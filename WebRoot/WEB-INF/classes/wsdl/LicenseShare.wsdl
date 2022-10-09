@@ -1,0 +1,2707 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="test">
+        <s:complexType />
+      </s:element>
+      <s:element name="testResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="testResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Authorization">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthorizationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthorizationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLicenseType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLicenseTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLicenseTypeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDocumentListByQuery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="requestXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDocumentListByQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDocumentListByQueryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDocumentListByCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="businessID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="companyCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDocumentListByCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDocumentListByCodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDocumentListByName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="businessID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="companyName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDocumentListByNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDocumentListByNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLicenseDataByFileNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="businessID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="licenseType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="licenseFileNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLicenseDataByFileNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLicenseDataByFileNumberResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLicenseDataByFileNumberTwo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="businessID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="licenseFileNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLicenseDataByFileNumberTwoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLicenseDataByFileNumberTwoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLicenseDataByHolderID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="businessID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="licenseName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="licenseType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="holderID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLicenseDataByHolderIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLicenseDataByHolderIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLicenseDataByHolderName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="businessID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="licenseName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="licenseType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="holderName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLicenseDataByHolderNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLicenseDataByHolderNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLicenseDataByQuery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="requestXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLicenseDataByQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLicenseDataByQueryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLicenseData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="businessID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orgName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="licenseType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="licenseID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLicenseDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLicenseDataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLicenseFileByFileNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="businessID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="licenseType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="licenseFileNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLicenseFileByFileNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLicenseFileByFileNumberResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLicenseFileByFileNumberTwo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="businessID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="licenseFileNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLicenseFileByFileNumberTwoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLicenseFileByFileNumberTwoResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLicenseFileByHolderID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="businessID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="licenseName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="licenseType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="holderID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLicenseFileByHolderIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLicenseFileByHolderIDResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLicenseFileByHolderName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="businessID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="licenseName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="licenseType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="holderName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLicenseFileByHolderNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLicenseFileByHolderNameResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLicenseFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="businessID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orgName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="licenseType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="licenseID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLicenseFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLicenseFileResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLicenseFileByQuery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="requestXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLicenseFileByQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLicenseFileByQueryResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifyLicenseByFileNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="businessID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="licenseType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="licenseFileNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifyLicenseByFileNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VerifyLicenseByFileNumberResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifyLicenseByHolderID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="businessID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="licenseName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="licenseType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="holderID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifyLicenseByHolderIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VerifyLicenseByHolderIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifyLicenseByHolderName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="businessID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="licenseName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="licenseType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="holderName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifyLicenseByHolderNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VerifyLicenseByHolderNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifyLicenseByLicenseID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="businessID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orgName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="licenseType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="licenseID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifyLicenseByLicenseIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VerifyLicenseByLicenseIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDocumentListBySFZ">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="businessID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sfz" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDocumentListBySFZResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDocumentListBySFZResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDocumentListByQueryOfPerson">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="requestXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDocumentListByQueryOfPersonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDocumentListByQueryOfPersonResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLicenseFileByQueryOfPerson">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="requestXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLicenseFileByQueryOfPersonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLicenseFileByQueryOfPersonResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLicenseDataByQueryOfPerson">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="requestXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLicenseDataByQueryOfPersonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLicenseDataByQueryOfPersonResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPowerObjList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="businessID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPowerObjListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPowerObjListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLicenseDataFromDS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="businessID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="requestXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLicenseDataFromDSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLicenseDataFromDSResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLicenseFileFromDS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="guid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="businessID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="requestXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLicenseFileFromDSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLicenseFileFromDSResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="base64Binary" nillable="true" type="s:base64Binary" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="testSoapIn">
+    <wsdl:part name="parameters" element="tns:test" />
+  </wsdl:message>
+  <wsdl:message name="testSoapOut">
+    <wsdl:part name="parameters" element="tns:testResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizationSoapIn">
+    <wsdl:part name="parameters" element="tns:Authorization" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizationSoapOut">
+    <wsdl:part name="parameters" element="tns:AuthorizationResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLicenseType" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLicenseTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentListByQuerySoapIn">
+    <wsdl:part name="parameters" element="tns:GetDocumentListByQuery" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentListByQuerySoapOut">
+    <wsdl:part name="parameters" element="tns:GetDocumentListByQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentListByCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDocumentListByCode" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentListByCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDocumentListByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentListByNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDocumentListByName" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentListByNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDocumentListByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataByFileNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLicenseDataByFileNumber" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataByFileNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLicenseDataByFileNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataByFileNumberTwoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLicenseDataByFileNumberTwo" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataByFileNumberTwoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLicenseDataByFileNumberTwoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataByHolderIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLicenseDataByHolderID" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataByHolderIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLicenseDataByHolderIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataByHolderNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLicenseDataByHolderName" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataByHolderNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLicenseDataByHolderNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataByQuerySoapIn">
+    <wsdl:part name="parameters" element="tns:GetLicenseDataByQuery" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataByQuerySoapOut">
+    <wsdl:part name="parameters" element="tns:GetLicenseDataByQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLicenseData" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLicenseDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileByFileNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLicenseFileByFileNumber" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileByFileNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLicenseFileByFileNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileByFileNumberTwoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLicenseFileByFileNumberTwo" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileByFileNumberTwoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLicenseFileByFileNumberTwoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileByHolderIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLicenseFileByHolderID" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileByHolderIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLicenseFileByHolderIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileByHolderNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLicenseFileByHolderName" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileByHolderNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLicenseFileByHolderNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLicenseFile" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLicenseFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileByQuerySoapIn">
+    <wsdl:part name="parameters" element="tns:GetLicenseFileByQuery" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileByQuerySoapOut">
+    <wsdl:part name="parameters" element="tns:GetLicenseFileByQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerifyLicenseByFileNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:VerifyLicenseByFileNumber" />
+  </wsdl:message>
+  <wsdl:message name="VerifyLicenseByFileNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:VerifyLicenseByFileNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerifyLicenseByHolderIDSoapIn">
+    <wsdl:part name="parameters" element="tns:VerifyLicenseByHolderID" />
+  </wsdl:message>
+  <wsdl:message name="VerifyLicenseByHolderIDSoapOut">
+    <wsdl:part name="parameters" element="tns:VerifyLicenseByHolderIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerifyLicenseByHolderNameSoapIn">
+    <wsdl:part name="parameters" element="tns:VerifyLicenseByHolderName" />
+  </wsdl:message>
+  <wsdl:message name="VerifyLicenseByHolderNameSoapOut">
+    <wsdl:part name="parameters" element="tns:VerifyLicenseByHolderNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerifyLicenseByLicenseIDSoapIn">
+    <wsdl:part name="parameters" element="tns:VerifyLicenseByLicenseID" />
+  </wsdl:message>
+  <wsdl:message name="VerifyLicenseByLicenseIDSoapOut">
+    <wsdl:part name="parameters" element="tns:VerifyLicenseByLicenseIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentListBySFZSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDocumentListBySFZ" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentListBySFZSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDocumentListBySFZResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentListByQueryOfPersonSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDocumentListByQueryOfPerson" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentListByQueryOfPersonSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDocumentListByQueryOfPersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileByQueryOfPersonSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLicenseFileByQueryOfPerson" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileByQueryOfPersonSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLicenseFileByQueryOfPersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataByQueryOfPersonSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLicenseDataByQueryOfPerson" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataByQueryOfPersonSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLicenseDataByQueryOfPersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPowerObjListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPowerObjList" />
+  </wsdl:message>
+  <wsdl:message name="GetPowerObjListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPowerObjListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataFromDSSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLicenseDataFromDS" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataFromDSSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLicenseDataFromDSResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileFromDSSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLicenseFileFromDS" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileFromDSSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLicenseFileFromDSResponse" />
+  </wsdl:message>
+  <wsdl:message name="testHttpGetIn" />
+  <wsdl:message name="testHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizationHttpGetIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizationHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseTypeHttpGetIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="name" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseTypeHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentListByQueryHttpGetIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="requestXml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentListByQueryHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentListByCodeHttpGetIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="appID" type="s:string" />
+    <wsdl:part name="businessID" type="s:string" />
+    <wsdl:part name="companyCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentListByCodeHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentListByNameHttpGetIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="appID" type="s:string" />
+    <wsdl:part name="businessID" type="s:string" />
+    <wsdl:part name="companyName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentListByNameHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataByFileNumberHttpGetIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="appID" type="s:string" />
+    <wsdl:part name="businessID" type="s:string" />
+    <wsdl:part name="licenseType" type="s:string" />
+    <wsdl:part name="licenseFileNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataByFileNumberHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataByFileNumberTwoHttpGetIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="appID" type="s:string" />
+    <wsdl:part name="businessID" type="s:string" />
+    <wsdl:part name="licenseFileNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataByFileNumberTwoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataByHolderIDHttpGetIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="appID" type="s:string" />
+    <wsdl:part name="businessID" type="s:string" />
+    <wsdl:part name="licenseName" type="s:string" />
+    <wsdl:part name="licenseType" type="s:string" />
+    <wsdl:part name="holderID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataByHolderIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataByHolderNameHttpGetIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="appID" type="s:string" />
+    <wsdl:part name="businessID" type="s:string" />
+    <wsdl:part name="licenseName" type="s:string" />
+    <wsdl:part name="licenseType" type="s:string" />
+    <wsdl:part name="holderName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataByHolderNameHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataByQueryHttpGetIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="requestXml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataByQueryHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataHttpGetIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="appID" type="s:string" />
+    <wsdl:part name="businessID" type="s:string" />
+    <wsdl:part name="orgName" type="s:string" />
+    <wsdl:part name="licenseType" type="s:string" />
+    <wsdl:part name="licenseID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileByFileNumberHttpGetIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="appID" type="s:string" />
+    <wsdl:part name="businessID" type="s:string" />
+    <wsdl:part name="licenseType" type="s:string" />
+    <wsdl:part name="licenseFileNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileByFileNumberHttpGetOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileByFileNumberTwoHttpGetIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="appID" type="s:string" />
+    <wsdl:part name="businessID" type="s:string" />
+    <wsdl:part name="licenseFileNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileByFileNumberTwoHttpGetOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileByHolderIDHttpGetIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="appID" type="s:string" />
+    <wsdl:part name="businessID" type="s:string" />
+    <wsdl:part name="licenseName" type="s:string" />
+    <wsdl:part name="licenseType" type="s:string" />
+    <wsdl:part name="holderID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileByHolderIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileByHolderNameHttpGetIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="appID" type="s:string" />
+    <wsdl:part name="businessID" type="s:string" />
+    <wsdl:part name="licenseName" type="s:string" />
+    <wsdl:part name="licenseType" type="s:string" />
+    <wsdl:part name="holderName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileByHolderNameHttpGetOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileHttpGetIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="appID" type="s:string" />
+    <wsdl:part name="businessID" type="s:string" />
+    <wsdl:part name="orgName" type="s:string" />
+    <wsdl:part name="licenseType" type="s:string" />
+    <wsdl:part name="licenseID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileHttpGetOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileByQueryHttpGetIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="requestXml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileByQueryHttpGetOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="VerifyLicenseByFileNumberHttpGetIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="appID" type="s:string" />
+    <wsdl:part name="businessID" type="s:string" />
+    <wsdl:part name="licenseType" type="s:string" />
+    <wsdl:part name="licenseFileNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VerifyLicenseByFileNumberHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="VerifyLicenseByHolderIDHttpGetIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="appID" type="s:string" />
+    <wsdl:part name="businessID" type="s:string" />
+    <wsdl:part name="licenseName" type="s:string" />
+    <wsdl:part name="licenseType" type="s:string" />
+    <wsdl:part name="holderID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VerifyLicenseByHolderIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="VerifyLicenseByHolderNameHttpGetIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="appID" type="s:string" />
+    <wsdl:part name="businessID" type="s:string" />
+    <wsdl:part name="licenseName" type="s:string" />
+    <wsdl:part name="licenseType" type="s:string" />
+    <wsdl:part name="holderName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VerifyLicenseByHolderNameHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="VerifyLicenseByLicenseIDHttpGetIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="appID" type="s:string" />
+    <wsdl:part name="businessID" type="s:string" />
+    <wsdl:part name="orgName" type="s:string" />
+    <wsdl:part name="licenseType" type="s:string" />
+    <wsdl:part name="licenseID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VerifyLicenseByLicenseIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentListBySFZHttpGetIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="appID" type="s:string" />
+    <wsdl:part name="businessID" type="s:string" />
+    <wsdl:part name="sfz" type="s:string" />
+    <wsdl:part name="name" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentListBySFZHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentListByQueryOfPersonHttpGetIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="requestXml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentListByQueryOfPersonHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileByQueryOfPersonHttpGetIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="requestXml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileByQueryOfPersonHttpGetOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataByQueryOfPersonHttpGetIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="requestXml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataByQueryOfPersonHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPowerObjListHttpGetIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="appID" type="s:string" />
+    <wsdl:part name="businessID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPowerObjListHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataFromDSHttpGetIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="appID" type="s:string" />
+    <wsdl:part name="businessID" type="s:string" />
+    <wsdl:part name="requestXml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataFromDSHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileFromDSHttpGetIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="appID" type="s:string" />
+    <wsdl:part name="businessID" type="s:string" />
+    <wsdl:part name="requestXml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileFromDSHttpGetOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="testHttpPostIn" />
+  <wsdl:message name="testHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizationHttpPostIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizationHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseTypeHttpPostIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="name" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseTypeHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentListByQueryHttpPostIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="requestXml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentListByQueryHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentListByCodeHttpPostIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="appID" type="s:string" />
+    <wsdl:part name="businessID" type="s:string" />
+    <wsdl:part name="companyCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentListByCodeHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentListByNameHttpPostIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="appID" type="s:string" />
+    <wsdl:part name="businessID" type="s:string" />
+    <wsdl:part name="companyName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentListByNameHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataByFileNumberHttpPostIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="appID" type="s:string" />
+    <wsdl:part name="businessID" type="s:string" />
+    <wsdl:part name="licenseType" type="s:string" />
+    <wsdl:part name="licenseFileNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataByFileNumberHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataByFileNumberTwoHttpPostIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="appID" type="s:string" />
+    <wsdl:part name="businessID" type="s:string" />
+    <wsdl:part name="licenseFileNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataByFileNumberTwoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataByHolderIDHttpPostIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="appID" type="s:string" />
+    <wsdl:part name="businessID" type="s:string" />
+    <wsdl:part name="licenseName" type="s:string" />
+    <wsdl:part name="licenseType" type="s:string" />
+    <wsdl:part name="holderID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataByHolderIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataByHolderNameHttpPostIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="appID" type="s:string" />
+    <wsdl:part name="businessID" type="s:string" />
+    <wsdl:part name="licenseName" type="s:string" />
+    <wsdl:part name="licenseType" type="s:string" />
+    <wsdl:part name="holderName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataByHolderNameHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataByQueryHttpPostIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="requestXml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataByQueryHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataHttpPostIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="appID" type="s:string" />
+    <wsdl:part name="businessID" type="s:string" />
+    <wsdl:part name="orgName" type="s:string" />
+    <wsdl:part name="licenseType" type="s:string" />
+    <wsdl:part name="licenseID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileByFileNumberHttpPostIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="appID" type="s:string" />
+    <wsdl:part name="businessID" type="s:string" />
+    <wsdl:part name="licenseType" type="s:string" />
+    <wsdl:part name="licenseFileNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileByFileNumberHttpPostOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileByFileNumberTwoHttpPostIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="appID" type="s:string" />
+    <wsdl:part name="businessID" type="s:string" />
+    <wsdl:part name="licenseFileNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileByFileNumberTwoHttpPostOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileByHolderIDHttpPostIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="appID" type="s:string" />
+    <wsdl:part name="businessID" type="s:string" />
+    <wsdl:part name="licenseName" type="s:string" />
+    <wsdl:part name="licenseType" type="s:string" />
+    <wsdl:part name="holderID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileByHolderIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileByHolderNameHttpPostIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="appID" type="s:string" />
+    <wsdl:part name="businessID" type="s:string" />
+    <wsdl:part name="licenseName" type="s:string" />
+    <wsdl:part name="licenseType" type="s:string" />
+    <wsdl:part name="holderName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileByHolderNameHttpPostOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileHttpPostIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="appID" type="s:string" />
+    <wsdl:part name="businessID" type="s:string" />
+    <wsdl:part name="orgName" type="s:string" />
+    <wsdl:part name="licenseType" type="s:string" />
+    <wsdl:part name="licenseID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileHttpPostOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileByQueryHttpPostIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="requestXml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileByQueryHttpPostOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="VerifyLicenseByFileNumberHttpPostIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="appID" type="s:string" />
+    <wsdl:part name="businessID" type="s:string" />
+    <wsdl:part name="licenseType" type="s:string" />
+    <wsdl:part name="licenseFileNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VerifyLicenseByFileNumberHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="VerifyLicenseByHolderIDHttpPostIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="appID" type="s:string" />
+    <wsdl:part name="businessID" type="s:string" />
+    <wsdl:part name="licenseName" type="s:string" />
+    <wsdl:part name="licenseType" type="s:string" />
+    <wsdl:part name="holderID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VerifyLicenseByHolderIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="VerifyLicenseByHolderNameHttpPostIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="appID" type="s:string" />
+    <wsdl:part name="businessID" type="s:string" />
+    <wsdl:part name="licenseName" type="s:string" />
+    <wsdl:part name="licenseType" type="s:string" />
+    <wsdl:part name="holderName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VerifyLicenseByHolderNameHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="VerifyLicenseByLicenseIDHttpPostIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="appID" type="s:string" />
+    <wsdl:part name="businessID" type="s:string" />
+    <wsdl:part name="orgName" type="s:string" />
+    <wsdl:part name="licenseType" type="s:string" />
+    <wsdl:part name="licenseID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VerifyLicenseByLicenseIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentListBySFZHttpPostIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="appID" type="s:string" />
+    <wsdl:part name="businessID" type="s:string" />
+    <wsdl:part name="sfz" type="s:string" />
+    <wsdl:part name="name" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentListBySFZHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentListByQueryOfPersonHttpPostIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="requestXml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentListByQueryOfPersonHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileByQueryOfPersonHttpPostIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="requestXml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileByQueryOfPersonHttpPostOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataByQueryOfPersonHttpPostIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="requestXml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataByQueryOfPersonHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPowerObjListHttpPostIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="appID" type="s:string" />
+    <wsdl:part name="businessID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPowerObjListHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataFromDSHttpPostIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="appID" type="s:string" />
+    <wsdl:part name="businessID" type="s:string" />
+    <wsdl:part name="requestXml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseDataFromDSHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileFromDSHttpPostIn">
+    <wsdl:part name="guid" type="s:string" />
+    <wsdl:part name="appID" type="s:string" />
+    <wsdl:part name="businessID" type="s:string" />
+    <wsdl:part name="requestXml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLicenseFileFromDSHttpPostOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:portType name="LicenseShareSoap">
+    <wsdl:operation name="test">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">测试</wsdl:documentation>
+      <wsdl:input message="tns:testSoapIn" />
+      <wsdl:output message="tns:testSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Authorization">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">用户登录(以帐号方式)</wsdl:documentation>
+      <wsdl:input message="tns:AuthorizationSoapIn" />
+      <wsdl:output message="tns:AuthorizationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseType">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取证照类别编码</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseTypeSoapIn" />
+      <wsdl:output message="tns:GetLicenseTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentListByQuery">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据查询条件获取企业相应的电子证照、电子批文列表</wsdl:documentation>
+      <wsdl:input message="tns:GetDocumentListByQuerySoapIn" />
+      <wsdl:output message="tns:GetDocumentListByQuerySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentListByCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">通过企业编码获取企业电子证照列表</wsdl:documentation>
+      <wsdl:input message="tns:GetDocumentListByCodeSoapIn" />
+      <wsdl:output message="tns:GetDocumentListByCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentListByName">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">通过企业名称获取企业电子证照列表</wsdl:documentation>
+      <wsdl:input message="tns:GetDocumentListByNameSoapIn" />
+      <wsdl:output message="tns:GetDocumentListByNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataByFileNumber">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据证照文件编号获取证照内容</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseDataByFileNumberSoapIn" />
+      <wsdl:output message="tns:GetLicenseDataByFileNumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataByFileNumberTwo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据证照文件编号获取证照内容</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseDataByFileNumberTwoSoapIn" />
+      <wsdl:output message="tns:GetLicenseDataByFileNumberTwoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataByHolderID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据持证者ID和证照名称获取电子证照或批文元数据内容</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseDataByHolderIDSoapIn" />
+      <wsdl:output message="tns:GetLicenseDataByHolderIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataByHolderName">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据持证者名称和证照名称获取企业电子证照元数据内容</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseDataByHolderNameSoapIn" />
+      <wsdl:output message="tns:GetLicenseDataByHolderNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataByQuery">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据查询条件获取电子证照元数据内容</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseDataByQuerySoapIn" />
+      <wsdl:output message="tns:GetLicenseDataByQuerySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据证照编号和证照颁证单位获取电子证照的内容。（证照编号即证照颁证单位编制的证照流水号，不同单位间的证照编号有可能重复，所以需要证照编号和证照颁证单位组合使用。）</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseDataSoapIn" />
+      <wsdl:output message="tns:GetLicenseDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileByFileNumber">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据电子证照文件编号获取证照的电文文件</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseFileByFileNumberSoapIn" />
+      <wsdl:output message="tns:GetLicenseFileByFileNumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileByFileNumberTwo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据电子证照文件编号获取证照的电文文件</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseFileByFileNumberTwoSoapIn" />
+      <wsdl:output message="tns:GetLicenseFileByFileNumberTwoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileByHolderID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据持证者ID获取证照的电文文件</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseFileByHolderIDSoapIn" />
+      <wsdl:output message="tns:GetLicenseFileByHolderIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileByHolderName">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据持证者名称获取企业证照的电文文件</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseFileByHolderNameSoapIn" />
+      <wsdl:output message="tns:GetLicenseFileByHolderNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFile">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据证照编号和证照颁证单位获取电子证照的电文文件。（证照编号即证照颁证单位编制的证照流水号，不同单位间的证照编号有可能重复，所以需要证照编号和证照颁证单位组合使用。）</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseFileSoapIn" />
+      <wsdl:output message="tns:GetLicenseFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileByQuery">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据查询条件获取电子证照文件</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseFileByQuerySoapIn" />
+      <wsdl:output message="tns:GetLicenseFileByQuerySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyLicenseByFileNumber">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据证照文件编号验证电子证照的有效性</wsdl:documentation>
+      <wsdl:input message="tns:VerifyLicenseByFileNumberSoapIn" />
+      <wsdl:output message="tns:VerifyLicenseByFileNumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyLicenseByHolderID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">据持证者ID验证电子证照的有效性</wsdl:documentation>
+      <wsdl:input message="tns:VerifyLicenseByHolderIDSoapIn" />
+      <wsdl:output message="tns:VerifyLicenseByHolderIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyLicenseByHolderName">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据持证者名称验证电子证照的有效性</wsdl:documentation>
+      <wsdl:input message="tns:VerifyLicenseByHolderNameSoapIn" />
+      <wsdl:output message="tns:VerifyLicenseByHolderNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyLicenseByLicenseID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据证照编号和证照颁证单位验证电子证照的有效性。（证照编号即证照颁证单位编制的证照流水号，不同单位间的证照编号有可能重复，所以需要证照编号和证照颁证单位组合使用。）</wsdl:documentation>
+      <wsdl:input message="tns:VerifyLicenseByLicenseIDSoapIn" />
+      <wsdl:output message="tns:VerifyLicenseByLicenseIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentListBySFZ">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">通过身份证获取有权限共享的个人证照类别列表</wsdl:documentation>
+      <wsdl:input message="tns:GetDocumentListBySFZSoapIn" />
+      <wsdl:output message="tns:GetDocumentListBySFZSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentListByQueryOfPerson">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">通过身份证及证照类型编码获取有权限共享的个人证照类别列表</wsdl:documentation>
+      <wsdl:input message="tns:GetDocumentListByQueryOfPersonSoapIn" />
+      <wsdl:output message="tns:GetDocumentListByQueryOfPersonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileByQueryOfPerson">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据电子证照文件编号获取电子证照文件</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseFileByQueryOfPersonSoapIn" />
+      <wsdl:output message="tns:GetLicenseFileByQueryOfPersonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataByQueryOfPerson">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据查询条件获取电子证照元数据内容</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseDataByQueryOfPersonSoapIn" />
+      <wsdl:output message="tns:GetLicenseDataByQueryOfPersonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPowerObjList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">该接口返回该业务的权限授权结果</wsdl:documentation>
+      <wsdl:input message="tns:GetPowerObjListSoapIn" />
+      <wsdl:output message="tns:GetPowerObjListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataFromDS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">从地市调用省级获取证照内容</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseDataFromDSSoapIn" />
+      <wsdl:output message="tns:GetLicenseDataFromDSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileFromDS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">从地市调用省级获取证照电文文件</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseFileFromDSSoapIn" />
+      <wsdl:output message="tns:GetLicenseFileFromDSSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="LicenseShareHttpGet">
+    <wsdl:operation name="test">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">测试</wsdl:documentation>
+      <wsdl:input message="tns:testHttpGetIn" />
+      <wsdl:output message="tns:testHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Authorization">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">用户登录(以帐号方式)</wsdl:documentation>
+      <wsdl:input message="tns:AuthorizationHttpGetIn" />
+      <wsdl:output message="tns:AuthorizationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseType">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取证照类别编码</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseTypeHttpGetIn" />
+      <wsdl:output message="tns:GetLicenseTypeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentListByQuery">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据查询条件获取企业相应的电子证照、电子批文列表</wsdl:documentation>
+      <wsdl:input message="tns:GetDocumentListByQueryHttpGetIn" />
+      <wsdl:output message="tns:GetDocumentListByQueryHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentListByCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">通过企业编码获取企业电子证照列表</wsdl:documentation>
+      <wsdl:input message="tns:GetDocumentListByCodeHttpGetIn" />
+      <wsdl:output message="tns:GetDocumentListByCodeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentListByName">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">通过企业名称获取企业电子证照列表</wsdl:documentation>
+      <wsdl:input message="tns:GetDocumentListByNameHttpGetIn" />
+      <wsdl:output message="tns:GetDocumentListByNameHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataByFileNumber">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据证照文件编号获取证照内容</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseDataByFileNumberHttpGetIn" />
+      <wsdl:output message="tns:GetLicenseDataByFileNumberHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataByFileNumberTwo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据证照文件编号获取证照内容</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseDataByFileNumberTwoHttpGetIn" />
+      <wsdl:output message="tns:GetLicenseDataByFileNumberTwoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataByHolderID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据持证者ID和证照名称获取电子证照或批文元数据内容</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseDataByHolderIDHttpGetIn" />
+      <wsdl:output message="tns:GetLicenseDataByHolderIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataByHolderName">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据持证者名称和证照名称获取企业电子证照元数据内容</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseDataByHolderNameHttpGetIn" />
+      <wsdl:output message="tns:GetLicenseDataByHolderNameHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataByQuery">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据查询条件获取电子证照元数据内容</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseDataByQueryHttpGetIn" />
+      <wsdl:output message="tns:GetLicenseDataByQueryHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据证照编号和证照颁证单位获取电子证照的内容。（证照编号即证照颁证单位编制的证照流水号，不同单位间的证照编号有可能重复，所以需要证照编号和证照颁证单位组合使用。）</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseDataHttpGetIn" />
+      <wsdl:output message="tns:GetLicenseDataHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileByFileNumber">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据电子证照文件编号获取证照的电文文件</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseFileByFileNumberHttpGetIn" />
+      <wsdl:output message="tns:GetLicenseFileByFileNumberHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileByFileNumberTwo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据电子证照文件编号获取证照的电文文件</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseFileByFileNumberTwoHttpGetIn" />
+      <wsdl:output message="tns:GetLicenseFileByFileNumberTwoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileByHolderID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据持证者ID获取证照的电文文件</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseFileByHolderIDHttpGetIn" />
+      <wsdl:output message="tns:GetLicenseFileByHolderIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileByHolderName">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据持证者名称获取企业证照的电文文件</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseFileByHolderNameHttpGetIn" />
+      <wsdl:output message="tns:GetLicenseFileByHolderNameHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFile">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据证照编号和证照颁证单位获取电子证照的电文文件。（证照编号即证照颁证单位编制的证照流水号，不同单位间的证照编号有可能重复，所以需要证照编号和证照颁证单位组合使用。）</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseFileHttpGetIn" />
+      <wsdl:output message="tns:GetLicenseFileHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileByQuery">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据查询条件获取电子证照文件</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseFileByQueryHttpGetIn" />
+      <wsdl:output message="tns:GetLicenseFileByQueryHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyLicenseByFileNumber">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据证照文件编号验证电子证照的有效性</wsdl:documentation>
+      <wsdl:input message="tns:VerifyLicenseByFileNumberHttpGetIn" />
+      <wsdl:output message="tns:VerifyLicenseByFileNumberHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyLicenseByHolderID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">据持证者ID验证电子证照的有效性</wsdl:documentation>
+      <wsdl:input message="tns:VerifyLicenseByHolderIDHttpGetIn" />
+      <wsdl:output message="tns:VerifyLicenseByHolderIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyLicenseByHolderName">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据持证者名称验证电子证照的有效性</wsdl:documentation>
+      <wsdl:input message="tns:VerifyLicenseByHolderNameHttpGetIn" />
+      <wsdl:output message="tns:VerifyLicenseByHolderNameHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyLicenseByLicenseID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据证照编号和证照颁证单位验证电子证照的有效性。（证照编号即证照颁证单位编制的证照流水号，不同单位间的证照编号有可能重复，所以需要证照编号和证照颁证单位组合使用。）</wsdl:documentation>
+      <wsdl:input message="tns:VerifyLicenseByLicenseIDHttpGetIn" />
+      <wsdl:output message="tns:VerifyLicenseByLicenseIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentListBySFZ">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">通过身份证获取有权限共享的个人证照类别列表</wsdl:documentation>
+      <wsdl:input message="tns:GetDocumentListBySFZHttpGetIn" />
+      <wsdl:output message="tns:GetDocumentListBySFZHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentListByQueryOfPerson">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">通过身份证及证照类型编码获取有权限共享的个人证照类别列表</wsdl:documentation>
+      <wsdl:input message="tns:GetDocumentListByQueryOfPersonHttpGetIn" />
+      <wsdl:output message="tns:GetDocumentListByQueryOfPersonHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileByQueryOfPerson">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据电子证照文件编号获取电子证照文件</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseFileByQueryOfPersonHttpGetIn" />
+      <wsdl:output message="tns:GetLicenseFileByQueryOfPersonHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataByQueryOfPerson">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据查询条件获取电子证照元数据内容</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseDataByQueryOfPersonHttpGetIn" />
+      <wsdl:output message="tns:GetLicenseDataByQueryOfPersonHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPowerObjList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">该接口返回该业务的权限授权结果</wsdl:documentation>
+      <wsdl:input message="tns:GetPowerObjListHttpGetIn" />
+      <wsdl:output message="tns:GetPowerObjListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataFromDS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">从地市调用省级获取证照内容</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseDataFromDSHttpGetIn" />
+      <wsdl:output message="tns:GetLicenseDataFromDSHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileFromDS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">从地市调用省级获取证照电文文件</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseFileFromDSHttpGetIn" />
+      <wsdl:output message="tns:GetLicenseFileFromDSHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="LicenseShareHttpPost">
+    <wsdl:operation name="test">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">测试</wsdl:documentation>
+      <wsdl:input message="tns:testHttpPostIn" />
+      <wsdl:output message="tns:testHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Authorization">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">用户登录(以帐号方式)</wsdl:documentation>
+      <wsdl:input message="tns:AuthorizationHttpPostIn" />
+      <wsdl:output message="tns:AuthorizationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseType">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取证照类别编码</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseTypeHttpPostIn" />
+      <wsdl:output message="tns:GetLicenseTypeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentListByQuery">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据查询条件获取企业相应的电子证照、电子批文列表</wsdl:documentation>
+      <wsdl:input message="tns:GetDocumentListByQueryHttpPostIn" />
+      <wsdl:output message="tns:GetDocumentListByQueryHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentListByCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">通过企业编码获取企业电子证照列表</wsdl:documentation>
+      <wsdl:input message="tns:GetDocumentListByCodeHttpPostIn" />
+      <wsdl:output message="tns:GetDocumentListByCodeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentListByName">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">通过企业名称获取企业电子证照列表</wsdl:documentation>
+      <wsdl:input message="tns:GetDocumentListByNameHttpPostIn" />
+      <wsdl:output message="tns:GetDocumentListByNameHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataByFileNumber">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据证照文件编号获取证照内容</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseDataByFileNumberHttpPostIn" />
+      <wsdl:output message="tns:GetLicenseDataByFileNumberHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataByFileNumberTwo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据证照文件编号获取证照内容</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseDataByFileNumberTwoHttpPostIn" />
+      <wsdl:output message="tns:GetLicenseDataByFileNumberTwoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataByHolderID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据持证者ID和证照名称获取电子证照或批文元数据内容</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseDataByHolderIDHttpPostIn" />
+      <wsdl:output message="tns:GetLicenseDataByHolderIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataByHolderName">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据持证者名称和证照名称获取企业电子证照元数据内容</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseDataByHolderNameHttpPostIn" />
+      <wsdl:output message="tns:GetLicenseDataByHolderNameHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataByQuery">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据查询条件获取电子证照元数据内容</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseDataByQueryHttpPostIn" />
+      <wsdl:output message="tns:GetLicenseDataByQueryHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据证照编号和证照颁证单位获取电子证照的内容。（证照编号即证照颁证单位编制的证照流水号，不同单位间的证照编号有可能重复，所以需要证照编号和证照颁证单位组合使用。）</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseDataHttpPostIn" />
+      <wsdl:output message="tns:GetLicenseDataHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileByFileNumber">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据电子证照文件编号获取证照的电文文件</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseFileByFileNumberHttpPostIn" />
+      <wsdl:output message="tns:GetLicenseFileByFileNumberHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileByFileNumberTwo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据电子证照文件编号获取证照的电文文件</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseFileByFileNumberTwoHttpPostIn" />
+      <wsdl:output message="tns:GetLicenseFileByFileNumberTwoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileByHolderID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据持证者ID获取证照的电文文件</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseFileByHolderIDHttpPostIn" />
+      <wsdl:output message="tns:GetLicenseFileByHolderIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileByHolderName">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据持证者名称获取企业证照的电文文件</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseFileByHolderNameHttpPostIn" />
+      <wsdl:output message="tns:GetLicenseFileByHolderNameHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFile">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据证照编号和证照颁证单位获取电子证照的电文文件。（证照编号即证照颁证单位编制的证照流水号，不同单位间的证照编号有可能重复，所以需要证照编号和证照颁证单位组合使用。）</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseFileHttpPostIn" />
+      <wsdl:output message="tns:GetLicenseFileHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileByQuery">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据查询条件获取电子证照文件</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseFileByQueryHttpPostIn" />
+      <wsdl:output message="tns:GetLicenseFileByQueryHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyLicenseByFileNumber">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据证照文件编号验证电子证照的有效性</wsdl:documentation>
+      <wsdl:input message="tns:VerifyLicenseByFileNumberHttpPostIn" />
+      <wsdl:output message="tns:VerifyLicenseByFileNumberHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyLicenseByHolderID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">据持证者ID验证电子证照的有效性</wsdl:documentation>
+      <wsdl:input message="tns:VerifyLicenseByHolderIDHttpPostIn" />
+      <wsdl:output message="tns:VerifyLicenseByHolderIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyLicenseByHolderName">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据持证者名称验证电子证照的有效性</wsdl:documentation>
+      <wsdl:input message="tns:VerifyLicenseByHolderNameHttpPostIn" />
+      <wsdl:output message="tns:VerifyLicenseByHolderNameHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyLicenseByLicenseID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据证照编号和证照颁证单位验证电子证照的有效性。（证照编号即证照颁证单位编制的证照流水号，不同单位间的证照编号有可能重复，所以需要证照编号和证照颁证单位组合使用。）</wsdl:documentation>
+      <wsdl:input message="tns:VerifyLicenseByLicenseIDHttpPostIn" />
+      <wsdl:output message="tns:VerifyLicenseByLicenseIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentListBySFZ">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">通过身份证获取有权限共享的个人证照类别列表</wsdl:documentation>
+      <wsdl:input message="tns:GetDocumentListBySFZHttpPostIn" />
+      <wsdl:output message="tns:GetDocumentListBySFZHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentListByQueryOfPerson">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">通过身份证及证照类型编码获取有权限共享的个人证照类别列表</wsdl:documentation>
+      <wsdl:input message="tns:GetDocumentListByQueryOfPersonHttpPostIn" />
+      <wsdl:output message="tns:GetDocumentListByQueryOfPersonHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileByQueryOfPerson">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据电子证照文件编号获取电子证照文件</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseFileByQueryOfPersonHttpPostIn" />
+      <wsdl:output message="tns:GetLicenseFileByQueryOfPersonHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataByQueryOfPerson">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据查询条件获取电子证照元数据内容</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseDataByQueryOfPersonHttpPostIn" />
+      <wsdl:output message="tns:GetLicenseDataByQueryOfPersonHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPowerObjList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">该接口返回该业务的权限授权结果</wsdl:documentation>
+      <wsdl:input message="tns:GetPowerObjListHttpPostIn" />
+      <wsdl:output message="tns:GetPowerObjListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataFromDS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">从地市调用省级获取证照内容</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseDataFromDSHttpPostIn" />
+      <wsdl:output message="tns:GetLicenseDataFromDSHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileFromDS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">从地市调用省级获取证照电文文件</wsdl:documentation>
+      <wsdl:input message="tns:GetLicenseFileFromDSHttpPostIn" />
+      <wsdl:output message="tns:GetLicenseFileFromDSHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="LicenseShareSoap" type="tns:LicenseShareSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="test">
+      <soap:operation soapAction="http://tempuri.org/test" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Authorization">
+      <soap:operation soapAction="http://tempuri.org/Authorization" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseType">
+      <soap:operation soapAction="http://tempuri.org/GetLicenseType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentListByQuery">
+      <soap:operation soapAction="http://tempuri.org/GetDocumentListByQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentListByCode">
+      <soap:operation soapAction="http://tempuri.org/GetDocumentListByCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentListByName">
+      <soap:operation soapAction="http://tempuri.org/GetDocumentListByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataByFileNumber">
+      <soap:operation soapAction="http://tempuri.org/GetLicenseDataByFileNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataByFileNumberTwo">
+      <soap:operation soapAction="http://tempuri.org/GetLicenseDataByFileNumberTwo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataByHolderID">
+      <soap:operation soapAction="http://tempuri.org/GetLicenseDataByHolderID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataByHolderName">
+      <soap:operation soapAction="http://tempuri.org/GetLicenseDataByHolderName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataByQuery">
+      <soap:operation soapAction="http://tempuri.org/GetLicenseDataByQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseData">
+      <soap:operation soapAction="http://tempuri.org/GetLicenseData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileByFileNumber">
+      <soap:operation soapAction="http://tempuri.org/GetLicenseFileByFileNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileByFileNumberTwo">
+      <soap:operation soapAction="http://tempuri.org/GetLicenseFileByFileNumberTwo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileByHolderID">
+      <soap:operation soapAction="http://tempuri.org/GetLicenseFileByHolderID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileByHolderName">
+      <soap:operation soapAction="http://tempuri.org/GetLicenseFileByHolderName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFile">
+      <soap:operation soapAction="http://tempuri.org/GetLicenseFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileByQuery">
+      <soap:operation soapAction="http://tempuri.org/GetLicenseFileByQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyLicenseByFileNumber">
+      <soap:operation soapAction="http://tempuri.org/VerifyLicenseByFileNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyLicenseByHolderID">
+      <soap:operation soapAction="http://tempuri.org/VerifyLicenseByHolderID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyLicenseByHolderName">
+      <soap:operation soapAction="http://tempuri.org/VerifyLicenseByHolderName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyLicenseByLicenseID">
+      <soap:operation soapAction="http://tempuri.org/VerifyLicenseByLicenseID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentListBySFZ">
+      <soap:operation soapAction="http://tempuri.org/GetDocumentListBySFZ" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentListByQueryOfPerson">
+      <soap:operation soapAction="http://tempuri.org/GetDocumentListByQueryOfPerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileByQueryOfPerson">
+      <soap:operation soapAction="http://tempuri.org/GetLicenseFileByQueryOfPerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataByQueryOfPerson">
+      <soap:operation soapAction="http://tempuri.org/GetLicenseDataByQueryOfPerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPowerObjList">
+      <soap:operation soapAction="http://tempuri.org/GetPowerObjList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataFromDS">
+      <soap:operation soapAction="http://tempuri.org/GetLicenseDataFromDS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileFromDS">
+      <soap:operation soapAction="http://tempuri.org/GetLicenseFileFromDS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="LicenseShareSoap12" type="tns:LicenseShareSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="test">
+      <soap12:operation soapAction="http://tempuri.org/test" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Authorization">
+      <soap12:operation soapAction="http://tempuri.org/Authorization" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseType">
+      <soap12:operation soapAction="http://tempuri.org/GetLicenseType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentListByQuery">
+      <soap12:operation soapAction="http://tempuri.org/GetDocumentListByQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentListByCode">
+      <soap12:operation soapAction="http://tempuri.org/GetDocumentListByCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentListByName">
+      <soap12:operation soapAction="http://tempuri.org/GetDocumentListByName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataByFileNumber">
+      <soap12:operation soapAction="http://tempuri.org/GetLicenseDataByFileNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataByFileNumberTwo">
+      <soap12:operation soapAction="http://tempuri.org/GetLicenseDataByFileNumberTwo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataByHolderID">
+      <soap12:operation soapAction="http://tempuri.org/GetLicenseDataByHolderID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataByHolderName">
+      <soap12:operation soapAction="http://tempuri.org/GetLicenseDataByHolderName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataByQuery">
+      <soap12:operation soapAction="http://tempuri.org/GetLicenseDataByQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseData">
+      <soap12:operation soapAction="http://tempuri.org/GetLicenseData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileByFileNumber">
+      <soap12:operation soapAction="http://tempuri.org/GetLicenseFileByFileNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileByFileNumberTwo">
+      <soap12:operation soapAction="http://tempuri.org/GetLicenseFileByFileNumberTwo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileByHolderID">
+      <soap12:operation soapAction="http://tempuri.org/GetLicenseFileByHolderID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileByHolderName">
+      <soap12:operation soapAction="http://tempuri.org/GetLicenseFileByHolderName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFile">
+      <soap12:operation soapAction="http://tempuri.org/GetLicenseFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileByQuery">
+      <soap12:operation soapAction="http://tempuri.org/GetLicenseFileByQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyLicenseByFileNumber">
+      <soap12:operation soapAction="http://tempuri.org/VerifyLicenseByFileNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyLicenseByHolderID">
+      <soap12:operation soapAction="http://tempuri.org/VerifyLicenseByHolderID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyLicenseByHolderName">
+      <soap12:operation soapAction="http://tempuri.org/VerifyLicenseByHolderName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyLicenseByLicenseID">
+      <soap12:operation soapAction="http://tempuri.org/VerifyLicenseByLicenseID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentListBySFZ">
+      <soap12:operation soapAction="http://tempuri.org/GetDocumentListBySFZ" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentListByQueryOfPerson">
+      <soap12:operation soapAction="http://tempuri.org/GetDocumentListByQueryOfPerson" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileByQueryOfPerson">
+      <soap12:operation soapAction="http://tempuri.org/GetLicenseFileByQueryOfPerson" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataByQueryOfPerson">
+      <soap12:operation soapAction="http://tempuri.org/GetLicenseDataByQueryOfPerson" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPowerObjList">
+      <soap12:operation soapAction="http://tempuri.org/GetPowerObjList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataFromDS">
+      <soap12:operation soapAction="http://tempuri.org/GetLicenseDataFromDS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileFromDS">
+      <soap12:operation soapAction="http://tempuri.org/GetLicenseFileFromDS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="LicenseShareHttpGet" type="tns:LicenseShareHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="test">
+      <http:operation location="/test" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Authorization">
+      <http:operation location="/Authorization" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseType">
+      <http:operation location="/GetLicenseType" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentListByQuery">
+      <http:operation location="/GetDocumentListByQuery" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentListByCode">
+      <http:operation location="/GetDocumentListByCode" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentListByName">
+      <http:operation location="/GetDocumentListByName" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataByFileNumber">
+      <http:operation location="/GetLicenseDataByFileNumber" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataByFileNumberTwo">
+      <http:operation location="/GetLicenseDataByFileNumberTwo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataByHolderID">
+      <http:operation location="/GetLicenseDataByHolderID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataByHolderName">
+      <http:operation location="/GetLicenseDataByHolderName" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataByQuery">
+      <http:operation location="/GetLicenseDataByQuery" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseData">
+      <http:operation location="/GetLicenseData" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileByFileNumber">
+      <http:operation location="/GetLicenseFileByFileNumber" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileByFileNumberTwo">
+      <http:operation location="/GetLicenseFileByFileNumberTwo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileByHolderID">
+      <http:operation location="/GetLicenseFileByHolderID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileByHolderName">
+      <http:operation location="/GetLicenseFileByHolderName" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFile">
+      <http:operation location="/GetLicenseFile" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileByQuery">
+      <http:operation location="/GetLicenseFileByQuery" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyLicenseByFileNumber">
+      <http:operation location="/VerifyLicenseByFileNumber" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyLicenseByHolderID">
+      <http:operation location="/VerifyLicenseByHolderID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyLicenseByHolderName">
+      <http:operation location="/VerifyLicenseByHolderName" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyLicenseByLicenseID">
+      <http:operation location="/VerifyLicenseByLicenseID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentListBySFZ">
+      <http:operation location="/GetDocumentListBySFZ" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentListByQueryOfPerson">
+      <http:operation location="/GetDocumentListByQueryOfPerson" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileByQueryOfPerson">
+      <http:operation location="/GetLicenseFileByQueryOfPerson" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataByQueryOfPerson">
+      <http:operation location="/GetLicenseDataByQueryOfPerson" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPowerObjList">
+      <http:operation location="/GetPowerObjList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataFromDS">
+      <http:operation location="/GetLicenseDataFromDS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileFromDS">
+      <http:operation location="/GetLicenseFileFromDS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="LicenseShareHttpPost" type="tns:LicenseShareHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="test">
+      <http:operation location="/test" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Authorization">
+      <http:operation location="/Authorization" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseType">
+      <http:operation location="/GetLicenseType" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentListByQuery">
+      <http:operation location="/GetDocumentListByQuery" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentListByCode">
+      <http:operation location="/GetDocumentListByCode" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentListByName">
+      <http:operation location="/GetDocumentListByName" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataByFileNumber">
+      <http:operation location="/GetLicenseDataByFileNumber" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataByFileNumberTwo">
+      <http:operation location="/GetLicenseDataByFileNumberTwo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataByHolderID">
+      <http:operation location="/GetLicenseDataByHolderID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataByHolderName">
+      <http:operation location="/GetLicenseDataByHolderName" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataByQuery">
+      <http:operation location="/GetLicenseDataByQuery" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseData">
+      <http:operation location="/GetLicenseData" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileByFileNumber">
+      <http:operation location="/GetLicenseFileByFileNumber" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileByFileNumberTwo">
+      <http:operation location="/GetLicenseFileByFileNumberTwo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileByHolderID">
+      <http:operation location="/GetLicenseFileByHolderID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileByHolderName">
+      <http:operation location="/GetLicenseFileByHolderName" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFile">
+      <http:operation location="/GetLicenseFile" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileByQuery">
+      <http:operation location="/GetLicenseFileByQuery" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyLicenseByFileNumber">
+      <http:operation location="/VerifyLicenseByFileNumber" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyLicenseByHolderID">
+      <http:operation location="/VerifyLicenseByHolderID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyLicenseByHolderName">
+      <http:operation location="/VerifyLicenseByHolderName" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyLicenseByLicenseID">
+      <http:operation location="/VerifyLicenseByLicenseID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentListBySFZ">
+      <http:operation location="/GetDocumentListBySFZ" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentListByQueryOfPerson">
+      <http:operation location="/GetDocumentListByQueryOfPerson" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileByQueryOfPerson">
+      <http:operation location="/GetLicenseFileByQueryOfPerson" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataByQueryOfPerson">
+      <http:operation location="/GetLicenseDataByQueryOfPerson" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPowerObjList">
+      <http:operation location="/GetPowerObjList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDataFromDS">
+      <http:operation location="/GetLicenseDataFromDS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseFileFromDS">
+      <http:operation location="/GetLicenseFileFromDS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LicenseShare">
+    <wsdl:port name="LicenseShareSoap" binding="tns:LicenseShareSoap">
+      <soap:address location="http://117.25.28.209:11121/XmEgssWebService/LicenseShare.asmx" />
+    </wsdl:port>
+    <wsdl:port name="LicenseShareSoap12" binding="tns:LicenseShareSoap12">
+      <soap12:address location="http://117.25.28.209:11121/XmEgssWebService/LicenseShare.asmx" />
+    </wsdl:port>
+    <wsdl:port name="LicenseShareHttpGet" binding="tns:LicenseShareHttpGet">
+      <http:address location="http://117.25.28.209:11121/XmEgssWebService/LicenseShare.asmx" />
+    </wsdl:port>
+    <wsdl:port name="LicenseShareHttpPost" binding="tns:LicenseShareHttpPost">
+      <http:address location="http://117.25.28.209:11121/XmEgssWebService/LicenseShare.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,34 @@
+@charset "utf-8";
+html, ul, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, td, img, dl, dt, dd {margin: 0;padding: 0;border: 0;}
+body{font-size:12px;margin: 0 auto;padding: 0;border: 0;}
+ul{list-style-type:none;}
+select,input{vertical-align:middle;}
+img {border:none;}
+a{text-decoration: none; color:#333;}
+a:hover {text-decoration: none; color:#930}
+
+.editor_top{background:url(../images/editor_bgT.jpg) repeat-x bottom #d5e7fd; padding:4px 4px 3px}
+.editor_top th{text-align:right; font-weight:normal;}
+.editor_top td{height:25px; line-height:25px}
+.editor_top td p{float:left; display:inline; padding:0 0 3px 0; height:22px!important; line-height:22px!important}
+.editor_top td a{float:left; display:inline; margin:0 0 0 4px}
+.editor_top td input{float:left; display:inline; vertical-align:middle}
+.editor_top td select{float:left; display:inline; vertical-align:middle; height:22px; line-height:22px; font-size:12px}
+.editor_top td span{float:left; display:inline; color:#F00; padding:0 4px 2px; height:20px!important; line-height:20px!important}
+
+.editor_input{background:url(../images/editor_input.jpg) repeat-x; border:1px solid #b5b8c8; height:18px; line-height:18px}
+
+.editor_btn li{text-align:center; height:24px; padding:3px 0}
+.editor_btn li a:hover{position:relative; top:1px}
+
+.editor_boxR{border-left:1px solid #b6b7c9; border-bottom:1px solid #b6b7c9}
+
+.editor_titleR{cursor: pointer;background:url(../images/editor_titleR.jpg) no-repeat right; margin:1px 1px 0 0; height:23px; line-height:23px; padding:1px 0 0 6px; font-size:14px; font-weight:bold}
+
+.editor_table{padding:8px 4px}
+.editor_table select{font-size:12px}
+.editor_table input{font-size:12px}
+.editor_table th{font-weight:normal; text-align:right; padding:3px 2px 1px}
+.editor_table td{padding:3px 2px 1px}
+
+.editor_table_input{margin:0 4px 2px 0; _margin:0 0 4px 0}

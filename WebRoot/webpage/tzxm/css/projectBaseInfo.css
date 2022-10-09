@@ -1,0 +1,327 @@
+.eui-content{
+	height: auto;
+	padding-bottom: 100px;
+	background: none;
+}
+/*内容开始*/
+.slideTxtBox{/*border:1px solid #ddd;*/ border-top: none; text-align:left; /*margin: 0 20px; height: 50.5vh;*/overflow: auto;padding-bottom: 10px; margin-bottom: 20px;}
+.slideTxtBox .hd{ height:50px; line-height:50px; background:none;  position:relative; }
+.slideTxtBox .hd ul{ float:left;  position:absolute; left:0px; top:-1px; height:32px;   }
+.slideTxtBox .hd ul li{ float:left; padding:0 15px; cursor:pointer;  font-size: 20px; color: #0582e1;}
+.slideTxtBox .hd ul li.on{ height:44px; line-height: 40px;font-weight: 600;  background:#cae7fd; border:1px solid #ddd;     border-bottom: solid 2px rgba(255,255,255,0.1);border-top:6px solid #0068b7; color: #0068b7; font-style: italic;}
+/* .slideTxtBox .bd{ border: 1px solid #ddd;} */
+.slideTxtBox .bd ul{  zoom:1;  }    
+.slideTxtBox .bd li{ height:24px; line-height:24px;   }
+.slideTxtBox .bd li .date{ float:right; color:#999;  }
+
+.eui-table-input{
+	/* font-family: "宋体"; */
+	/* margin:20px 0; */
+/* 	text-align: center; */
+}
+.eui-table{
+	border-bottom: solid 2px #3a81d1;
+	box-sizing: border-box;
+	margin: 0 30px 10px 30px;
+}
+.eui-table p{
+	height: 50px;
+	text-align: left;
+	line-height: 50px;
+	font-size: 18px;
+	color: #3a81d1;
+}
+
+
+.eui-table-input table{
+	width: calc(100% - 60px);
+	margin: 0 30px;
+	font-size: 14px;
+	/* width: 1000px; */
+}
+.eui-table-input table tr{
+}
+.eui-table-input table tr td{
+	height: 40px;
+	line-height: 40px;
+	padding: 5px 0;
+	font-size: 16px;
+}
+.eui-table-input table tr td span{
+	color: #ff0000;
+}
+.eui-table-input table tr td:nth-child(odd){
+	width: 160px;
+	text-align: right;
+	padding-right: 10px;
+	vertical-align: text-top;
+}
+.eui-table-input table tr td:nth-child(4){
+	width: 400px;
+}
+.eui-table-input table tr td input{
+	width: 280px;
+	height: 40px;
+	line-height: 40px;
+	border: solid 1px #c9deef;
+	box-sizing: border-box;
+	padding: 0 10px;
+}
+
+.eui-table-input table tr td div input{
+	width: 350px;
+	height: 16px;
+	line-height: 16px;
+	border: solid 1px #c9deef;
+}
+
+.eui-table-input table tr td select{
+	width: 280px!important;
+	height: 40px;
+	line-height: 40px;
+	border: solid 1px #c9deef;
+	appearance:none;
+	-moz-appearance:none;
+	-webkit-appearance:none;
+	background: url(../images/down.png) no-repeat right,#FFFFFF;
+	background-position-x: 255px;
+	padding-left: 10px;
+	box-sizing: border-box;
+}
+/*.eui-table-input table tr td select:after{
+	content: "";
+	width: 20px;
+	height: 20px;
+	background: url(../images/down.png) no-repeat;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}*/
+.eui-table-input .eui-jiaoyan{
+	display: inline-block;
+	width: 60px;
+	height: 31px;
+	line-height: 31px;
+	text-align: center;
+	background: #44a3eb;
+	color: #FFFFFF;
+	border-radius: 5px;
+}
+.eui-table-input b{
+ 	color: #ff0000;
+ 	font-weight: 500;
+ }
+.eui-table-input .eui-a-href{
+ 	color: #ff0000;
+ 	text-decoration: underline;
+ }
+.eui-table-input .eui-bh{
+	width: 328px;
+}
+.eui-table-input .eve-input-all{
+	width: 952px;
+}
+
+.eui-table-input .eve-select-package{
+	width: 382px;
+	height: 20px;
+}
+.eui-table-input table tr td .eui-input-h{
+	height: 60px;
+}
+.eui-table-input table tr td .eui-input-w{
+	width: 848px;
+	height: 100px;
+	border: solid 1px #c9deef;
+}
+.eui-9-progress-btn{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	display: inline-block;
+	width: 90px;
+	height: 36px;
+	text-align: center;
+	line-height: 36px;
+	font-size: 16px;
+	color: #FFFFFF;
+	background: #0f88ec;
+	border-radius: 5px;
+	margin-top: 16px;
+}
+.eui-submit-btn{
+	display: block;
+	height: 50px;
+	width: 179px;
+	line-height:50px; 
+	text-align:center; 
+	font-size:24px; 
+	color:#fff; 
+	background: #3A81D1;
+	margin: auto;
+}
+
+.eui-9-progress{
+	
+}
+.eui-9-progress-head{height: 36px;margin: 20px  30px 0 30px;position: relative;}
+.eui-9-progress-head span{
+	display: inline-block;
+    width: 300px;
+    height: 36px;
+    line-height: 36px;
+    color: #FFFFFF;
+    font-size: 18px;
+    background: url(../images/index3.png) no-repeat;
+    background-size: 100%;
+    padding-left: 20px;
+}
+.eui-9-progress-head a{display: inline-block;height: 36px; line-height: 36px;font-size: 16px;color: #FFFFFF;background:#0f88ec;text-align: center;padding: 0 15px;border-radius: 5px;position: absolute;right: 0;top: 50%;transform: translateY(-50%);}
+.eui-9-progress-input{
+	margin-top: 18px;
+	position: relative;
+}
+.eui-9-progress-input table{
+	padding: 0 60px;
+	display: inline-block;
+}
+.eui-9-progress-input tr{
+	display: inline-block;
+	margin-top: 6px;
+}
+.eui-9-progress-input tr td{
+	height: 37px;
+	line-height: 37px;
+}
+.eui-9-progress-input table tr td:nth-child(odd) {
+    width: 140px;
+    text-align: right;
+    padding-right: 10px;
+    vertical-align: text-top;
+}
+.eui-9-progress-input tr td input{
+	width: 350px;
+    height: 35px;
+    line-height: 35px;
+    border: solid 1px #c9deef;
+}
+.eui-9-progress-input table tr td select{
+	width: 352px;
+	height: 37px;
+	line-height: 37px;
+	border: solid 1px #c9deef;
+	appearance:none;
+	-moz-appearance:none;
+	-webkit-appearance:none;
+	background: url(../images/down.png) no-repeat right,#FFFFFF;
+	background-position-x: 320px;
+	padding-left: 10px;
+}
+.eui-9-progress-input table tr .eui-9-progress-data select{
+	 width: 160px;
+}
+.eui-9-progress-input table tr .eui-9-progress-data span{
+	display: inline-block;
+	width: 23px;
+	text-align: center;
+}
+.eui-9-progress-btn{
+	position: absolute;
+	/*bottom: 0;*/
+	left: 50%;
+	transform: translate(-50%);
+	display: inline-block;
+	width: 90px;
+	height: 36px;
+	text-align: center;
+	line-height: 36px;
+	font-size: 16px;
+	color: #FFFFFF;
+	background: #0f88ec;
+	border-radius: 5px;
+	margin-top: 16px;
+}
+.eui-9-progress-table-1{
+	margin:60px 30px 30px 30px;
+}
+.eui-9-progress-table-1 table{
+	width: 100%;
+}
+.eui-9-progress-table-1 table tr:first-child{
+	background: -webkit-linear-gradient(to right,rgba(15,136,236,0.8), rgba(62,158,238,0.8)); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(to right,rgba(15,136,236,0.8), rgba(62,158,238,0.8)); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(to right,rgba(15,136,236,0.8), rgba(62,158,238,0.8)); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right,rgba(15,136,236,0.8), rgba(62,158,238,0.8)); /* 标准的语法 */
+}
+.eui-9-progress-table-1 table tr{
+	text-align: center;
+}
+.eui-9-progress-table-1 table tr th{
+	height: 41px;
+	line-height: 41px;
+	color: #FFFFFF;
+	font-size: 16px;
+	border: solid 1px #e1e1e1;
+}
+.eui-9-progress-table-1 table tr td{
+	height: 60px;
+	line-height: 60px;
+	color: #4c4c4c;
+	font-size: 16px;
+	border: solid 1px #e1e1e1;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.eui-9-progress-table-1 table tr td .span-1{
+	color:#01b549 ;
+}
+.eui-9-progress-table-1 table tr td .span-2{
+	color:#f40000 ;
+}
+.eui-9-progress-table-3{
+	margin: 30px;
+}
+.eui-9-progress-table-3 table{
+	width: 100%;
+}
+.eui-9-progress-table-3 table tr{
+	height: 60px;
+	line-height: 60px;
+}
+.eui-9-progress-table-3 table tr td{
+	font-size: 14px;
+	border:solid 1px #e1e1e1;
+}
+.eui-9-progress-table-3 table tr td:nth-child(odd){
+	width: 184px;
+	text-align: right;
+	padding-right: 16px;
+	color: #FFFFFF;
+	background: -webkit-linear-gradient(to right,rgba(15,136,236,0.8), rgba(62,158,238,0.8)); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(to right,rgba(15,136,236,0.8), rgba(62,158,238,0.8)); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(to right,rgba(15,136,236,0.8), rgba(62,158,238,0.8)); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right,rgba(15,136,236,0.8), rgba(62,158,238,0.8)); /* 标准的语法 */
+}
+.eui-9-progress-table-3 table tr td:nth-child(even){
+	padding-left: 20px;
+}
+.czxq{
+	color: #0078ff;
+	text-decoration: underline;
+}
+
+
+
+/*10 项目登记*/
+.eui-9-progress-table-title i{display: block;font-weight: 600;font-size: 18px;color: #0068b7;margin:20px 0 10px 0;}
+.eui-10-progress{margin:10px 30px 30px 30px;}
+.eui-10-progress table{table-layout: fixed;}
+.eui-10-progress table tr th:nth-child(1),.eui-10-progress table tr td:nth-child(1){display: inline-block;width: 128px;}
+.eui-10-progress table tr th:nth-child(2),.eui-10-progress table tr td:nth-child(2){display: inline-block;width: 578px;}
+.eui-10-progress table tr th:nth-child(3),.eui-10-progress table tr td:nth-child(3){display: inline-block;width: 364px;}
+.eui-10-progress a{display: inline-block;width: 90px;height: 30px;line-height: 30px;text-align: center;font-size:16px;color: #4c4c4c;border-radius: 5px;margin:0 10px;}
+.eui-10-progress a.sc{border: solid 1px #939393;}
+.eui-10-progress a.xz{border: solid 1px #0582e1;color: #0582e1;}
+.eui-10-progress a.shanchu{border: solid 1px red;color: red;}
+/*10 项目登记*/

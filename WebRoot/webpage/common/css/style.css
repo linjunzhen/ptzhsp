@@ -1,0 +1,171 @@
+@charset "utf-8";
+html,body,div,form,img,ul,ol,li,dl,dt,dd{margin: 0; padding: 0;}
+select,input,textarea {vertical-align:middle; padding:0; margin:0;}
+input{margin-right: 4px;margin-left: 4px;}
+textarea {resize:vertical;}
+img{border:0;}
+ol,ul{list-style:none;}
+a{text-decoration:none;}
+a:hover{text-decoration: none;}
+table{border-collapse:collapse;border-spacing:0;}
+td,th{padding:0;}
+body{word-break:break-all;}
+.lfloat{float:left;}
+.rfloat{float:right;}
+/*清除浮动*/
+.clearfix:after{content:'\0020';display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{*zoom:1; _zoom:1;}
+.bodybg{background:url(../images/tab-bg.jpg) repeat-y center;}
+
+
+/*样式开始*/
+.eui-hd{width:100%; padding:8px 14px; text-align:right; border-bottom:1px solid #ccc; position:fixed; top:0px; z-index:992; background:#f1efef; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;}
+.eui-btn{min-width:74px; height:27px; line-height:27px; padding:0 10px; border:none; border-radius:3px; cursor:pointer; color:#fff;}
+.eui-btn:hover,.eui-btn:active{filter:alpha(opacity=70); opacity:0.7;}
+.eui-btn3{min-width:52px; height:27px; line-height:27px; padding:0 10px; border:none; border-radius:3px; cursor:pointer; color:#fff;}
+.eui-btn3:hover,.eui-btn3:active{filter:alpha(opacity=70); opacity:0.7;}
+.eui-bg{background:#8cb839;}
+.eui-bg1{background:#fe6869;}
+.eui-bg2{background:#38c9c2;}
+.eui-slidebox{width: 1000px;margin: 0 auto; padding: 10px;position: relative;}
+.eui-sdehd{background: #fff;border-bottom: 1px solid #ccc;height: 43px;line-height: 33px;margin-bottom: 12px;position: fixed;top: 44px;width: 1000px;z-index: 992;}
+.eui-sdehd ul{margin-top: 10px;}
+.eui-sdehd ul li{float:left; display:inline; margin-right:6px;}
+.eui-sdehd ul li a{display:block; height:32px; line-height:32px; font-size:14px; position:relative; z-index:2; padding:0 6px;color:#077ccb;border:1px solid #ccc; background:#fff;}
+.eui-sdehd ul li a:hover,.eui-sdehd ul .on a{background:#c4e7fe !important; border-bottom:1px solid #c4e7fe !important; color:#333 !important;}
+.eui-sdehd ul li .eui-bg3{background:#c61c00; color:#fff;}
+.eui-sdehd ul li .eui-bg4{background:#29b609; color:#fff;}
+.eui-bg5{background:#f4f9fd; font-weight:bold;}
+.eui-table,.eui-table1{width:100%; font-family:"宋体"; color:#333;}
+.eui-table tr th,.eui-table1 tr th{height:31px; line-height:31px; font-size:14px; text-align:center; border:1px solid #d6d6d6; background:#c4e7fe;}
+.eui-table tr td{height:37px; line-height:37px; border:1px solid #d6d6d6; padding:0 5px;}
+.eui-width{width:126px; font-weight:bold; text-align:right; background:#f4f9fd;}
+.eui-input{width:80%; height:26px; line-height:26px; padding:0 5px;}
+.eui-table tr td label{margin:0 8px;}
+.eui-table1 tr td{height:37px; line-height:20px; text-align:center; border:1px solid #d6d6d6; padding:0 5px;}
+.eui-btn1{display:inline-block; width:73px; height:27px; vertical-align:middle; background:url(../images/btn.png) no-repeat;}
+.tmargin60{margin-top:95px;}
+/**===============开始编写自定义输入框CSS=======================**/
+.eve-input{
+	width:151px;
+    margin-left:0; color: #336699; 
+    background: #fff; 
+    border: 1px solid #ccc; 
+    height:21px; 
+	line-height:21px;
+    /*vertical-align:middle;*/ 
+    -moz-border-radius: 2px; 
+    -webkit-border-radius: 2px; 
+    margin-top:3px;
+    margin-left:4px;
+}
+.eve-input:hover { 
+    border-color: #beebff; 
+    height:21px;
+    line-height:21px;
+}
+.eve-input:focus {
+    color:#147; 
+    border-color: #beebff; 
+    height:21px;
+    line-height:21px;
+}
+.eve-chcekbox{float:left; padding:0px; margin:0px;  text-align: left;}
+.eve-chcekbox ul li{float:left; margin:0 5px;}
+
+.eve-input1{
+	width:151px;
+    margin-left:0; color: #336699; 
+    background: #fff; 
+    border: 1px solid #ccc; 
+    height:25px; 
+	line-height:25px;
+    /*vertical-align:middle;*/ 
+    -moz-border-radius: 2px; 
+    -webkit-border-radius: 2px; 
+    margin-top:3px;
+    margin-left:4px;
+}
+.eve-input1:hover { 
+    border-color: #beebff; 
+    height:25px;
+    line-height:25px;
+}
+.eve-input1:focus {
+    color:#147; 
+    border-color: #beebff; 
+    height:25px;
+    line-height:25px;
+}
+/**===============结束编写自定义输入框CSS=======================**/
+/**===============开始编写自定义TEXTAREACSS=======================**/
+.eve-textarea{
+    border: 1px solid #ccc; 
+    margin-left:4px;
+}
+.eve-textarea:hover { 
+    border:1px solid #beebff; 
+}
+/**===============结束编写自定义TEXTAREACSS=======================**/
+
+
+/*新加*/
+.eui-titel{height:36px; line-height:36px; margin:10px 0; padding:0 10px; border-bottom:1px solid #ccc; font-family:"微软雅黑"; font-size:18px; color:#077ccb;}
+.eui-btn2{display:block; width:74px; height:26px; line-height:26px; text-align:center; color:#fff; font-size:14px; margin-top:10px; background:#29b609;}
+.eui-bg3{background:#c61c00; color:#fff;}
+.eui-btn2:hover{filter:alpha(opacity=70); opacity:0.7;}
+
+.panel-body {
+    color: #333;
+    font-size: 14px;
+}
+
+.statisTable{
+	text-align: center;	
+}
+ .statisTable th{
+    text-align: center;
+    background-color: #eef1f8;
+    font-weight: 400
+ }
+ 
+.eui-legend{height:38px; line-height:38px; padding:0 10px; text-align:center; border-bottom:1px solid #c9deef; background:#f9faff;}
+.eui-legend a{display: inline-block; padding-right:40px; color:#000; height:34px; margin-top:2px; background:url(../images/tab-on.png) no-repeat top right;}
+.eui-legend a:hover{background-position: bottom right; color:#399ade;}
+
+.eui-legbg{background:#3292cc;}
+.eui-legbg1{background:#41a976;}
+.eui-legbg2{background:#d85539;}
+.eui-legbg3{background:#7447a2;}
+
+
+
+/*  */
+.eui-slidebox .syj-title1{margin-top: 15px;}
+.eui-slidebox .syj-title1 span{font-size:16px;}
+.eui-slidebox .syj-table2{table-layout: initial; border-collapse:collapse;}
+.eui-slidebox .syj-table2 tr th{width: 150px; border: 1px solid #84b1d9; background:#f1f3ff;}
+.eui-slidebox .syj-table2 tr td{line-height: 27px; border: 1px solid #84b1d9;}
+.eui-slidebox .syj-input1{width:300px;}
+
+
+
+
+.eui-lcmain{width:928px; margin:0 auto;}
+.eui-lcbtn{float:left; width:96px; height:32px; line-height:32px; text-align:center; color:#000; margin:0 68px; background:url(../images/pointes_2.png) no-repeat;}
+.flow_container1{font-family: "Microsoft Yahei",Arial,sans-serif; display: inline-block; position: relative; float:left; font-size:14px;}
+.flow_container1 ul {list-style: none;}
+.flow_container1 ul,.flow_container1 li,.flow_container1 p{margin: 0; padding: 0;}
+.flow_container1 ul li{float:left; height:32px; position:relative; z-index:1; }
+.flow_container1 ul li i{display:inline-block; width:20px; text-align:center; padding-left:5px; font-style:normal;}
+.flow_container1 ul li span{display:inline-block; width:60px; text-align:left;}
+.flow_container1 ul li a{display:inline-block; width:96px; height:32px; line-height:32px; font-size:14px; margin:0 10px;}
+.flow_container1 ul li .flow_done1{background:url(../images/pointes_2.png) no-repeat; color: #000;}
+.flow_active1,.eui-lcbtn:hover{background:url(../images/pointes_3.png) no-repeat !important; color:#fff !important;}
+.flow_nodone1,.flow_nodone1:hover{background:url(../images/pointes_1.png) no-repeat; color:#c0c8c9;}
+.flow_progress1{position:relative; top:15px; margin:0 52px;}
+.flow_progress_bar1{height:2px; background:#e4e4e4;}
+.flow_progress_highlight1{display:block; height:2px; background:#60baff;}
+
+
+

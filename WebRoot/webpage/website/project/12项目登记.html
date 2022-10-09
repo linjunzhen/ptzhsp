@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta name="renderer" content="webkit">
+	<title></title>
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/Select.css">
+	<link rel="stylesheet" type="text/css" href="css/eui.css">
+</head>
+<body>
+	
+	<div class="eui-main">
+		<!-- 头部 -->
+		<div class="eui-con eui-flex vc eui-header">
+			<div class="eui-logo">
+				<a class="eui-flex vc" href="1首页.html"><img src="images/logo.png" ></a>
+			</div>
+			<div class="eui-nav flex1">
+				<ul class="eui-flex vc">
+					<li><a href="1首页.html">首　页</a></li>
+					<li><a href="2申报指引.html">申报指引</a></li>
+					<li><a href="3办事指南.html">办事指南</a></li>
+					<li class="on"><a href="4办件公示.html">办件公示</a></li>
+					<li><a href="5政策法规.html">政策法规</a></li>
+					<li><a href="6下载专区.html">下载专区</a></li>
+				</ul>
+			</div>
+			<div class="eui-header-login">
+				<!-- 未登录 -->
+				<a class="unlogin" href="#">登录/注册</a>
+				<!-- 已登录 -->
+				<div class="eui-user" style="display: none;">
+					<span>134****3386</span>
+					<div class="sub">
+						<a href="#">个人中心</a>
+						<a href="#">退出登录</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 头部 end -->
+		
+		<!-- banner -->
+		<div class="eui-banner slideBox">
+			<div class="hd"><ul class="eui-flex tc"></ul></div>
+			<div class="bd">
+				<ul>
+					<li><img src="images/banner.png" ></li>
+					<li><img src="images/banner.png" ></li>
+					<li><img src="images/banner.png" ></li>
+				</ul>
+			</div>
+		</div>
+		<!-- banner end -->
+		
+		<!-- 主体 -->
+		<div class="eui-con">
+			<div class="slideTxtBox eui-tab">
+				<div class="hd" style="margin-bottom: 12px;">
+					<ul class="eui-flex">
+						<li>项目基本信息</li>
+						<li>项目(法人)单位信息</li>
+					</ul>
+				</div>
+				<div class="bd">
+					<!-- 项目基本信息 -->
+					<div class="">
+						<div class="eui-table-info">
+							<table>
+								<colgroup>
+									<col>
+									<col width="200">
+									<col>
+									<col width="200">
+								</colgroup>
+								<tr>
+									<th><i>*</i>投资项目编号：</th>
+									<td colspan="3">
+										<div class="eui-flex bt">
+											<div class="flex1"><input class="ipt error" type="text" /></div>
+											<a class="eui-btn" href="javascript:void(0)">选择项目</a>
+										</div>
+										<span class="tooltips" style="display: none;">请输入正确的项目编号</span>
+									</td>
+								</tr>
+								<tr>
+									<th><i>*</i>项目名称：</th>
+									<td><input class="ipt" type="text" /></td>
+									<th><i>*</i>项目类型：</th>
+									<td>
+										<select name="">
+											<option value="">请选择项目类型</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<th><i>*</i>项目所属区划：</th>
+									<td><input class="ipt" type="text" /></td>
+									<th>投资项目目录编码：</th>
+									<td><input class="ipt" type="text" /></td>
+								</tr>
+								<tr>
+									<th><i>*</i>建设性质：</th>
+									<td>
+										<select name="">
+											<option value="">请选择建设性质</option>
+										</select>
+									</td>
+									<th><i>*</i>建设地点详情：</th>
+									<td><input class="ipt" type="text" /></td>
+								</tr>
+								<tr>
+									<th><i>*</i>拟开工时间：</th>
+									<td><input class="ipt date" type="text" /></td>
+									<th><i>*</i>拟建成时间：</th>
+									<td><input class="ipt date" type="text" /></td>
+								</tr>
+								<tr>
+									<th><i>*</i>总投资(万元)：</th>
+									<td><input class="ipt" type="text" /></td>
+									<th>申报时间：</th>
+									<td><input class="ipt date" type="text" /></td>
+								</tr>
+								<tr>
+									<th>总投资额为0时说明：</th>
+									<td colspan="3"><textarea rows="3" cols=""></textarea></td>
+								</tr>
+								<tr>
+									<th><i>*</i>建设地点：</th>
+									<td><input class="ipt" type="text" /></td>
+									<th>国际行业：</th>
+									<td>
+										<select name="">
+											<option value="">请选择国际行业</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<th><i>*</i>建设规模及内容：</th>
+									<td colspan="3"><textarea rows="3" cols=""></textarea></td>
+								</tr>
+								<tr>
+									<th><i>*</i>项目属性：</th>
+									<td><input class="ipt" type="text" /></td>
+									<th><i>*</i>产业结构指导目录：</th>
+									<td><input class="ipt" type="text" /></td>
+								</tr>
+								<tr>
+									<th><i>*</i>土地获取方式：</th>
+									<td><input class="ipt" type="text" /></td>
+									<th><i>*</i>项目投资来源：</th>
+									<td><input class="ipt" type="text" /></td>
+								</tr>
+								<tr>
+									<th><i>*</i>工程分类：</th>
+									<td>
+										<select name="">
+											<option value="">请选择工程分类</option>
+										</select>
+									</td>
+									<th><i>*</i>是否完成区域评估：</th>
+									<td>
+										<select name="">
+											<option value="">是</option>
+											<option value="">否</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<th><i>*</i>土地是否带设计方案：</th>
+									<td>
+										<select name="">
+											<option value="">是</option>
+											<option value="">否</option>
+										</select>
+									</td>
+									<th></th>
+									<td></td>
+								</tr>
+							</table>
+						</div>
+						<div class="eui-flex tc eui-sx-btn">
+							<a class="eui-btn light" href="javascript:void(0)">重 置</a>
+							<a class="eui-btn" href="javascript:void(0)">提 交</a>
+						</div>
+					</div>
+					<!-- 项目(法人)单位信息 -->
+					<div class="">
+						
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<!-- 主体 end -->
+		
+		<!-- 底部 -->
+		<div class="eui-footer">
+			<iframe frameborder="0" width="100%" height="100%" marginheight="0" marginwidth="0" scrolling="no" allowtransparency="true" src="foot.html"></iframe>
+		</div>
+		<!-- 底部 end -->
+	</div>
+	
+	<script type="text/javascript" charset="utf-8" src="js/jquery.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/jquery.SuperSlide.2.1.3.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/Select.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/totop.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			// banner切换
+			jQuery(".slideBox").slide({titCell:".hd ul",mainCell:".bd ul",effect:"fold",autoPlay:true,autoPage:true,interTime:4000});
+			// 选项卡切换
+			jQuery(".slideTxtBox").slide({targetCell:".more a",delayTime:0,triggerTime: 0,trigger:"click"});
+			//下拉框
+			$('select').selectMatch();
+		});
+	</script>
+	
+</body>
+</html>

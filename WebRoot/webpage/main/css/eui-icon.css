@@ -1,0 +1,295 @@
+/*eui-icon */
+/* 综合服务 */
+.eui-icon-1,
+a:hover .eui-icon-1{
+	background: url(../images/icon/eui_icon_1.png) no-repeat;
+    background-size: auto 14px;
+    height: 14px;
+    display: inline-block;
+}
+.eui-active1 .eui-icon-1{
+	background: url(../images/icon/eui_icon_1_h.png) no-repeat;
+    background-size: auto 14px;
+    height: 14px;
+    display: inline-block;
+}
+/* 窗口收件 */
+.eui-icon-2,
+a:hover .eui-icon-2{
+	background: url(../images/icon/eui_icon_2.png) no-repeat;
+	background-size: auto 14px;
+    height: 14px;
+    display: inline-block;
+}
+.eui-active1 .eui-icon-2{
+	background: url(../images/icon/eui_icon_2_h.png) no-repeat;
+    background-size: auto 14px;
+    height: 14px;
+    display: inline-block;
+}
+/* 叫号管理 */
+.eui-icon-3,
+a:hover .eui-icon-3{
+	background: url(../images/icon/eui_icon_3.png) no-repeat;
+	background-size: auto 14px;
+    height: 14px;
+    display: inline-block;
+}
+.eui-active1 .eui-icon-3{
+	background: url(../images/icon/eui_icon_3_h.png) no-repeat;
+    background-size: auto 14px;
+    height: 14px;
+    display: inline-block;
+}
+/* 社区审批 */
+.eui-icon-4,
+a:hover .eui-icon-4{
+	background: url(../images/icon/eui_icon_4.png) no-repeat;
+	background-size: auto 14px;
+    height: 14px;
+    display: inline-block;
+}
+.eui-active1 .eui-icon-4{
+	background: url(../images/icon/eui_icon_4_h.png) no-repeat;
+    background-size: auto 14px;
+    height: 14px;
+    display: inline-block;
+}
+/* 排队管理 */
+.eui-icon-5,
+a:hover .eui-icon-5{
+	background: url(../images/icon/eui_icon_5.png) no-repeat;
+	background-size: auto 14px;
+    height: 14px;
+    display: inline-block;
+}
+.eui-active1 .eui-icon-5{
+	background: url(../images/icon/eui_icon_5_h.png) no-repeat;
+    background-size: auto 14px;
+    height: 14px;
+    display: inline-block;
+}
+/* 商事登记 */
+.eui-icon-6,
+a:hover .eui-icon-6{
+	background: url(../images/icon/eui_icon_6.png) no-repeat;
+	background-size: auto 14px;
+    height: 14px;
+    display: inline-block;
+}
+.eui-active1 .eui-icon-6{
+	background: url(../images/icon/eui_icon_6_h.png) no-repeat;
+    background-size: auto 14px;
+    height: 14px;
+    display: inline-block;
+}
+/* 不动产登记 */
+.eui-icon-7,
+a:hover .eui-icon-7{
+	background: url(../images/icon/eui_icon_7.png) no-repeat;
+	background-size: auto 14px;
+    height: 14px;
+    display: inline-block;
+}
+.eui-active1 .eui-icon-7{
+	background: url(../images/icon/eui_icon_7_h.png) no-repeat;
+    background-size: auto 14px;
+    height: 14px;
+    display: inline-block;
+}
+/* 食药登记 */
+.eui-icon-8,
+a:hover .eui-icon-8{
+	background: url(../images/icon/eui_icon_8.png) no-repeat;
+	background-size: auto 14px;
+    height: 14px;
+    display: inline-block;
+}
+.eui-active1 .eui-icon-8{
+	background: url(../images/icon/eui_icon_8_h.png) no-repeat;
+    background-size: auto 14px;
+    height: 14px;
+    display: inline-block;
+}
+/* 数据对接配置 */
+.eui-icon-9,
+a:hover .eui-icon-9{
+	background: url(../images/icon/eui_icon_9.png) no-repeat;
+	background-size: auto 14px;
+    height: 14px;
+    display: inline-block;
+}
+.eui-active1 .eui-icon-9{
+	background: url(../images/icon/eui_icon_9_h.png) no-repeat;
+    background-size: auto 14px;
+    height: 14px;
+    display: inline-block;
+}
+/* 工程建设项目管理 */
+.eui-icon-10,
+a:hover .eui-icon-10{
+	background: url(../images/icon/eui_icon_10.png) no-repeat;
+	background-size: auto 14px;
+    height: 14px;
+    display: inline-block;
+}
+.eui-active1 .eui-icon-10{
+	background: url(../images/icon/eui_icon_10_h.png) no-repeat;
+    background-size: auto 14px;
+    height: 14px;
+    display: inline-block;
+}
+/* 政府服务事项管理 */
+.eui-icon-11,
+a:hover .eui-icon-11{
+	background: url(../images/icon/eui_icon_11.png) no-repeat;
+	background-size: auto 14px;
+    height: 14px;
+    display: inline-block;
+}
+.eui-active1 .eui-icon-11{
+	background: url(../images/icon/eui_icon_11_h.png) no-repeat;
+    background-size: auto 14px;
+    height: 14px;
+    display: inline-block;
+}
+/* 互动咨询 */
+.eui-icon-12,
+a:hover .eui-icon-12{
+	background: url(../images/icon/eui_icon_12.png) no-repeat;
+	background-size: auto 14px;
+    height: 14px;
+    display: inline-block;
+}
+.eui-active1 .eui-icon-12{
+	background: url(../images/icon/eui_icon_12_h.png) no-repeat;
+    background-size: auto 14px;
+    height: 14px;
+    display: inline-block;
+}
+/* 信息发布管理 */
+.eui-icon-13,
+a:hover .eui-icon-13{
+	background: url(../images/icon/eui_icon_13.png) no-repeat;
+	background-size: auto 14px;
+    height: 14px;
+    display: inline-block;
+}
+.eui-active1 .eui-icon-13{
+	background: url(../images/icon/eui_icon_13_h.png) no-repeat;
+    background-size: auto 14px;
+    height: 14px;
+    display: inline-block;
+}
+/* 权责清单管理 */
+.eui-icon-14,
+a:hover .eui-icon-14{
+	background: url(../images/icon/eui_icon_14.png) no-repeat;
+	background-size: auto 14px;
+    height: 14px;
+    display: inline-block;
+}
+.eui-active1 .eui-icon-14{
+	background: url(../images/icon/eui_icon_14_h.png) no-repeat;
+    background-size: auto 14px;
+    height: 14px;
+    display: inline-block;
+}
+/* 台湾区事业资格证书 */
+.eui-icon-15,
+a:hover .eui-icon-15{
+	background: url(../images/icon/eui_icon_15.png) no-repeat;
+	background-size: auto 14px;
+    height: 14px;
+    display: inline-block;
+}
+.eui-active1 .eui-icon-15{
+	background: url(../images/icon/eui_icon_15_h.png) no-repeat;
+    background-size: auto 14px;
+    height: 14px;
+    display: inline-block;
+}
+/* 办件统计分析 */
+.eui-icon-16,
+a:hover .eui-icon-16{
+	background: url(../images/icon/eui_icon_16.png) no-repeat;
+	background-size: auto 14px;
+    height: 14px;
+    display: inline-block;
+}
+.eui-active1 .eui-icon-16{
+	background: url(../images/icon/eui_icon_16_h.png) no-repeat;
+    background-size: auto 14px;
+    height: 14px;
+    display: inline-block;
+}
+/* 窗口统计分析 */
+.eui-icon-17,
+a:hover .eui-icon-17{
+	background: url(../images/icon/eui_icon_17.png) no-repeat;
+	background-size: auto 14px;
+    height: 14px;
+    display: inline-block;
+}
+.eui-active1 .eui-icon-17{
+	background: url(../images/icon/eui_icon_17_h.png) no-repeat;
+    background-size: auto 14px;
+    height: 14px;
+    display: inline-block;
+}
+/* 我的流程 */
+.eui-icon-18,
+a:hover .eui-icon-18{
+	background: url(../images/icon/eui_icon_18.png) no-repeat;
+	background-size: auto 14px;
+    height: 14px;
+    display: inline-block;
+}
+.eui-active1 .eui-icon-18{
+	background: url(../images/icon/eui_icon_18_h.png) no-repeat;
+    background-size: auto 14px;
+    height: 14px;
+    display: inline-block;
+}
+/* 智能工作流 */
+.eui-icon-19,
+a:hover .eui-icon-19{
+	background: url(../images/icon/eui_icon_19.png) no-repeat;
+	background-size: auto 14px;
+    height: 14px;
+    display: inline-block;
+}
+.eui-active1 .eui-icon-19{
+	background: url(../images/icon/eui_icon_19_h.png) no-repeat;
+    background-size: auto 14px;
+    height: 14px;
+    display: inline-block;
+}
+/* 系统管理 */
+.eui-icon-20,
+a:hover .eui-icon-20{
+	background: url(../images/icon/eui_icon_20.png) no-repeat;
+	background-size: auto 14px;
+    height: 14px;
+    display: inline-block;
+}
+.eui-active1 .eui-icon-20{
+	background: url(../images/icon/eui_icon_20_h.png) no-repeat;
+    background-size: auto 14px;
+    height: 14px;
+    display: inline-block;
+}
+/* 应用组件 */
+.eui-icon-21,
+a:hover .eui-icon-21{
+	background: url(../images/icon/eui_icon_21.png) no-repeat;
+	background-size: auto 14px;
+    height: 14px;
+    display: inline-block;
+}
+.eui-active1 .eui-icon-21{
+	background: url(../images/icon/eui_icon_21_h.png) no-repeat;
+    background-size: auto 14px;
+    height: 14px;
+    display: inline-block;
+}

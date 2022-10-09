@@ -1,0 +1,54 @@
+*{padding:0;margin:0;font-family:Tahoma, Helvetica, Arial, 'Microsoft YaHei', sans-serif;}
+.img-banner{width:100%;display:block}
+.bg-gray{background-color:#f9f7f8}
+.br-gray{height:8px;background-color:#f1f0f7}
+.item{padding:0 12px;height:32px;line-height:32px;border-bottom:1px solid #f1f0f7;color:#37b3fb;background:url(../images/tip.jpg) 0 2px no-repeat}
+.item-con{text-align:center;padding:20px 0}
+.item-icon img{width:40px}
+.item-t{font-size:14px;color:#333}
+.main{margin: 0 8px;}
+.mt4{margin-top: 4px;}
+
+.btn-modify {
+    font-size: 14px;
+    margin-top: 16px;
+    display: block;
+    text-decoration: underline;
+    font-style: italic;
+    color: #37b3fb;
+    right: 14px;
+    position: absolute;
+    margin-bottom: 30px;
+}
+.btn-save {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #37b3fb;
+}
+.btn-save:active {
+    color: rgba(255, 255, 255, 0.6)!important;
+    background-color: #67b3fb!important;
+}
+.title{
+    margin-top: .57em;
+    margin-bottom: .2em;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.content{
+    background-color: white;
+    padding: 4px 15px;
+    color: #888;
+}
+
+.select-01,.select-02{
+    width: 48%;
+    font-size: 16px;
+    height: 25px;
+    line-height: 25px;
+}
+.select-02 {
+    margin-left: 2%;
+}

@@ -1,0 +1,232 @@
+{
+	"EFLOW_BUSRECORDID" : "402881e6542190c1015421a1ca570003",
+	"EFLOW_BUSTABLENAME" : "T_BSFW_JBJINFO",
+	"EFLOW_CREATORACCOUNT" : "admin",
+	"EFLOW_CREATORID" : "402883524863ab1f014863ab1f340000",
+	"EFLOW_CREATORNAME" : "超级管理员",
+	"EFLOW_CUREXERUNNINGNODENAMES" : "审核",
+	"EFLOW_CURRENTTASK_ID" : "40283f8c5427042e0154270465f00002",
+	"EFLOW_CURUSEROPERNODENAME" : "审核",
+	"EFLOW_DEFID" : "4028b796513c2e1401513c91d9360008",
+	"EFLOW_DEFKEY" : "jbj",
+	"EFLOW_DEFVERSION" : 8,
+	"EFLOW_EXEID" : "FJPT16041701390",
+	"EFLOW_EXERUNSTATUS" : 1,
+	"EFLOW_ISQUERYDETAIL" : "false",
+	"HJMC" : "审核",
+	"SHRMC" : "海洋与渔业处",
+	"busRecord" : {
+		"YW_ID" : "402881e6542190c1015421a1ca570003",
+		"APPROVAL_ITEMS" : "机动车环保合格标志",
+		"BELONG_DEPT" : "569262478",
+		"PROMISE_DATE" : "0",
+		"BELONG_DEPTNAME" : "区环境与国土资源局",
+		"SXLX" : "即办件",
+		"SBMC" : "机动车环保合",
+		"FINISH_GETTYPE" : "01",
+		"EXE_ID" : "FJPT16041701390",
+		"DEF_ID" : "4028b796513c2e1401513c91d9360008",
+		"SUBJECT" : "机动车环保合(机动车环保合格标志)",
+		"CREATOR_NAME" : "超级管理员",
+		"CREATE_TIME" : "2016-04-17 08:32:12",
+		"RUN_STATUS" : 1,
+		"DEF_VERSION" : 8,
+		"CREATOR_ACCOUNT" : "admin",
+		"CREATOR_ID" : "402883524863ab1f014863ab1f340000",
+		"CUR_STEPNAMES" : "审核",
+		"CUR_STEPAUDITNAMES" : "林心怡",
+		"CUR_STEPAUDITACCOUNTS" : "linxinyi",
+		"BUS_RECORDID" : "402881e6542190c1015421a1ca570003",
+		"BUS_TABLENAME" : "T_BSFW_JBJINFO",
+		"ITEM_NAME" : "机动车环保合格标志",
+		"ITEM_CODE" : "569262478XK00101",
+		"SSBMBM" : "569262478",
+		"APPLY_STATUS" : 2,
+		"SQRMC" : "张三",
+		"SQRSFZ" : "11111",
+		"SQRSJH" : "13452031733",
+		"SQFS" : "2",
+		"BJCXMM" : "493627",
+		"JBR_NAME" : "张三",
+		"JBR_MOBILE" : "13452031733",
+		"JBR_ZJLX" : "SB",
+		"JBR_ZJHM" : "11111",
+		"BSYHLX" : "1",
+		"SQRZJLX" : "SB",
+		"FLOW_STAGE" : "1"
+	},
+	"currentNodeFieldRights" : [{
+				"FIELD_NAME" : "ITEM_CODE",
+				"RIGHTFLAG" : 2
+			}, {
+				"FIELD_NAME" : "ITEM_NAME",
+				"RIGHTFLAG" : 2
+			}, {
+				"FIELD_NAME" : "SQFS",
+				"RIGHTFLAG" : 2
+			}, {
+				"FIELD_NAME" : "EFLOW_DEFKEY",
+				"RIGHTFLAG" : 2
+			}, {
+				"FIELD_NAME" : "EFLOW_SUBMITMATERFILEJSON",
+				"RIGHTFLAG" : 2
+			}, {
+				"FIELD_NAME" : "BELONG_DEPT",
+				"RIGHTFLAG" : 2
+			}, {
+				"FIELD_NAME" : "APPROVAL_ITEMS",
+				"RIGHTFLAG" : 2
+			}, {
+				"FIELD_NAME" : "BELONG_DEPTNAME",
+				"RIGHTFLAG" : 2
+			}, {
+				"FIELD_NAME" : "SXLX",
+				"RIGHTFLAG" : 2
+			}, {
+				"FIELD_NAME" : "PROMISE_DATE",
+				"RIGHTFLAG" : 2
+			}, {
+				"FIELD_NAME" : "SBMC",
+				"RIGHTFLAG" : 2
+			}, {
+				"FIELD_NAME" : "FINISH_GETTYPE",
+				"RIGHTFLAG" : 2
+			}, {
+				"FIELD_NAME" : "SXXZ",
+				"RIGHTFLAG" : 2
+			}, {
+				"FIELD_NAME" : "BSYHLX",
+				"RIGHTFLAG" : 2
+			}, {
+				"FIELD_NAME" : "SQRMC",
+				"RIGHTFLAG" : 2
+			}, {
+				"FIELD_NAME" : "SQRZJLX",
+				"RIGHTFLAG" : 2
+			}, {
+				"FIELD_NAME" : "SQRSFZ",
+				"RIGHTFLAG" : 2
+			}, {
+				"FIELD_NAME" : "SQRSJH",
+				"RIGHTFLAG" : 2
+			}, {
+				"FIELD_NAME" : "SQRDHH",
+				"RIGHTFLAG" : 2
+			}, {
+				"FIELD_NAME" : "SQRLXDZ",
+				"RIGHTFLAG" : 2
+			}, {
+				"FIELD_NAME" : "SQRYJ",
+				"RIGHTFLAG" : 2
+			}, {
+				"FIELD_NAME" : "SQJG_NAME",
+				"RIGHTFLAG" : 2
+			}, {
+				"FIELD_NAME" : "SQJG_TYPE",
+				"RIGHTFLAG" : 2
+			}, {
+				"FIELD_NAME" : "SQJG_CODE",
+				"RIGHTFLAG" : 2
+			}, {
+				"FIELD_NAME" : "SQJG_LEALPERSON",
+				"RIGHTFLAG" : 2
+			}, {
+				"FIELD_NAME" : "SQJG_TEL",
+				"RIGHTFLAG" : 2
+			}, {
+				"FIELD_NAME" : "SQJG_ADDR",
+				"RIGHTFLAG" : 2
+			}, {
+				"FIELD_NAME" : "JBR_NAME",
+				"RIGHTFLAG" : 2
+			}, {
+				"FIELD_NAME" : "JBR_SEX",
+				"RIGHTFLAG" : 2
+			}, {
+				"FIELD_NAME" : "JBR_ZJLX",
+				"RIGHTFLAG" : 2
+			}, {
+				"FIELD_NAME" : "JBR_ZJHM",
+				"RIGHTFLAG" : 2
+			}, {
+				"FIELD_NAME" : "JBR_MOBILE",
+				"RIGHTFLAG" : 2
+			}, {
+				"FIELD_NAME" : "JBR_LXDH",
+				"RIGHTFLAG" : 2
+			}, {
+				"FIELD_NAME" : "JBR_POSTCODE",
+				"RIGHTFLAG" : 2
+			}, {
+				"FIELD_NAME" : "JBR_EMAIL",
+				"RIGHTFLAG" : 2
+			}, {
+				"FIELD_NAME" : "JBR_ADDRESS",
+				"RIGHTFLAG" : 2
+			}, {
+				"FIELD_NAME" : "JBR_REMARK",
+				"RIGHTFLAG" : 2
+			}, {
+				"FIELD_NAME" : "uploadUserName",
+				"RIGHTFLAG" : 2
+			}, {
+				"FIELD_NAME" : "uploadUserId",
+				"RIGHTFLAG" : 2
+			}, {
+				"FIELD_NAME" : "CKSJRYXM",
+				"RIGHTFLAG" : 2
+			}, {
+				"FIELD_NAME" : "applyMatersJson",
+				"RIGHTFLAG" : 2
+			}, {
+				"FIELD_NAME" : "SSBMBM",
+				"RIGHTFLAG" : 2
+			}],
+	"EFLOW_ISTEMPSAVE" : "-1",
+	"uploadUserId" : "40288b9f5387640b015388d9db2e01d9",
+	"uploadUserName" : "林心怡",
+	"applyMatersJson" : "",
+	"ITEM_NAME" : "机动车环保合格标志",
+	"ITEM_CODE" : "569262478XK00101",
+	"SSBMBM" : "569262478",
+	"SQFS" : "2",
+	"EFLOW_SUBMITMATERFILEJSON" : "[]",
+	"BELONG_DEPT" : "569262478",
+	"APPROVAL_ITEMS" : "机动车环保合格标志",
+	"BELONG_DEPTNAME" : "区环境与国土资源局",
+	"SXLX" : "即办件",
+	"PROMISE_DATE" : "0",
+	"SBMC" : "机动车环保合",
+	"SXXZ" : "行政许可",
+	"BSYHLX" : "1",
+	"SQRMC" : "张三",
+	"SQRZJLX" : "SB",
+	"SQRSFZ" : "11111",
+	"SQRSJH" : "13452031733",
+	"SQRDHH" : "",
+	"SQRLXDZ" : "",
+	"SQRYJ" : "",
+	"SQJG_NAME" : "",
+	"SQJG_TYPE" : "",
+	"SQJG_CODE" : "",
+	"SQJG_LEALPERSON" : "",
+	"SQJG_TEL" : "",
+	"SQJG_ADDR" : "",
+	"SFXSJBRXX" : "",
+	"lineId" : "",
+	"JBR_NAME" : "张三",
+	"JBR_SEX" : "",
+	"JBR_ZJLX" : "SB",
+	"JBR_ZJHM" : "11111",
+	"JBR_MOBILE" : "13452031733",
+	"JBR_LXDH" : "",
+	"JBR_POSTCODE" : "",
+	"JBR_EMAIL" : "",
+	"JBR_ADDRESS" : "",
+	"JBR_REMARK" : "",
+	"CKSJRYXM" : "超级管理员",
+	"FINISH_GETTYPE" : "01",
+	"REMARK" : "",
+	"flashvars" : "",
+	"movie" : ""
+}

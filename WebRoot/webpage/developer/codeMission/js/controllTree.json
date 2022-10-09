@@ -1,0 +1,132 @@
+[{
+	id : "-1",
+	name : "可视化控件树",
+	open : true,
+	icon : "plug-in/easyui-1.4/themes/icons/monitor.png",
+	children : [{
+				id : "1",
+				name : "布局组件",
+				open : false,
+				icon : "plug-in/easyui-1.4/themes/icons/folder_table.png",
+				children : [{
+							id : "2",
+							isControll:true,
+							name : "Layout组件",
+							icon : "plug-in/easyui-1.4/themes/icons/folder_table.png"
+						},{
+							id : "21",
+							isControll:true,
+							name : "TAB组件",
+							icon : "plug-in/easyui-1.4/themes/icons/folder_table.png"
+						}]
+			},
+			{
+				id : "3",
+				name : "表格组件",
+				open : false,
+				icon : "plug-in/easyui-1.4/themes/icons/folder_table.png",
+				children : [{
+							id : "4",
+							isControll:true,
+							name : "普通表格组件",
+							icon : "plug-in/easyui-1.4/themes/icons/folder_table.png"
+						}]
+			},
+			{
+				id : "5",
+				name : "表单组件",
+				open : false,
+				icon : "plug-in/easyui-1.4/themes/icons/folder_table.png",
+				children : [{
+							id : "11",
+							isControll:true,
+							name : "表单布局",
+							icon : "plug-in/easyui-1.4/themes/icons/folder_table.png"
+						},{
+							id : "12",
+							isControll:true,
+							name : "隐藏域",
+							icon : "plug-in/easyui-1.4/themes/icons/folder_table.png"
+						},{
+							id : "6",
+							isControll:true,
+							name : "文本框",
+							icon : "plug-in/easyui-1.4/themes/icons/folder_table.png"
+						},
+						{
+							id : "7",
+							isControll:true,
+							name : "数值框",
+							icon : "plug-in/easyui-1.4/themes/icons/folder_table.png"
+						},
+						{
+							id : "8",
+							isControll:true,
+							name : "日期框",
+							icon : "plug-in/easyui-1.4/themes/icons/folder_table.png"
+						},
+						{
+							id : "9",
+							isControll:true,
+							name : "下拉框",
+							icon : "plug-in/easyui-1.4/themes/icons/folder_table.png"
+						},
+						{
+							id : "16",
+							isControll:true,
+							name : "单选框",
+							icon : "plug-in/easyui-1.4/themes/icons/folder_table.png"
+						},
+						{
+							id : "17",
+							isControll:true,
+							name : "复选框",
+							icon : "plug-in/easyui-1.4/themes/icons/folder_table.png"
+						},
+						{
+							id : "10",
+							isControll:true,
+							name : "大文本框",
+							icon : "plug-in/easyui-1.4/themes/icons/folder_table.png"
+						},
+						{
+							id : "13",
+							isControll:true,
+							name : "下拉树",
+							icon : "plug-in/easyui-1.4/themes/icons/folder_table.png"
+						},
+						{
+							id : "14",
+							isControll:true,
+							name : "上传控件",
+							icon : "plug-in/easyui-1.4/themes/icons/folder_table.png"
+						},
+						{
+							id : "15",
+							isControll:true,
+							name : "Eweb编辑器",
+							icon : "plug-in/easyui-1.4/themes/icons/folder_table.png"
+						}
+						]
+			},
+			{
+				id : "18",
+				name : "代码模版",
+				open : false,
+				icon : "plug-in/easyui-1.4/themes/icons/folder_table.png",
+				children : [{
+							id : "19",
+							isControll:true,
+							name : "树与列表操作",
+							icon : "plug-in/easyui-1.4/themes/icons/folder_table.png"
+						},
+						{
+							id : "20",
+							isControll:true,
+							name : "树形选择器",
+							icon : "plug-in/easyui-1.4/themes/icons/folder_table.png"
+						}
+						]
+			}
+			]
+}]

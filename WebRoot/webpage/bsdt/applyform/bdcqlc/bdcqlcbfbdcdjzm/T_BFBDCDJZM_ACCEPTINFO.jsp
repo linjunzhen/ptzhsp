@@ -1,0 +1,81 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="eve" uri="/evetag"%>
+<!-- 受理信息 -->
+<div class="tab_height"></div>
+<input type="hidden" name="FWXX_JSON" value="${serviceItem.FWXX_JSON}">
+<input type="hidden" name="YGXX_JSON" value="${serviceItem.YGXX_JSON}">
+<table cellpadding="0" cellspacing="1" class="tab_tk_pro2">
+	<tr>
+		<th colspan="4">受理信息</th>
+	</tr>
+	<tr>
+		<td class="tab_width">
+			<font class="tab_color">*</font>登记类型：
+		</td>
+		<td><input type="text" class="tab_text " disabled="disabled" name="CATALOG_NAME"
+				value="${serviceItem.CATALOG_NAME }" /></td>
+		<td class="tab_width">
+			<font class="tab_color">*</font>权利类型：
+		</td>
+		<td><input type="text" class="tab_text " disabled="disabled" name="ITEM_NAME"
+				value="${serviceItem.ITEM_NAME }" /></td>
+	</tr>
+	<tr>
+		<td class="tab_width">
+			<font class="tab_color ">*</font>不动产单元号：
+		</td>
+		<td colspan="3"><input type="text" class="tab_text validate[required,custom[estateNum]]" style="width: 450px"
+				onblur="checkIsAuditPass();" name="ESTATE_NUM" id="ESTATE_NUM"
+				value="${busRecord.ESTATE_NUM }" />&nbsp;&nbsp;
+			<input type="button" value="不动产预告登记查询" class="eve-button" onclick="showSelectBdcYgdacx();" /> </td>
+	</tr>
+	<tr>
+		<td class="tab_width">
+			<font class="tab_color" color="red">*</font>外网申请编号：
+		</td>
+		<td style="width:600px;">
+			<input type="text" class="tab_text validate[required]" style="width:600px;" name="BDC_WWSQBH"
+				value="${serviceItem.BDC_WWSQBH }" />
+		</td>
+		<td colspan='2'>
+			<a href="javascript:void(0);" class="eflowbutton">获取数据/外网</a>
+		</td>
+	</tr>
+	<tr>
+		<td class="tab_width"><font class="tab_color ">*</font>类型：</td>
+		<td colspan="3">
+			<input type="radio" name="TYPE" value="1" <c:if test="${busRecord.TYPE!='2' && busRecord.TYPE!='3'}">checked="checked"</c:if>>补发证明登记
+			<input type="radio" name="TYPE" value="2" <c:if test="${busRecord.TYPE=='2'}">checked="checked"</c:if>>预购商品房预告补发登记
+			<input type="radio" name="TYPE" value="3" <c:if test="${busRecord.TYPE=='3'}">checked="checked"</c:if>>抵押权预告补发登记
+		</td>
+	</tr>
+	<tr>
+		<td class="tab_width">
+			<font class="tab_color ">*</font>申请人(单位)：
+		</td>
+		<td colspan="3"><input type="text" class="tab_text validate[required]" name="APPLICANT_UNIT"
+				value="${busRecord.APPLICANT_UNIT }" /></td>
+	</tr>
+	<tr>
+		<td class="tab_width">
+			<font class="tab_color ">*</font>坐落：
+		</td>
+		<td colspan="3"><input type="text" class="tab_text validate[required]" maxlength="60" name="LOCATED"
+				value="${busRecord.LOCATED}" style="width: 72%;" />
+		</td>
+	</tr>
+	<tr>
+		<td class="tab_width">通知人姓名：</td>
+		<td><input type="text" class="tab_text " name="NOTIFY_NAME" value="${busRecord.NOTIFY_NAME }" /></td>
+		<td class="tab_width">通知人电话：</td>
+		<td><input type="text" class="tab_text validate[custom[mobilePhoneLoose]]" maxlength="11" name="NOTIFY_TEL"
+				value="${busRecord.NOTIFY_TEL}" /></td>
+	</tr>
+	<tr>
+		<td class="tab_width">备注：</td>
+		<td colspan="3"><input type="text" class="tab_text validate[]" maxlength="60" name="REMARK"
+				value="${busRecord.REMARK}" style="width: 72%;" />
+		</td>
+	</tr>
+</table>

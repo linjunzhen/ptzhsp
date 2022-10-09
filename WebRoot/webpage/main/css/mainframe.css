@@ -1,0 +1,338 @@
+@charset "utf-8";
+/* CSS Document */
+html,body {
+	width: 100%;
+	height: 100%;
+}
+/*=========base========*/
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td
+	{
+	margin: 0;
+	padding: 0;
+}
+
+input,textarea {
+	font-size: 12px;
+	font-family: "宋体";
+	padding: 0;
+}
+
+img {
+	border: 0;
+}
+
+ul,ol {
+	list-style: none
+}
+
+a,a:hover {
+	text-decoration: none;
+}
+
+body {
+	font-size: 12px;
+	font-family: "宋体";
+}
+
+.clearFloat {
+	clear: both;
+	line-height: 0;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+/* 登录页面样式开始 */
+.login_logo {
+	width: 717px;
+	margin: 0 auto;
+	padding: 30px 0 0 0;
+}
+
+.login_register {
+	width: 770px;
+	height: 430px;
+	margin: 0 auto 170px;
+	background: url(../images/login_bg.png) no-repeat;
+}
+
+.login_margin {
+	padding: 56px 0 75px 132px;
+}
+
+.login_name input {
+	width: 443px;
+	height: 50px;
+	line-height: 50px;
+	border: none;
+	padding-left: 50px;
+	background: url(../images/input_name.png) no-repeat;
+}
+
+.login_pwd input {
+	width: 443px;
+	height: 50px;
+	border: none;
+	padding-left: 50px;
+	background: url(../images/input_pwd.png) no-repeat;
+}
+
+.login_name,.login_pwd,.login_yzm {
+	width: 493px;
+	height: 50px;
+	margin-bottom: 19px;
+}
+
+.login_yzm input {
+	float: left;
+	width: 223px;
+	height: 50px;
+	line-height: 50px;
+	border: none;
+	padding-left: 50px;
+	background: url(../images/input_yzm.png) no-repeat;
+}
+
+.login_yzm img {
+	float: left;
+	width: 105px;
+	height: 50px;
+	margin: 0 11px;
+}
+
+.login_yzm span {
+	float: left;
+	height: 50px;
+	line-height: 50px;
+}
+
+.login_dl {
+	width: 493px;
+	height: 50px;
+	line-height: 50px;
+	margin: 8px 0 0 0;
+	text-align: center;
+}
+
+.login_dl a {
+	display: block;
+	width: 493px;
+	height: 50px;
+	color: #FFF;
+	font-size: 14px;
+	font-weight: 700;
+	background: #ff8900;
+}
+
+.login_dl a:hover {
+	position: relative;
+	top: 1px;
+}
+
+.copyright {
+	color: #FFF;
+	text-align: center;
+}
+/* 登录页面样式结束 */
+
+/* top页面样式开始 */
+.topbg {
+	width: 100%;
+	height: 59px;
+	background: url(../images/top_bg.png) no-repeat left top;
+}
+
+.top_logo {
+	float: left;
+	padding: 6px 0 0 25px;
+	width:500px
+}
+.top_logo img{float:left;}
+.top_logo h1{color:#f7f7f7; height:46px; line-height:46px; margin:0 0 0 5px;}
+.top_nav {
+	float: right;
+	width: 466px;
+	height: 27px;
+	margin: 10px 19px 0 0;
+	background: url(../images/top_navbg.png) no-repeat;
+	overflow: hidden;
+}
+
+.top_nav ul li {
+	float: left;
+	height: 27px;
+	line-height: 27px;
+	color: #FFF;
+	margin: 0 8px;
+}
+
+.top_nav ul li span {
+	color: #fff200;
+}
+
+.top_nav ul li a {
+	color: #FFF;
+}
+
+.top_nav ul li img {
+	position: relative;
+	top: 4px;
+}
+/* top页面样式开始 */
+
+/* left_nav页面样式开始 */
+.left_navmain {
+	float: left;
+	width: 98px;
+	height: 100%;
+}
+
+.left_navtop {
+	width: 98px;
+	height: 33px;
+	text-align: center;
+}
+
+.left_nav {
+	width: 98px;
+	height: 95%;
+	background: url(../images/nav_bg.png) repeat-y;
+}
+
+.nav_content {
+	padding: 20px 0;
+}
+
+.nav_content ul li {
+	height: 83px;
+	overflow: hidden;
+	margin: 0 0 2px 8px;
+}
+
+.nav_content ul li a {
+	display: block;
+	float: left;
+	width: 83px;
+	height: 70px;
+	padding: 13px 0 0 0;
+	color: #7d7d7d;
+	text-align: center;
+	font-size: 14px;
+}
+
+.nav_content ul li a:hover {
+	background: url(../images/nav_hover.png) no-repeat;
+	font-weight: 700;
+	color: #FFF;
+}
+
+.nav_content ul li a img {
+	margin-bottom: 5px;
+}
+
+.nav_active {
+	width: 100px;
+	height: 83px;
+	margin: 0 0 2px 8px;
+	background: url(../images/nav_active.png) no-repeat;
+}
+
+.nav_active a {
+	font-weight: 700;
+	color: #FFF !important;
+}
+
+.nav_two {
+	position: absolute;
+	left: 108px;
+	float: left;
+}
+
+.nav_con {
+	width: 271px;
+	height: auto;
+	overflow: hidden;
+	background: url(../images/nav_con.png) repeat-y;
+}
+
+.nav_padding {
+	padding: 0 15px 5px 10px;
+}
+
+.nav_padding dl dd {
+	font-size: 14px;
+	font-weight: 700;
+	color: #293d58;
+	padding: 10px 0 10px 10px;
+}
+
+.nav_padding dl dt>a {
+	display: block;
+	width: auto;
+	height: auto;
+	font-size: 12px;
+	padding: 0 0 0 10px;
+	margin: 0 5px 0 0;
+	color: #000 !important;
+	font-weight: 400;
+}
+
+.nav_padding dl dt>a:hover {
+	background: url(../images/nav_twoli.png) no-repeat left center;
+	color: #000 !important;
+	font-weight: 400;
+}
+
+/* left_nav页面样式结束 */
+
+/* pt页面样式开始 */
+.pt_main {
+	width: 100%;
+	height: 768px;
+	background: url(../images/pt_bg.png) no-repeat center bottom;
+}
+
+.pt_logo {
+	width: 717px;
+	margin: 0 auto;
+	padding: 80px 0 0 0;
+}
+
+.pt_content {
+	width: 717px;
+	margin: 0 auto;
+	padding: 20px 0 0 0;
+}
+
+.pt_content ul li {
+	float: left;
+	margin: 30px 41px;
+	height:144px;
+}
+
+.pt_content ul li a:hover {
+	position: relative;
+	top: 1px;
+	left: 1px;
+}
+
+.pt_margin {
+	position: relative;
+	top: 20px;
+}
+
+.pt_copyright {
+	padding-top: 135px;
+	width: 717px;
+	margin: 0 auto;
+	text-align: center;
+	color: #FFF;
+}
+
+.pt_copyright p {
+	height: 20px;
+	line-height: 20px;
+}
+
+/* pt页面样式结束 */
+

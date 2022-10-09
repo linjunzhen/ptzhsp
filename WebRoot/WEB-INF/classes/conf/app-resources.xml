@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xmlns:aop="http://www.springframework.org/schema/aop"
+	   xmlns:tx="http://www.springframework.org/schema/tx"
+	   xmlns:ehcache="http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+           http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring 
+           http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring/ehcache-spring-1.2.xsd"
+           
+	   default-autowire="byName" default-lazy-init="false">
+    <context:annotation-config/>
+    <!-- 配置包扫描路径 -->
+    <context:component-scan base-package="net.evecom" annotation-config="true"/>
+    <!-- 事物性相关配置 -->
+    <tx:annotation-driven transaction-manager="txManager"/>
+  	<bean id="txManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+	   <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+	<aop:config>
+		<aop:pointcut id="servicePointCut" expression="execution(* net.evecom.platform.*.service..*(..))"/>
+		<aop:pointcut id="servicePointCut2" expression="execution(* net.evecom.core.service..*(..))"/>
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="servicePointCut"/>
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="servicePointCut2"/> 
+	</aop:config>
+	
+	<tx:advice id="txAdvice" transaction-manager="txManager">
+		<tx:attributes>
+			<tx:method name="get*" read-only="true"/>
+			<tx:method name="is*" read-only="true"/>
+			<tx:method name="find*" read-only="true"/>
+			<tx:method name="*"/>
+		</tx:attributes>
+	</tx:advice>
+    
+    <!-- 配置JDBC属性文件路径 -->
+	<bean id="propertyConfigurer" class="net.evecom.core.web.config.DecryptPropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:conf/jdbc.properties</value>
+			</list>
+		</property>
+	</bean>
+	<!-- 配置连接池 -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+  		<property name="driverClass">
+  			<value>${jdbc.driverClassName}</value>
+  		</property>
+  		<property name="jdbcUrl">
+  			<value>${jdbc.url}</value>
+  		</property>
+  		<property name="user">
+  			<value>${jdbc.username}</value>
+  		</property>
+  		<property name="password">
+  			<value>${jdbc.password}</value>
+  		</property>
+  		<!--初始化时获取的连接数，取值应在minPoolSize与maxPoolSize之间。Default: 3 -->
+  		<property name="initialPoolSize">
+  			<value>${c3p0.initialPoolSize}</value>
+  		</property>
+  		<!--连接池中保留的最小连接数。-->
+  		<property name="minPoolSize">
+  			<value>${c3p0.minPoolSize}</value>
+  		</property>
+  		<!--连接池中保留的最大连接数。Default: 15 -->
+  		<property name="maxPoolSize">
+  			<value>${c3p0.maxPoolSize}</value>
+  		</property>
+  		<!--最大空闲时间,60秒内未使用则连接被丢弃。若为0则永不丢弃。Default: 0 -->
+  		<property name="maxIdleTime">   
+            <value>${c3p0.maxIdleTime}</value>   
+        </property>
+        <!--当连接池中的连接耗尽的时候c3p0一次同时获取的连接数。Default: 3 -->   
+        <property name="acquireIncrement">   
+            <value>${c3p0.acquireIncrement}</value>   
+        </property>
+        <!--JDBC的标准参数，用以控制数据源内加载的PreparedStatements数量。但由于预缓存的statements   
+  		属于单个connection而不是整个连接池。所以设置这个参数需要考虑到多方面的因素。   
+  		如果maxStatements与maxStatementsPerConnection均为0，则缓存被关闭。Default: 0-->   
+        <property name="maxStatements">   
+            <value>${c3p0.maxStatements}</value>   
+        </property>
+        <!--每60秒检查所有连接池中的空闲连接。Default: 0 -->   
+        <property name="idleConnectionTestPeriod">   
+            <value>${c3p0.idleConnectionTestPeriod}</value>
+        </property>
+        <!--两次连接中间隔时间，单位毫秒，默认为1000 -->
+        <property name="acquireRetryDelay">
+        	<value>${c3p0.acquireRetryDelay}</value>
+        </property>
+        <!--定义在从数据库获取新连接失败后重复尝试的次数。Default: 30 -->   
+        <property name="acquireRetryAttempts">
+            <value>${c3p0.acquireRetryAttempts}</value>
+        </property>
+        <!--获取连接失败将会引起所有等待连接池来获取连接的线程抛出异常。但是数据源仍有效   
+  		保留，并在下次调用getConnection()的时候继续尝试获取连接。如果设为true，那么在尝试   
+  		获取连接失败后该数据源将申明已断开并永久关闭。Default: false-->   
+        <property name="breakAfterAcquireFailure">
+            <value>${c3p0.breakAfterAcquireFailure}</value>
+        </property>
+        <!--因性能消耗大请只在需要的时候使用它。如果设为true那么在每个connection提交的   
+  		时候都将校验其有效性。建议使用idleConnectionTestPeriod或automaticTestTable   
+  		等方法来提升连接测试的性能。Default: false -->
+        <property name="testConnectionOnCheckout">
+            <value>${c3p0.testConnectionOnCheckout}</value>
+        </property>
+        <!--c3p0是异步操作的，缓慢的JDBC操作通过帮助进程完成。扩展这些操作可以有效的提升性能 
+                      通过多线程实现多个操作同时被执行。Default: 3--> 
+        <property name="numHelperThreads">
+        	<value>${c3p0.numHelperThreads}</value>
+        </property>
+ 	</bean>
+ 	<!-- 配置ORACLE大文本配置 -->
+ 	<bean id="lobHandler" lazy-init="true" class="org.springframework.jdbc.support.lob.OracleLobHandler">
+		<property name="nativeJdbcExtractor">
+			<ref bean="nativeJdbcExtractor"/>
+		</property>
+	</bean>
+	<bean id="nativeJdbcExtractor" lazy-init="true" class="org.springframework.jdbc.support.nativejdbc.SimpleNativeJdbcExtractor"/>
+ 	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+	<!-- 配置sessionFactory -->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mappingLocations">
+			<list>
+				<value>classpath*:net/evecom/platform/**/model/**/*.hbm.xml</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="connection.useUnicode">true</prop>
+				<prop key="connection.characterEncoding">utf-8</prop>
+				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
+				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+				<prop key="hibernate.format_sql">${hibernate.format_sql}</prop>
+				<prop key="hibernate.jdbc.batch_size">20</prop>
+				<prop key="hibernate.jdbc.fetch_size">20</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<ehcache:annotation-driven cache-manager="ehCacheManager" />   
+   
+    <bean id="ehCacheManager" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">    
+       <property name="configLocation" value="classpath:conf/ehcache.xml" />    
+    </bean> 
+	
+	<!-- 定义ehcache工厂 -->
+    <bean id="ehCache" class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+       <property name="cacheManager"><ref local="ehCacheManager"/></property>
+       <property name="cacheName" value="SimpleMethodFilter"></property>
+    </bean>
+    <!-- find/create cache方法拦截器 -->
+    <bean id="methodCacheInterceptor" class="net.evecom.platform.system.filter.MethodCacheInterceptor">
+       <property name="cache"><ref local="ehCache"/></property>
+    </bean>
+    <bean id="methodCachePointCut" class="net.evecom.platform.system.filter.SelectEhcacheList">
+      <property name="advice"><ref local="methodCacheInterceptor"/></property>
+       <property name="patterns" value=" " >
+      </property>
+    </bean>
+    <!-- delete cache拦截器 -->
+    <bean id="methodCacheDelete" class="net.evecom.platform.system.filter.MethodCacheDelete">
+      <property name="cache"><ref local="ehCache"/></property>
+    </bean>
+    <bean id="methodCachePointCutDelete" class="net.evecom.platform.system.filter.SelectDelEhcacheList">
+       <property name="advice"><ref local="methodCacheDelete"/></property>
+       <property name="patterns" value="" >
+       </property>
+    </bean>
+
+	<!-- 国际化配置 -->
+	<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="cacheSeconds" value="0"/>
+		<property name="basenames">
+			<list>
+				<value>classpath:message_zh_CN</value>
+			</list>
+		</property>
+		<property name="useCodeAsDefaultMessage" value="true"/>
+	</bean>
+	
+	<!-- 引入应用程序工具类 -->
+	 <bean id="appUtil" class="net.evecom.core.util.AppUtil"/>
+</beans>

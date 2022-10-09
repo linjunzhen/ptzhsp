@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns="http://java.sun.com/xml/ns/javaee" 
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+ id="WebApp_ID" version="2.5">  
+    
+  <display-name>PTZHSP</display-name>
+  <context-param>
+    <param-name>webAppRootKey</param-name>
+    <param-value>PTZHSP.root</param-value>
+  </context-param>
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:conf/app-context.xml</param-value>
+  </context-param>
+  <servlet>
+    <servlet-name>springMVC</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>classpath:conf/app-servlet.xml</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UploadServlet</servlet-name>
+    <servlet-class>net.evecom.core.web.servlet.UploadServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DownLoadServlet</servlet-name>
+    <servlet-class>net.evecom.core.web.servlet.DownLoadServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DownLoadPrintServlet</servlet-name>
+    <servlet-class>net.evecom.core.web.servlet.DownLoadPrintServlet</servlet-class>
+  </servlet> 
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>PtwgUploadServlet</servlet-name>
+    <servlet-class>net.evecom.platform.ptwg.servlet.PtwgUploadServlet</servlet-class>
+  </servlet>   
+  <servlet>  
+      <servlet-name>Kaptcha</servlet-name>  
+      <servlet-class>com.google.code.kaptcha.servlet.KaptchaServlet</servlet-class>  
+      <init-param>  
+        <param-name>kaptcha.image.width</param-name>  
+        <param-value>90</param-value>  
+      </init-param>  
+      <init-param>  
+        <param-name>kaptcha.image.height</param-name>  
+        <param-value>35</param-value>  
+      </init-param>  
+      <init-param>  
+        <param-name>kaptcha.textproducer.font.size</param-name>  
+        <param-value>32</param-value>  
+      </init-param>  
+      <init-param>  
+        <param-name>kaptcha.textproducer.char.length</param-name>  
+        <param-value>4</param-value>  
+      </init-param>  
+      <init-param>  
+        <param-name>kaptcha.noise.impl</param-name>  
+        <param-value>com.google.code.kaptcha.impl.NoNoise</param-value>  
+      </init-param>  
+      <init-param>  
+        <param-name>kaptcha.textproducer.char.string</param-name>  
+        <param-value>0123456789</param-value>  
+      </init-param>  
+      <init-param>  
+        <param-name>kaptcha.textproducer.font.names</param-name>  
+        <param-value>微软雅黑</param-value>  
+      </init-param>  
+    </servlet>  
+  
+	<servlet>
+		<servlet-name>reg</servlet-name>
+		<servlet-class>net.evecom.core.util.RegisterCode</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>reg</servlet-name>
+		<url-pattern>/servlet/regCode</url-pattern>
+	</servlet-mapping>
+	
+  <servlet-mapping>
+    <servlet-name>springMVC</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UploadServlet</servlet-name>
+    <url-pattern>/UploadServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DownLoadServlet</servlet-name>
+    <url-pattern>/DownLoadServlet</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+    <servlet-name>DownLoadPrintServlet</servlet-name>
+    <url-pattern>/DownLoadPrintServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PtwgUploadServlet</servlet-name>
+    <url-pattern>/PtwgUploadServlet</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping> 
+     <servlet-name>Kaptcha</servlet-name> 
+     <url-pattern>/rand.jpg</url-pattern> 
+   </servlet-mapping> 
+  
+  
+  <!-- pageOffice servlet begin -->
+    <servlet>
+    <servlet-name>poserver</servlet-name>
+    <servlet-class>com.zhuozhengsoft.pageoffice.poserver.Server</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>poserver</servlet-name>
+    <url-pattern>/poserver.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>poserver</servlet-name>
+    <url-pattern>/poserver.zz</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>poserver</servlet-name>
+    <url-pattern>/pageoffice.cab</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>poserver</servlet-name>
+    <url-pattern>/popdf.cab</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping> 
+     <servlet-name>poserver</servlet-name> 
+     <url-pattern>/posetup.exe</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>poserver</servlet-name>
+    <url-pattern>/sealsetup.exe</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>adminseal</servlet-name>
+    <servlet-class>com.zhuozhengsoft.pageoffice.poserver.AdminSeal</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>adminseal</servlet-name>
+    <url-pattern>/adminseal.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>adminseal</servlet-name>
+    <url-pattern>/loginseal.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>adminseal</servlet-name>
+    <url-pattern>/sealimage.do</url-pattern>
+  </servlet-mapping>
+  
+  <!-- pageOffice servlet end -->
+  
+  <!-- webservice start -->  
+  <servlet>  
+      <servlet-name>XFireServlet</servlet-name>  
+      <servlet-class>  
+          org.codehaus.xfire.transport.http.XFireConfigurableServlet   
+      </servlet-class>  
+  </servlet>  
+
+  <servlet-mapping>  
+      <servlet-name>XFireServlet</servlet-name>  
+      <url-pattern>/servlet/XFireServlet/*</url-pattern>  
+  </servlet-mapping>  
+
+  <servlet-mapping>  
+      <servlet-name>XFireServlet</servlet-name>  
+      <url-pattern>/services/*</url-pattern>  
+  </servlet-mapping>
+  <!-- webservice end -->
+  
+  <!-- forbid http method -->
+  	      <security-constraint>  
+           <web-resource-collection>  
+               <url-pattern>/*</url-pattern>  
+               <http-method>PUT</http-method>  
+               <http-method>DELETE</http-method>  
+               <http-method>HEAD</http-method>  
+               <http-method>OPTIONS</http-method>  
+               <http-method>TRACE</http-method>  
+           </web-resource-collection>  
+           <auth-constraint></auth-constraint>  
+       </security-constraint>  
+       <!-- 
+      <servlet>  
+            <servlet-name>springServlet</servlet-name>  
+            <servlet-class>net.evecom.core.web.servlet.CustomerDispatcherServlet</servlet-class>  
+            <init-param>  
+                <param-name>contextConfigLocation</param-name>  
+                <param-value>classpath:conf/app-servlet.xml</param-value>  
+            </init-param>  
+            <load-on-startup>1</load-on-startup>  
+            <async-supported>true</async-supported>  
+     </servlet>
+	<servlet-mapping>
+		<servlet-name>springServlet</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>-->
+	
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>DownLoadAccessServlet</servlet-name>
+		<servlet-class>net.evecom.core.web.servlet.DownLoadAccessServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>DownLoadAccessServlet</servlet-name>
+		<url-pattern>/DownLoadAccessServlet</url-pattern>
+	</servlet-mapping>   
+        
+  <filter>
+    <filter-name>lazyLoadingFilter</filter-name>
+    <filter-class>org.springframework.orm.hibernate3.support.OpenSessionInViewFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>lazyLoadingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>encodingFilter</filter-name>
+    <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>UTF-8</param-value>
+    </init-param>
+    <init-param>
+      <param-name>forceEncoding</param-name>
+      <param-value>true</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>encodingFilter</filter-name>
+    <url-pattern>*.do</url-pattern>
+  </filter-mapping>
+  <!--  -->
+  <filter>
+    <filter-name>stringEscapeFilter</filter-name>
+    <filter-class>net.evecom.core.web.filter.StringEscapeFilter</filter-class>
+    <init-param>
+      <param-name>illegalCharacter</param-name>
+      <param-value>',%,(,),%3C,%3E,&lt;,>,update,delete,insert,where,alert(,prompt(</param-value>  
+    </init-param>
+  </filter> 
+  <filter-mapping>
+    <filter-name>stringEscapeFilter</filter-name>
+    <url-pattern>*.do</url-pattern>
+  </filter-mapping> 
+   
+   <filter>
+     <filter-name>paramsFilter</filter-name>
+     <filter-class>net.evecom.core.web.filter.SQLParamsFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>paramsFilter</filter-name>
+    <url-pattern>*.do</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>paramsFilter</filter-name>
+    <url-pattern>*.jsp</url-pattern>
+  </filter-mapping>
+  <!-- 
+  <filter>  
+    <filter-name>cookieFilter</filter-name>  
+    <filter-class>net.evecom.core.web.filter.CookieFilter</filter-class>  
+  </filter>   
+  <filter-mapping>  
+    <filter-name>cookieFilter</filter-name>  
+    <url-pattern>/*</url-pattern>  
+  </filter-mapping> -->
+  
+  <listener>
+    <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+  </listener>
+  <listener>
+    <description>自定义spring启动监听器</description>
+    <listener-class>net.evecom.core.web.listener.StartupListener</listener-class>
+  </listener>
+  <listener>
+    <description>Introspector缓存清除监听器</description>
+    <listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+  </listener>
+  <session-config>
+    <session-timeout>60</session-timeout>
+  </session-config>
+  
+  <welcome-file-list>
+    <welcome-file>/webSiteController/view.do</welcome-file>
+  </welcome-file-list>
+  <error-page>
+    <error-code>500</error-code>
+    <location>/error.html</location>
+  </error-page>
+  <error-page>
+    <error-code>404</error-code>
+    <location>/404.html</location>
+  </error-page>
+<error-page>
+    <error-code>403</error-code>
+    <location>/403filter.html</location>
+</error-page>
+</web-app>

@@ -1,0 +1,79 @@
+@charset "utf-8";
+/* CSS Document */
+
+html,body,div,form,img,ul,ol,li,dl,dt,dd{margin:0px; padding:0px;}
+body{font-size:12px; margin:0 auto;padding:0;border:0; font-family:"Helvetica Neue", Helvetica, Arial, sans-serif,"宋体";}
+select,input,textarea{font-size:12px; vertical-align:middle; padding:0; margin:0;}
+textarea{resize:none;}
+img{border:0; display:block;}
+ol,ul,li{list-style:none;}
+a{text-decoration:none; color:#000; display:block;}
+a:hover{text-decoration:none; color:#5cd38b;}
+
+/*清除浮动*/
+.clearfix:after{content:'';display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{*zoom:1; _zoom:1;}
+/*IE下a:hover 背景闪烁*/
+*html{overflow:-moz-scrollbars-vertical; _zoom:expression(function(ele){ele.style.zoom = "1"; document.execCommand("BackgroundImageCache",false,true)}(this))}
+
+.lfloat{float:left;}
+.rfloat{float:right;}
+
+
+.gpy{width:730px; padding:12px; margin:0 auto;}
+
+.gpy-camera{width:560px; height:320px; border:1px solid #e4e4e4; background:url(../images/camera-none.png) no-repeat center #eaf6fd; overflow:hidden;}
+.gpy-camera-zoom{height:29px; padding:8px 0; background:#2f3133; text-align:center; font-size:0;}
+.gpy-camera-zoom a{height:27px; line-height:27px; display:inline-block; border-radius:4px; behavior:url(css/pie.htc); margin:0 4px; border:1px solid #828385; background:#3E4041; -webkit-transition:0.2s; transition:0.2s; cursor:pointer; position:relative}
+.gpy-camera-zoom a:hover{background:#565656;}
+.gpy-camera-zoom span{display:block; font-size:14px; color:#fff; padding:0 12px 0 34px}
+.gpy-camera-zoom .qh{background:url(../images/gpy-camera-qh.png) no-repeat 8px center}
+.gpy-camera-zoom .fd{background:url(../images/gpy-camera-fd.png) no-repeat 8px center}
+.gpy-camera-zoom .sx{background:url(../images/gpy-camera-sx.png) no-repeat 8px center}
+
+.gpy-btn{width:136px; height:40px; line-height:40px; border-radius:4px; behavior:url(css/pie.htc); background:#2199e0; text-align:center; margin:0 0 10px 17px; color:#fff; font-size:14px; cursor:pointer; -webkit-transition:0.2s; transition:0.2s;}
+.gpy-btn a{color:#fff; font-size:14px;}
+.gpy-btn:hover{background:#4dade6;}
+.gpy-btn i{width:24px; height:24px; display:inline-block; position:relative; top:7px; right:8px; margin:0 0 0 6px;}
+.gpy-btn .begin{background:url(../images/gpy-btn-begin.png) no-repeat;}
+.gpy-btn .stop{background:url(../images/gpy-btn-stop.png) no-repeat;}
+.gpy-btn .af{background:url(../images/gpy-btn-af.png) no-repeat;}
+.gjgn{text-indent:20px;}
+
+.gpy-camera-info{border:1px solid #dcdcdc; background:#eee; padding:5px; min-height:80px; margin:5px 0;}
+
+
+.gpy-af{display:none;}
+
+.gpy-af-con{padding:2px 0; text-align:right; line-height:28px;}
+.gpy-af-con input{position:relative; right:4px; margin:0 0 0 12px;}
+
+.select1{width:80px; padding:5px; border:1px solid #e4e4e4; cursor:pointer; background:#fff; outline:none; color:#999}
+
+.gpy-sub{text-align:center}
+.gpy-sub a{height:35px; line-height:35px; border-radius:4px; behavior:url(css/pie.htc); display:inline-block; padding:0 15px 0 45px; -webkit-transition:0.2s; transition:0.2s; cursor:pointer; margin:0 4px;}
+.gpy-sub span{position:relative; color:#fff; font-size:14px;}
+.gpy-sub .camera{background:url(../images/gpy-sub-camera.png) no-repeat 12px 5px #f3ac58;}
+.gpy-sub .submit{background:url(../images/gpy-sub-submit.png) no-repeat 12px 5px #2199e0;}
+.gpy-sub .cancel{background:url(../images/gpy-sub-cancel.png) no-repeat 12px 5px #b5bccb;}
+.gpy-sub a:hover{opacity:0.8; filter:alpha(opacity=80);}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

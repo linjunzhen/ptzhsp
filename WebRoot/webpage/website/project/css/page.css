@@ -1,0 +1,152 @@
+
+
+
+.clearfix {
+	clear: both;
+}
+.clearfix:after {
+	clear: both;
+	content: "";
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.pager {
+	max-width: 800px;
+	text-align: center;
+	margin-bottom: 30px;
+	display: inline-block;
+}
+
+.pager a {
+	cursor: pointer;
+}
+
+.pager a,
+.pager span {
+	/* 按钮内数字 */
+	width: 45px;
+	height: 40px;
+	border: 1px solid #EBEBEB;
+	margin-left: -1px;
+	color: #8a8a8a;
+	display: inline-block;
+	line-height: 40px;
+	float: left;
+	font-size: 15px;
+	text-decoration: none;
+	margin: 0 2px;
+	border-radius: 6px;
+}
+.pager a:hover,
+.pager span:hover {
+	border-color: #3897cd;
+	color: #3897cd;
+	position: relative;
+	z-index: 1;
+}
+
+.pager span.current {
+	background-color: #4471fb;
+	color: #fff;
+	border-color: #EBEBEB;
+	position: relative;
+	z-index: 1;
+}
+
+.pager .pg-first,
+.pager .pg-prev,
+.pager .pg-next,
+.pager .pg-last {
+	background: white url(../images/page_bg.jpg)  8px 7px no-repeat;
+}
+
+.pager .pg-first:hover,
+.pager .pg-prev:hover,
+.pager .pg-next:hover,
+.pager .pg-last:hover {
+	background: white url(../images/page_bg_hover.jpg)  8px 7px no-repeat;
+}
+
+.pager .pg-prev,
+.pager .pg-prev:hover {
+	background-position: 7px -21px;
+}
+
+.pager .pg-next,
+.pager .pg-next:hover {
+	background-position: -21px -21px;
+}
+
+.pager .pg-last,
+.pager .pg-last:hover {
+	background-position: -21px 7px;
+}
+
+.pager .pg-prev[disabled='true'],
+.pager .pg-prev[disabled='true']:hover {
+	cursor: default;
+	background-image: url(../images/page_bg.jpg);
+}
+
+.pager .pg-next[disabled='true'],
+.pager .pg-next[disabled='true']:hover {
+	cursor: default;
+	background-image: url(../images/page_bg.jpg);
+}
+
+.pager .pg-prev[disabled='true'],
+.pager .pg-next[disabled='true'] {
+	border-color: #eeeeee;
+}
+
+.pager span.els {
+	border-color: transparent;
+}
+
+.pagerHtmlWrap {
+	width: 800px;
+	margin: 30px auto;
+}
+
+.pagerHtmlWrap .cc_cells {
+	width: 100%;
+	height: 35px;
+	padding: 5px 0;
+	border-bottom: 1px #cccccc solid;
+}
+
+.pagerHtmlWrap .cc_cells a {
+	color: #454545;
+	font-size: 14px;
+	line-height: 35px;
+	text-decoration: none;
+}
+
+.pagerHtmlWrap .cc_cells a span {
+	display: inline-block;
+	width: 25%;
+	text-align: left;
+	margin: 0;
+}
+
+
+
+.pager{display: flex; align-items: center; justify-content: center; margin: 30px 0; text-align: center; line-height: 36px; font-size: 0; word-wrap: normal; white-space: nowrap; color: #999;}
+.pager a{display:inline-block; vertical-align:top; padding:0 15px; margin-left:-1px; border:1px solid #d1d1d1; font-size:14px; color: #ccc; cursor: no-drop; background:#fff; transition: .3s;}
+.pager a[href]{color: #000; cursor: pointer;}
+.pager a[href]:hover{background:#fafafa; color: #4471fb;}
+.pager a.active,.pager a.active:hover{position: relative; background:#4471fb; color: #fff; border-color: #4471fb;}
+.pager a.prev{padding: 0 30px; border-radius: 4px 0 0 4px;}
+.pager a.next{padding: 0 30px; border-radius: 0 4px 4px 0;}
+.pager span{display: inline-block; line-height: 32px; padding: 0 4px; font-size: 14px; margin-left: 8px;}
+.pager.round a{margin: 0 2px; padding: 0; width: 36px; line-height: 34px; border-color: transparent; border-radius: 50%;}
+.pager.round a.prev,.pager.round a.next{padding: 0; font-family: simsun; font-weight: bold; color: #999; background: #eaf3ff;}

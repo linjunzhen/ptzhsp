@@ -1,0 +1,64 @@
+@charset "utf-8";
+/*  通用样式  */
+html,body,div,form,img,ul,ol,li,dl,dt,dd{margin: 0; padding: 0;}
+select,input,textarea {font-size: 12px; vertical-align:middle; padding:0; margin:0;}
+textarea {resize: none;}
+img{border:0;}
+ol,ul{list-style: none; }
+a{text-decoration: none;}
+body{font-family:"宋体"; font-size:12px; margin:0; padding:0; word-break:break-all;}
+.lfloat{float:left;}
+.rfloat{float:right;}
+/*清除浮动*/
+.clearfix:after{content:'\0020';display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{*zoom:1; _zoom:1;}
+.clearFloat{clear: both; line-height: 0; margin: 0; padding: 0; border: none; height:0;}
+
+/*  首页样式开始  */
+.header{width:100%; height:56px; background:url(../images/headerbg.png) no-repeat center top;}
+.logo{float:left; width:532px; height:46px; margin:4px 0 0 23px;}
+.headerR{float:right; margin:6px 40px 0 0; font-size:14px;}
+.sysName{float:left; margin-right:20px; height:44px; line-height:44px; color:#fff;}
+.sysName img{float:left; margin:0 9px 0 0; border-radius:50%; -moz-border-radius:50%; -ms-border-radius:50%; -webkit-border-radius:50%; -o-border-radius:50%; position:relative; z-index:2; behavior: url(css/iecss3.htc);}
+.Mout{float:left; height:44px; line-height:44px;}
+.Mout a{display:block; padding:0 0 0 28px; background:url(../images/Mout.png) no-repeat left; color:#fff;}
+.Mout a:hover{color:#00cffd; text-decoration:underline;}
+.sysMainbg{width:100%; height:100%; background:url(../images/mainbg.png) no-repeat 0 56px; background-size:100%;}
+.sysMain{width:1002px; margin:0 auto;}
+
+.MainL{float:left; width:274px; overflow:hidden;}
+.tmaring{margin-top:5px;}
+.mainLcon{width:256px; height:217px; padding:8px 9px 0 9px; background:#fff;}
+.mainLtitle{height:29px; line-height:29px; border-bottom:1px solid #e5e5e5;}
+.mainLtitle span{font-size:14px; font-weight:bold; color:#319cff;}
+.mainLtitle a{float:right; color:#989898;}
+.mainLtitle a:hover{color:#F00;}
+.mainLi,.tmaring1{margin-top:6px;}
+.mainLi ul li{line-height:25px; color:#363636;}
+.mainLi ul li a{color:#363636;}
+.mainLi ul li a:hover{color:#319cff;}
+.wzcolor{color:#22ac38 !important;}
+
+.MainCimg{float:left; width:340px; height:455px; margin-left:5px; overflow:hidden;}
+
+.MainC{float:left; width:148px; margin-left:5px; overflow:hidden;}
+.mainCone{width:148px; height:148px;}
+.mainCone a{display:block; width:148px; height:148px; text-align:center; font-size:14px; color:#fff; overflow:hidden;}
+.mainCbox{background:url(../images/Micon.png) no-repeat center 28px #f48513;}
+.mainCbox:hover{background:url(../images/Micon.png) no-repeat center 28px #e87704;}
+.mainCbox1{background:url(../images/Micon1.png) no-repeat center 28px #ebad18;}
+.mainCbox1:hover{background:url(../images/Micon1.png) no-repeat center 28px #df9f05;}
+.mainCbox2{background:url(../images/Micon2.png) no-repeat center 28px #a6c21f;}
+.mainCbox2:hover{background:url(../images/Micon2.png) no-repeat center 28px #97b603;}
+.mainCone a span{display:inline-block; padding-top:114px;}
+
+.MainR{float:left; width:225px; margin-left:5px; overflow:hidden;}
+.mainRone{width:225px; height:225px;}
+.mainRone a{display:block; width:225px; height:225px; text-align:center; font-size:14px; color:#fff; overflow:hidden;}
+.mainCbox3{background:url(../images/Micon3.png) no-repeat center 51px #886bf0;}
+.mainCbox3:hover{background:url(../images/Micon3.png) no-repeat center 51px #7759e4;}
+.mainCbox4{background:url(../images/Micon4.png) no-repeat center 51px #319cff;}
+.mainCbox4:hover{background:url(../images/Micon4.png) no-repeat center 51px #238df0;}
+.mainRone a span{display:inline-block; padding-top:168px;}
+
+

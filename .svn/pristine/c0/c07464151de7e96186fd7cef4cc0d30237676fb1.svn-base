@@ -1,0 +1,99 @@
+@CHARSET "UTF-8";
+/*外面边框的样式*/
+.selectpick_div {
+	background-color: #FFFFFF;
+	font-size: 13px;
+	font-weight: 500;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border: solid 1px #CFCFCF;
+	line-height: 30px;
+	position: absolute;
+	padding-left: 5px;
+	overflow: hidden;
+	cursor: pointer;
+	overflow: hidden;
+	z-index: 9060;
+}
+
+.selectpick_icon {
+	float: right;
+	background: url("../images/skin_icons.png") no-repeat scroll -57px -162px;
+	height: 30px;
+	width: 12px;
+	cursor: pointer;
+}
+
+.selectpick_div:hover {
+	background-color: #F5F5F5;
+	border: solid 1px #ccc;
+}
+
+.selectpick_div:active {
+	-moz-box-shadow: 0 0 3px #0099CC;
+	-webkit-box-shadow: 0 0 3px #0099CC;
+	box-shadow: 0 0 3px #0099CC;
+	border: solid 1px #0099CC;
+}
+/*下拉框的主体*/
+.selectpick_options {
+	border: solid 1px #CFCFCF;
+	border-bottom: none;
+	position: absolute;
+	z-index: 9060;
+	font-size: 13.5px;
+}
+
+.selectpick_options ul {
+	list-style: none;
+	height: auto;
+	margin: 0px;
+	padding: 0px;
+	z-index: 9060;
+	font-size: 13.5px;
+}
+
+.selectpick_options ul li {
+	border-bottom: solid 1px #CFCFCF;
+	padding-left: 5px;
+	display: block;
+	font-size: 13.5px;
+	z-index: 9060;
+	background-color: #fff;
+}
+
+.selectpick_options_selected {
+	font-size: 13.5px;
+	z-index: 9060;
+}
+
+/*设置下拉框的不透明度*/
+.select_hide {
+	-moz-opacity: 0;
+	opacity: 0;
+	-webkit-opacity: 0;
+	filter: alpha(opacity =       0);
+}
+/*设置为disabled的时候*/
+.selectpick_no_select {
+	cursor: default;
+	color: #9a9898;
+	background-color: #F5F5F5;
+}
+
+/* ---------------- 农业调查悬浮窗样式 ------------------ */
+.eui-time{width:250px; height:165px;}
+.eui-timeclose{height:20px; line-height:20px; font-size:14px; text-align:left;color:blue; text-decoration:none;}
+.eui-timeimg{width:250px; height:85px; overflow:hidden;}
+.eui-timec{width:250px; height:60px; background:url(../images/timebg.png) no-repeat;}
+.eui-timec ul{padding:8px 0 0 14px;}
+.eui-timec ul li{float:left; width:23px; height:33px; line-height:33px; text-align:center; color:#fff; font-size:24px; font-family:Verdana, Geneva, sans-serif;}
+.lmargin12{margin-left:12px;}
+/* ---------------- 农业调查悬浮窗样式 1------------------ */
+
+.eve_ad_bg{background:#fff;text-align: }
+#ref{ background:url(../images/pf3.png) no-repeat;height:22px;padding: 8px 0px 8px 16px;border:1px solid yellow;}
+.transparent_class{ filter:alpha(opacity=90); -moz-opacity:0.9; -khtml-opacity: 0.9; opacity: 0.9; }
+.ad_time_num{font-size: 16px;float: left;margin-left:2px;}
+.ad_time_text{font-size:18px;float:left;margin-left:1px;}

@@ -1,0 +1,34 @@
+@charset "utf-8";
+/* CSS Document */
+html,body,div,form,img,ul,ol,li,dl,dt,dd{margin:0px; padding:0px;}
+select,input,textarea{vertical-align:middle; padding:0; margin:0;}
+textarea{resize:none;}
+img{border:0; vertical-align:middle;}
+ol,ul,li{list-style:none; }
+a{text-decoration:none;}
+a:hover{ text-decoration:none;}
+body{font-family:"宋体",sans-serif; font-size:12px; height:100%; width:100%;}
+table{border-collapse:collapse;border-spacing:0;}
+td,th{padding:0;}
+/*IE下a:hover 背景闪烁*/
+*html{overflow:-moz-scrollbars-vertical;zoom:expression(function(ele){ele.style.zoom = "1";
+document.execCommand("BackgroundImageCache",false,true)}(this))}
+.lfloat{float:left;}
+.rfloat{float:right;}
+/*清除浮动*/
+.clearfix:after{content:'\0020';display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{*zoom:1; _zoom:1;}
+
+
+.margin20{margin:20px;width:1280px;}
+.bmargin20{margin-bottom:20px;}
+.marginTop1{margin-top: -1px;}
+.tab-title{width:100%; height:30px; line-height:30px;}
+.tab-title span{display:inline-block; border-left:2px solid #00479d; height:20px; line-height:20px; color:#666; font-weight:bold; padding-left:10px; font-size:14px;}
+.tab-table{width:100%; table-layout:fixed; font-size:14px; font-family:"宋体",sans-serif; color:#000;}
+.tab-table tr th{width:139px; text-align:right; padding:8px; border:1px solid #c9deef; background:#f9faff;}
+.tab-table tr td{border:1px solid #c9deef; padding:4px;}
+.tab-table tr font{color:#ff0000;}
+.tab-input{width:70%; padding:0 5px; height:30px; line-height:30px;}
+.tab-thc tr th,.tab-thc tr td{text-align:center;}
+.tab-table tr td select{width:80px;}

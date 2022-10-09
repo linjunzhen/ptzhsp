@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>上传认证视频</title>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<!--标准mui.css-->
+<link rel="stylesheet" href="css/mui.min.css">
+<link href="css/mui.loading.css" rel="stylesheet" />
+<script
+	src="https://mztapp.fujian.gov.cn:8190/mztAppWeb/app/js/zepto.js"></script>
+<script
+	src="https://mztapp.fujian.gov.cn:8190/mztAppWeb/app/js/cordova.js"></script>
+<script
+	src="https://mztapp.fujian.gov.cn:8190/mztAppWeb/app/js/bingotouch.js"></script>
+<script src="js/jmtplugins.js"></script>
+<script src="https://cdn.bootcss.com/mui/3.7.1/js/mui.min.js"></script>
+<script type="text/javascript" src="js/mui.loading.js"></script>
+<script type="text/javascript" src="js/mobileUtil.js"></script>
+<style>
+</style>
+</head>
+<body>
+	<div class="content">
+		<div class="mui-content">
+			<div style="background-color:white;margin-top:-5px;padding:10px">
+				<p>请在录像时朗读一下文字</p>
+				<h5 id="content" style="color:#000;"></h5>
+				<input id="v_file" type="file" accept="video/*"
+					style="display:none;" onChange="play()" />
+				<button id="select" type="button"
+					class="mui-btn  mui-btn-primary mui-btn-outlined"
+					style="margin-top:10px">选择视频文件</button>
+				<p style="margin-top:10px">注：在安卓系统手机，请依次选择视频文件-我的文件-视频下的相关视频（不超过5M，您可通过微信录像朗读相关文字并保存，可达到视频占用最小化）</p>
+			</div>
+		</div>
+	</div>
+	<script>
+		mui.init();
+		$("#content").html(getUrlParam("content"));
+		app.page.onLoad = function() {
+			$('#select').click(function() {
+				var u = navigator.userAgent;
+				if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) {
+					var param = {};
+					param.maxSize = 5.00;
+					param.type = "";
+					app.link.getFile(function(res) {
+						if (res.success) {
+							var reg = RegExp(/.mp4/);
+							if (res.fileName.match(reg)) {
+								// 包含        
+								var mask = mobileUtil.createMask(function() {
+									return false;
+								}); //callback为用户点击蒙版时自动执行的回调；
+								mask.show(); //显示遮罩
+	
+								$.post('http://xzfwzx.pingtan.gov.cn:8888/exeDataController.do?uploadBaseCode', {
+									TOKEN : getUrlParam("token"),
+									UPLOADBASECODE : res.fileBase64,
+									TYPE : "SIGN_VIDEO"
+								},
+									function(responseText, status, xhr) {
+										mask._remove(); //取消遮罩
+										var resultJson = $.parseJSON(responseText);
+										mui.toast(resultJson.msg);
+										if (resultJson.code == '001') { //成功
+											window.location.href = "signWrite.html?token=" + getUrlParam("token");
+										}
+									}
+								);
+							} else {
+								mui.toast("请选择正确格式的视频文件");
+							}
+	
+						} else {
+							mui.alert("选择文件失败")
+						}
+					}, param);
+	
+				} else {
+					var v_file = document.getElementById('v_file');
+					v_file.click();
+				}
+			});
+		}
+	
+	
+		function play() {
+			var file = document.getElementById('v_file').files[0];
+			var name = document.getElementById('v_file').files[0].name;
+	
+			toBase64(file);
+		}
+	
+		function toBase64(file) {
+			/*转换base64*/
+			var imgFile = new FileReader();
+			imgFile.readAsDataURL(file);
+	
+			imgFile.onload = function() {
+				var data = this.result; //base64数据  
+				// 包含        
+				var mask = mobileUtil.createMask(function() {
+					return false;
+				}); //callback为用户点击蒙版时自动执行的回调；
+				mask.show(); //显示遮罩
+				$.post('http://xzfwzx.pingtan.gov.cn:8888/exeDataController.do?uploadBaseCode', {
+					TOKEN : getUrlParam("token"),
+					UPLOADBASECODE : data.replace("data:video/quicktime;base64,", ""),
+					TYPE : "SIGN_VIDEO"
+				},
+					function(responseText, status, xhr) {
+						mask._remove(); //取消遮罩
+						var resultJson = $.parseJSON(responseText);
+						mui.toast(resultJson.msg);
+						if (resultJson.code == '001') { //成功
+							window.location.href = "signWrite.html?token=" + getUrlParam("token");
+						}
+					}
+				);
+			}
+		}
+	
+		function getUrlParam(name) {
+			var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+			var r = window.location.search.substr(1).match(reg);
+			if (r != null) {
+				return decodeURI(r[2]);
+			}
+			return null;
+		}
+	</script>
+</body>
+</html>

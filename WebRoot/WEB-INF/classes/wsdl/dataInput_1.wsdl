@@ -1,0 +1,227 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://webservice.pcipws.evecom.net/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="PcipDataInputWsImplService" targetNamespace="http://webservice.pcipws.evecom.net/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://webservice.pcipws.evecom.net/" elementFormDefault="unqualified" targetNamespace="http://webservice.pcipws.evecom.net/" version="1.0">
+
+  <xs:element name="collectReportBlack" type="tns:collectReportBlack"/>
+
+  <xs:element name="collectReportBlackResponse" type="tns:collectReportBlackResponse"/>
+
+  <xs:element name="collectReportCase" type="tns:collectReportCase"/>
+
+  <xs:element name="collectReportCaseResponse" type="tns:collectReportCaseResponse"/>
+
+  <xs:element name="collectReportPermit" type="tns:collectReportPermit"/>
+
+  <xs:element name="collectReportPermitResponse" type="tns:collectReportPermitResponse"/>
+
+  <xs:element name="collectReportSmSupport" type="tns:collectReportSmSupport"/>
+
+  <xs:element name="collectReportSmSupportResponse" type="tns:collectReportSmSupportResponse"/>
+
+  <xs:element name="collectReportSpotcheck" type="tns:collectReportSpotcheck"/>
+
+  <xs:element name="collectReportSpotcheckResponse" type="tns:collectReportSpotcheckResponse"/>
+
+  <xs:complexType name="collectReportCase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="userId" type="xs:string"/>
+      <xs:element minOccurs="0" name="password" type="xs:string"/>
+      <xs:element minOccurs="0" name="operType" type="xs:string"/>
+      <xs:element minOccurs="0" name="report" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="collectReportCaseResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Result" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="collectReportBlack">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="userId" type="xs:string"/>
+      <xs:element minOccurs="0" name="password" type="xs:string"/>
+      <xs:element minOccurs="0" name="operType" type="xs:string"/>
+      <xs:element minOccurs="0" name="report" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="collectReportBlackResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Result" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="collectReportSmSupport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="userId" type="xs:string"/>
+      <xs:element minOccurs="0" name="password" type="xs:string"/>
+      <xs:element minOccurs="0" name="operType" type="xs:string"/>
+      <xs:element minOccurs="0" name="report" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="collectReportSmSupportResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Result" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="collectReportPermit">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="userId" type="xs:string"/>
+      <xs:element minOccurs="0" name="password" type="xs:string"/>
+      <xs:element minOccurs="0" name="operType" type="xs:string"/>
+      <xs:element minOccurs="0" name="report" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="collectReportPermitResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Result" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="collectReportSpotcheck">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="userId" type="xs:string"/>
+      <xs:element minOccurs="0" name="password" type="xs:string"/>
+      <xs:element minOccurs="0" name="operType" type="xs:string"/>
+      <xs:element minOccurs="0" name="report" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="collectReportSpotcheckResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Result" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="collectReportSmSupport">
+    <wsdl:part element="tns:collectReportSmSupport" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="collectReportBlackResponse">
+    <wsdl:part element="tns:collectReportBlackResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="collectReportSpotcheckResponse">
+    <wsdl:part element="tns:collectReportSpotcheckResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="collectReportCase">
+    <wsdl:part element="tns:collectReportCase" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="collectReportSmSupportResponse">
+    <wsdl:part element="tns:collectReportSmSupportResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="collectReportSpotcheck">
+    <wsdl:part element="tns:collectReportSpotcheck" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="collectReportPermit">
+    <wsdl:part element="tns:collectReportPermit" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="collectReportPermitResponse">
+    <wsdl:part element="tns:collectReportPermitResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="collectReportBlack">
+    <wsdl:part element="tns:collectReportBlack" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="collectReportCaseResponse">
+    <wsdl:part element="tns:collectReportCaseResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="PcipDataInputWs">
+    <wsdl:operation name="collectReportCase">
+      <wsdl:input message="tns:collectReportCase" name="collectReportCase">
+    </wsdl:input>
+      <wsdl:output message="tns:collectReportCaseResponse" name="collectReportCaseResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="collectReportBlack">
+      <wsdl:input message="tns:collectReportBlack" name="collectReportBlack">
+    </wsdl:input>
+      <wsdl:output message="tns:collectReportBlackResponse" name="collectReportBlackResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="collectReportSmSupport">
+      <wsdl:input message="tns:collectReportSmSupport" name="collectReportSmSupport">
+    </wsdl:input>
+      <wsdl:output message="tns:collectReportSmSupportResponse" name="collectReportSmSupportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="collectReportPermit">
+      <wsdl:input message="tns:collectReportPermit" name="collectReportPermit">
+    </wsdl:input>
+      <wsdl:output message="tns:collectReportPermitResponse" name="collectReportPermitResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="collectReportSpotcheck">
+      <wsdl:input message="tns:collectReportSpotcheck" name="collectReportSpotcheck">
+    </wsdl:input>
+      <wsdl:output message="tns:collectReportSpotcheckResponse" name="collectReportSpotcheckResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PcipDataInputWsImplServiceSoapBinding" type="tns:PcipDataInputWs">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="collectReportBlack">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="collectReportBlack">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="collectReportBlackResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="collectReportCase">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="collectReportCase">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="collectReportCaseResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="collectReportSmSupport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="collectReportSmSupport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="collectReportSmSupportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="collectReportPermit">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="collectReportPermit">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="collectReportPermitResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="collectReportSpotcheck">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="collectReportSpotcheck">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="collectReportSpotcheckResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PcipDataInputWsImplService">
+    <wsdl:port binding="tns:PcipDataInputWsImplServiceSoapBinding" name="PcipDataInputWsImplPort">
+      <soap:address location="http://www.pingtancredit.gov.cn/pcipws/webservice/dataInput"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

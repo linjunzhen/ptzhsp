@@ -1,0 +1,133 @@
+{
+	"EFLOW_BUSTABLENAME" : "T_BSFW_SHTZXMGH",
+	"EFLOW_CUREXERUNNINGNODENAMES" : "网上申请",
+	"EFLOW_CURUSEROPERNODENAME" : "网上申请",
+	"EFLOW_DEFID" : "402881a6508e830c01508e920faa001c",
+	"EFLOW_DEFKEY" : "002",
+	"EFLOW_DEFVERSION" : 1,
+	"EFLOW_ISQUERYDETAIL" : "false",
+	"currentNodeFieldRights" : [{
+				"FIELD_NAME" : "NTZXMC",
+				"RIGHTFLAG" : 1
+			}, {
+				"FIELD_NAME" : "QQXMLLYDH",
+				"RIGHTFLAG" : 1
+			}, {
+				"FIELD_NAME" : "TMGCXMQZD",
+				"RIGHTFLAG" : 1
+			}, {
+				"FIELD_NAME" : "TMGCXMMC",
+				"RIGHTFLAG" : 1
+			}, {
+				"FIELD_NAME" : "TMGCXMZYJYYW",
+				"RIGHTFLAG" : 1
+			}, {
+				"FIELD_NAME" : "TMGCXMGCZL",
+				"RIGHTFLAG" : 1
+			}, {
+				"FIELD_NAME" : "TZGS",
+				"RIGHTFLAG" : 1
+			}, {
+				"FIELD_NAME" : "RJL",
+				"RIGHTFLAG" : 1
+			}, {
+				"FIELD_NAME" : "JZMJ",
+				"RIGHTFLAG" : 1
+			}, {
+				"FIELD_NAME" : "GHYDMJ",
+				"RIGHTFLAG" : 1
+			}, {
+				"FIELD_NAME" : "NXZDZ",
+				"RIGHTFLAG" : 1
+			}, {
+				"FIELD_NAME" : "XMFZRXM",
+				"RIGHTFLAG" : 1
+			}, {
+				"FIELD_NAME" : "XMFZRDH",
+				"RIGHTFLAG" : 1
+			}, {
+				"FIELD_NAME" : "XMTZGCZL",
+				"RIGHTFLAG" : 1
+			}, {
+				"FIELD_NAME" : "XMZYJYYW",
+				"RIGHTFLAG" : 1
+			}, {
+				"FIELD_NAME" : "YDXZ",
+				"RIGHTFLAG" : 1
+			}, {
+				"FIELD_NAME" : "TMGCXMGHYXKD",
+				"RIGHTFLAG" : 1
+			}, {
+				"FIELD_NAME" : "TMGCXMGHYDMJ",
+				"RIGHTFLAG" : 1
+			}, {
+				"FIELD_NAME" : "TMGCXMZCD",
+				"RIGHTFLAG" : 1
+			}, {
+				"FIELD_NAME" : "TMGCXMZZD",
+				"RIGHTFLAG" : 1
+			}, {
+				"FIELD_NAME" : "TZR",
+				"RIGHTFLAG" : 1
+			}, {
+				"FIELD_NAME" : "QQDJFZR",
+				"RIGHTFLAG" : 1
+			}, {
+				"FIELD_NAME" : "QQDJCY",
+				"RIGHTFLAG" : 1
+			}, {
+				"FIELD_NAME" : "QQDJZYJYYW",
+				"RIGHTFLAG" : 1
+			}, {
+				"FIELD_NAME" : "TMGCXMTZGS",
+				"RIGHTFLAG" : 1
+			}, {
+				"FIELD_NAME" : "QQDJLLY",
+				"RIGHTFLAG" : 1
+			}],
+	"EFLOW_ISTEMPSAVE" : "-1",
+	"uploadUserId" : "402883524863ab1f014863ab1f340000",
+	"uploadUserName" : "超级管理员",
+	"applyMatersJson" : "[{\"MATER_ID\":\"4028b79c50a3001e0150a327d5510032\",\"MATER_CODE\":\"001\",\"MATER_NAME\":\"申请办理行政审批事项承诺书\",\"MATER_TYPE\":\"*.jpg;*.jpeg;*.png;*.docx;*.doc;*.xlsx;*.xls;\",\"MATER_SIZE\":\"5\",\"MATER_PATH\":\"4028b79c50a3001e0150a327c4660031\",\"MATER_ISNEED\":\"1\"},{\"MATER_ID\":\"4028b79c50a3001e0150a32ba03c0036\",\"MATER_CODE\":\"005\",\"MATER_NAME\":\"投资项目建设方案概述\",\"MATER_TYPE\":\"*.jpg;*.jpeg;*.png;*.docx;*.doc;*.xlsx;*.xls;\",\"MATER_SIZE\":\"5\",\"MATER_PATH\":\"4028b79c50a3001e0150a32b984e0035\",\"MATER_ISNEED\":\"1\"},{\"MATER_ID\":\"4028b79c50a3001e0150a32e9d460039\",\"MATER_CODE\":\"007\",\"MATER_NAME\":\"管委会关于拟引进该项目的决策文件\",\"MATER_TYPE\":\"*.jpg;*.jpeg;*.png;*.docx;*.doc;*.xlsx;*.xls;\",\"MATER_SIZE\":\"5\",\"MATER_ISNEED\":\"0\"}]",
+	"ITEM_NAME" : "社会投资项目规划",
+	"ITEM_CODE" : "0001",
+	"SXBMBM" : "",
+	"SQFS" : "2",
+	"NTZXMC" : "dfs",
+	"TZR" : "fds",
+	"XMFZRXM" : "fs",
+	"XMFZRDH" : "13452031733",
+	"GCLX" : "1",
+	"XMTZGCZL" : "",
+	"XMZYJYYW" : "",
+	"YDXZ" : "",
+	"NXZDZ" : "",
+	"GHYDMJ" : "",
+	"JZMJ" : "",
+	"RJL" : "",
+	"TZGS" : "",
+	"TMGCXMGCZL" : "",
+	"TMGCXMZYJYYW" : "",
+	"TMGCXMMC" : "",
+	"TMGCXMQZD" : "",
+	"TMGCXMZZD" : "",
+	"TMGCXMZCD" : "",
+	"TMGCXMGHYDMJ" : "",
+	"TMGCXMGHYXKD" : "",
+	"TMGCXMTZGS" : "",
+	"QQDJZYJYYW" : "",
+	"QQDJCY" : "",
+	"QQDJFZR" : "",
+	"QQDJLLY" : "",
+	"QQXMLLYDH" : "",
+	"wmode" : "transparent",
+	"movie" : "plug-in/swfupload-2.2/swfupload.swf?swfuploadrnd=448929327",
+	"quality" : "high",
+	"menu" : "false",
+	"allowScriptAccess" : "always",
+	"flashvars" : "movieName=SWFUpload_2&uploadURL=%2Fptzhsp%2FUploadServlet&useQueryString=true&requeueOnError=false&httpSuccess=&params=uploadPath%3Dapplyform%26amp%3BuploadUserId%3D402883524863ab1f014863ab1f340000%26amp%3BuploadUserName%3D%2525E8%2525B6%252585%2525E7%2525BA%2525A7%2525E7%2525AE%2525A1%2525E7%252590%252586%2525E5%252591%252598%26amp%3BattachKey%3D007%26amp%3BbusTableName%3DT_BSFW_SHTZXMGH&filePostName=Filedata&fileTypes=*.jpg%3B*.jpeg%3B*.png%3B*.docx%3B*.doc%3B*.xlsx%3B*.xls%3B&fileTypesDescription=All%20Files&fileSizeLimit=5%20MB&fileUploadLimit=3&fileQueueLimit=1&debugEnabled=false&buttonImageURL=webpage%2Fbsdt%2Fapplyform%2Fimages%2Fsc.png&buttonWidth=73&buttonHeight=27&buttonText=&buttonTextTopPadding=0&buttonTextLeftPadding=0&buttonTextStyle=color%3A%20%23000000%3B%20font-size%3A%2016pt%3B&buttonAction=-110&buttonDisabled=false&buttonCursor=-2",
+	"SQRMC" : "fds",
+	"SQRSJH" : "13452031733",
+	"SQRSFZ" : "352221987010121235",
+	"CKSJRYXM" : "超级管理员"
+}

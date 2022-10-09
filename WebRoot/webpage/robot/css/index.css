@@ -1,0 +1,76 @@
+body{ font-family: "微软雅黑"; color: #323232; background:#ffffff;padding: 0;margin: 0;} 
+html,body{width: 100%; height: 100%;}
+ table, tbody, tfoot, thead, tr, th, td, dl, dd{margin: 0;padding: 0;outline: 0;font-size: 100%;background: transparent; border-collapse: collapse; border-spacing: 0;border: 0px;}
+p{ margin: 0; padding: 0;}
+ul, li, tr,td,table{ padding: 0; margin: 0; list-style: none;}
+input ,button:focus{outline:none}
+input ,button:active{border:none}
+@font-face {
+	font-family:阿里智能汉仪黑体;
+	src:url("../test/阿里智能汉仪黑体.TTF");
+	font-weight: normal;
+}
+.clearfix{clear: both;}
+::-webkit-scrollbar-track { background-color: none;  }
+::-webkit-scrollbar {  width: 0px;height:8px;  background-color:none;border-radius: 5px;  }
+::-webkit-scrollbar-thumb { /* */background: none;border-radius: 5px; }
+::-webkit-scrollbar-corner{ background-color: none;}
+img{max-width: 100%;vertical-align: middle;}
+/*办事指南查询*/
+.eui-ken-body-bszn{width: 1280px; height:800px;background: url(../images/bg.png) no-repeat; background-size: 100% 100%;}
+.eui-ken-body-bszncx-logo{text-align: center;padding: 100px 0 76px 0;}
+.eui-ken-bszncx{width: 876px; margin: auto;}
+.eui-ken-bszncx-input{}
+.eui-ken-bszncx-input input{width: 669px; height: 80px; padding: 0 20px;line-height: 80px;background: url(../images/icon1.png) no-repeat; border: none; margin-right: 6px;}
+.eui-ken-bszncx-input a{display: inline-block;width: 156px;height:80px; line-height: 80px;background: url(../images/icon2.png) no-repeat; vertical-align: middle; font-size: 24px;color: #FFFFFF;text-align: center;}
+
+.eui-ken-bszncx-main{width: 709px;height: 420px;overflow: auto; margin-top: 10px;background: rgba(0,0,0,0.4);}
+.eui-ken-bszncx-main ul{margin: 0 26px;display: inline-block; width: calc(100% - 52px);}
+.eui-ken-bszncx-main ul li{height: 60px;line-height: 60px;font-size: 22px; border-bottom: solid 1px rgba(255,255,255,0.1);color: #FFFFFF; padding-left: 26px;}
+.eui-ken-bszncx-main ul li span{color: #ffb400;}
+/*办事指南查询*/
+/*分公司证照管理事务*/
+.eui-ken-body-fgszzgl-logo{text-align: center;padding: 70px 0 50px 0;font-family: "阿里智能汉仪黑体";font-size: 60px; color: #FFFFFF;font-style: italic}
+.eui-ken-fgszzgl{width: 1060px; height: 548px;margin: auto;background: url(../images/icon3.png) no-repeat;padding: 10px;}
+.eui-ken-fgszzgl table{display:inline-block;width: 100%;height: 100%; overflow: auto; border-radius: 50px;}
+.eui-ken-fgszzgl table tr{height: 67px;font-size: 22px;color: #FFFFFF;text-align: center;border-bottom: solid 2px #4d405a;}
+.eui-ken-fgszzgl table tr:last-child{border-bottom: none;}
+.eui-ken-fgszzgl table tr td{padding: 20px 50px;}
+.eui-ken-fgszzgl table tr td:nth-child(1){width: 154px;padding: 20px 10px;}
+
+/*分公司证照管理事务*/
+
+
+.eui-ken-bszncx2 .eui-ken-bszncx-input input{width: calc(100% - 40px); background-size:100% 100% ;}
+.eui-ken-bszncx2 .eui-ken-bszncx-main{width: 100%;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

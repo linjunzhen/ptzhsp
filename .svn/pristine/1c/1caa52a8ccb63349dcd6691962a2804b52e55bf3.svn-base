@@ -1,0 +1,120 @@
+<div style="text-align:center;">
+<table style="border-collapse: collapse; width: 568px; padding: 0pt 5.4pt;margin:0 auto;">
+  <tbody>
+    <tr style="height:27.2000pt; ">
+      <td colspan="5" style="width: 553px; padding: 0pt 5.4pt; border-width: 0.5pt; border-style: solid; border-color: rgb(0, 0, 0);" valign="center">
+      <p class="p0" style="margin-bottom:0pt; margin-top:0pt; text-align:center; "><span style="mso-spacerun:'yes'; text-decoration:underline ;font-size:22.0000pt; font-family:'宋体'; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="mso-spacerun:'yes'; text-decoration:underline ;font-size:22.0000pt; font-family:'宋体'; ">@TITLE</span><span style="mso-spacerun:'yes'; text-decoration:underline ;font-size:22.0000pt; font-family:'宋体'; ">&nbsp;&nbsp;&nbsp;</span><span style="mso-spacerun:'yes'; font-size:22.0000pt; font-family:'宋体'; ">&nbsp;项目审批前公示</span><span style="font-weight:bold; font-size:12.0000pt; font-family:'宋体'; "></span></p>
+      </td>
+    </tr>
+    <tr style="height:27.2000pt; ">
+      <td style="width: 79px; padding: 0pt 5.4pt; border-width: medium 0.5pt 0.5pt; border-style: none solid solid; border-color: -moz-use-text-color rgb(0, 0, 0) rgb(0, 0, 0);" valign="center">
+      <p class="p0" style="margin-bottom:0pt; margin-top:0pt; text-align:center; "><span style="mso-spacerun:'yes'; font-weight:bold; font-size:12.0000pt; font-family:'宋体'; ">事项名称</span><span style="font-weight:bold; font-size:12.0000pt; font-family:'宋体'; "></span></p>
+      </td>
+      <td colspan="4" style="width: 460px; padding: 0pt 5.4pt; border-width: 0.5pt 0.5pt 0.5pt medium; border-style: solid solid solid none; border-color: rgb(0, 0, 0) rgb(0, 0, 0) rgb(0, 0, 0) -moz-use-text-color;" valign="center">
+      <p class="p0" style="margin-bottom:0pt; margin-top:0pt; text-align:center; "><span style="mso-spacerun:'yes'; font-size:12.0000pt; font-family:'宋体'; ">@GSSXMM</span><span style="font-weight:bold; font-size:12.0000pt; font-family:'宋体'; "></span></p>
+      </td>
+    </tr>
+    <tr style="height:48.2000pt; ">
+      <td style="width: 79px; padding: 0pt 5.4pt; border-width: medium 0.5pt 0.5pt; border-style: none solid solid; border-color: -moz-use-text-color rgb(0, 0, 0) rgb(0, 0, 0);" valign="center">
+      <p class="p0" style="margin-bottom:0pt; margin-top:0pt; text-align:center; "><span style="mso-spacerun:'yes'; font-weight:bold; font-size:12.0000pt; font-family:'宋体'; ">申报单位</span><span style="font-weight:bold; font-size:12.0000pt; font-family:'宋体'; "></span></p>
+      </td>
+      <td style="width: 204px; padding: 0pt 5.4pt; border-width: medium 0.5pt 0.5pt medium; border-style: none solid solid none; border-color: -moz-use-text-color rgb(0, 0, 0) rgb(0, 0, 0) -moz-use-text-color;" valign="center">
+      <p class="p0" style="margin-bottom:0pt; margin-top:0pt; text-align:center; "><span style="mso-spacerun:'yes'; font-size:12.0000pt; font-family:'宋体'; ">@SBDW</span><span style="font-weight:bold; font-size:12.0000pt; font-family:'宋体'; "></span></p>
+      </td>
+      <td colspan="2" style="width: 92px; padding: 0pt 5.4pt; border-width: 0.5pt 0.5pt 0.5pt medium; border-style: solid solid solid none; border-color: rgb(0, 0, 0) rgb(0, 0, 0) rgb(0, 0, 0) -moz-use-text-color;" valign="center">
+      <p class="p0" style="margin-bottom:0pt; margin-top:0pt; text-align:center; "><span style="mso-spacerun:'yes'; font-weight:bold; font-size:12.0000pt; font-family:'宋体'; ">建设单位</span><span style="font-weight:bold; font-size:12.0000pt; font-family:'宋体'; "></span></p>
+      </td>
+      <td style="width: 136px; padding: 0pt 5.4pt; border-width: 0.5pt 0.5pt 0.5pt medium; border-style: solid solid solid none; border-color: rgb(0, 0, 0) rgb(0, 0, 0) rgb(0, 0, 0) -moz-use-text-color;" valign="center">
+      <p class="p0" style="margin-bottom:0pt; margin-top:0pt; text-align:center; "><span style="mso-spacerun:'yes'; font-size:12.0000pt; font-family:'宋体'; ">@JSDW</span><span style="font-weight:bold; font-size:12.0000pt; font-family:'宋体'; "></span></p>
+      </td>
+    </tr>
+    <tr style="height:117.4000pt; ">
+      <td style="width: 79px; padding: 0pt 5.4pt; border-width: medium 0.5pt 0.5pt; border-style: none solid solid; border-color: -moz-use-text-color rgb(0, 0, 0) rgb(0, 0, 0);" valign="center">
+      <p class="p0" style="margin-bottom:0pt; margin-top:0pt; text-align:center; "><span style="mso-spacerun:'yes'; font-weight:bold; font-size:12.0000pt; font-family:'宋体'; ">建设地点</span><span style="font-weight:bold; font-size:12.0000pt; font-family:'宋体'; "></span></p>
+      </td>
+      <td style="width: 204px; padding: 0pt 5.4pt; border-width: medium 0.5pt 0.5pt medium; border-style: none solid solid none; border-color: -moz-use-text-color rgb(0, 0, 0) rgb(0, 0, 0) -moz-use-text-color;" valign="center">
+      <p class="p0" style="margin-bottom:0pt; margin-top:0pt; text-align:center; "><span style="mso-spacerun:'yes'; font-size:12.0000pt; font-family:'宋体'; ">@JSDD</span><span style="font-weight:bold; font-size:12.0000pt; font-family:'宋体'; "></span></p>
+      </td>
+      <td colspan="2" style="width: 92px; padding: 0pt 5.4pt; border-width: medium 0.5pt 0.5pt medium; border-style: none solid solid none; border-color: -moz-use-text-color rgb(0, 0, 0) rgb(0, 0, 0) -moz-use-text-color;" valign="center">
+      <p class="p0" style="margin-bottom:0pt; margin-top:0pt; text-align:center; "><span style="mso-spacerun:'yes'; font-weight:bold; font-size:12.0000pt; font-family:'宋体'; ">建设期限</span><span style="font-weight:bold; font-size:12.0000pt; font-family:'宋体'; "></span></p>
+      </td>
+      <td style="width: 136px; padding: 0pt 5.4pt; border-width: medium 0.5pt 0.5pt medium; border-style: none solid solid none; border-color: -moz-use-text-color rgb(0, 0, 0) rgb(0, 0, 0) -moz-use-text-color;" valign="center">
+      <p class="p0" style="margin-bottom:0pt; margin-top:0pt; text-align:center; "><span style="mso-spacerun:'yes'; font-size:12.0000pt; font-family:'宋体'; ">@JSQX</span><span style="font-weight:bold; font-size:12.0000pt; font-family:'宋体'; "></span></p>
+      </td>
+    </tr>
+    <tr style="height:58.8500pt; ">
+      <td style="width: 79px; padding: 0pt 5.4pt; border-width: medium 0.5pt 0.5pt; border-style: none solid solid; border-color: -moz-use-text-color rgb(0, 0, 0) rgb(0, 0, 0);" valign="center">
+      <p class="p0" style="margin-bottom:0pt; margin-top:0pt; text-align:center; "><span style="mso-spacerun:'yes'; font-weight:bold; font-size:12.0000pt; font-family:'宋体'; ">总投资</span><span style="font-weight:bold; font-size:12.0000pt; font-family:'宋体'; "></span></p>
+      </td>
+      <td style="width: 204px; padding: 0pt 5.4pt; border-width: medium 0.5pt 0.5pt medium; border-style: none solid solid none; border-color: -moz-use-text-color rgb(0, 0, 0) rgb(0, 0, 0) -moz-use-text-color;" valign="center">
+      <p class="p0" style="margin-bottom:0pt; margin-top:0pt; text-align:center; "><span style="mso-spacerun:'yes'; font-size:12.0000pt; font-family:'宋体'; ">@ZTZ</span><span style="font-weight:bold; font-size:12.0000pt; font-family:'宋体'; "></span></p>
+      </td>
+      <td colspan="2" style="width: 96px; padding: 0pt 5.4pt; border-width: medium 0.5pt 0.5pt medium; border-style: none solid solid none; border-color: -moz-use-text-color rgb(0, 0, 0) rgb(0, 0, 0) -moz-use-text-color;" valign="center">
+      <p class="p0" style="margin-bottom:0pt; margin-top:0pt; text-align:center; "><span style="mso-spacerun:'yes'; font-weight:bold; font-size:12.0000pt; font-family:'宋体'; ">资金来源</span><span style="font-weight:bold; font-size:12.0000pt; font-family:'宋体'; "></span></p>
+      </td>
+      <td style="width: 139px; padding: 0pt 5.4pt; border-width: medium 0.5pt 0.5pt medium; border-style: none solid solid none; border-color: -moz-use-text-color rgb(0, 0, 0) rgb(0, 0, 0) -moz-use-text-color;" valign="center">
+      <p class="p0" style="margin-bottom:0pt; margin-top:0pt; text-align:center; "><span style="mso-spacerun:'yes'; font-size:12.0000pt; font-family:'宋体'; ">@ZJLY</span><span style="font-weight:bold; font-size:12.0000pt; font-family:'宋体'; "></span></p>
+      </td>
+    </tr>
+    <tr style="height:91.7500pt; ">
+      <td style="width: 82px; padding: 0pt 5.4pt; border-width: medium 0.5pt 0.5pt; border-style: none solid solid; border-color: -moz-use-text-color rgb(0, 0, 0) rgb(0, 0, 0);" valign="center">
+      <p class="p0" style="margin-bottom:0pt; margin-top:0pt; text-align:center; "><span style="mso-spacerun:'yes'; font-weight:bold; font-size:12.0000pt; font-family:'宋体'; ">建设规模及主要内容</span><span style="font-weight:bold; font-size:12.0000pt; font-family:'宋体'; "></span></p>
+      </td>
+      <td colspan="4" style="width: 457px; padding: 0pt 5.4pt; border-width: medium 0.5pt 0.5pt medium; border-style: none solid solid none; border-color: -moz-use-text-color rgb(0, 0, 0) rgb(0, 0, 0) -moz-use-text-color;" valign="top">
+      <p class="p0" style="margin-bottom:0pt; margin-top:0pt; "><span style="font-size:12.0000pt; font-family:'宋体'; ">&nbsp;</span></p>
+      <p class="p0" style="margin-bottom:0pt; margin-top:0pt; text-align:left; "><span style="mso-spacerun:'yes'; font-size:12.0000pt; font-family:'宋体'; ">@JSGMJZYNR</span><span style="font-size:12.0000pt; font-family:'宋体'; "></span></p>
+      <p class="p0" style="margin-bottom:0pt; margin-top:0pt; "><span style="font-weight:bold; font-size:12.0000pt; font-family:'Times New Roman'; ">&nbsp;</span></p>
+      </td>
+    </tr>
+    <tr style="height:36.6000pt; ">
+      <td style="width: 82px; padding: 0pt 5.4pt; border-width: medium 0.5pt 0.5pt; border-style: none solid solid; border-color: -moz-use-text-color rgb(0, 0, 0) rgb(0, 0, 0);" valign="center">
+      <p class="p0" style="margin-bottom:0pt; margin-top:0pt; text-align:center; "><span style="mso-spacerun:'yes'; font-weight:bold; font-size:12.0000pt; font-family:'宋体'; ">公示期限</span><span style="font-weight:bold; font-size:12.0000pt; font-family:'宋体'; "></span></p>
+      </td>
+      <td colspan="4" style="width: 457px; padding: 0pt 5.4pt; border-width: medium 0.5pt 0.5pt medium; border-style: none solid solid none; border-color: -moz-use-text-color rgb(0, 0, 0) rgb(0, 0, 0) -moz-use-text-color;" valign="top">
+      <p class="p0" style="margin-bottom:0pt; margin-top:0pt; "><span style="mso-spacerun:'yes'; font-size:10.5000pt; font-family:'宋体'; ">@GSKSSJ</span><span style="font-size:10.5000pt; font-family:'宋体'; ">至</span><span style="mso-spacerun:'yes'; font-size:10.5000pt; font-family:'宋体'; ">@GSJSSJ</span><span style="font-size:12.0000pt; font-family:'宋体'; "></span></p>
+      </td>
+    </tr>
+    <tr style="height:36.6000pt; ">
+      <td style="width: 82px; padding: 0pt 5.4pt; border-width: medium 0.5pt 0.5pt; border-style: none solid solid; border-color: -moz-use-text-color rgb(0, 0, 0) rgb(0, 0, 0);" valign="center">
+      <p class="p0" style="margin-bottom:0pt; margin-top:0pt; text-align:center; "><span style="mso-spacerun:'yes'; font-weight:bold; font-size:12.0000pt; font-family:'宋体'; ">审批处室</span><span style="font-weight:bold; font-size:12.0000pt; font-family:'宋体'; "></span></p>
+      </td>
+      <td colspan="2" style="width: 194px; padding: 0pt 5.4pt; border-width: medium 0.5pt 0.5pt medium; border-style: none solid solid none; border-color: -moz-use-text-color rgb(0, 0, 0) rgb(0, 0, 0) -moz-use-text-color;" valign="center">
+      <p class="p0" style="margin-bottom:0pt; margin-top:0pt; text-align:center; "><span style="mso-spacerun:'yes'; font-size:12.0000pt; font-family:'宋体'; ">@SPCS</span><span style="font-weight:bold; font-size:12.0000pt; font-family:'宋体'; "></span></p>
+      </td>
+      <td style="width: 96px; padding: 0pt 5.4pt; border-width: 0.5pt 0.5pt 0.5pt medium; border-style: solid solid solid none; border-color: rgb(0, 0, 0) rgb(0, 0, 0) rgb(0, 0, 0) -moz-use-text-color;" valign="center">
+      <p class="p0" style="margin-bottom:0pt; margin-top:0pt; text-align:center; "><span style="mso-spacerun:'yes'; font-weight:bold; font-size:12.0000pt; font-family:'宋体'; ">联系电话</span><span style="font-weight:bold; font-size:12.0000pt; font-family:'宋体'; "></span></p>
+      </td>
+      <td style="width: 139px; padding: 0pt 5.4pt; border-width: 0.5pt 0.5pt 0.5pt medium; border-style: solid solid solid none; border-color: rgb(0, 0, 0) rgb(0, 0, 0) rgb(0, 0, 0) -moz-use-text-color;" valign="center">
+      <p class="p0" style="margin-bottom:0pt; margin-top:0pt; text-align:center; "><span style="mso-spacerun:'yes'; font-size:12.0000pt; font-family:'宋体'; ">@LXDH</span><span style="font-weight:bold; font-size:12.0000pt; font-family:'宋体'; "></span></p>
+      </td>
+    </tr>
+    <tr style="height:36.6000pt; ">
+      <td style="width: 82px; padding: 0pt 5.4pt; border-width: medium 0.5pt 0.5pt; border-style: none solid solid; border-color: -moz-use-text-color rgb(0, 0, 0) rgb(0, 0, 0);" valign="center">
+      <p class="p0" style="margin-bottom:0pt; margin-top:0pt; text-align:center; "><span style="mso-spacerun:'yes'; font-weight:bold; font-size:12.0000pt; font-family:'宋体'; ">电子邮箱</span><span style="font-weight:bold; font-size:12.0000pt; font-family:'宋体'; "></span></p>
+      </td>
+      <td colspan="2" style="width: 194px; padding: 0pt 5.4pt; border-width: medium 0.5pt 0.5pt medium; border-style: none solid solid none; border-color: -moz-use-text-color rgb(0, 0, 0) rgb(0, 0, 0) -moz-use-text-color;" valign="center">
+      <p class="p0" style="margin-bottom:0pt; margin-top:0pt; text-align:center; "><span style="mso-spacerun:'yes'; font-size:12.0000pt; font-family:'宋体'; ">@EMAIL</span><span style="font-size:12.0000pt; font-family:'宋体'; "></span></p>
+      </td>
+      <td style="width: 96px; padding: 0pt 5.4pt; border-width: medium 0.5pt 0.5pt medium; border-style: none solid solid none; border-color: -moz-use-text-color rgb(0, 0, 0) rgb(0, 0, 0) -moz-use-text-color;" valign="center">
+      <p class="p0" style="margin-bottom:0pt; margin-top:0pt; text-align:center; "><span style="mso-spacerun:'yes'; font-weight:bold; font-size:12.0000pt; font-family:'宋体'; ">邮政编码</span><span style="font-weight:bold; font-size:12.0000pt; font-family:'宋体'; "></span></p>
+      </td>
+      <td style="width: 140px; padding: 0pt 5.4pt; border-width: medium 0.5pt 0.5pt medium; border-style: none solid solid none; border-color: -moz-use-text-color rgb(0, 0, 0) rgb(0, 0, 0) -moz-use-text-color;" valign="center">
+      <p class="p0" style="margin-bottom:0pt; margin-top:0pt; text-align:center; "><span style="mso-spacerun:'yes'; font-size:12.0000pt; font-family:'宋体'; ">@POSTCODE</span><span style="font-weight:bold; font-size:12.0000pt; font-family:'宋体'; "></span></p>
+      </td>
+    </tr>
+    <tr style="height:36.6000pt; ">
+      <td style="width: 83px; padding: 0pt 5.4pt; border-width: medium 0.5pt 0.5pt; border-style: none solid solid; border-color: -moz-use-text-color rgb(0, 0, 0) rgb(0, 0, 0);" valign="center">
+      <p class="p0" style="margin-bottom:0pt; margin-top:0pt; text-align:center; "><span style="mso-spacerun:'yes'; font-weight:bold; font-size:12.0000pt; font-family:'宋体'; ">邮政地址</span><span style="font-weight:bold; font-size:12.0000pt; font-family:'宋体'; "></span></p>
+      </td>
+      <td colspan="4" style="width: 458px; padding: 0pt 5.4pt; border-width: medium 0.5pt 0.5pt medium; border-style: none solid solid none; border-color: -moz-use-text-color rgb(0, 0, 0) rgb(0, 0, 0) -moz-use-text-color;" valign="center">
+      <p class="p0" style="margin-bottom: 0pt; margin-top: 0pt; text-align: center;"><span style="mso-spacerun:'yes'; font-size:12.0000pt; font-family:'宋体'; ">@ADDRESS</span><span style="font-weight:bold; font-size:12.0000pt; font-family:'宋体'; "></span></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="MsoNormal" style="text-align:center" align="center"><b><span lang="EN-US">&nbsp;</span></b></p>
+<p class="MsoNormal" style="text-align:left;width: 568px; padding: 0pt 5.4pt; margin: 0px auto; line-height: 22px; font-size: 14px;" align="left"><span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">友情提示：<span style="background:red;mso-highlight:red">公民、法人和其他经济组织在公示期限内对本行政审批事项直接涉及自身重大利益或者自身与申请人重大利益的，可依法向我局书面陈述、申辩</span></span><span style="background:red;mso-highlight:red" lang="EN-US">:</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;;background:red;mso-highlight:red">对本行政审批事项内容有其他意见建议的，也可向我局提出。</span><span lang="EN-US"></span></p>
+</div>

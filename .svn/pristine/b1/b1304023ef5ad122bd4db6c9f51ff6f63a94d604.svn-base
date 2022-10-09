@@ -1,0 +1,82 @@
+/*common css*/
+*{margin:0px; padding:0px;}
+.flow_container {
+  font-family: "Microsoft Yahei",Arial,sans-serif;
+  display: inline-block;
+  position: relative;
+  color: #000;
+  float:left;
+  font-size:14px;
+  padding:20px;
+}
+.flow_container ul {
+  list-style: none;
+}
+.flow_container ul,.flow_container li,.flow_container p {
+  margin: 0;
+  padding: 0;
+}
+.flow_container ul li{float:left; text-align:center; width:85px; height:50px; position:relative; z-index:1; }
+.flow_container ul li span{cursor:pointer;}
+.flow_container ul li .pro_base{color:#fff; height:23px; line-height:23px; margin-bottom:10px;}
+.flow_done{background:url(../images/pointes_2.png) no-repeat center top; color:#60baff;}
+.flow_active{background:url(../images/pointes_3.png) no-repeat center top; color:#F00;}
+.flow_nodone{background:url(../images/pointes_1.png) no-repeat center top;}
+
+.flow_progress{position:relative; top:9px; margin:0 3%;}
+.flow_progress_bar{height:6px; background:#e4e4e4;}
+.flow_progress_highlight{display:block; height:6px; background:#60baff;}
+
+
+.eve_inpbtn {
+    margin:5px;
+    height:26px;
+    line-height:26px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    line-height: 1;
+*padding:4px 10px;
+*height:2em;
+    letter-spacing:2px;
+    font-family: Tahoma, Arial/9!important;
+    min-width:60px;
+    min-width:50px\9;/*IE8 下按钮使用contentbox模式*/
+    width:auto;
+    overflow:visible;
+*width:1;
+    color: #fff;
+    border: solid 1px #2992D8;
+    border-radius: 4px;
+    background: #238ED6;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2ca5e0', endColorstr='#238ED6');
+    background: -moz-linear-gradient(top, #2ca5e0, #238ED6);
+    background: -ms-linear-gradient(top, #2ca5e0, #238ED6);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#2ca5e0), to(#238ED6));
+    background: linear-gradient(top, #2ca5e0, #238ED6);
+    text-shadow: -1px -1px 1px #2992D8;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .7), 0 -1px 0 rgba(0, 0, 0, .1);
+-moz-transition:-moz-box-shadow linear .2s;
+-webkit-transition: -webkit-box-shadow linear .2s;
+transition: box-shadow linear .2s;
+}
+
+.eve_inpbtn:hover {
+    color:#FFF;
+    border-color:#33A4DD;
+    background: #2ca5e0;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3fb5d9', endColorstr='#2296D0');
+    background: -moz-linear-gradient(top, #3fb5d9, #2296D0);
+    background: -ms-linear-gradient(top, #3fb5d9, #2296D0);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#3fb5d9), to(#2296D0));
+    background: linear-gradient(top, #3fb5d9, #2296D0);
+}
+.eve_inpbtn:active {
+    border-color:#2288CC;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#32ABE7', endColorstr='#2296D0');
+    background: -moz-linear-gradient(top, #32ABE7, #2296D0);
+    background: -ms-linear-gradient(top, #32ABE7, #2296D0);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#32ABE7), to(#2296D0));
+    background: linear-gradient(top, #32ABE7, #2296D0);
+}
+

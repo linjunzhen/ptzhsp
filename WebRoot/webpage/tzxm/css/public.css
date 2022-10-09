@@ -1,0 +1,206 @@
+body{ font-family: "微软雅黑"; color: #4c4c4c; /*background:url(../images/index-bg.png) no-repeat,#eff8fe !important; background-size:100%*/ ;padding: 0;margin: 0;} 
+html,body{ height: 100%;    margin-top: 0px!important;}
+ table, tbody, tfoot, thead, tr, th, td{
+ 	margin: 0;
+    padding: 0;
+    outline: 0;
+    font-size: 100%;
+    /*vertical-align: baseline;*/
+    /* background: transparent; */
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 0px;
+ }
+p{ margin: 0; padding: 0;}
+ul, li, tr,td,table{ padding: 0; margin: 0; list-style: none;}
+input ,button:focus{outline:none}
+input ,button:active{border:none}
+a,a:link,a:hover{text-decoration: none;color: #000a26; cursor: pointer;}
+img{
+	vertical-align: middle;
+	max-width: 100%;
+	max-height: 100%;
+}
+::-webkit-scrollbar-track { background-color: none;  }
+::-webkit-scrollbar {  width: 0px;height:8px;  background-color:none;border-radius: 5px;  }
+::-webkit-scrollbar-thumb {background: none;border-radius: 5px; }
+::-webkit-scrollbar-corner{ background-color: none;}
+
+
+.eui-head{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	background: url(../images/index-head.png) no-repeat;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9;
+}
+.eui-head ul{
+	width: 960px;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+}
+.eui-head ul li{
+	width: 100px;
+	float: left;
+	text-align: center;
+	margin: 0 30px;
+	height: 45px;
+}
+.eui-head ul li.on{
+	border-bottom: solid 5px #0643f2;
+}
+.eui-head ul li:hover{
+	border-bottom: solid 5px #0643f2;
+}
+.eui-head ul li a{
+	width: 100%;
+	display: inline-block;
+	font-size: 20px;
+	font-weight: bold;
+	color: #fff;
+}
+.eui-login{
+	width:120px;
+	position: absolute;
+	left: 50%;
+	margin-left: 520px;
+	top: 16px;
+}
+.eui-login a{
+	display: inline-block;
+	width: 49%;
+	text-align: center;
+	font-size: 16px;
+	color: #fff;
+	float: left;
+	height: 20px;
+	line-height: 20px;
+}
+.eui-login a:first-child{
+	border-right: solid 2px #ffffff;
+}
+/*头部结束*/
+.eui-main{
+    width: 1200px;
+    margin: auto;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+.eui-logo{
+	  text-align: center;
+	width: 100%;
+	padding-top: 20px;
+}
+/*.eui-logo img{
+	width: 100%;
+}*/
+
+/*面包屑*/
+.eui-crumbs{
+	padding: 5px 20px;
+}
+.eui-crumbs ul li{
+	float: left;
+	color: #5f6060;
+}
+.eui-crumbs ul li a{
+	display: inline-block;
+	/*color: #0068b7;*/
+	font-size: 16px;
+}
+.eui-crumbs ul li:last-child a{
+	color: #5f6060;
+}
+/*面包屑*/
+/*内页内容*/
+.eui-content{
+	/*width:1199px;*/
+	margin:auto;
+	min-height:530px;
+	background: rgba(255,255,255,0.7);
+	/*margin-top:4.5vh;*/
+	padding-bottom: 20px;
+}
+/*内页内容*/
+
+/*底部开始*/
+.eui-footer{
+	width: 100%;
+	height: 156px;
+	background: #3986c0;
+	position: relative;
+	/*position: absolute;
+	bottom: 0;*/
+}
+.eui-footer-main{
+	width: 1200px;
+	/*position: absolute;
+	left: 50%;
+	transform: translate(-50%);*/
+	margin: auto;
+}
+.eui-footer-ul{
+	width: 800px;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+}
+.eui-footer-ul ul li{
+	float: left;
+	color: #FFFFFF;
+	width: 100px;
+	margin-top: 24px;
+	text-align: center;
+	font-size: 16.8px;
+	height: 20px;
+	line-height: 20px;
+	position: relative;
+}
+.eui-footer-ul ul li:after{
+	content: "";
+	width: 1px;
+	height: 20px;
+	background: #FFFFFF;
+	position: absolute;
+	right: 0px;
+}
+.eui-footer-ul ul li:last-child:after{
+	width: 0;
+}
+.eui-footer-p{
+	width: 620px;
+	position: absolute;
+	top: 44px;
+	left: 50%;
+	transform: translate(-50%);
+	margin-top: 30px;
+	font-size: 14px;
+	color: #FFFFFF;
+	text-align: center;
+}
+/*底部结束*/
+
+@media screen and (max-width: 1366px) {
+	.eui-head ul li {
+		width: 80px;
+	}
+	.eui-head ul li a{
+		font-size: 16px;
+	}
+	.eui-login {
+	    margin-left: 397px;
+	}
+	.eui-content{
+		height: auto;
+	}
+}
+
+/*  分页样式  */
+.page{padding:20px 0 0 0; text-align:center; font-size:14px; color:#777;}
+.page span{display:inline; margin:0 20px;}
+.page a{display:inline-block; padding:5px 11px; margin:0 5px; border:1px solid #ccc; color:#777;}
+.page a:hover{border:1px solid #ff7f00; color:#ff7f00;}

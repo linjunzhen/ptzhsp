@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta name="renderer" content="webkit">
+	<title></title>
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/Select.css">
+	<link rel="stylesheet" type="text/css" href="css/eui.css">
+</head>
+<body>
+	
+	<div class="eui-main">
+		<!-- 头部 -->
+		<div class="eui-con eui-flex vc eui-header">
+			<div class="eui-logo">
+				<a class="eui-flex vc" href="1首页.html"><img src="images/logo.png" ></a>
+			</div>
+			<div class="eui-nav flex1">
+				<ul class="eui-flex vc">
+					<li><a href="1首页.html">首　页</a></li>
+					<li><a href="2申报指引.html">申报指引</a></li>
+					<li><a href="3办事指南.html">办事指南</a></li>
+					<li class="on"><a href="4办件公示.html">办件公示</a></li>
+					<li><a href="5政策法规.html">政策法规</a></li>
+					<li><a href="6下载专区.html">下载专区</a></li>
+				</ul>
+			</div>
+			<div class="eui-header-login">
+				<!-- 未登录 -->
+				<a class="unlogin" href="#">登录/注册</a>
+				<!-- 已登录 -->
+				<div class="eui-user" style="display: none;">
+					<span>134****3386</span>
+					<div class="sub">
+						<a href="#">个人中心</a>
+						<a href="#">退出登录</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 头部 end -->
+		
+		<!-- banner -->
+		<div class="eui-banner slideBox">
+			<div class="hd"><ul class="eui-flex tc"></ul></div>
+			<div class="bd">
+				<ul>
+					<li><img src="images/banner.png" ></li>
+					<li><img src="images/banner.png" ></li>
+					<li><img src="images/banner.png" ></li>
+				</ul>
+			</div>
+		</div>
+		<!-- banner end -->
+		
+		<!-- 主体 -->
+		<div class="eui-con">
+			<div class="slideTxtBox eui-tab">
+				<div class="hd">
+					<ul class="eui-flex">
+						<li>批前公示</li>
+						<li>批后公示</li>
+					</ul>
+				</div>
+				<div class="bd">
+					<!-- 批前公示 -->
+					<div class="">
+						<div class="eui-table-info bjgs">
+							<table>
+								<tr>
+									<th>项目编码</th>
+									<td><input class="ipt" type="text" placeholder="请输入项目编码"/></td>
+									<th>项目名称</th>
+									<td><input class="ipt" type="text" placeholder="请输入项目名称"/></td>
+									<th>事项名称</th>
+									<td><input class="ipt" type="text" placeholder="请输入事项名称"/></td>
+								</tr>
+								<tr>
+									<th>项目类型</th>
+									<td>
+										<select name="">
+											<option value="">请选择项目类型</option>
+											<option value="">1</option>
+										</select>
+									</td>
+									<th>办理结果</th>
+									<td>
+										<select name="">
+											<option value="">请选择办理结果</option>
+										</select>
+									</td>
+									<th colspan="3">
+										<a class="eui-btn round" href="javascript:void(0)">查询</a>
+										<a class="eui-btn round lightblue" href="javascript:void(0)">重置</a>
+									</th>
+								</tr>
+							</table>
+						</div>
+						
+						<div class="eui-index-bjgs in">
+							<table>
+								<tr>
+									<th width="25%">项目代码</th>
+									<th align="left">项目名称</th>
+									<th width="16%">项目类型</th>
+									<th width="12%">办理结果</th>
+								</tr>
+								<tr>
+									<td align="center">2019-350128-78-01-026333</td>
+									<td>平潭滨湖小学（一期）</td>
+									<td align="center">施工许可</td>
+									<td align="center">审批</td>
+								</tr>
+								<tr>
+									<td align="center">2019-350128-78-01-026333</td>
+									<td>旅游驿站（榕山驿站）</td>
+									<td align="center">工程建设许可</td>
+									<td align="center">审批</td>
+								</tr>
+								<tr>
+									<td align="center">2019-350128-78-01-026333</td>
+									<td>平潭明碧桂园片区路网工程（规划三路、四路、五路、凤凰湖路）</td>
+									<td align="center">施工许可</td>
+									<td align="center">审批</td>
+								</tr>
+								<tr>
+									<td align="center">2019-350128-78-01-026333</td>
+									<td>旅游驿站（榕山驿站）</td>
+									<td align="center">施工许可</td>
+									<td align="center">审批</td>
+								</tr>
+								<tr>
+									<td align="center">2019-350128-78-01-026333</td>
+									<td>平潭明碧桂园片区路网工程（规划三路、四路、五路、凤凰湖路）</td>
+									<td align="center">施工许可</td>
+									<td align="center">审批</td>
+								</tr>
+							</table>
+							
+							<div class="eui-page round" style="margin: 50px 0 -20px;">
+								<a class="prev">&lt;</a>
+								<a href="javascript:void(0)" class="active">1</a>
+								<a href="javascript:void(0)">2</a>
+								<a href="javascript:void(0)">3</a>
+								<a href="javascript:void(0)">4</a>
+								<a href="javascript:void(0)" class="next">&gt;</a>
+								<span>第<input class="ipt" type="text">页</span>
+							</div>
+						</div>
+					</div>
+					<!-- 批后公示 -->
+					<div class="">
+						
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<!-- 主体 end -->
+		
+		<!-- 底部 -->
+		<div class="eui-footer">
+			<iframe frameborder="0" width="100%" height="100%" marginheight="0" marginwidth="0" scrolling="no" allowtransparency="true" src="foot.html"></iframe>
+		</div>
+		<!-- 底部 end -->
+	</div>
+	
+	<script type="text/javascript" charset="utf-8" src="js/jquery.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/jquery.SuperSlide.2.1.3.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/Select.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/totop.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			// banner切换
+			jQuery(".slideBox").slide({titCell:".hd ul",mainCell:".bd ul",effect:"fold",autoPlay:true,autoPage:true,interTime:4000});
+			// 选项卡切换
+			jQuery(".slideTxtBox").slide({targetCell:".more a",delayTime:0,triggerTime: 0,trigger:"click"});
+			//下拉框
+			$('select').selectMatch();
+		});
+	</script>
+	
+</body>
+</html>

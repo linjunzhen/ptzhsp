@@ -1,0 +1,660 @@
+html,body {
+	width: 100%;
+	height: 100%;
+}
+/*=========base========*/
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td
+	{
+	margin: 0;
+	padding: 0;
+}
+
+input,textarea {
+	font-size: 12px;
+	font-family: "宋体";
+	padding: 0;
+	vertical-align: middle;
+}
+
+img {
+	border: 0;
+}
+
+ul,ol {
+	list-style: none
+}
+
+a {
+	text-decoration: none;
+	color: #333;
+}
+
+a:hover {
+	color: #e94709;
+}
+
+.clearFloat {
+	clear: both;
+	line-height: 0;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+/**===============开始编写工具栏CSS========================**/
+.right-con .e-toolbar {
+	background: url(../images/bar.gif) no-repeat 0 -40px;
+	padding-left: 6px;
+}
+
+.right-con .e-toolbar-ct {
+	background: url(../images/bar.gif) no-repeat right -80px;
+	padding-right: 6px;
+}
+
+.right-con .e-toolbar-overflow {
+	background: url(../images/bar.gif) repeat-x 0 0px;
+	height: 37px;
+	overflow: hidden;
+	line-height: 33px;
+}
+
+/**===============结束编写工具栏CSS========================**/
+
+/**===============开始编写查询面板CSS=======================**/
+.dddl-contentBorder {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+	position: relative;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-khtml-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	font-size: 12px;
+}
+
+.dddl_table tr {
+	height: 28px;
+	line-height: 28px;
+}
+
+.dddl_table td {
+	word-break: break-all;
+	word-wrap: break-word;
+	overflow: hidden;
+	border: 1px solid #ccc;
+}
+
+.datagrid-toolbar .dddl-contentBorder {
+	background-color: #fff;
+	border: 1px solid #fff;
+	border-radius: 2px;
+	position: relative;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-khtml-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	font-size: 12px;
+}
+
+.datagrid-toolbar .dddl_table td {
+	word-break: break-all;
+	word-wrap: break-word;
+	overflow: hidden;
+	border: 1px solid #fff;
+}
+/**===============结束编写查询面板CSS=======================**/
+
+/**===============开始编写明细表单CSS=======================**/
+.dddl-legend {
+	background: #c4e7fe;
+	height: 30px;
+	padding-left: 10px !important;
+	line-height: 25px;
+	margin: 3px 0;
+	font-weight: bold;
+	text-align: center;
+	color: #333;
+}
+
+.dddl_platform_html_requiredFlag {
+	color: red;
+	padding-left: 3px;
+}
+/**===============结束编写明细表单CSS=======================**/
+
+/**===============开始编写自定义按钮CSS=======================**/
+.eve-button {
+	color: #fff;
+	background: #0c83d3;
+	cursor: pointer;
+	padding: 0 20px;
+	height: 26px;
+	border: 1px solid #0c83d3;
+	border-color: #0c83d3 #0c83d3 #0c83d3 #0c83d3;
+	-moz-border-radius: 1px;
+	vertical-align: top;
+	border-radius: 3px;
+}
+
+.eve-button:hover {
+	border-color: #0f9bfa;
+	color: #fff;
+	background: #0f9bfa;
+}
+/**===============结束编写自定义按钮CSS=======================**/
+
+/**===============开始编写自定义输入框CSS=======================**/
+.eve-input {
+	width: 151px;
+	margin-left: 0;
+	color: #336699;
+	background: #fff;
+	border: 1px solid #ccc;
+	height: 21px;
+	line-height: 21px;
+	/*vertical-align:middle;*/
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	margin-top: 3px;
+	margin-left: 4px;
+}
+
+.eve-input:hover {
+	border-color: #beebff;
+	height: 21px;
+	line-height: 21px;
+}
+
+.eve-input:focus {
+	color: #147;
+	border-color: #beebff;
+	height: 21px;
+	line-height: 21px;
+}
+/**===============结束编写自定义输入框CSS=======================**/
+
+/**===============开始编写自定义TEXTAREACSS=======================**/
+.eve-textarea {
+	border: 1px solid #ccc;
+	margin-left: 4px;
+}
+
+.eve-textarea:hover {
+	border: 1px solid #beebff;
+}
+/**===============结束编写自定义TEXTAREACSS=======================**/
+
+/**===============开始编写自定义弹出框按钮CSS=======================**/
+.eve_buttons input {
+	margin-right: 5px;
+	height: 26px;
+	line-height: 26px;
+	cursor: pointer;
+	display: inline-block;
+	text-align: center;
+	line-height: 1;
+	*padding: 4px 10px;
+	*height: 2em;
+	letter-spacing: 2px;
+	font-family: Tahoma, Arial/ 9 !important;
+	min-width: 60px;
+	min-width: 50px\9; /*IE8 下按钮使用contentbox模式*/
+	width: auto;
+	overflow: visible;
+	*width: 1;
+	color: #333;
+	border: solid 1px #999;
+	border-radius: 4px;
+	background: #DDD;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF',
+		endColorstr='#DDDDDD');
+	background: -moz-linear-gradient(top, #FFF, #DDD);
+	background: -ms-linear-gradient(top, #FFF, #DDD);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFF),
+		to(#DDD));
+	background: linear-gradient(top, #FFF, #DDD);
+	text-shadow: 0px 1px 1px rgba(255, 255, 255, 1);
+	box-shadow: 0 1px 0 rgba(255, 255, 255, .7), 0 -1px 0 rgba(0, 0, 0, .1);
+	-moz-transition: -moz-box-shadow linear .2s;
+	-webkit-transition: -webkit-box-shadow linear .2s;
+	transition: box-shadow linear .2s;
+}
+
+.eve_buttons input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+.eve_buttons input:focus {
+	outline: none 0;
+	border-color: #3388cc;
+}
+
+.eve_buttons input:hover {
+	color: #000;
+	border-color: #666;
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, .2);
+}
+
+.eve_buttons input:active {
+	border-color: #666;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#DDDDDD',
+		endColorstr='#FFFFFF');
+	background: -moz-linear-gradient(top, #DDD, #FFF);
+	background: -ms-linear-gradient(top, #DDD, #FFF);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#DDD),
+		to(#FFF));
+	background: linear-gradient(top, #DDD, #FFF);
+	box-shadow: inset 0 1px 2px rgba(130, 140, 150, .2), inset 0 1px 5px
+		rgba(0, 0, 0, .3);
+}
+
+.eve_buttons input[disabled] {
+	cursor: default;
+	color: #666;
+	background: #DDD;
+	border: solid 1px #999;
+	filter: alpha(opacity = 50);
+	opacity: .5;
+	box-shadow: none;
+}
+
+.eve_buttons input.aui_state_highlight {
+	color: #FFF;
+	border: solid 1px #2992D8;
+	background: #238ED6;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2ca5e0',
+		endColorstr='#238ED6');
+	background: -moz-linear-gradient(top, #2ca5e0, #238ED6);
+	background: -ms-linear-gradient(top, #2ca5e0, #238ED6);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#2ca5e0),
+		to(#238ED6));
+	background: linear-gradient(top, #2ca5e0, #238ED6);
+	text-shadow: -1px -1px 1px #2992D8;
+}
+
+.eve_buttons input.aui_state_highlight:hover {
+	color: #FFF;
+	border-color: #33A4DD;
+	background: #2ca5e0;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2ca5e0',
+		endColorstr='#2ca5e0');
+	background: -moz-linear-gradient(top, #2ca5e0, #2ca5e0);
+	background: -ms-linear-gradient(top, #2ca5e0, #2ca5e0);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#2ca5e0),
+		to(#2ca5e0));
+	background: linear-gradient(top, #2ca5e0, #2ca5e0);
+}
+
+.eve_buttons input.aui_state_highlight:active {
+	border-color: #2288CC;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#32ABE7',
+		endColorstr='#2296D0');
+	background: -moz-linear-gradient(top, #32ABE7, #2296D0);
+	background: -ms-linear-gradient(top, #32ABE7, #2296D0);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#32ABE7),
+		to(#2296D0));
+	background: linear-gradient(top, #32ABE7, #2296D0);
+}
+
+.eve_buttons {
+	text-align: right;
+	white-space: nowrap;
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	background-color: #F6F6F6;
+	border-top: solid 1px #ebeef2;
+	height: 46px;
+	line-height: 46px;
+}
+/**===============结束编写自定义弹出框按钮CSS=======================**/
+
+/**===============开始编写自定义复选框CSS=======================**/
+.eve-chcekbox {
+	float: left;
+	padding: 0px;
+	margin: 0px;
+	text-align: left;
+}
+
+.eve-chcekbox ul li {
+	float: left;
+	margin: 0 5px;
+}
+
+/**===============结束编写自定义复选框CSS=======================**/
+.eve-bntdel {
+	display: block;
+	margin-left: 10px;
+	float: left;
+	width: 42px;
+	height: 21px;
+	background: url("../images/btn_del.png") no-repeat top;
+}
+
+.eve-bntdel:hover {
+	display: block;
+	width: 42px;
+	height: 21px;
+	background: url("../images/btn_del.png") no-repeat bottom;
+}
+/**===============开始编写自定义下拉树CSS=======================**/
+.eve-combotree ul.ztree {
+	margin-top: 10px;
+	border: 1px solid #617775;
+	background: #f0f6e4;
+	width: 220px;
+	height: 360px;
+	overflow-y: scroll;
+	overflow-x: auto;
+}
+
+.eve-combotree ul.log {
+	border: 1px solid #617775;
+	background: #f0f6e4;
+	width: 300px;
+	height: 170px;
+	overflow: hidden;
+}
+
+.eve-combotree ul.log.small {
+	height: 45px;
+}
+
+.eve-combotree ul.log li {
+	color: #666666;
+	list-style: none;
+	padding-left: 10px;
+}
+
+.eve-combotree ul.log li.dark {
+	background-color: #E3E3E3;
+}
+/**===============结束编写自定义下拉树CSS=======================**/
+
+/**===============开始编写自定义选择器CSS=======================**/
+.selectorBtn {
+	width: 50px;
+	height: 30px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+.eve-autoinputbg {
+	background: url(../images/ry_bg_2.gif) no-repeat;
+	width: 248px;
+	height: 32px;
+	line-height: 32px;
+	float: left;
+	border: none;
+	padding-left: 5px;
+}
+
+.eve-autoqueryicon {
+	background: url(../images/ry_bg_1.gif) no-repeat;
+	width: 32px;
+	height: 32px;
+	float: left;
+	border: none;
+	cursor: pointer;
+}
+
+.eve-selectleft,.eve-selectright {
+	width: 345px;
+	float: left;
+	height: 350px;
+	overflow: hidden;
+	border: 5px solid #E4E4E4;
+	margin: 10px 0 0 10px;
+}
+
+.eve-search {
+	padding: 10px;
+}
+
+.eve-select {
+	width: 800px;
+}
+/**===============结束编写自定义选择器CSS=======================**/
+
+/**===============流程表单CSS 开始======================================**/
+.tab_tk_pro,.tab_tk_pro1 {
+	width: 100%;
+	background: #e1e1e1;
+}
+
+.tab_tk_pro tr th,.tab_tk_pro1 tr th {
+	height: 31px;
+	line-height: 31px;
+	background: #f5f7fa;
+	color: #053892;
+	text-align: center;
+}
+
+.tab_tk_pro tr td {
+	height: 38px;
+	line-height: 20px;
+	background: #fff;
+	padding: 0 5px;
+}
+
+.tab_tk_pro tr .tab_width {
+	width: 106px;
+	background: #fbfbfb;
+}
+
+.tab_color {
+	color: #F00 !important;
+}
+
+.tab_tk_pro2 {
+	width: 100%;
+	background: #e1e1e1;
+}
+
+.tab_tk_pro2 tr th {
+	height: 31px;
+	line-height: 31px;
+	background: #f3f3f3;
+	color: #053892;
+}
+
+.tab_tk_pro2 tr td {
+	height: 38px;
+	line-height: 20px;
+	background: #fff;
+	padding: 0 5px;
+	word-break: break-all;
+}
+
+.tab_tk_pro2 tr td a {
+	float: left;
+	margin: 0 5px;
+}
+
+.tab_tk_pro2 tr td a:hover {
+	position: relative;
+	top: 1px;
+	left: 1px;
+}
+
+.tab_tk_pro2btn {
+	display: block;
+	width: 73px;
+	height: 27px;
+	line-height: 27px;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+}
+
+.tab_widthnum {
+	width: 50px;
+	text-align: center;
+}
+
+.tab_btn_tj1 {
+	background: url(../images/tab_btn_tj1.png) no-repeat;
+}
+
+.tab_btn_ct1 {
+	background: url(../images/tab_btn_ct1.png) no-repeat;
+}
+/**===============流程表单CSS 结束======================================**/
+
+/**===============开始编写自定义按钮样式============================**/
+.ex-button {
+	background: #0c83d3 none repeat scroll 0 0;
+	border: 1px solid #0c83d3;
+	border-radius: 3px;
+	color: #fff;
+	cursor: pointer;
+	height: 26px;
+	padding: 0 20px;
+}
+/**===============结束编写自定义按钮样式============================**/
+
+/**===============工具栏按钮开始样式============================**/
+.e-toolbar-overflow  .l-btn-plain {
+	color: #5f6984;
+	background: #f9f8fe;
+	background-repeat: repeat-x;
+	border: 1px solid #bdcfe5;
+	background: -webkit-linear-gradient(top, #f9f8fe 0, #f9f8fe 100%);
+	background: -moz-linear-gradient(top, #f9f8fe 0, #f9f8fe 100%);
+	background: -o-linear-gradient(top, #f9f8fe 0, #f9f8fe 100%);
+	background: linear-gradient(to bottom, #f9f8fe 0, #f9f8fe 100%);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#f9f8fe,
+		endColorstr=#f9f8fe, GradientType=0);
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	border-radius: 5px 5px 5px 5px;
+}
+
+/**===============工具栏按钮结束样式============================**/
+
+
+/**===============叫号按钮CSS开始=======================================**/
+.call_buttons {
+	text-align: left;
+	white-space: nowrap;
+	bottom: 0px;
+	width: 100%;
+	background-color: #F6F6F6;
+	border-top: solid 1px #ebeef2;
+	height:36px;
+	line-height:28px;
+}
+.call_buttons input {
+	margin-right:5px;
+	height:28px;
+	line-height:28px;
+	cursor: pointer;
+	display: inline-block;
+}
+.call_buttons input[disabled] {
+	cursor:default;
+	color:#666;
+	background:#DDD;
+	border: solid 1px #999;
+	filter:alpha(opacity=50);
+	opacity:.5;
+	box-shadow:none;
+}
+.input_out1 {
+	text-align:right;
+	height:28px;
+	width:90px;
+	background: url(../images/callicon/change.png) no-repeat;
+	border: none;
+}
+.input_in1 {
+	text-align:right;
+	height:28px;
+	width:90px;
+	color:white;
+	background: url(../images/callicon/change_in.png) no-repeat;
+	border: none;
+}
+.input_out2 {
+	text-align:center;
+	height:28px;
+	width:90px;
+	background: url(../images/callicon/call.png) no-repeat;
+	border: none;
+}
+.input_in2 {
+	text-align:center;
+	height:28px;
+	width:90px;
+	color:white;
+	background: url(../images/callicon/call_in.png) no-repeat;
+	border: none;
+}
+.input_out3 {
+	text-align:center;
+	height:28px;
+	width:90px;
+	background: url(../images/callicon/pass.png) no-repeat;
+	border: none;
+}
+.input_in3 {
+	text-align:center;
+	height:28px;
+	width:90px;
+	color:white;
+	background: url(../images/callicon/pass_in.png) no-repeat;
+	border: none;
+}
+.input_out4 {
+	text-align:center;
+	height:28px;
+	width:90px;
+	background: url(../images/callicon/wait.png) no-repeat;
+	border: none;
+}
+.input_in4 {
+	text-align:center;
+	height:28px;
+	width:90px;
+	color:white;
+	background: url(../images/callicon/wait_in.png) no-repeat;
+	border: none;
+}
+.input_out5 {
+	text-align:center;
+	height:28px;
+	width:90px;
+	background: url(../images/callicon/service.png) no-repeat;
+	border: none;
+}
+.input_in5 {
+	text-align:center;
+	height:28px;
+	width:90px;
+	color:white;
+	background: url(../images/callicon/service_in.png) no-repeat;
+	border: none;
+}
+.input_out6 {
+	text-align:center;
+	height:28px;
+	width:90px;
+	background: url(../images/callicon/deal.png) no-repeat;
+	border: none;
+}
+.input_in6 {
+	text-align:center;
+	height:28px;
+	width:90px;
+	color:white;
+	background: url(../images/callicon/deal_in.png) no-repeat;
+	border: none;
+}
+
+/**===============叫号按钮CSS结束=======================================**/

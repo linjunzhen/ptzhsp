@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>认证须知</title>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<!--标准mui.css-->
+<link href="https://cdn.bootcss.com/mui/3.7.1/css/mui.min.css"
+	rel="stylesheet" />
+<link href="css/mui.loading.css" rel="stylesheet" />
+
+<script
+	src="https://mztapp.fujian.gov.cn:8190/mztAppWeb/app/js/zepto.js"></script>
+<script
+	src="https://mztapp.fujian.gov.cn:8190/mztAppWeb/app/js/cordova.js"></script>
+<script
+	src="https://mztapp.fujian.gov.cn:8190/mztAppWeb/app/js/bingotouch.js"></script>
+<script
+	src="https://mztapp.fujian.gov.cn:8190/mztAppWeb/app/js/jmtplugins.js"></script>
+<script
+	src="https://mztapp.fujian.gov.cn:8190/mztAppWeb/app/js/jsencrypt.js"></script>
+<script src="https://cdn.bootcss.com/mui/3.7.1/js/mui.min.js"></script>
+<script type="text/javascript" src="js/mui.loading.js"></script>
+
+<style>
+body {
+	background-color: #ffffff;
+}
+
+.mui-btn {
+	display: block;
+	width: 120px;
+	margin: 10px auto;
+}
+
+#info {
+	padding: 20px 10px;
+}
+</style>
+
+</head>
+
+<body>
+	<div class="mui-content" style="background-color:#ffffff">
+		<div class="mui-content-padded"
+			style="margin: 5px;text-align: center;">
+			<div id="content"></div>
+			<ul>
+				<li class="mui-table-view-cell"><span>我已阅知并同意</span>
+					<div class="mui-switch mui-switch-mini">
+						<div class="mui-switch-handle"></div>
+					</div></li>
+			</ul>
+			<button id='next' type="button"
+				class="mui-btn mui-btn-blue mui-btn-outlined">下一步</button>
+		</div>
+	</div>
+	<script type="text/javascript" charset="utf-8">
+		var num,
+			userId,
+			userIdCard,
+			name,
+			isAgree = false,
+			companyName;
+		//mui初始化
+		mui.init();
+		mui('.mui-content .mui-switch').each(function() { //循环所有toggle
+			//toggle.classList.contains('mui-active') 可识别该toggle的开关状态
+			isAgree = this.classList.contains('mui-active');
+			/**
+			 * toggle 事件监听
+			 */
+			this.addEventListener('toggle', function(event) {
+				//event.detail.isActive 可直接获取当前状态
+				isAgree = event.detail.isActive;
+			});
+		});
+	
+		app.page.onLoad = function() {
+	
+			app.link.getLoginInfo(function(result) {
+				var encrypt = new JSEncrypt();
+				encrypt.setPrivateKey(keyUtil.getPrivateKey());
+				var userinfo = result;
+				userId = encrypt.decrypt(userinfo.userId);
+				userIdCard = encrypt.decrypt(userinfo.cardNum);
+				name = encrypt.decrypt(userinfo.name);
+				$("#content").html("本人" + name + "，为公司的(股东/董事/监事/经理/联络员/委托代理人），现自愿申请办理本企业设立/变更/备案/注销、印章刻制、申领发票、社保登记等业务，相关文件的电子签名均是本人真实意愿的表示，本人承诺对所提供资料的真实、合法、有效性负责，并承担相应的法律责任");
+				if (userId) {
+					var url = "http://xzfwzx.pingtan.gov.cn:8888/exeDataController/getCompanyNameByToken.do";
+					$.post(url, {
+						TOKEN : getUrlParam("token"),
+					},
+						function(responseText, status, xhr) {
+							var resultJson = $.parseJSON(responseText);
+							if (resultJson.code == '001') { //成功
+								companyName = resultJson.msg;
+								$("#content").html("本人" + name + "，为" + resultJson.msg + "公司的(股东/董事/监事/经理/联络员/委托代理人），现自愿申请办理本企业设立/变更/备案/注销、印章刻制、申领发票、社保登记等业务，相关文件的电子签名均是本人真实意愿的表示，本人承诺对所提供资料的真实、合法、有效性负责，并承担相应的法律责任");
+	
+							} else { //失败
+								console.info('错误信息为' + resultJson.msg);
+							}
+						}
+					);
+	
+				} else {
+					confirmError();
+				}
+			}, function(result) {
+				if (result.error) {
+					confirmError();
+				}
+			})
+	
+	
+			$("#next").click(function() {
+				if (!isAgree) {
+					mui.alert("请先阅读并同意申报信息");
+					return;
+				}
+				var param = {};
+				param.token = getUrlParam("token");
+				param.content = " 我已阅知并同意" + companyName + "设立/变更/备案/注销申报信息。"
+			/* 	 window.location.href = "uploadFile.html?token=" + getUrlParam("token") + "&content=" + param.content;  */
+				 app.link.getMediaRecorder(function(res) {
+					window.location.href = "signWrite.html?token=" + getUrlParam("token") + "&content=" + param.content;
+				}, param);  
+			})
+		}
+		function confirmError(msg) {
+			if (!msg) {
+				msg = "获取用户信息失败，请确认已登录，并已实名认证";
+			}
+			var btnArray = [ '重试' ];
+			mui.confirm(msg, '提示', btnArray, function(e) {
+				if (e.index == 0) {
+					app.refresh();
+				}
+			});
+			return;
+		}
+		function getUrlParam(name) {
+			var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+			var r = window.location.search.substr(1).match(reg);
+			if (r != null) {
+				return decodeURI(r[2]);
+			}
+			return null;
+		}
+	</script>
+</body>
+
+</html>

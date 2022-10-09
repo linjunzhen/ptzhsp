@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* CSS Document */
+html,body,div,form,img,ul,ol,li,dl,dt,dd{margin:0px; padding:0px;}
+body{margin:0 auto;padding:0;border:0; font-family:simsun;}
+select,input,textarea{vertical-align:middle; padding:0; margin:0;}
+textarea{resize:none;}
+img{border:0;}
+ol,ul,li{list-style:none; margin:0px; padding:0px;}
+a{text-decoration:none; transition: ease-in-out .3s;}
+a,img,input,textarea,select,button,area{outline:none;}
+*{-webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;}
+/*清除浮动*/
+.clearfix:before, .clearfix:after {content: '\0020';display: block;height: 0;clear: both;visibility: hidden;}
+.clearfix{*zoom:1;_zoom: 1;}
+
+
+.loginBg{width:100%; height:100%; background:url(../images/login_bg.jpg) no-repeat center center fixed;}
+.loginCon{position:relative; top:34px; width:1122px; margin:0 auto;}
+.login-time{width:227px; height:129px; background:url(../images/time.png) no-repeat; position:absolute; z-index:1; top:28px;}
+.login-time span{display:inline-block; width:100px; height:94px; line-height:94px; text-align:center; font-family:'Arial'; font-size:80px; margin:14px 4px 0 4px;}
+
+.login-year{position:absolute; right:0px; z-index:1;}
+.login-year p{margin:0px; font-family:'Arial'; color:#fff; text-align:right;}
+#login_date{font-size:72px;}
+#login_weekDay{font-size:30px; line-height:60px;}
+.login-logo{position:absolute; top:80px;}
+
+.logininfo{position:absolute; right:20px; top:320px; width:355px;}
+.logininfo p{margin:0 0 20px 0; width:355px; height:50px; line-height:50px;}
+.input-name{background:url(../images/input.png) no-repeat;}
+.input-psd{background:url(../images/input1.png) no-repeat;}
+.input-yzm{background:url(../images/input2.png) no-repeat left;}
+.logininfo p input{float:left; border:none; margin:0 0 0 102px; padding:0 5px; height:50px; line-height:50px;font-size: 18px;}
+.logininfo p img{float:right; width:116px; height:50px;}
+.login-btn{display:block; float:right; width:61px; height:62px; background:url(../images/login_btn.png) no-repeat;}
+.login-btn:hover{background:url(../images/loginHover.png) no-repeat;}
+
+.eui-btn{height: 50px;}
+.eui-btn .btn{display: block; float: left; width: 224px; height: 50px; line-height: 50px; text-align: center; color: #fff; font-size: 18px; background: url(../images/login_btn1.png) no-repeat;}
+.eui-btn .btn1{display: block; float: right; width: 116px; height: 50px; line-height: 50px; text-align: center; color: #0c67b1; font-size: 18px; background: url(../images/login_btn2.png) no-repeat;}
+.eui-btn a:hover{filter:alpha(opacity=80); opacity:0.8;}
+
+
+

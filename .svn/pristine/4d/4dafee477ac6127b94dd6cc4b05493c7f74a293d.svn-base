@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta name="renderer" content="webkit">
+	<title></title>
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/Select.css">
+	<link rel="stylesheet" type="text/css" href="css/eui.css">
+</head>
+<body>
+	
+	<div class="eui-main mine">
+		<!-- 头部 -->
+		<div class="eui-con eui-flex vc eui-header">
+			<div class="eui-logo">
+				<a class="eui-flex vc" href="1首页.html"><img src="images/logo.png" ></a>
+			</div>
+			<div class="eui-nav flex1">
+				<ul class="eui-flex vc">
+					<li><a href="1首页.html">首　页</a></li>
+					<li><a href="2申报指引.html">申报指引</a></li>
+					<li><a href="3办事指南.html">办事指南</a></li>
+					<li><a href="4办件公示.html">办件公示</a></li>
+					<li><a href="5政策法规.html">政策法规</a></li>
+					<li><a href="6下载专区.html">下载专区</a></li>
+				</ul>
+			</div>
+			<div class="eui-header-login">
+				<!-- 未登录 -->
+				<a class="unlogin" style="display: none;" href="#">登录/注册</a>
+				<!-- 已登录 -->
+				<div class="eui-user">
+					<span>134****3386</span>
+					<div class="sub">
+						<a href="#">个人中心</a>
+						<a href="#">退出登录</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 头部 end -->
+		
+		<!-- 主体 -->
+		<div class="eui-con">
+			
+			<div class="eui-flex eui-mine">
+				<div class="flex1">
+					
+					<div class="eui-card eui-mb eui-flex bt eui-step">
+						<span class="on"><i>1</i>合同说明</span>
+						<span class="on"><i>2</i>申报信息</span>
+						<span class="on"><i>3</i>业务表单</span>
+						<span class="on"><i>4</i>上传材料</span>
+						<span><i>5</i>完成申报</span>
+					</div>
+					
+					<div class="eui-card eui-declaration ovh">
+						
+						<div class="eui-tips" style="margin-top: 20px;">温馨提示：加*号的材料，为必须上传的材料</div>
+						<div class="tit" style="background-image: url(images/wysb-i6.png);">通用/共性材料</div>
+						<div class="eui-upload">
+							<table>
+								<colgroup>
+									<col width="70">
+									<col>
+									<col>
+									<col width="360">
+								</colgroup>
+								<thead>
+									<tr>
+										<td>序号</td>
+										<td>材料名称</td>
+										<td>提供方式</td>
+										<td>提供方式</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td><i>*</i>立项用地规划许可阶段项目审批申请表</td>
+										<td>
+											<select name="">
+												<option value="">未提交</option>
+											</select>
+										</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>项目建设依据（项目建议书批复文件、项目列入相关规划文件或相关产业政策文件）</td>
+										<td>
+											<select name="">
+												<option value="">纸质收取</option>
+											</select>
+										</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>社会稳定风险评估意见表<a class="download" href="#">下载表格模板</a></td>
+										<td>
+											<select name="">
+												<option value="">上传</option>
+											</select>
+										</td>
+										<td>
+											<a class="btn" style="color: #ff902e;" href="javascript:void(0)">上传材料</a>
+											<a class="btn" style="color: #00e577;" href="javascript:void(0)">从我的材料库上传</a>
+											<a class="btn" style="color: #edbe00;" href="javascript:void(0)">APP扫码上传</a>
+										</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td><i>*</i>统一社会信用代码的证照</td>
+										<td>
+											<select name="">
+												<option value="">电子证照</option>
+											</select>
+										</td>
+										<td>
+											<a class="btn" style="color: #ff902e;" href="javascript:void(0)">证照库获取</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						
+						<div class="tit" style="background-image: url(images/wysb-i7.png);">建设用地规划许可证及划拨决定核发</div>
+						
+						<div class="tit" style="background-image: url(images/wysb-i7.png);">建设项目用地预审和选址意见书核发</div>
+						
+						<div class="eui-flex tc eui-sx-btn">
+							<a class="eui-btn light" href="javascript:void(0)">上一步</a>
+							<a class="eui-btn o"  onclick="tempSaveWebSiteFlowForm('T_GCXM_XMJBXX_FORM')">保存草稿</a>
+							<a class="eui-btn" href="javascript:void(0)">下一步</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 主体 end -->
+		
+		<!-- 底部 -->
+		<div class="eui-footer">
+			<iframe frameborder="0" width="100%" height="100%" marginheight="0" marginwidth="0" scrolling="no" allowtransparency="true" src="foot.html"></iframe>
+		</div>
+		<!-- 底部 end -->
+	</div>
+	
+	<script type="text/javascript" charset="utf-8" src="js/jquery.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/Select.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/totop.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			//下拉框
+			$('select').selectMatch();
+		});
+	</script>
+	
+</body>
+</html>

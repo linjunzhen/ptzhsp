@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans  
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 默认定时任务配置  -->
+	<bean id="defaultSchedule" class="net.evecom.core.job.DefaultSchedule"> 
+	</bean> 
+	<bean id="schedulerJobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean"> 
+		<property name="targetObject" ref="defaultSchedule"/> 
+		<property name="targetMethod" value="scheduleJob"/> 
+		<property name="concurrent" value="false"/> 
+	</bean> 
+	<bean id="cronTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean" > 
+		<property name="jobDetail" ref="schedulerJobDetail"/> 
+		<property name="cronExpression"> 
+			<value>0 59 23 * * ?</value> <!-- 每天23:59:00开始执行 0 59 23 * * ? -->
+		</property> 
+	</bean> 
+	<bean id="schedulerFactory" autowire="no" class="org.springframework.scheduling.quartz.SchedulerFactoryBean"> 
+		<property name="triggers"> 
+			<list> 
+                 <ref local="cronTrigger"/> 
+			</list> 
+		</property> 
+		<property name="configLocation" value="classpath:conf/quart.properties"/>
+	</bean> 
+	
+</beans>

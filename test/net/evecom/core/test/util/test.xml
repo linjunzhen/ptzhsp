@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process xmlns="http://jbpm.org/4.4/jpdl" name="AllFlow">
+	<start name="网民填写表单信息" g="166,64,48,48">
+		<transition g="214,148;385,148:-50,-22" name="" to="进行信件业务类型判断" />
+	</start>
+	<decision name="进行信件业务类型判断" g="360,160,48,48">
+		<transition g="115,185:-50,-22" name="科所队业务范围" to="科所队经办受理" />
+		<transition g="-50,-22" name="业务或分县局部门范围" to="业务部门经办受理" />
+		<transition g="655,185:-50,-22" name="受理中心经办" to="受理中心经办受理" />
+		<handler class="net.evecom.platform.flow.handler.DecisionHandlerImpl" />
+	</decision>
+	<task name="科所队经办受理" g="70,340,90,50">
+		<transition g="-50,-22" name="" to="判断处理方式" />
+		<on event="start">
+			<event-listener class="net.evecom.platform.flow.event.NodeEventListener">
+				<field name="eventType">
+					<string value="start" />
+				</field>
+			</event-listener>
+		</on>
+	</task>
+	<task name="业务部门经办受理" g="340,290,90,50">
+		<transition g="-50,-22" name="" to="选择处理方式" />
+		<on event="start">
+			<event-listener class="net.evecom.platform.flow.event.NodeEventListener">
+				<field name="eventType">
+					<string value="start" />
+				</field>
+			</event-listener>
+		</on>
+	</task>
+	<task name="受理中心经办受理" g="610,320,90,50">
+		<transition g="-50,-22" name="" to="处理方式判断" />
+		<on event="start">
+			<event-listener class="net.evecom.platform.flow.event.NodeEventListener">
+				<field name="eventType">
+					<string value="start" />
+				</field>
+			</event-listener>
+		</on>
+	</task>
+	<decision name="判断处理方式" g="90,460,48,48">
+		<transition g="-50,-22" name="直接回复" to="科所队领导审核" />
+		<transition g="240,485;240,315:-50,-22" name="" to="业务部门经办受理" />
+		<handler class="net.evecom.platform.flow.handler.DecisionHandlerImpl" />
+	</decision>
+	<task name="科所队领导审核" g="70,570,90,50">
+		<transition g="115,675:-50,-22" name="" to="判断回复数量" />
+		<on event="start">
+			<event-listener class="net.evecom.platform.flow.event.NodeEventListener">
+				<field name="eventType">
+
+					<string value="start" />
+
+
+				</field>
+
+
+
+
+
+
+			</event-listener>
+
+
+
+
+
+
+		</on>
+
+
+
+
+
+
+		<on event="end">
+
+
+
+
+
+			<event-listener class="net.evecom.platform.flow.event.NodeEventListener">
+
+
+
+
+
+				<field name="eventType">
+
+
+
+
+
+					<string value="end" />
+
+
+
+
+
+				</field>
+
+
+
+
+
+			</event-listener>
+
+
+
+
+
+		</on>
+
+
+
+
+
+	</task>
+
+
+
+
+
+
+
+
+
+	<decision name="选择处理方式" g="360,460,48,48">
+
+
+
+
+
+
+
+
+
+
+		<transition g="260,485;260,365:-50,-22" name="分发" to="科所队经办受理" />
+
+
+
+
+
+
+
+
+
+
+		<transition g="-50,-22" name="直接回复" to="业务部门领导审核" />
+
+
+
+
+
+
+
+
+
+
+		<handler class="net.evecom.platform.flow.handler.DecisionHandlerImpl" />
+
+
+
+
+
+
+
+
+
+	</decision>
+
+
+
+
+
+
+
+
+
+	<task name="业务部门领导审核" g="340,580,90,50">
+
+
+
+
+
+
+
+
+
+
+		<transition g="495,605:-50,-22" name="" to="方式判断" />
+
+
+
+
+
+
+
+
+
+		<on event="start">
+
+
+
+
+			<event-listener class="net.evecom.platform.flow.event.NodeEventListener">
+
+
+
+
+				<field name="eventType">
+
+
+
+
+					<string value="start" />
+
+
+
+
+				</field>
+
+
+
+
+			</event-listener>
+
+
+
+
+		</on>
+
+
+
+
+		<on event="end">
+
+
+
+			<event-listener class="net.evecom.platform.flow.event.NodeEventListener">
+
+
+
+				<field name="eventType">
+
+
+
+					<string value="end" />
+
+
+
+				</field>
+
+
+
+			</event-listener>
+
+
+
+		</on>
+
+
+
+	</task>
+
+
+
+
+
+
+
+
+
+	<decision name="处理方式判断" g="630,460,48,48">
+
+
+
+
+
+
+
+
+
+
+		<transition g="530,485;530,315:-50,-22" name="" to="业务部门经办受理" />
+
+
+
+
+
+
+
+
+
+
+		<transition g="-50,-22" name="直接回复" to="受理中心领导审核" />
+		<handler class="net.evecom.platform.flow.handler.DecisionHandlerImpl" />
+
+	</decision>
+	<task name="受理中心领导审核" g="610,580,90,50">
+		<transition g="738,605:-50,-22" name="to 流程结束" to="流程结束" />
+		<on event="start">
+			<event-listener class="net.evecom.platform.flow.event.NodeEventListener">
+				<field name="eventType">
+					<string value="start" />
+				</field>
+			</event-listener>
+		</on>
+	</task>
+	<end name="流程结束" g="714,778,48,48" />
+	<decision name="判断回复数量" g="210,650,48,48">
+
+		<transition g="235,605:-50,-22" name="一个" to="业务部门领导审核" />
+
+		<transition g="-50,-22" name="多个" to="业务部门经办汇总" />
+
+		<handler class="net.evecom.platform.flow.handler.DecisionHandlerImpl" />
+
+	</decision>
+
+	<task name="业务部门经办汇总" g="190,780,90,50">
+
+		<transition g="385,805:-50,-22" name="汇总完毕" to="业务部门领导审核" />
+		<on event="start">
+			<event-listener class="net.evecom.platform.flow.event.NodeEventListener">
+				<field name="eventType">
+					<string value="start" />
+				</field>
+			</event-listener>
+		</on>
+	</task>
+
+
+
+
+
+
+
+
+
+	<decision name="方式判断" g="470,690,48,48">
+
+
+
+
+
+
+
+
+
+
+		<transition g="-50,-22" name="多个业务部门" to="受理中心经办汇总" />
+
+
+
+
+
+
+
+
+
+
+		<transition g="495,805:-50,-22" name="一个业务部门" to="流程结束" />
+
+
+
+
+
+
+
+
+
+
+		<transition g="495,345:-50,-22" name="退回受理中心" to="受理中心经办受理" />
+
+
+
+
+
+
+
+
+
+
+		<handler class="net.evecom.platform.flow.handler.DecisionHandlerImpl" />
+
+
+
+
+
+
+
+
+
+	</decision>
+
+
+
+
+
+
+
+
+
+	<task name="受理中心经办汇总" g="610,690,90,50">
+
+
+
+
+
+
+
+
+
+
+		<transition g="-50,-22" name="" to="受理中心领导审核" />
+
+
+
+
+
+
+
+
+
+		<on event="start">
+
+			<event-listener class="net.evecom.platform.flow.event.NodeEventListener">
+
+				<field name="eventType">
+
+					<string value="start" />
+
+				</field>
+
+			</event-listener>
+
+		</on>
+
+	</task>
+</process>

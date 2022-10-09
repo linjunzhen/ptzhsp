@@ -1,0 +1,134 @@
+﻿@charset "utf-8";
+html,body,div,form,img,ul,ol,li,dl,dt,dd{margin:0px; padding:0px;}
+body{font-size:12px; margin:0 auto;padding:0;border:0; background:url(../imagesnew/bg.jpg) repeat-x top #000; font-family:"微软雅黑"; width:1024px; height:768px; margin:0 auto;overflow:hidden; word-break:break-all}
+select,input,textarea{font-size:12px; vertical-align:middle; padding:0; margin:0;}
+textarea{resize:none;}
+img{border:0; vertical-align:middle;}
+ol,ul,li{list-style:none; }
+a{text-decoration:none; color:#000; outline:none}
+a:hover {text-decoration:none; color:#0299ea}
+
+/*IE下a:hover 背景闪烁*/
+*html{overflow:-moz-scrollbars-vertical;_zoom:expression(function(ele){ele.style.zoom = "1";
+document.execCommand("BackgroundImageCache",false,true)}(this))}
+/*清除浮动*/
+.clearfix:after{content:'';display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{*zoom:1; _zoom:1;}
+
+/*布局*/
+.bg-none{background:none}
+.fs14{font-size:14px}
+.fs16{font-size:16px}
+.fs18{font-size:18px}
+.fs24{font-size:24px}
+.fb{font-weight:bold}
+
+/*头部*/
+.eui-header{background:url(../imagesnew/topbg.jpg) no-repeat bottom center #1c294b; display:table; width:1024px; height:72px; overflow:hidden;}
+.eui-header div{display:table-cell; display:inline-block\9; vertical-align:middle; color:#fff;}
+.eui-header .weather{width:200px}
+.eui-header .title{width:618px; text-align:center; font-size:28px; line-height:72px; font-family:"汉仪综艺体简"; letter-spacing:1px}
+.eui-header .time{width:120px; padding:0 0 0 70px}
+.eui-header .time p{margin:0; padding:0 12px; text-align:center}
+.eui-header .time .clock{font-size:28px; font-weight:bold; line-height:30px; letter-spacing:3px;}
+.eui-header .time .day{font-size:15px; line-height:20px}
+
+/*底部*/
+.eui-footer{height:90px}
+.eui-footer .tips{height:35px; line-height:35px; text-align:center; color:#fff; font-size:14px}
+.eui-footer .tips span{color:#ff0}
+.eui-footer .img{height:65px; overflow:hidden}
+
+/*content*/
+.eui-content{height:610px}
+.readcard{text-align:center; padding:24px 0 0 0}
+
+/*title*/
+.eui-title{background:url(../imagesnew/titlebg.png) no-repeat center top; line-height:40px; height:46px; text-align:center; color:#0ff; font-size:24px; letter-spacing:2px; -webkit-text-stroke-width:0.1px; position:relative}
+.eui-title a{display:block; color:#0ff}
+.eui-title img{position:absolute; left:20px; top:2px}
+
+/*scroll*/
+.scroll-left{width:864px; position:relative; margin:0 auto}
+.scroll-left .hd{color:#333;}
+.scroll-left .hd .prev,.scroll-left .hd .next{background:url(../imagesnew/arrow.png) no-repeat; display:block; width:80px; height:100px; position:absolute;top:216px;cursor:pointer;text-indent:-999em; overflow:hidden;}
+.scroll-left .hd .prev{left:-73px;background-position:0 0 ;}
+.scroll-left .hd .next{right:-73px;background-position:0 -100px;}
+.scroll-left .hd .prevStop{ background-position:80px 100px; cursor:default; }
+.scroll-left .hd .nextStop{ background-position:80px 100px; cursor:default; }
+
+.scroll-left .hd ul{zoom:1; display:table; margin:0 auto 0; overflow:hidden}
+.scroll-left .hd ul li{display:table-cell;  width:20px; height:20px; overflow:hidden; margin-right:5px; text-indent:-999px; cursor:pointer; background:url(../imagesnew/icon-circle.png) 0 -20px no-repeat; }
+.scroll-left .hd ul li.on{ background-position:0 0; }
+
+.scroll-list{overflow:hidden; zoom:1; margin:0 auto; padding:10px 0 0; height:526px; }
+.scroll-list li{float:left; _display:inline; overflow:hidden; text-align:center; padding:12px 15px; color:#fff}
+.scroll-list li:hover{background:url(../imagesnew/scroll-list-on.png) no-repeat}
+.scroll-list li a{color:#fff; display:table-cell; vertical-align:middle; padding:0 10px; overflow:hidden; width:236px; height:95px; font-size:18px; letter-spacing:2px; line-height:28px; border:1px solid #fff}
+.scroll-list li a:hover{color:#fff}
+.scroll-list li img{width:60px; display:block; margin:0 auto;}
+.scroll-list li.color1 a{background:#4a81d3}
+.scroll-list li.color2 a{background:#b13e41}
+.scroll-list li.color3 a{background:#8a2be2}
+.scroll-list li.color4 a{background:#d3af41}
+.scroll-list li.color5 a{background:#009966}
+.scroll-list li.color6 a{background:#3366cc}
+.scroll-list li.color7 a{background:#0066cc}
+.scroll-list li.color8 a{background:#32c0c4}
+.scroll-list li.color9 a{background:#daa520}
+.scroll-list li.color10 a{background:#6666cc}
+.scroll-list li.color11 a{background:#66ccff}
+.scroll-list li.color12 a{background:#4f86d8}
+.scroll-list li.color13 a{background:#9932cc}
+.scroll-list li.color14 a{background:#33ccff}
+.scroll-list li.color15 a{background:#0000cd}
+.scroll-list li.color16 a{background:#33cc66}
+.scroll-list li.color17 a{background:#6dc185}
+.scroll-list li.color18 a{background:#4f86d8}
+.scroll-list li.color19 a{background:#1c9edc}
+.scroll-list li.color20 a{background:#32c0c4}
+.scroll-list li.color21 a{background:#339933}
+.scroll-list li.color22 a{background:#f4a460}
+.scroll-list li.color23 a{background:#6666cc}
+.scroll-list li.color24 a{background:#4f86d8}
+.scroll-list li.color25 a{background:#4a81d3}
+
+.scrollt-list{overflow:hidden; zoom:1; margin:0 auto; padding:110px 60px 0; height:526px; }
+.scrollt-list li{float:left; _display:inline; overflow:hidden; text-align:center; padding:12px 15px; color:#fff}
+.scrollt-list li a{color:#fff; display:table-cell; vertical-align:middle; padding:0 10px; overflow:hidden; width:236px; height:204px; font-size:28px; letter-spacing:2px; line-height:28px;}
+.scrollt-list li a:hover{color:#fff}
+.scrollt-list li img{width:160px; display:block; margin:0 auto;}
+
+.nocolor a{background:rgba(255,255,255,0.1)!important; background:#283659\9!important; border:1px solid #8d94a6!important}
+.nocolor li:hover{background:url(../imagesnew/scroll-list-on-blue.png) no-repeat!important;}
+.nocolor li:hover a{background:rgba(255,255,255,0.1)!important; border:1px solid #00ffff!important; color:#00ffff}
+
+/* 竖屏 */
+.macw{width: 1080px; height: 1920px;}
+.macw .eui-header{width: 1080px;}
+.macw .eui-content{height: 1758px;}
+.macw .scrollt-list{height: auto; padding-top: 300px;}
+.macw .scrollt-list li{float: none; padding: 50px 0; text-align: center;}
+.macw .scrollt-list li a{display: block; width: 100%;}
+.macw .readcard{padding-top: 550px;}
+.macw .eui-tab{height: 1692px;}
+.macw .eui-tab .hd{background: #111f55;}
+.macw .multipleColumn .eui-sx{height: 1580px;}
+.macw .multipleColumn .eui-sx li{margin-bottom: 11px;}
+.macw .eui-sx-detail .swiper-container{height: 1602px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:p="http://www.springframework.org/schema/p" 
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context" 
+	xmlns:tx="http://www.springframework.org/schema/tx" 
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd	
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<!-- 自动扫描controller包下的所有类，使其认为spring mvc的控制器 -->
+	<!-- 加载controller的时候,不加载service,因为此时事物并未生效,若此时加载了service,那么事物无法对service进行拦截 -->
+	<context:component-scan base-package="net.evecom.platform.*.controller">
+		<context:exclude-filter type="annotation"
+			expression="org.springframework.stereotype.Service" />
+	</context:component-scan>
+
+	<!-- 避免IE执行AJAX时,返回JSON出现下载文件 -->
+	<bean id="mappingJacksonHttpMessageConverter"
+		class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
+		<property name="supportedMediaTypes">
+			<list>
+				<value>text/html;charset=UTF-8</value>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- 启动Spring MVC的注解功能，完成请求和注解POJO的映射， 配置一个基于注解的定制的WebBindingInitializer，解决日期转换问题，方法级别的处理器映射 -->
+	<bean
+		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+		<property name="cacheSeconds" value="0" />
+		<property name="messageConverters">
+			<list>
+				<ref bean="mappingJacksonHttpMessageConverter" /><!-- json转换器 -->
+			</list>
+		</property>
+		<property name="webBindingInitializer">
+			<bean class="net.evecom.core.interceptors.MyWebBinding" />
+		</property>
+	</bean>
+	<!-- 默认的视图解析器 在上边的解析错误时使用 (默认使用html)- -->
+	<bean id="defaultViewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+		p:order="3">
+		<property name="viewClass"
+			value="org.springframework.web.servlet.view.JstlView" />
+		<property name="contentType" value="text/html" />
+		<property name="prefix" value="/webpage/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver"
+		p:defaultEncoding="UTF-8">
+		<property name="maxUploadSize">
+			<value>104857600</value>
+		</property>
+		<property name="maxInMemorySize">
+			<value>4096</value>
+		</property>
+	</bean>
+	
+	<!-- 权限url拦截器 -->
+	<mvc:interceptors>
+	   <mvc:interceptor>
+	      <mvc:mapping path="/*.do"/>
+	      <bean class="net.evecom.core.web.interceptors.AuthInterceptor">
+	            <!-- 后台管理系统无须拦截的URL -->
+				<property name="excludeUrls">
+					<list>
+						<value>domesticControllerController.do?selectorNew</value>
+						<value>domesticControllerController.do?businessScopeDatagrid</value>
+						<value>domesticControllerController.do?businessScopeSelected</value>
+						<value>payController.do?goPaySuccess</value>
+						<value>payController.do?goAccPay</value>
+						<value>webSiteController.do?bdcdjzlcxbr</value>
+						<value>declare.do?getDeclareInfo</value>
+						<value>declare.do?uploadImages</value>
+						<value>declare.do?submitApply</value>
+						<value>declare.do?findItemForRobot</value>
+						<value>declare.do?itemDetail</value>
+						<value>loginController.do?login</value>
+						<value>loginController.do?facelogin</value>
+						<value>loginController.do?checkFacelogin</value>
+						<value>sysUserController.do?allPhotoUser</value>
+						<value>loginController.do?checkUser</value>
+						<value>loginController.do?unifiedlogin</value>
+						<value>loginController.do?logout</value>
+						<value>loginController.do?autologin</value>
+						<value>opinionController.do?load</value>
+						<value>dictionaryController.do?load</value>
+						<value>fileAttachController.do?multiDel</value>
+						<value>fileAttachController.do?get</value>
+						<value>fileAttachController.do?getHisMatInfo</value>
+						<value>excelConfigController.do?exp</value>
+						<value>userInfoController.do?login</value>
+						<value>userInfoController.do?saveOrUpdate</value>
+						<value>baseController.do?verifyValueExist</value>
+						<value>baseController.do?tree</value>
+						<value>serviceItemController.do?pagelist</value>
+						<value>webSiteController.do?loadbsSearch</value>
+						<value>serviceItemController.do?jskzx</value>
+						<value>osTopicController.do?wsdc</value>
+						<value>callController.do?goTakeNo</value>
+						<value>callController.do?toDeptChoose</value>
+						<value>callController.do?toChildDepart</value>
+						<value>callController.do?takeNo</value>
+						<value>callController.do?pickUpParts</value>
+						<value>callController.do?callingLineInfo</value>
+						<value>callController.do?lineInfoJson</value>
+						<value>callController.do?yqyzlineInfoJson</value>
+						<value>callController.do?xmtzlineInfoJson</value>
+						<value>callController.do?goAppointTakeNo</value>
+						<value>callController.do?goYctbTakeNo</value>
+						<value>callController.do?goYctbTakeNoMacW</value>
+						<value>callController.do?goYqyzTakeNoMacW</value>
+						<value>callController.do?toYctbTypeChoose</value>
+						<value>callController.do?toYctbTypeChooseMacW</value>
+						<value>callController.do?toYqyzTypeChooseMacW</value>
+						<value>callController.do?goAppointTakeNoTest</value>
+						<value>callController.do?toTypeChoose</value>
+						<value>callController.do?toTypeChooseTest</value>
+						<value>callController.do?toReadCardAppoint</value>
+						<value>callController.do?toReadCardAgain</value>
+						<value>callController.do?toAppointChoose</value>
+						<value>callController.do?toAgainChoose</value>
+						<value>callController.do?toReadCardAppointMacW</value>
+						<value>callController.do?toReadCardAgainMacW</value>
+						<value>callController.do?toAppointChooseMacW</value>
+						<value>callController.do?toAgainChooseMacW</value>
+
+						<value>callController.do?toYctbReadCardAppoint</value>
+						<value>callController.do?toYctbReadCardAgain</value>
+
+						<value>callController.do?appointmentGrid</value>
+						<value>callController.do?appointmentTake</value>
+						<value>callController.do?waitingGrid</value>
+						<value>callController.do?appointmentTakeNo</value>
+						<value>callController.do?againTakeNo</value>
+						<value>newCallController.do?toMaterTypeChoose</value>
+						<value>newCallController.do?toMaterChoose</value>
+						<value>newCallController.do?toMaterTypeChooseMacW</value>
+						<value>newCallController.do?toMaterChooseMacW</value>
+						<value>weachat.do?chat</value>
+						<value>applyMaterController.do?onlineWord</value>
+						<value>applyMaterController.do?saveFileAttach</value>
+						<value>serviceItemController.do?pagelistnew</value>
+						<value>loginController.do?swbLogin</value>
+						<value>loginController.do?swbRegister</value>
+						<value>loginController.do?getUserToken</value>
+						<value>negativeListController.do?selector</value>
+						<value>negativeListController.do?datagrid</value>
+						<value>executionController.do?frontRevokeFlow</value>
+						<value>printAttachController.do?printTemplate</value>
+						<value>contentController.do?info</value>
+						<value>baseController.do?verifyCompanyNameExist</value>
+						<value>baseController.do?verifyCompanyEngExist</value>
+						<value>userInfoController.do?sqcb</value>
+						<value>userInfoController.do?revoke</value>
+						<value>oldAgeCardController.do?newApply</value>
+						<value>oldAgeCardController.do?export</value>
+						<value>executionController.do?goStart</value>
+						<value>userInfoController.do?addrSelector</value>
+						<value>userInfoController.do?findAddrByUserId</value>
+
+						<value>creditController.do?licenseInfo</value>
+						<value>creditController.do?uploadFile</value>
+						<value>creditController.do?showFileWithFilePath</value>
+						<value>creditController.do?getCertificateType</value>
+						<value>creditController.do?licenseDatagrid</value>
+						<value>creditController.do?showFile</value>
+						
+						<value>creditController.do?electDocumentInfo</value>
+						<value>creditController.do?electDocumentDatagrid</value>
+						<value>creditController.do?uploadElectDocumentFile</value>
+
+						<value>callController.do?goQueQuery</value>
+						<value>callController.do?goBusWaitNum</value>
+						<value>callController.do?busWaitNumDatagrid</value>
+						<value>callController.do?bindOpenId</value>
+						<value>callController.do?sendMessage</value>
+						<value>callController.do?notifyWxHasOpenId</value>
+						<value>callDataController.do?yqyzCallingLineInfo</value>
+						<value>callDataController.do?xmtzCallingLineInfo</value>
+						<value>callDataController.do?callingLineInfo</value>
+						<value>newCallController.do?checkLineItemDeal</value>
+						<value>callDataController.do?callingLineInfoForMarriage</value>
+						<value>callDataController.do?lineInfoJsonForMarriage</value>
+						<value>userInfoController.do?mztLogin</value>
+						<value>userInfoController.do?mztLoginResult</value>
+						<value>webSiteController.do?mztRegist</value>
+						<value>projectApplyController.do?loadTzxmxxData</value>
+						<value>projectWebsiteApplyController.do?websiteSaveOrUpdate</value>
+						<value>userProjectController.do?pagelist</value>
+						<value>userProjectController.do?websiteItemList</value>
+						<value>projectWebsiteApplyController.do?websiteInfo</value>
+						<value>projectWebsiteApplyController.do?progressQuery</value>
+						<value>projectWebsiteApplyController.do?projectInfo</value>
+						<value>exeDataController.do?getResultOfSign</value>
+						<value>exeDataController.do?uploadBaseCode</value>
+						<value>wxUploadVideoController.do?fileUpload</value>
+						<value>exeDataController.do?commercialSignView</value>
+						<value>exeDataController.do?signDatagrid</value>
+						<value>executionController.do?getResultFiles</value>
+						<value>executionController.do?notAccept</value>
+						<value>fileTypeController.do?openWebStieUploadDialog</value>
+						<value>bdcApplyController.do?printSmartForm</value>
+						<value>projectWebsiteApplyController.do?getApproveItem</value>
+						<value>projectWebsiteApplyController.do?getAccessToken</value>
+						<value>projectWebsiteApplyController.do?getAccessTokenByParam</value>
+						<value>projectWebsiteApplyController.do?delUpload</value>
+						<value>projectFinishManageController.do?projectFinishItemData</value>
+						<value>projectFinishManageController.do?cjgfzrztList</value>
+						<value>xfDesignController.do?findZrztxxList</value>
+						<value>xfDesignController.do?findDtjzwList</value>
+						<value>xfDesignController.do?zrztInfo</value>
+						<value>xfDesignController.do?dtjzwInfo</value>
+						<value>xfDesignController.do?saveOrUpdateDtjzw</value>
+						<value>xfDesignController.do?saveOrUpdateZrzt</value>
+						<value>xfDesignController.do?multiDelZrzt</value>
+						<value>xfDesignController.do?multiDelDtjzw</value>
+						<value>projectSgxkController.do?addSgry</value>
+						<value>projectSgxkController.do?addJlry</value>
+						<value>projectSgxkController.do?addDwInfo</value>
+						<value>projectSgxkController.do?enterpriseSelector</value>
+						<value>projectSgxkController.do?enterpriseDatagrid</value>
+						<value>bdcApplyController.do?lookBdcImgView</value>
+
+						<value>busInteractController.do?wxBookDepartListView</value>
+						<value>busInteractController.do?wxBookBusinessChooseView</value>
+						<value>busInteractController.do?wxBookListView</value>
+						<value>busInteractController.do?toOnlineNew</value>
+						<value>busInteractController.do?toReviewNew</value>
+						<value>exeDataController.do?companyInfoByCreditView</value>
+
+						<value>bdcApplyController.do?bdcDocInfoSelector</value>
+						<value>bdcApplyController.do?fdchtbaxxcxSelector</value>
+						<value>bdcDyqscdjController.do?bdcygdacxSelector</value>
+						<value>bdcDyqscdjController.do?bdcdaxxcxDatagrid</value>
+						<value>bdcYgspfygdjController.do?fdchtbaxxcxDatagrid</value>
+						<value>bdcDyqscdjController.do?bdcygdacxDatagrid</value>
+						<value>bdcGyjsjfwzydjController.do?checkBdcdyh</value>
+						<value>bdcYgspfygdjController.do?getCqztByBdcdyh</value>
+						<value>bdcGyjsjfwzydjController.do?loadBdcBankList</value>
+						<value>bdcGyjsjfwzydjController.do?addBdcBankView</value>
+						<value>bdcApplyController.do?fdchtbaxxcxSelectorWw</value>
+						<value>bdcApplyController.do?bdcDocInfoSelectorWw</value>
+						<value>bdcDyqscdjController.do?bdcygdacxSelectorWw</value>
+						<value>bdcDyqscdjController.do?selector</value>
+						<value>bdcDyqscdjController.do?datagrid</value>
+						<value>bdcDyqscdjController.do?bdcdaxxcxSelector</value>
+						<value>bdcDyqscdjController.do?bdcdaxxcxDatagrid</value>
+						<value>bdcDyqscdjController.do?checkBdcfh</value>
+						<value>bdcDyqzxdjController.do?selector</value>
+						<value>bdcDyqzxdjController.do?datagrid</value>
+						<value>bdcDyqzxdjController.do?busSelectorItemView</value>
+						<value>personCreditController.do?queryPersonCreditLevel</value>
+						<value>bdcApplyController.do?fwdyxxcxDatagrid</value>
+						<value>busController.do?workFlowReceive</value>
+						<value>bdcApplyController.do?bdcdjsjjgImgView</value>
+						<value>webSiteController.do?bdcLjczView</value>
+                        <value>projectFinishManageController.do?saveOrUpdateZrzt</value>
+                        <value>projectFinishManageController.do?multiDelZrzt</value>
+                        <value>projectFinishManageController.do?zrztInfo</value>
+                        <value>bdcGyjsjfwzydjController.do?busSelectorItemView</value>
+						<value>projectSgxkController.do?addDwgcChildrenInfo</value>
+						<value>fileTypeController.do?openUploadDialog</value>
+						<value>bdcApplyController.do?checkLimitPerson</value>
+						<value>bdcApplyController.do?bdcsxtjbView</value>
+						<value>bdcApplyController.do?bdcdjsjjgImgView</value>
+						<value>bdcApplyController.do?bdcjbrytjbView</value>
+						<value>bdcApplyController.do?bdcjbrytjbData</value>
+						<value>bdcApplyController.do?bdcsxtjbData</value>
+						<value>projectWebsiteController.do?index</value>
+						<value>projectWebsiteController.do?declareInfo</value>
+						<value>projectWebsiteController.do?findContentForPage</value>
+						<value>projectWebsiteController.do?bsznView</value>
+						<value>projectWebsiteController.do?userCenter</value>
+						<value>projectWebsiteController.do?projectInfoDetail</value>
+						<value>projectWebsiteController.do?applyProjectView</value>
+						<value>projectWebsiteController.do?myProjectView</value>
+						<value>bdcApplyController.do?bdcbjmxbView</value>
+						<value>bdcApplyController.do?bdcbjmxbData</value>
+						<value>creditController.do?creditFeedBackView</value>
+						<value>creditController.do?saveOrUpdateCreditFeedBack</value>
+						<value>baseController.do?verifyAllBdcdyhExist</value>
+						<value>industryController.do?selectMainBussinessView</value>
+						<value>bdcApplyController.do?bdcLsyljfjsView</value>
+						<value>bdcApplyController.do?bdcLandPrcCalculator</value>
+						<value>newCallController.do?proEvaluateView</value>
+						<value>newCallController.do?evaluate</value>
+						<value>newCallController.do?stfSituationView</value>
+						<value>bdcQlcApplyController.do?verifyBdcdyhExistSubmit</value>
+						<value>statisticsNewController.do?exportMrsltjXxExcel</value>
+						<value>statisticsNewController.do?exportMrsltjXsExcel</value>
+						<value>projectFullTestController.do?saveFullTestProject</value>	
+
+						<value>projectFlowController.do?projectInfo</value>
+						<value>projectFlowController.do?projectNodeInfo</value>
+						<value>ktStampController.do?downLoadStampFile</value>
+					</list>
+				</property>
+				<!-- 网站前台需要被拦截的URL -->
+				<property name="webSiteAuthUrls">
+					<list>
+						<value>webSiteController.do?usercenter</value>
+						<value>webSiteController.do?applyItem</value>
+						<value>webSiteController.do?applyItemOfProject</value>
+						<value>webSiteController.do?submitApply</value>
+						
+						<value>userInfoController.do?wdbjonl</value>
+						<value>userInfoController.do?wdbj</value>
+						<value>userInfoController.do?wdbjlist</value>
+						<value>userInfoController.do?wdsjdzlist</value>
+						<value>userInfoController.do?wdcllist</value>
+						<value>bspjController.do?pagelist</value>
+						<value>bsscController.do?pagelist</value>
+						<value>consultController.do?pagelist</value>
+						<value>userInfoController.do?xgmm</value>
+						<value>bspjController.do?savePjxx</value>
+						<value>userInfoController.do?updateUserInfo</value>
+						<value>userInfoController.do?saveUserRecAdd</value>
+						<value>userInfoController.do?saveUserFile</value>
+						<value>complainController.do?tsjd</value>
+						<value>commentController.do?wspy</value>
+						<value>complainController.do?pagelist</value>
+						<value>executionController.do?getBackMyApply</value>	
+						<value>webSiteController.do?zzhywssb</value>	
+						<value>webSiteController.do?wssbSelect</value>	
+						<value>webSiteController.do?bgzx</value>
+						<value>webSiteController.do?relateItemSelect</value>					
+						<value>executionController.do?multiDelDraft</value>							
+						<value>userInfoController.do?makeDefault</value>						
+						<value>userInfoController.do?multiDelMyFile</value>				
+						<value>userInfoController.do?multiDelDraft</value>
+						<value>executionController.do?frontRevokeFlow</value>
+						<value>userInfoController.do?sqcb</value>
+						<value>userInfoController.do?revoke</value>
+						<value>exeDataController.do?fontSignInfo</value>
+						<value>exeDataController.do?uploadCompanyFileView</value>
+						<value>domesticControllerController.do?downloadLegalSeal</value>
+						<value>exeDataController.do?uploadCompanyFileView</value>
+						<value>exeDataController.do?uploadCompanyFile</value>
+						<value>xfDesignController.do?findZrztxxList</value>
+						<value>xfDesignController.do?findDtjzwList</value>
+						<value>projectFinishManageController.do?cjgfzrztList</value>
+
+						<value>bdcQlcApplyController.do?fdchtbaxxcxSelectorWw</value>
+						<value>bdcQlcApplyController.do?bdcygdacxSelectorWw</value>
+						
+						<value>webSiteController.do?wssbmp</value>	
+						<value>gtptxxglController.do?gtptxxSelector</value>	
+						<value>gtptxxglController.do?datagridWw</value>	
+						
+						<value>cancelController.do?enterpriseInfo</value>	
+						<value>cancelController.do?getEnterpriseInfo</value>
+						<value>cancelController.do?getCommercialDicType</value>	
+						<value>cancelController.do?getCommercialDic</value>	
+						
+
+					</list>
+				</property>
+				<!-- weixin不需要被拦截的URL -->
+				<property name="weixinAuthUrls">
+					<list>
+						<value>webSiteController.do?bdcdjzlcxbr</value>
+						<value>declare.do?getDeclareInfo</value>
+						<value>declare.do?findItemForRobot</value>
+						<value>declare.do?itemDetail</value>
+						<value>declare.do?uploadImages</value>
+						<value>declare.do?submitApply</value>
+						<value>wregisterController.do?register</value>
+						<value>wregisterController.do?registerSecond</value>
+						<value>wregisterController.do?registerThird</value>
+						<value>wregisterController.do?createCode</value>
+						<value>wregisterController.do?checkUser</value>
+						<value>wregisterController.do?registerSave</value>
+						<value>wregisterController.do?registerQy</value>
+						<value>userBindController.do?toBind</value>
+						<value>userBindController.do?toChangeBind</value>
+						<value>userBindController.do?checkUser</value>
+						<value>userBindController.do?bindSave</value>
+						<value>userBindController.do?saveChangeInfo</value>
+						<value>userBindController.do?cancelBD</value>
+						<value>userBindController.do?toBinded</value>
+						<value>busInteractController.do?toTousu</value>
+						<value>busInteractController.do?toConsult</value>
+						<value>busInteractController.do?zxSubmit</value>
+						<value>busInteractController.do?toZXList</value>
+						<value>busInteractController.do?tousuSave</value>
+						<value>busInteractController.do?showZX</value>
+						<value>busInteractController.do?toRateQuery</value>
+						<value>busInteractController.do?toOnline</value>
+						<value>busInteractController.do?toReview</value>
+						<value>busInteractController.do?bsGuide</value>
+						<value>busInteractController.do?reviewInfo</value>
+						<value>busInteractController.do?savePjxx</value>
+						<value>busInteractController.do?bsGuide</value>
+						<value>busInteractController.do?guideList</value>
+						<value>busInteractController.do?frguideList</value>
+						<value>busInteractController.do?bsguideInfo</value>
+						<value>busInteractController.do?loadbsSearch</value>
+						<value>userInfoController.do?swbLogin</value>
+						<value>userInfoController.do?swbRegister</value>
+						<value>userInfoController.do?getUserToken</value>
+						
+						<value>callController.do?goQueQuery</value>
+						<value>callController.do?goBusWaitNum</value>
+						<value>callController.do?busWaitNumDatagrid</value>
+						<value>callController.do?bindOpenId</value>
+						<value>callController.do?sendMessage</value>
+
+						<value>busInteractController.do?wxBookDepartListView</value>
+						<value>busInteractController.do?wxBookBusinessChooseView</value>
+						<value>busInteractController.do?wxBookListView</value>
+						<value>busInteractController.do?toOnlineNew</value>
+						<value>busInteractController.do?toReviewNew</value>
+
+					</list>
+				</property>
+		 </bean>
+	   </mvc:interceptor>
+	</mvc:interceptors>
+	
+</beans>

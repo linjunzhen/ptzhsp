@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta name="renderer" content="webkit">
+	<title></title>
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/Select.css">
+	<link rel="stylesheet" type="text/css" href="css/eui.css">
+</head>
+<body>
+	
+	<div class="eui-main mine">
+		<!-- 头部 -->
+		<div class="eui-con eui-flex vc eui-header">
+			<div class="eui-logo">
+				<a class="eui-flex vc" href="1首页.html"><img src="images/logo.png" ></a>
+			</div>
+			<div class="eui-nav flex1">
+				<ul class="eui-flex vc">
+					<li><a href="1首页.html">首　页</a></li>
+					<li><a href="2申报指引.html">申报指引</a></li>
+					<li><a href="3办事指南.html">办事指南</a></li>
+					<li><a href="4办件公示.html">办件公示</a></li>
+					<li><a href="5政策法规.html">政策法规</a></li>
+					<li><a href="6下载专区.html">下载专区</a></li>
+				</ul>
+			</div>
+			<div class="eui-header-login">
+				<!-- 未登录 -->
+				<a class="unlogin" style="display: none;" href="#">登录/注册</a>
+				<!-- 已登录 -->
+				<div class="eui-user">
+					<span>134****3386</span>
+					<div class="sub">
+						<a href="#">个人中心</a>
+						<a href="#">退出登录</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 头部 end -->
+		
+		<!-- 主体 -->
+		<div class="eui-con">
+			
+			<div class="eui-flex eui-mine">
+				<div class="flex1">
+					
+					<div class="eui-card eui-mb eui-flex bt eui-step">
+						<span class="on"><i>1</i>合同说明</span>
+						<span><i>2</i>申报信息</span>
+						<span><i>3</i>业务表单</span>
+						<span><i>4</i>上传材料</span>
+						<span><i>5</i>完成申报</span>
+					</div>
+					
+					<div class="eui-card eui-declaration">
+						<!-- 类型 -->
+						<div class="eui-tit round">
+							<b>类型</b>
+						</div>
+						<div class="eui-filter i1 eui-flex wrap">
+							<span class="on">政府投资市政类（线性工程）项目</span>
+							<span>政府投资房建类项目</span>
+							<span>社会投资房建类项目</span>
+							<span>社会投资小型工程建设项目</span>
+							<span>社会投资工业类项目</span>
+							<span>带方案出让用地的社会投资项目</span>
+						</div>
+						<!-- 阶段 -->
+						<div class="eui-tit round">
+							<b>阶段</b>
+						</div>
+						<div class="eui-filter i2 eui-flex wrap">
+							<span class="on">立项用地规划许可阶段</span>
+							<span>工程建设许可阶段</span>
+							<span>施工许可阶段</span>
+							<span>竣工验收阶段</span>
+						</div>
+						<!-- 事项列表 -->
+						<div class="eui-tit round">
+							<b>事项列表</b>
+						</div>
+						<div class="eui-flex tc eui-search" style="margin-top: 0;">
+							<input class="ipt" type="text" placeholder="请输入事项名称">
+							<a class="eui-btn" href="javascript:void(0)">搜 索</a>
+						</div>
+						<div class="eui-sx-list">
+							<table>
+								<thead>
+									<tr>
+										<th><input class="eui-checkbox" type="checkbox" /></th>
+										<td>事项名称</td>
+										<th>服务</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th><input class="eui-checkbox" type="checkbox" /></th>
+										<td>建设用地规划许可证及划拨决定书核发<span>必经事项</span></td>
+										<th><a href="#">办事指南</a></th>
+									</tr>
+									<tr>
+										<th><input class="eui-checkbox" type="checkbox" /></th>
+										<td>建设用地规划许可证及划拨决定书核发<span>必经事项</span></td>
+										<th><a href="#">办事指南</a></th>
+									</tr>
+									<tr>
+										<th><input class="eui-checkbox" type="checkbox" /></th>
+										<td>建设用地规划许可证及划拨决定书核发</td>
+										<th><a href="#">办事指南</a></th>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="eui-flex bt vc">
+							<div class="eui-flex vc"><strong>已选事项：</strong>
+								<div class="eui-sx-selected">
+									<b>3</b>
+									<div class="eui-sx-popup">
+										<div class="tit eui-flex bt">
+											<span>已选事项</span>
+											<span class="close">×</span>
+										</div>
+										<div class="con eui-table">
+											<div class="tr">
+												<div class="td"><i>1</i>建设用地规划许可证及划拨决定书核发</div>
+												<div class="th min"><a class="del"></a></div>
+											</div>
+											<div class="tr">
+												<div class="td"><i>2</i>建设用地规划许可证及划拨决定书核发</div>
+												<div class="th min"><a class="del"></a></div>
+											</div>
+											<div class="tr">
+												<div class="td"><i>3</i>建设用地规划许可证及划拨决定书核发</div>
+												<div class="th min"><a class="del"></a></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="eui-flex tc eui-sx-btn">
+								<a class="eui-btn o"  onclick="tempSaveWebSiteFlowForm('T_GCXM_XMJBXX_FORM')">保存草稿</a>
+								<a class="eui-btn" href="javascript:void(0)">下一步</a>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 主体 end -->
+		
+		<!-- 底部 -->
+		<div class="eui-footer">
+			<iframe frameborder="0" width="100%" height="100%" marginheight="0" marginwidth="0" scrolling="no" allowtransparency="true" src="foot.html"></iframe>
+		</div>
+		<!-- 底部 end -->
+	</div>
+	
+	<script type="text/javascript" charset="utf-8" src="js/jquery.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/Select.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/totop.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			//下拉框
+			$('select').selectMatch();
+			// 筛选
+			$(".eui-filter span").click(function(){
+				$(this).addClass("on").siblings().removeClass("on");
+			})
+			// 已选事项
+			$(".eui-sx-selected b").click(function(){
+				$(this).toggleClass("on");
+			})
+			$(".eui-sx-popup .close").click(function(){
+				$(".eui-sx-selected b").removeClass("on");
+			})
+		});
+	</script>
+	
+</body>
+</html>

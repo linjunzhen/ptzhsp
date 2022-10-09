@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Proposer><!--申报种类。枚举类型，取值为数字“个人（办理个人业务）=0，法人（办理单位业务）=1” -->
+	<ApplyType>1</ApplyType><!--申报对象所属区划 -->
+	<AreaCode>350481</AreaCode><!--个人信息 -->
+	<Person><!--(不多于100个汉字) --><!--姓名 -->
+		<ApplyName /><!--枚举类型，男、女 --><!--性别 -->
+		<Sex /><!--出生日期 --><!--（时间格式：yyyy-MM-dd，如：2014-01-01） -->
+		<Birthday /><!--枚举类型：取值范围为“身份证SF，组织机构代码证JGDM，工商营业执照YYZZ，军官证JG，士兵证SB，护照HZ，台湾居民来往大陆通行证TWTX，香港身份证 
+			HKSF，澳门身份证 AMSF，台湾身份证 TWSF，港澳居民来往内地通行证 GATX，其他 QT” --><!--证件类型 -->
+		<CertificateType /><!--当证件类型不在IDType的取值范围内时，需要“证件名称” --><!--证件名称 -->
+		<CertificateName /><!--证件号码 -->
+		<CertificateNumber /><!--(不多于100个汉字) --><!--家庭住址 -->
+		<Address /><!--邮政编码 -->
+		<Postcode /><!--手机号码 -->
+		<MobilePhone /><!--电子邮箱 -->
+		<Mail /><!--办公/家庭电话 -->
+		<Tel /><!--实名认证状态 -->
+		<IdentificationStatus />
+	</Person><!--法人信息 -->
+	<Unit><!--机构名称 -->
+		<UnitName>大田县智讯网吧</UnitName><!--（必须为9位，组织机构代码证上的“-”不要，如组织机构代码证上的号码为74381792-7，则输入为743817927） --><!--组织机构代码 -->
+		<UnitCode></UnitCode><!--枚举类型，取值范围为“机关JG，事业单位SYDW，企业QY，社团ST，其他QT” --><!--机构类型 -->
+		<UnitType>QY</UnitType><!--法人代表 -->
+		<LealPerson>罗春海</LealPerson><!--机构地址 -->
+		<Address>福建省三明市大田县建设镇建设村259号5幢122-123号店</Address><!--联系电话 -->
+		<Tel></Tel><!--邮政编码 -->
+		<Postcode>366105</Postcode><!--实名认证状态 -->
+		<IdentificationStatus></IdentificationStatus>
+	</Unit>
+</Proposer>

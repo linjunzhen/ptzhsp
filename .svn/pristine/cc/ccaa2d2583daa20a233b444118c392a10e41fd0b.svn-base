@@ -1,0 +1,352 @@
+
+/* 全局 */
+html,body{overflow-x: hidden;}
+html body{margin-top: 61px;}
+html{background-color: #F2F2F2;}
+i{font-style: normal;}
+
+/* 系统 */
+::-webkit-input-placeholder{color: #c2c2c2}
+
+/* 辅助 */
+a:hover{color: #009688; transition: all .3s;}
+pre{padding: 10px 15px; margin: 10px 0; font-size: 12px; border-left: 6px solid #009688;  background-color: #f8f8f8; font-family: Courier New; overflow: auto;}
+
+pre{position: relative; margin: 10px 0; padding: 15px; line-height: 20px; border: 1px solid #ddd; border-left-width: 6px; background-color: #F2F2F2; color: #333; font-family: Courier New; font-size: 12px;}
+pre{border: none; border-left: 5px solid #ddd;}
+
+
+.layui-container{padding: 0;}
+.merchant-main{width: 1079px; min-height: 600px; margin: 0 auto 15px;}
+.layui-badge{height: 20px; line-height: 20px; border-radius: 2px;}
+
+.merchant-link{color: #01AAED;}
+.merchant-link:hover{color: #5FB878;}
+.merchant-grey{color: #999;}
+
+.merchant-msg, .merchant-error{padding: 10px 15px; line-height: 24px;}
+.merchant-msg{background-color:#F8F8F8; color:#666;}
+.merchant-msg a{color:#4F99CF}
+.merchant-error{color: #FF5722;}
+.merchant-editbox{position: relative;}
+
+.merchant-marginTop{margin-top: 15px;}
+.merchant-mid{display: inline-block; height: 10px; width: 1px; margin: 0 10px; vertical-align: middle; background-color: #e2e2e2;}
+.merchant-right{position: absolute; right: 15px; top: 0;}
+.merchant-imagecode{position: relative; cursor: pointer;}
+
+/* 过度 */
+.merchant-loading{position: absolute; top: 50%; left: 50%; margin: -12px 0 0 -15px; font-size: 30px; color: #c2c2c2;}
+
+/* 头像 */
+.merchant-avatar{position: absolute; left: 15px; top: 15px;}
+.merchant-avatar img{display: block; width: 45px; height: 45px; margin: 0; border-radius: 2px;}
+
+/* 徽章 */
+.merchant-badge-vip{height: 16px; line-height: 16px; padding: 0 3px; background-color: #FF5722; color: #fff; border-radius: 2px;}
+.merchant-badge-accept{height: 18px; line-height: 18px; padding: 0 5px !important; background-color: #5FB878; border-radius: 2px;}
+
+/* 赞助商 */
+.merchant-zanzhu{display: block; position: relative; height: 60px; line-height: 60px; margin-top: 10px; padding: 0 20px; text-align: center; font-size: 16px; font-weight: 300; background-color: #009688; color: #fff;}
+.merchant-zanzhu:first-child{margin-top: 0;}
+.merchant-zanzhu:hover{opacity: 0.9; color: #fff;}
+.merchant-zanzhu-img{height: auto; max-width: 100%; padding: 0; text-align: center; background-color: #eee;}
+.merchant-zanzhu-img img{max-width: 100%;}
+
+/* 图标 */
+.icon-touxiang{display: inline-block; font-size: 34px;}
+.icon-qq, .icon-weibo{font-size: 30px;}
+.icon-renzheng{position: relative; color: #FFB800;}
+.icon-kiss{font-size: 18px;}
+.icon-pinglun1{position: relative; top: 2px;}
+
+.icon-alipay{position: relative; color: #3AA1FB; font-size: 24px;}
+.icon-weixinzhifu{position: relative; color: #40AF3A;}
+
+.icon-liwu{color: #FF5722;}
+
+
+/* 头部 */
+.merchant-header{position: fixed; left: 0; top: 0; z-index: 10000; width: 100%; height: 60px; border-bottom: 1px solid #404553; border-right: 1px solid #404553; border-radius: 0;}
+.merchant-logo{position: absolute; left: 15px; top: 11px;}
+.merchant-nav{margin-left: 200px;}
+.merchant-nav a i{position: absolute; left: 25px; top: 0; padding-right: 10px; font-size: 26px;}
+.merchant-nav a .icon-shouye, .nav a .icon-shezhi{top: 2px;}
+
+.merchant-nav-user{position: absolute; top: 0; right: 0;}
+.merchant-nav-user .iconfont{position: relative;}
+.merchant-nav-avatar img{width: 36px; height: 36px; margin-left: 10px; border-radius: 100%;}
+.merchant-nav-avatar  .icon-renzheng{font-size: 16px; top: 1px;}
+.merchant-nav-avatar .merchant-badge-vip{position: relative; margin-left: 10px;}
+.merchant-nav-user .layui-nav-child{text-align: center;}
+.merchant-nav-user .layui-nav-child a i{position: relative; top: 2px; margin-right: 10px; font-size: 26px;}
+
+.merchant-nav-msg{position:absolute; top: 50%; left: -25px; height: 20px; line-height: 20px; margin-top: -10px; padding:0 6px!important; background-color: #FF7200; color: #fff; border-radius: 2px;}
+.merchant-nav-msg:hover{color:#fff;}
+
+.merchant-header .layui-nav{padding: 0; background: none;}
+.merchant-header .merchant-nav a{padding: 0 25px 0 60px;}
+
+.merchant-header .merchant-nav .merchant-nav-child a{padding-left: 25px;}
+.merchant-header .merchant-nav .layui-nav-more{display: none;}
+
+.merchant-header .merchant-nav-user li a{padding: 0 10px;}
+.merchant-header .merchant-nav-user li .merchant-nav-avatar{padding-right: 0;}
+.merchant-header .merchant-nav-user a.iconfont{color: #A9B7B7;}
+.merchant-header>.layui-nav-item a{color: rgba(255,255,255,0.5);}
+.merchant-header .layui-this a{color: #fff;}
+.merchant-header .layui-nav .layui-this:after,
+.merchant-header .layui-nav .layui-nav-bar,
+.merchant-header .merchant-nav-user .layui-nav-more,
+.merchant-html-layui .merchant-nav-avatar .layui-nav-more{display: none !important;}
+.merchant-header .merchant-nav-user .layui-nav-child{left: auto; right: 0; width: 120px; min-width: 0;}
+.merchant-html-layui .merchant-nav-msg{left: -30px;}
+.merchant-html-layui .layui-header .layui-nav-child dd{text-align: center;}
+.merchant-html-layui .layui-header .layui-nav-item a cite{padding: 0 0 0 10px;}
+.merchant-html-layui .layui-header .layui-nav .merchant-layui-user{margin: 0; margin-left: 40px;}
+.merchant-html-layui .layui-header .layui-nav .merchant-layui-user a{padding: 0;}
+.merchant-layui-user .layui-nav-child{left: auto; right: 0; min-width: 0; width: 120px;}
+
+/* 底部 */
+.merchant-footer {margin: 50px 0 0; padding: 20px 0 30px; line-height: 30px; text-align: center; color: #737573; border-top: 1px solid #e2e2e2;}
+.merchant-footer a{padding:0 6px; font-weight: 300; color: #333;}
+.merchant-footer a:hover{color: #777;}
+.merchant-union{margin-top: 10px; color: #999;}
+.merchant-union>*{display: inline-block; vertical-align: middle;}
+.merchant-union a[upyun] img{width: 80px;}
+.merchant-union span{position: relative; top: 3px;}
+.merchant-union span a{padding: 0; display: inline; color: #999;}
+.merchant-union span a:hover{text-decoration: underline;}
+
+/* 面板 */
+.merchant-panel{margin-bottom: 15px; border-radius: 2px; background-color: #fff; box-shadow: 0 1px 2px 0 rgba(0,0,0,.05);}
+.merchant-panel[pad20]{padding: 20px;}
+.merchant-panel-title{position: relative; height: 50px; line-height: 50px; padding: 0 15px; border-bottom: 1px dotted #E9E9E9; color: #333; border-radius: 2px 2px 0 0; font-size: 14px;}
+.merchant-panel-main{padding: 10px 15px;}
+.merchant-panel-border{border: 1px solid #e6e6e6; box-shadow: none;}
+.merchant-panel-border .merchant-panel-title{border-bottom: 1px solid #e6e6e6;}
+
+
+
+/* 筛选 */
+.merchant-filter a{padding: 0 8px; color: #666;}
+.merchant-filter a.layui-this{color: #5FB878;}
+.merchant-filter .merchant-mid{margin: 0 8px;}
+.merchant-filter-right{position: absolute; right: 10px; top: 0;}
+
+/* Tab */
+.merchant-tab{position: relative; padding-top: 3px;}
+.merchant-tab .layui-tab{margin: 0;}
+.merchant-tab .layui-tab-title{border-bottom: 1px dotted #e2e2e2;}
+
+.merchant-tab-border{position:relative; margin-bottom: 15px;}
+.merchant-tab-border span,
+.merchant-tab-border span a{display:inline-block; *display:inline; *zoom:1; vertical-align:top;}
+.merchant-tab-border span{border: 1px solid #ddd; border-right: none; font-size:0;}
+.merchant-tab-border span a{position: relative; height: 36px; line-height: 36px; padding: 0 20px; border-right: 1px solid #ddd; font-size: 14px; background-color: #fff;}
+.merchant-tab-border .tab-this{color: #000;}
+.merchant-tab-border .tab-this:after{content: ''; position: absolute; bottom: -1px; left: -1px; width: 100%; height: 1px; padding: 0 1px; background-color: #009688;}
+
+/* 分页 */
+.laypage-main,
+.laypage-main *{box-sizing: border-box; display: inline-block; vertical-align: top;}
+.laypage-main{margin: 30px 0; border: 1px solid #009E94; border-right: none; border-bottom: none; font-size: 0;}
+.laypage-main *{margin: -1px; padding: 0 20px; line-height: 36px; border-right: 1px solid #009E94; border-bottom: 1px solid #009E94; font-size: 14px;}
+.laypage-main .laypage-curr{background-color:#009E94; color: #fff;}
+
+
+/* 列表 */
+.merchant-list li{position: relative; height: 45px; line-height: 22px; padding: 15px 15px 15px 75px; border-bottom: 1px dotted #e2e2e2;}
+.merchant-list li:last-child{border-bottom: none;}
+.merchant-list li h2,
+.merchant-list li h2 a,
+.merchant-list-info{white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.merchant-list li h2{height: 26px; font-size: 0;}
+.merchant-list li h2 a{display: inline-block; max-width: 80%; padding-right: 10px; font-size: 16px;}
+.merchant-list li h2 .layui-badge{top: -2px; height: 16px; line-height: 16px; padding: 0 5px; margin-right: 10px; font-size: 12px; border: 1px solid #5FB878; background: none; color: #5FB878;}
+
+.merchant-list-info{position: relative; font-size: 13px; color: #999;}
+.merchant-list-info>*{padding-right: 15px;}
+.merchant-list-info a[link]{color: #999;}
+.merchant-list-info a[link]:hover{color: #5FB878;}
+.merchant-list-info .icon-renzheng{position: relative; top: 1px; margin-right: 3px;}
+.merchant-list-info .merchant-badge-vip{position: relative; margin-left: 2px;}
+.merchant-list-kiss{color: #FF5722;}
+.merchant-list-nums{position: absolute; right: 0; top: 0; padding-right: 0!important;}
+.merchant-list-nums i{position: relative; padding: 0 3px 0 15px;}
+
+.merchant-list-badge{position: absolute; right: 15px; top: 15px; font-size: 0;}
+.merchant-list-badge .layui-badge{margin-left: 5px; border-radius: 2px; font-size: 12px;}
+
+/* 单行列表 */
+.merchant-list-one .merchant-panel-title{margin-bottom: 5px;}
+.merchant-list-one dd{margin: 0 15px; line-height: 26px; white-space: nowrap; overflow: hidden; list-style: decimal-leading-zero inside; *list-style-type: decimal inside; color: #009E94;}
+.merchant-list-one dd a,
+.merchant-list-one dd span{display: inline-block; *display: inline; *zoom: 1; vertical-align: top; font-style: normal}
+.merchant-list-one dd a{max-width: 85%; margin-right: 5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 14px;}
+.merchant-list-one dd span{font-size: 12px; color: #ccc;}
+.merchant-list-one dd:last-child{padding-bottom: 5px;}
+
+body .layui-edit-face{ border:none; background:none;}
+body .layui-edit-face  .layui-layer-content{padding:0; background-color:#fff; color:#666; box-shadow:none}
+.layui-edit-face .layui-layer-TipsG{display:none;}
+.layui-edit-face ul{position:relative; width:372px; padding:10px; border:1px solid #D9D9D9; background-color:#fff; box-shadow: 0 0 20px rgba(0,0,0,.2);}
+.layui-edit-face ul li{cursor: pointer; float: left; border: 1px solid #e8e8e8; height: 22px; width: 26px; overflow: hidden; margin: -1px 0 0 -1px; padding: 4px 2px; text-align: center;}
+.layui-edit-face ul li:hover{position: relative; z-index: 2; border: 1px solid #eb7350; background: #fff9ec;}
+
+/* 签到 */
+.merchant-signin cite{padding: 0 5px; color: #FF5722; font-style: normal;}
+.merchant-signin .layui-badge-dot{top: -7px; margin-left: 0px;}
+.merchant-signin-list{padding: 0; line-height: 30px;}
+.merchant-signin-list .layui-tab-item{padding: 10px; height: 320px; overflow-x: hidden; overflow-y: auto;}
+.merchant-signin-list li{margin-top: 5px; padding-bottom: 5px; border-bottom: 1px dotted #e2e2e2; white-space: nowrap;}
+.merchant-signin-list li:first-child{margin-top: 0;}
+.merchant-signin-list li:last-child{border: none 0;}
+.merchant-signin-list img{width: 30px; height: 30px; margin-right: 10px; border-radius: 2px;}
+.merchant-signin-list span{padding-left: 10px;}
+.merchant-signin-list span i{color: #FF5722;}
+.merchant-signin-list .merchant-none{padding-top: 20px; min-height: 0;}
+.merchant-signin-days{position: absolute; right: 15px; padding-left: 10px; color: #999;}
+.merchant-signin-main{position: relative; height: 38px; padding: 24px 15px; text-align: center;}
+.merchant-signin-main span{padding-left: 10px;}
+
+/* 快捷通道 */
+.merchant-list-quick{border: 1px solid #f2f2f2; border-bottom: none; border-right: 0;}
+.merchant-list-quick .layui-col-xs6{height: 40px; line-height: 40px; padding: 0 10px; border: 1px solid #f2f2f2; border-left: none; border-top: none; text-align: center; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
+.merchant-list-quick a{display: block;}
+.merchant-list-quick a:hover{color: #5FB878;}
+
+
+/* 静态列表 */
+.merchant-list-static li{line-height: 26px; list-style-position: inside; list-style-type: disc; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
+.merchant-list-static li a{color: #01AAED;}
+.merchant-list-static li a:hover{opacity: 0.8;}
+
+/* 单行列表 */
+.jie-row li{position: relative; margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px dotted #E9E9E9; font-size: 0;}
+.jie-row li *{position: relative; display:inline-block; *display:inline; *zoom:1; vertical-align: top; line-height: 20px; font-size:12px;}
+.jie-row li span{padding: 0 6px; margin-right: 10px; background-color: #DADADA; color:#fff; font-size:12px;}
+.jie-row li .merchant-stick{background-color:#393D49;}
+.jie-row li .merchant-jing{background-color:#CC0000;}
+.jie-row li .jie-status{margin:0 10px 0 0;}
+.jie-row li .jie-status-ok{background-color:#8FCDA0;}
+.jie-row li a{ padding-right:15px; font-size:14px;}
+.jie-row li cite{padding-right:15px;}
+.jie-row li i, .jie-row li em, .jie-row li cite{font-size:12px; color:#999; font-style: normal;}
+.jie-row li .mine-edit{margin-left:15px; padding:0 6px; background-color: #8FCDA0; color:#fff; font-size:12px;}
+.jie-row li em{position:absolute; right:0; top:0;}
+.jie-row li .jie-user{}
+.jie-row li .jie-title{max-width: 70%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.jie-row li .jie-user img{position:relative; top: 16px; width: 35px; height: 35px;}
+
+/* Detail页 */
+.detail-box{padding: 20px;}
+.detail h1{font-size: 24px; line-height: 36px;}
+.merchant-detail-info{position: relative; margin: 10px 0 15px;}
+.merchant-detail-info .layui-btn{height: 20px; line-height: 20px; vertical-align: top; border-radius: 0;}
+.merchant-detail-info .layui-btn+.layui-btn{margin-left: 0;}
+.merchant-admin-box{position: relative; display: inline-block; vertical-align: top; margin-left: 20px;}
+.merchant-detail-info .merchant-list-nums{top: -3px; font-size: 16px;}
+.merchant-detail-info .merchant-list-nums i{padding: 0 3px 0 15px; font-size: 22px; color: #999;}
+
+.detail-about{position: relative; line-height: 20px; padding: 15px 15px 15px 75px; font-size: 13px; background-color: #f8f8f8; color: #999;}
+.detail-about .jie-status, .detail-about .jie-status-ok{color:#fff;}
+.detail-about .merchant-jing{padding:0 6px; background-color:#c00; color:#fff;}
+.detail-about .detail-hits{position: relative; top: 5px; line-height: 20px;}
+.merchant-detail-user{white-space: nowrap; overflow: hidden;}
+.merchant-detail-user a{padding-right: 10px; font-size: 14px;}
+.merchant-detail-user .icon-renzheng{top: 1px;}
+
+.detail-hits span{height: 20px; line-height: 20px;}
+.detail-hits .layui-btn{border-radius: 0;}
+.detail-hits .layui-btn+.layui-btn{margin-left: 5px;}
+.detail-hits .jie-admin{margin-right: 1px;}
+.detail-body{margin: 20px 0 0; min-height: 306px; line-height: 26px; font-size: 16px; color: #333; word-wrap: break-word;}
+.detail-body p{margin-bottom:15px;}
+.detail-body img{max-width: 100%; cursor: pointer;}
+
+
+.detail-body .layui-btn{margin: 0 10px 10px 0;}
+.detail-body .layui-btn a{color: #fff;}
+.detail-body ul>li{margin-top: 0;}
+.detail-body .layui-elem-quote{margin: 10px 0; font-size: 14px; line-height: 26px;}
+
+
+/* 用户中心 */
+body .merchant-user-main{position: relative; min-height: 600px;}
+.merchant-user-main>.layui-nav{position: absolute; left: 0; top: 0; z-index: 1000; height: 100%; padding: 10px 0;}
+.merchant-user-main>.layui-nav i{position: relative; top: 2px; font-size: 20px; margin-right: 10px;}
+.merchant-user-main>.merchant-panel{min-height: 575px; margin: 0 0 10px 215px;}
+.merchant-user-main .merchant-none{min-height: 0;}
+.merchant-panel-user[pad20]{padding-top: 5px;}
+
+.merchant-form-app{margin-top:30px;}
+.merchant-form-app .iconfont{font-size:26px; padding: 0 5px;}
+.merchant-form-app .icon-qq{color:#7CA9C9}
+.merchant-form-app .icon-weibo{color:#E6162D}
+
+.user-tab{margin:20px 0;}
+.user-about{position:relative; padding:0 0 0px 20px; border-left:1px solid #DFDFDF; text-align:center;}
+.user-about .user-avatar{width:100px; height:100px; border-radius:100%;}
+.user-about p{line-height:30px;}
+.user-about p span{padding:0 5px; color:#999;}
+
+/* 个人主页 */
+.merchant-home{position: relative; padding: 30px 0 30px; text-align: center;}
+.merchant-home img{width:120px; height:120px; border-radius:100%;}
+.merchant-home h1{font-size:26px; line-height:30px; margin-top:10px;}
+.merchant-home h1 span{font-size:14px; color:#999;}
+.merchant-home h1 .icon-nan{color:#4EBBF9}
+.merchant-home h1 .icon-nv{color:#F581B1}
+.merchant-home-sign{padding: 0 10px; color: #999; margin-top: 10px;}
+.merchant-home .icon-renzheng{display: inline-block; width: 20px; height: 20px; line-height: 20px; top: 45px; left: -15px; background-color: #FFB800; color: #fff; border-radius: 50%; font-size: 12px;}
+
+.merchant-home-info i{padding-right: 5px; padding-left: 10px; color: #666;}
+.merchant-home-info span{color: #999;}
+.merchant-sns{margin-top: 10px;}
+
+.merchant-home-jie .jie-row,
+.merchant-home-da .home-jieda{min-height: 500px; padding: 5px 20px;}
+
+/*.home-jieda li{margin-bottom:20px; padding-bottom:10px; line-height:24px; border-bottom: 1px dotted #DFDFDF;}*/
+.home-jieda li{ margin-bottom:20px; line-height:24px;}
+.home-dacontent{margin-top:10px; padding:10px 15px; background-color:#F2F2F5; border-radius:5px; word-wrap: break-word;;}
+.home-dacontent pre{ background-color:#F2F2F5;}
+.home-dacontent img{max-width:100%;}
+.home-jieda li a{padding:0 5px; color:#4F99CF;}
+.home-jieda li p{color:#999;}
+.home-jieda li p span{padding-right:5px;}
+
+/* 快捷方式 */
+.merchant-shortcut{margin: 5px 0;}
+.merchant-shortcut li{text-align: center;}
+.merchant-shortcut li .layui-icon{display: inline-block; width: 100%; height: 60px; line-height: 60px; text-align: center; color: #fff; border-radius: 2px; font-size: 30px; transition: all .3s; -webkit-transition: all .3s;}
+.merchant-shortcut li cite{position: relative; top: 2px; display: block; color: #666; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; font-size: 14px;}
+.merchant-shortcut li:hover .layui-icon{opacity: 0.9;}
+.merchant-shortcut li .layui-icon{background-color: #2F9688;}
+
+/* 我的消息 */
+#LAY-minemsg{min-height:420px;}
+.mine-msg li{position:relative; margin-bottom: 15px; padding: 10px 0 5px; line-height:24px; border-bottom:1px dotted #E9E9E9}
+.mine-msg li cite{padding: 0 5px; color: #4F99CF;}
+.mine-msg li i{color:#4F99CF; padding-right:5px;}
+.mine-msg li>p{position: relative; margin-top: 5px; line-height: 26px; text-align: right;}
+.mine-msg li>p span{position: absolute; left: 0; top: 0; color:#999;}
+.mine-msg li .merchant-delete{position: relative; top: -3px;}
+.mine-msg li .layui-elem-quote p[download]{padding: 10px 0 5px;}
+
+/* 设置 */
+.avatar-add{position:relative; width:373px; height:373px; background-color:#F2F2F5;}
+.avatar-add .upload-img{position:absolute; left:50%; top:35px; margin:0 0 0 -56px;}
+.avatar-add img{position:absolute; left:50%; top:50%; width:168px; height:168px; margin:-50px 0 0 -84px; border-radius:100%;}
+.avatar-add .loading{display:none; position:absolute; width:100%; height:100%; left:0; top:0; padding: 0; background-color:#000; opacity:0.5; filter: Alpha(opacity=50);}
+.avatar-add p{position:absolute; top:70px; width:100%; margin-top: 10px;; font-size:12px; text-align:center; color:#999;}
+.app-bind li{margin-bottom:10px; line-height:30px; color:#999;}
+.app-bind li .iconfont{position: relative; top: 3px; margin-right: 5px; font-size:28px; }
+.app-bind .app-havebind{color:#333;}
+.app-bind .app-havebind .icon-qq{color:#7CA9C9}
+.app-bind .app-havebind .icon-weibo{color:#E6162D}
+
+
+
+

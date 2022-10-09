@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<basicNode share_account="ptgwh_oa" share_password="ptoa@123" make_author="Authorization" make_xsd="GetApprovalDataXsd" make_edc="SubmitApprovalDataWithEdc"   make_namespace="http://tempuri.org/" make_url="http://10.23.251.199:11121/Services/Exchange.asmx" >
+	<organization code="569262478" make_account="pthjgtj_wsspxt" oa_orgname="区环境与国土资源局" make_password="q263gl345g">平潭综合实验区环境与国土资源局</organization>
+	<organization code="577012559" make_account="ptjtjsj_wsspxt" oa_orgname="区交通与建设局" make_password="64kl18m6kp5">平潭综合实验区交通与建设局</organization>
+	<organization code="577010975" make_account="ptjfj_wsspxt" oa_orgname="区经济发展局" make_password="82ulzlswwa">平潭综合实验区经济发展局</organization>
+	<organization code="315496039" make_account="ptzonghzfj_wsspxt" oa_orgname="区综合执法局" make_password="ptzonghzfj123">平潭综合实验区综合执法局</organization>
+	<organization code="075028219" make_account="ptdsj_wsspxt" oa_orgname="区地方税务局" make_password="uw51u3k750">福建省平潭综合实验区地方税务局</organization>
+	<organization code="06039606X" make_account="ptshsyj_wsspxt" oa_orgname="区社会事业局" make_password="chngl8zyor">平潭综合实验区社会事业局</organization>
+	<organization code="58311085X" make_account="ptgaj_wsspxt" oa_orgname="区公安局" make_password="flcxiq6333">平潭综合实验区公安局</organization>
+	<organization code="310777368" make_account="ptsjj_wsspxt" oa_orgname="区市场监督管理局" make_password="r50ghq82fr">平潭综合实验区市场监督管理局</organization>
+</basicNode>
+<!--
+<basicNode share_account="sirc_jd" share_password="dzzz0811" make_author="Authorization" make_xsd="GetApprovalDataXsd" make_edc="SubmitApprovalDataWithEdc"   make_namespace="http://tempuri.org/" make_url="http://218.66.59.166:11124/FZLicense/Services/Exchange.asmx" >
+	<organization code="569262478" make_account="wgx_wsspxt" oa_orgname="" make_password="wgx123">福州市文化广电新闻出版局</organization>
+</basicNode>
+ 
+<organization code="577010975" make_account="ptsjj_wsspxt" oa_orgname="区市场监督管理局" make_password="r50ghq82fr">平潭综合实验区市场监督管理局</organization>
+<organization code="577010975" make_account="" oa_orgname="区综合执法局" make_password="">平潭综合实验区综合执法局</organization>
+ 
+<organization code="06039606X" make_account="ptshsyj_wsspxt" make_password="chngl8zyor">平潭综合实验区社会事业局</organization>
+<organization code="574725705" make_account="ptslylglj_wsspxt" make_password="qe960ldgly">平潭综合实验区森林与园林管理局</organization>
+<organization code="058433220" make_account="ptajj_wsspxt" make_password="ssf64c47pt">平潭综合实验区安全生产监督管理局</organization>
+<organization code="58311085X" make_account="ptgaj_wsspxt" make_password="flcxiq6333">平潭综合实验区公安局</organization>
+<organization code="488511751" make_account="" make_password="">平潭县农业机械管理站</organization>
+<organization code="577010975" make_account="" make_password="">平潭综合实验区旅游发展局</organization>
+ 
+share_account,share_password共享系统OA对接账号密码
+make_account，make_password生成系统OA对接账号密码
+code 各单位组织机构代码
+oa_orgname oa单位名称
+-->

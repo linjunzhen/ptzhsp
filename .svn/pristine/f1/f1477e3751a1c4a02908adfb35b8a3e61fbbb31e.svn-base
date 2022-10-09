@@ -1,0 +1,136 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+
+<script type="text/javascript" src="plug-in/eveflowdesign-1.0/js/FlowUtil.js"></script>
+<script type="text/javascript" src="plug-in/eveutil-1.0/AppUtil.js"></script>
+<script type="text/javascript">
+
+
+    function formatdownFile(val,row){
+        var href = "<a href='domesticControllerController/downloadMedicialMater.do?exeId=" + row.EXE_ID + "";
+        href += "' target='_blank'><span style='text-decoration:underline;color:#0368ff;'>"+"下载"+"</span></a>";
+        return href;
+    }
+ 	//员工参保信息材料下载
+    function formatdownCbFile(val,row){
+	      var newhtml = "";
+	      if(row.FILE_ID4!=null && row.FILE_ID4!=undefined && row.FILE_ID4!=""){
+	     	 $.ajax({
+		         type: "POST",
+			     url: "executionController.do?getResultFiles&fileIds="+row.FILE_ID4,
+			     async: false, //采用同步方式进行数据判断
+			     success: function (resultJson) {
+			    	   if(resultJson!="websessiontimeout"){
+		                 var list=resultJson.rows;
+		                 for(var i=0; i<list.length; i++){
+		                     newhtml+="<p id='"+list[i].FILE_ID+"' style='margin-left: 5px; margin-right: 5px;line-height: 20px;'>";
+		                     newhtml+='<a style="color: blue;" href="javascript:AppUtil.downLoadFile(\''+list[i].FILE_ID+'\');">';
+		                     newhtml+=list[i].FILE_NAME+'</a>';
+		                     newhtml+='</p>';
+		                 }
+		             }
+			     }
+			 });
+	     }
+	     return newhtml;
+    }
+    $(document).ready(function() {
+        var start1 = {
+            elem : "#MedicialA.CREATE_TIME_BEGIN",
+            format : "YYYY-MM-DD",
+            istime : false,
+            choose : function(datas) {
+                var beginTime = $("input[name='Q_A.CREATE_TIME_>=']").val();
+                var endTime = $("input[name='Q_A.CREATE_TIME_<=']").val();
+                if (beginTime != "" && endTime != "") {
+                    var start = new Date(beginTime);
+                    var end = new Date(endTime);
+                    if (start > end) {
+                        alert("开始时间必须小于等于结束时间,请重新输入!");
+                        $("input[name='Q_T.CREATE_TIME_>=']").val("");
+                    }
+                }
+            }
+        };
+        var end1 = {
+            elem : "#MedicialA.CREATE_TIME_END",
+            format : "YYYY-MM-DD",
+            istime : false,
+            choose : function(datas) {
+                var beginTime = $("input[name='Q_A.CREATE_TIME_>=']").val();
+                var endTime = $("input[name='Q_A.CREATE_TIME_<=']").val();
+                if (beginTime != "" && endTime != "") {
+                    var start = new Date(beginTime);
+                    var end = new Date(endTime);
+                    if (start > end) {
+                        alert("结束时间必须大于等于开始时间,请重新输入!");
+                        $("input[name='Q_T.CREATE_TIME_<=']").val("");
+                    }
+                }
+            }
+        };
+        laydate(start1);
+        laydate(end1);
+    });
+</script>
+<div class="easyui-layout eui-jh-box" fit="true">
+
+    <div region="center">
+
+        <!-- =========================查询面板开始========================= -->
+        <div id="MedicialToolbar">
+            <form action="#" name="MedicialForm">
+                <table class="dddl-contentBorder dddl_table"
+                       style="background-repeat:repeat;width:100%;border-collapse:collapse;">
+                    <tbody>
+                    <tr style="height:28px;">
+                        <td style="width:68px;text-align:right;">申报号</td>
+                        <td style="width:135px;">
+                            <input class="eve-input" type="text" maxlength="20" style="width:128px;" name="Q_A.EXE_ID_LIKE" />
+                        </td>
+                        <td style="width:68px;text-align:right;">办件名称</td>
+                        <td style="width:135px;">
+                            <input class="eve-input" type="text" maxlength="20" style="width:128px;" name="Q_A.SUBJECT_LIKE" />
+                        </td>
+                        <td style="width:68px;text-align:right;">申请日期从</td>
+                        <td style="width:135px;padding-left:4px;"><input type="text"
+                                                                         style="width:128px;float:left;" class="laydate-icon"
+                                                                         id="MedicialA.CREATE_TIME_BEGIN" name="Q_A.CREATE_TIME_>=" /></td>
+                        <td style="width:68px;text-align:right;">申请日期至</td>
+                        <td style="width:135px;padding-left:4px;"><input type="text"
+                                                                         style="width:128px;float:left;" class="laydate-icon"
+                                                                         id="MedicialA.CREATE_TIME_END" name="Q_A.CREATE_TIME_<=" /></td>
+
+                        <td colspan="2"><input type="button" value="查询"
+                                               class="eve-button"
+                                               onclick="AppUtil.gridDoSearch('MedicialToolbar','MedicialGrid')" />
+                            <input type="button" value="重置" class="eve-button"
+                                   onclick="AppUtil.gridSearchReset('MedicialForm')" /></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+        <!--====================开始编写隐藏域============== -->
+        <!--====================结束编写隐藏域============== -->
+
+    </div>
+    <!-- =========================查询面板结束========================= -->
+    <!-- =========================表格开始==========================-->
+    <table class="easyui-datagrid" rownumbers="true" pagination="true" striped="true"
+           id="MedicialGrid" fitcolumns="false" toolbar="#MedicialToolbar"
+           method="post" checkonselect="false"
+           selectoncheck="false" fit="true" border="false" nowrap="false"
+           url="flowTaskController.do?medicialNeedMeHandle">
+        <thead>
+        <tr>
+            <th data-options="field:'EXE_ID',align:'center'" width="15%">申报号</th>
+            <th data-options="field:'SUBJECT',align:'center'" width="40%">办件名称</th>
+            <th data-options="field:'CREATE_TIME',align:'center'" width="20%">申请时间</th>
+            <th data-options="field:'DOWNLOAD',align:'center'" width="25%" formatter="formatdownFile">操作</th>
+			<th data-options="field:'FILE_ID4',align:'left'" width="22%" formatter="formatdownCbFile">员工参保信息下载</th>
+        </tr>
+        </thead>
+    </table>
+    <!-- =========================表格结束==========================-->
+</div>
+</div>

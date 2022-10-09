@@ -1,0 +1,53 @@
+.icon-auto{
+	background:url('iconsExt/auto.gif') no-repeat center center;
+}
+.icon-calc{
+	background:url('iconsExt/calc.gif') no-repeat center center;
+}
+.icon-calendar{
+	background:url('iconsExt/calendar.gif') no-repeat center center;
+}
+.icon-checkbox{
+	background:url('iconsExt/checkbox.gif') no-repeat center center;
+}
+.icon-radio{
+	background:url('iconsExt/radiobutton.png') no-repeat center center;
+}
+.icon-listmenu{
+	background:url('iconsExt/listmenu.gif') no-repeat center center;
+}
+.icon-listview{
+	background:url('iconsExt/listview.gif') no-repeat center center;
+}
+.icon-textarea{
+	background:url('iconsExt/textarea.gif') no-repeat center center;
+}
+.icon-textfield{
+	background:url('iconsExt/textfield.gif') no-repeat center center;
+}
+.icon-user{
+	background:url('iconsExt/user.gif') no-repeat center center;
+}
+.icon-attachment{
+	background:url('iconsExt/attachment.png') no-repeat center center;
+}
+.icon-useradd{
+	background:url('iconsExt/user_add.png') no-repeat center center;
+}
+.icon-userdelete{
+	background:url('iconsExt/user_delete.png') no-repeat center center;
+}
+.icon-deptadd{
+	background:url('iconsExt/group_add.png') no-repeat center center;
+}
+.icon-deptdelete{
+	background:url('iconsExt/group_delete.png') no-repeat center center;
+}
+.icon-upload{
+	background:url('iconsExt/folder_go.png') no-repeat center center;
+}
+.icon-fileadd{
+	background:url('iconsExt/page_add.png') no-repeat center center;
+}.icon-filedelete{
+	background:url('iconsExt/page_delete.png') no-repeat center center;
+}

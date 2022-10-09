@@ -1,0 +1,379 @@
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>上传身份证照片</title>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<!--标准mui.css-->
+<link rel="stylesheet" href="css/mui.min.css">
+<link href="css/mui.loading.css" rel="stylesheet" />
+<script
+	src="https://mztapp.fujian.gov.cn:8190/mztAppWeb/app/js/zepto.js"></script>
+<script
+	src="https://mztapp.fujian.gov.cn:8190/mztAppWeb/app/js/cordova.js"></script>
+<script
+	src="https://mztapp.fujian.gov.cn:8190/mztAppWeb/app/js/bingotouch.js"></script>
+<script
+	src="https://mztapp.fujian.gov.cn:8190/mztAppWeb/app/js/jmtplugins.js"></script>
+	<script
+	src="https://mztapp.fujian.gov.cn:8190/mztAppWeb/app/js/jsencrypt.js"></script>
+<!--App自定义的css-->
+<style type="text/css">
+.mui-preview-image.mui-fullscreen {
+	position: fixed;
+	z-index: 20;
+	background-color: #000;
+}
+
+.mui-preview-header, .mui-preview-footer {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	z-index: 10;
+}
+
+.mui-preview-header {
+	height: 44px;
+	top: 0;
+}
+
+.mui-preview-footer {
+	height: 50px;
+	bottom: 0px;
+}
+
+.mui-preview-header .mui-preview-indicator {
+	display: block;
+	line-height: 25px;
+	color: #fff;
+	text-align: center;
+	margin: 15px auto 4;
+	width: 70px;
+	background-color: rgba(0, 0, 0, 0.4);
+	border-radius: 12px;
+	font-size: 16px;
+}
+
+.mui-preview-image {
+	display: none;
+	-webkit-animation-duration: 0.5s;
+	animation-duration: 0.5s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+.mui-preview-image.mui-preview-in {
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+
+.mui-preview-image.mui-preview-out {
+	background: none;
+	-webkit-animation-name: fadeOut;
+	animation-name: fadeOut;
+}
+
+.mui-preview-image.mui-preview-out .mui-preview-header,
+	.mui-preview-image.mui-preview-out .mui-preview-footer {
+	display: none;
+}
+
+.mui-zoom-scroller {
+	position: absolute;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	-webkit-backface-visibility: hidden;
+}
+
+.mui-zoom {
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.mui-slider .mui-slider-group .mui-slider-item img {
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.mui-android-4-1 .mui-slider .mui-slider-group .mui-slider-item img {
+	width: 100%;
+}
+
+.mui-android-4-1 .mui-slider.mui-preview-image .mui-slider-group .mui-slider-item
+	{
+	display: inline-table;
+}
+
+.mui-android-4-1 .mui-slider.mui-preview-image .mui-zoom-scroller img {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.mui-preview-loading {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: none;
+}
+
+.mui-preview-loading.mui-active {
+	display: block;
+}
+
+.mui-preview-loading .mui-spinner-white {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -25px;
+	margin-top: -25px;
+	height: 50px;
+	width: 50px;
+}
+
+.mui-preview-image img.mui-transitioning {
+	-webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
+	transition: transform 0.5s ease, opacity 0.5s ease;
+}
+			@-webkit-keyframes fadeIn {
+				0% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+			@keyframes fadeIn {
+				0% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+			@-webkit-keyframes fadeOut {
+				0% {
+					opacity: 1;
+				}
+				100% {
+					opacity: 0;
+				}
+			}
+			@keyframes fadeOut {
+				0% {
+					opacity: 1;
+				}
+				100% {
+					opacity: 0;
+				}
+			}
+p {
+	display: flex;
+	justify-content: center;
+}
+
+p img {
+	max-width: 280px;
+	height: 160px;
+}
+#next{
+width:280px
+}
+</style>
+
+</head>
+
+<body>
+	<div class="mui-content">
+		<div style="background-color:white;margin-top:-5px;padding:10px">
+			<h5 style="color:#000;">根据国家相关规定，实名认证功能需要上传身份证照片，目前仅支持第二代身份证认证</h5>
+			<p>
+				<img id="photo_front" src="images/id_card_front.png"
+					data-preview-group="1" />
+			</p>
+			<p id="front">点击上传身份证人像面</p>
+			<p>
+				<img id="photo_back" src="images/id_card_back.png"
+					 data-preview-group="1" />
+			</p>
+			<p id="back">点击上传身份证国徽面</p>
+			<p style="margin-top:10px">注：请进行横板拍摄，确保您上传的身份证人像面和国徽面正常显示</p>
+			<div style="display: flex;justify-content: center;">
+			<p id="next" class="mui-btn mui-btn-primary">
+					下一步
+			</p>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="https://cdn.bootcss.com/mui/3.7.1/js/mui.min.js"></script>
+<script type="text/javascript" src="js/mui.loading.js"></script>
+<script type="text/javascript" src="js/mobileUtil.js"></script>
+<script src="js/mui.zoom.js"></script>
+<script src="js/mui.previewimage.js"></script>
+<script>
+	mui.init();
+	mui.previewImage();
+	var userId,userIdCard,
+		name;
+
+	app.page.onLoad = function() {
+	 front=0;
+	 back=0;
+	 
+	 app.link.getLoginInfo(function(result) {
+				var encrypt = new JSEncrypt();
+				encrypt.setPrivateKey(keyUtil.getPrivateKey());
+				var userinfo = result;
+				userId = encrypt.decrypt(userinfo.userId);
+				userIdCard = encrypt.decrypt(userinfo.cardNum);
+				name = encrypt.decrypt(userinfo.name);
+				if (userId) {
+				} else {
+					confirmError();
+				}
+			}, function(result) {
+				if (result.error) {
+					confirmError();
+				}
+			})
+	$("#photo_front").click(function() {
+			var param = {};
+			param.pictureNum = "1";
+			param.compressKB = 200; //指定压缩最小值,单位KB
+			param.isCardCamera = true; //启用身份证摄像
+			param.cameraType = 0; //身份证正面照
+			app.link.getTakePictures(function(res) {
+				var myPic = res.images;
+				$("#photo_front").attr("src", "data:image/png;base64," + myPic[0]);
+				uploadPhoto(myPic[0],"SIGN_IDPHOTO_FRONT");
+			}, param);
+		})
+		$("#front").click(function() {
+			var param = {};
+			param.pictureNum = "1";
+			param.compressKB = 200; //指定压缩最小值,单位KB
+			param.isCardCamera = true; //启用身份证摄像
+			param.cameraType = 0; //身份证正面照
+			app.link.getTakePictures(function(res) {
+				var myPic = res.images;
+				$("#photo_front").attr("src", "data:image/png;base64," + myPic[0]);
+				uploadPhoto(myPic[0],"SIGN_IDPHOTO_FRONT");
+			}, param);
+		})
+
+$("#photo_back").click(function() {
+			var param = {};
+			param.pictureNum = "1";
+			param.compressKB = 200; //指定压缩最小值,单位KB
+			param.isCardCamera = true; //启用身份证摄像
+			param.cameraType = 1; //身份证反面照
+			app.link.getTakePictures(function(res) {
+				var myPic = res.images;
+				$("#photo_back").attr("src", "data:image/png;base64," + myPic[0]);
+					uploadPhoto(myPic[0],"SIGN_IDPHOTO_BACK");
+			}, param);
+		})
+		$("#back").click(function() {
+			var param = {};
+			param.pictureNum = "1";
+			param.compressKB = 200; //指定压缩最小值,单位KB
+			param.isCardCamera = true; //启用身份证摄像
+			param.cameraType = 1; //身份证反面照
+			app.link.getTakePictures(function(res) {
+				var myPic = res.images;
+				$("#photo_back").attr("src", "data:image/png;base64," + myPic[0]);
+					uploadPhoto(myPic[0],"SIGN_IDPHOTO_BACK");
+			}, param);
+		})
+		$("#next").click(function() {
+		  if(front==0){
+		mui.toast("请上传身份证人像面");
+		return;
+		}
+		if(back==0){
+		mui.toast("请上传身份证国徽面");
+		return;
+		} 
+		 
+			 var param = {};
+			param.isNeedInputUserInfo = "1"; //isNeedInputUserInfo:0:不需要输入用户信息，1：需要输入用户信息(不回传图片)
+			param.isNeedIdentification = "1"; //0:不需要认证 （回传图片）,1:需要认证(不回传图片)
+			param.isCanEdit=false;
+			param.name=name;
+			param.cardNumber=userIdCard;
+			app.link.getFaceCheck(function(res) {
+			window.location.href = "certificationNote.html?token="+getUrlParam("token");
+			}, function(res){mui.alert("操作失败，请重试")}, param); 
+		});
+	}
+	
+	
+	function uploadPhoto(base64, type) {
+	var mask = mobileUtil.createMask(function() {
+					return false;
+				}); //callback为用户点击蒙版时自动执行的回调；
+				mask.show(); //显示遮罩
+		 $.post('http://xzfwzx.pingtan.gov.cn:8888/exeDataController.do?uploadBaseCode', {
+					TOKEN : getUrlParam("token"),
+				UPLOADBASECODE : base64,
+				TYPE : type
+				},
+					function(responseText, status, xhr) {
+						mask._remove(); //取消遮罩
+						var resultJson = $.parseJSON(responseText);
+						mui.toast(resultJson.msg);
+						if (resultJson.code == '001') { //成功
+						if('SIGN_IDPHOTO_FRONT'==type){
+						front=1;
+						}else if("SIGN_IDPHOTO_BACK"==type){
+						back=1;
+						}
+						} 
+					}
+				);  
+	}
+
+	function getUrlParam(name) {
+		var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+		var r = window.location.search.substr(1).match(reg);
+		if (r != null) {
+			return decodeURI(r[2]);
+		}
+		return null;
+	}
+	function confirmError(msg) {
+			if (!msg) {
+				msg = "获取用户信息失败，请确认已登录，并已实名认证";
+			}
+			var btnArray = [ '重试' ];
+			mui.confirm(msg, '提示', btnArray, function(e) {
+				if (e.index == 0) {
+					app.refresh();
+				}
+			});
+			return;
+		}
+</script>
+
+</html>

@@ -1,0 +1,199 @@
+@charset "utf-8";
+
+/* CSS Document */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+html,
+body,
+div,
+form,
+img,
+ul,
+ol,
+li,
+dl,
+dt,
+dd {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+    font-family: "微软雅黑";
+    font-size: 14px;
+}
+
+select,
+input,
+textarea {
+    vertical-align: middle;
+    padding: 0;
+    margin: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+img {
+    border: 0;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    transition: ease-in-out .3s;
+}
+
+a,
+img,
+input,
+textarea,
+select,
+button,
+area {
+    outline: none;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*清除浮动*/
+.clearfix:after {
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    *zoom: 1;
+    _zoom: 1;
+}
+
+.easyui-layout {
+    padding: 10px;
+}
+
+.easyui-layout .hd {
+    height: 32px;
+    line-height: 32px;
+    border-bottom: 1px solid #eee;
+    color: #666;
+}
+
+.easyui-layout .hd li {
+    position: relative;
+    float: left;
+    padding: 0 10px;
+}
+
+.easyui-layout .hd li.on {
+    color: #1983da;
+
+}
+
+.easyui-layout .hd li.on:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 80%;
+    height: 2px;
+    bottom: 0;
+    background-color: #1983da;
+    left: 10%;
+}
+
+.easyui-layout .bd>div {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.easyui-layout .bd .eui-table {
+    font-family: '宋体';
+    border-collapse: collapse;
+    border: 0;
+    white-space: nowrap;
+}
+
+.easyui-layout .bd .eui-table thead {
+    background: #eff5fa;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    color: #014781;
+    text-align: center;
+
+}
+
+.easyui-layout .bd .eui-table thead th {
+    color: #014781;
+}
+.easyui-layout .bd .eui-table thead tr{
+    border: 0;
+}
+.easyui-layout .bd .eui-table td {
+    text-align: center;
+    overflow: hidden;
+}
+
+.easyui-layout .bd .eui-table th:nth-child(3),
+.easyui-layout .bd .eui-table td:nth-child(3) {
+    text-align: left;
+}
+
+.easyui-layout .bd .eui-table tr {
+    height: 44px;
+    line-height: 44px;
+    border-bottom: 1px dashed #dad9d9;
+}
+.easyui-layout .bd .eui-table a{
+    display: block;
+    padding: 0 10px;
+    box-sizing: border-box;
+    max-width: 350px;
+    overflow: hidden;
+    
+}
+.easyui-layout .bd .eui-table a:link {
+    color: #1983da;
+    text-decoration: underline;
+}
+
+.easyui-layout .bd .eui-table .unl {
+    text-decoration: underline;
+}
+
+.easyui-layout .bd .eui-table .g {
+    color: #0d931a;
+}
+
+.easyui-layout .bd .eui-table .r {
+    color: #ff1111;
+}
+
+.easyui-layout .bd .eui-table .gr {
+    color: #666666
+}

@@ -1,0 +1,52 @@
+@charset "utf-8";
+/* CSS Document */
+html, body {
+	width: 100%;
+	height: 100%;
+}
+/*=========base========*/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+}
+input, textarea {
+	font-size: 12px;
+	font-family: "宋体";
+	padding: 0;
+}
+img {
+	border: 0;
+}
+ul, ol {
+	list-style: none
+}
+a, a:hover {
+	text-decoration: none;
+}
+body {
+	font-size: 12px;
+	font-family: "宋体";
+}
+.clearFloat {
+	clear: both;
+	line-height: 0;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+/* 登录页面样式开始 */
+.login_logo{width:717px; margin:0 auto; padding:30px 0 0 0;text-align: center;}
+.login_register{width:770px; height:430px; margin:0 auto 170px;  background:url(../images/login_bg.png) no-repeat;}
+.login_margin{padding:56px 0 75px 132px;}
+.login_name input{width:443px; height:50px; line-height:50px; border:none; padding-left:50px; background:url(../images/input_name.png) no-repeat;}
+.login_pwd input{width:443px; height:50px;line-height:50px; border:none; padding-left:50px; background:url(../images/input_pwd.png) no-repeat;}
+.login_name,.login_pwd,.login_yzm{width:493px; height:50px; margin-bottom:19px;}
+.login_yzm input{float:left; width:223px; height:50px; line-height:50px; border:none; padding-left:50px; background:url(../images/input_yzm.png) no-repeat;}
+.login_yzm img{float:left; width:105px; height:50px; margin:0 11px;}
+.login_yzm span{float:left; height:50px; line-height:50px;}
+.login_dl{width:493px; height:50px; line-height:50px; margin:8px 0 0 0; text-align:center;}
+.login_dl a{display:block; width:493px; height:50px; color:#FFF; font-size:14px; font-weight:700; background:#ff8900;}
+.login_dl a:hover{position:relative; top:1px;}
+.copyright{color:#FFF; text-align:center;}
+

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta name="renderer" content="webkit">
+	<title></title>
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/Select.css">
+	<link rel="stylesheet" type="text/css" href="css/eui.css">
+</head>
+<body>
+	
+	<div class="eui-main mine">
+		<!-- 头部 -->
+		<div class="eui-con eui-flex vc eui-header">
+			<div class="eui-logo">
+				<a class="eui-flex vc" href="1首页.html"><img src="images/logo.png" ></a>
+			</div>
+			<div class="eui-nav flex1">
+				<ul class="eui-flex vc">
+					<li><a href="1首页.html">首　页</a></li>
+					<li><a href="2申报指引.html">申报指引</a></li>
+					<li><a href="3办事指南.html">办事指南</a></li>
+					<li><a href="4办件公示.html">办件公示</a></li>
+					<li><a href="5政策法规.html">政策法规</a></li>
+					<li><a href="6下载专区.html">下载专区</a></li>
+				</ul>
+			</div>
+			<div class="eui-header-login">
+				<!-- 未登录 -->
+				<a class="unlogin" style="display: none;" href="#">登录/注册</a>
+				<!-- 已登录 -->
+				<div class="eui-user">
+					<span>134****3386</span>
+					<div class="sub">
+						<a href="#">个人中心</a>
+						<a href="#">退出登录</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 头部 end -->
+		
+		<!-- 主体 -->
+		<div class="eui-con">
+			
+			<div class="eui-flex eui-mine">
+				<div class="flex1">
+					
+					<div class="eui-card eui-mb eui-table-project">
+						<table>
+							<tr>
+								<th>事项编码</th>
+								<td>7820006000</td>
+								<th>事项名称</th>
+								<td colspan="5">政府投资房建类-立项用地规划许可阶段</td>
+							</tr>
+							<tr>
+								<th>事项类型</th>
+								<td>工程建设联办</td>
+								<th>办件类型</th>
+								<td>承诺件</td>
+								<th>法定时限</th>
+								<td>30个工作日</td>
+								<th>承诺时限</th>
+								<td>16个工作日</td>
+							</tr>
+						</table>
+					</div>
+					
+					<div class="eui-card eui-mb eui-flex bt eui-step">
+						<span class="on"><i>1</i>合同说明</span>
+						<span class="on"><i>2</i>申报信息</span>
+						<span class="on"><i>3</i>业务表单</span>
+						<span><i>4</i>上传材料</span>
+						<span><i>5</i>完成申报</span>
+					</div>
+					
+					<div class="eui-card eui-declaration ovh">
+						
+						<div class="tit" style="background-image: url(images/wysb-i3.png);">经办人信息</div>
+						<div class="eui-table-import">
+							<table>
+								<colgroup>
+									<col>
+									<col width="200">
+									<col>
+									<col width="200">
+								</colgroup>
+								<tr>
+									<th><i>*</i>姓名：</th>
+									<td><input class="ipt" type="text" /></td>
+									<th><i>*</i>性别：</th>
+									<td><input class="ipt" type="text" /></td>
+								</tr>
+								<tr>
+									<th><i>*</i>证件类型：</th>
+									<td>
+										<select name="">
+											<option value="">身份证</option>
+											<option value="">居住证</option>
+											<option value="">户口本</option>
+										</select>
+									</td>
+									<th><i>*</i>证件号码：</th>
+									<td><input class="ipt" type="text" /></td>
+								</tr>
+								<tr>
+									<th><i>*</i>手机号码：</th>
+									<td><input class="ipt" type="text" /></td>
+									<th>联系电话：</th>
+									<td><input class="ipt" type="text" /></td>
+								</tr>
+								<tr>
+									<th>邮政编码：</th>
+									<td><input class="ipt" type="text" /></td>
+									<th>电子邮箱：</th>
+									<td><input class="ipt" type="text" /></td>
+								</tr>
+								<tr>
+									<th>联系地址：</th>
+									<td colspan="3"><input class="ipt" type="text" /></td>
+								</tr>
+								<tr>
+									<th>备注：</th>
+									<td colspan="3"><input class="ipt" type="text" /></td>
+								</tr>
+							</table>
+						</div>
+						
+						<div class="tit" style="background-image: url(images/wysb-i4.png);">纸质材料提交方式</div>
+						<div class="eui-flex vc eui-wysb-zztj">
+							提交方式：
+							<label class="eui-label"><input class="eui-radio" type="radio" name="1">窗口收取</label>
+							<label class="eui-label"><input class="eui-radio" type="radio" name="1" checked="">邮递收取</label>
+						</div>
+						<div class="eui-flex bt vc eui-ems">
+							<b>EMS上门收取纸质申报材料的联系方式</b>
+							<span>
+								<a class="addr" href="javascript:void(0)">地址选择</a>
+								<small>（在用户中心—收件地址维护）</small>
+							</span>
+						</div>
+						<div class="eui-table-import">
+							<table>
+								<colgroup>
+									<col>
+									<col width="200">
+									<col>
+									<col width="200">
+								</colgroup>
+								<tr>
+									<th>寄件人：</th>
+									<td><input class="ipt" type="text" /></td>
+									<th>手机：</th>
+									<td><input class="ipt" type="text" /></td>
+								</tr>
+								<tr>
+									<th>固定电话：</th>
+									<td><input class="ipt" type="text" /></td>
+									<th>邮政编码：</th>
+									<td><input class="ipt" type="text" /></td>
+								</tr>
+								<tr>
+									<th>寄件地址：</th>
+									<td colspan="3">
+										<div class="eui-flex bt eui-city">
+											<select name="">
+												<option value="">福建省</option>
+											</select>
+											<select name="">
+												<option value="">福州省</option>
+											</select>
+											<select name="">
+												<option value="">鼓楼区</option>
+											</select>
+											<span class="flex1"><input class="ipt" type="text" /></span>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+						
+						<div class="tit" style="background-image: url(images/wysb-i5.png);">办理结果领取方式</div>
+						<div class="eui-flex vc eui-wysb-zztj">
+							领取方式：
+							<label class="eui-label"><input class="eui-radio" type="radio" name="1" checked="">窗口收取</label>
+							<label class="eui-label"><input class="eui-radio" type="radio" name="1">邮递收取</label>
+						</div>
+						
+						<div class="eui-flex tc eui-sx-btn">
+							<a class="eui-btn light" href="javascript:void(0)">上一步</a>
+							<a class="eui-btn o"  onclick="tempSaveWebSiteFlowForm('T_GCXM_XMJBXX_FORM')">保存草稿</a>
+							<a class="eui-btn" href="javascript:void(0)">下一步</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 主体 end -->
+		
+		<!-- 底部 -->
+		<div class="eui-footer">
+			<iframe frameborder="0" width="100%" height="100%" marginheight="0" marginwidth="0" scrolling="no" allowtransparency="true" src="foot.html"></iframe>
+		</div>
+		<!-- 底部 end -->
+	</div>
+	
+	<script type="text/javascript" charset="utf-8" src="js/jquery.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/Select.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/totop.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			//下拉框
+			$('select').selectMatch();
+		});
+	</script>
+	
+</body>
+</html>

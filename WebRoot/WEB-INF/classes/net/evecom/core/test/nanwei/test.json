@@ -1,0 +1,98 @@
+{
+	"Case" : {
+		"Body" : [{
+			"Attrs" : [{
+						"Attr" : [{
+									"AttrCode" : ["申报材料编码"],
+									"AttrCreateTime" : ["更新时间"],
+									"AttrName" : ["申报材料名称"],
+									"AttrRemark" : ["材料说明"],
+									"AttrSampleMaterial" : ["样表或样图，对应附件表中的主键列表"],
+									"AttrSort" : ["排序号"],
+									"AttrTempleMaterial" : ["电子表格模板，对应附件表中的主键列表"],
+									"AttrType" : ["材料分类"],
+									"ProAttrCode" : ["对应上级事项材料的唯一编码"],
+									"SrcAttrCode" : ["原材料唯一编码"]
+								}]
+					}],
+			"Classifys" : [{
+						"Classify" : [{
+									"ClassName" : ["分类名称"],
+									"ClassPunid" : ["父节点主键"],
+									"ClassSort" : ["排序号"],
+									"ClassUnid" : ["材料分类主键"]
+								}]
+					}],
+			"FormInfos" : [{
+						"FormInfo" : [{
+									"FormCode" : ["表单编号"],
+									"FormCreateTime" : ["创建时间"],
+									"FormName" : ["表单名称"],
+									"FormSort" : ["排序号"],
+									"FormType" : ["表单类型（业务表单、公文表单、照面表单）"],
+									"Items" : [{}]
+								}]
+					}],
+			"Notices" : [{
+						"Notice" : [{
+									"NoticeClassifyId" : ["条件分类主键,多个逗号分隔"],
+									"NoticeContent" : ["条件内容"],
+									"NoticeSort" : ["排序号"],
+									"NoticeTitle" : ["条件标题"],
+									"NoticeType" : ["条件类型【1自查条件、2温馨提醒、3常见问题解答】"]
+								}]
+					}],
+			"ServiceInfo" : [{
+				"According" : ["《义务教育法》"],
+				"ChargeFlag" : ["否"],
+				"ContactPhone" : ["59124330827"],
+				"CurState" : ["正常"],
+				"DeptCode" : ["350128"],
+				"DeptName" : ["社会事业局教育处"],
+				"DeptUnid" : ["03F492FC608769A33E569927CBFED640"],
+				"Ifdsx" : ["无"],
+				"Infoprojid" : ["350128102FK00101"],
+				"LeadDept" : ["初教科"],
+				"LinkMan" : ["吴文娟"],
+				"MonitorComplain" : ["24335140"],
+				"OfficeTime" : ["上午8:00―12:00  下午2:30―5:30（节假日除外，夏令时调整为下午3:00―6:00）"],
+				"ParentName" : ["中小学、幼儿园招生计划"],
+				"ParentUnid" : ["A6F960F25645584E8C6972D3533E9190"],
+				"PreDay" : ["2"],
+				"Proceflow" : ["各乡镇、各学校摸底适龄学生数－拟出年度招生计划－上报主管部门－审批出台年度招生计划"],
+				"ProjidMain" : ["350128102FK001"],
+				"ProjidSub" : ["01"],
+				"PromisDayInfo" : ["提前摸底，5月份前拟出招生计划。"],
+				"PromiseDay" : ["0"],
+				"ServiceAccepts" : [{
+					"ServiceAccept" : [{
+								"AcceptType" : ["申请方式类型，来源字典【受理方式分类及代码】"],
+								"AccountType" : ["申请帐户类型"],
+								"ToWinInfo" : ["承诺到窗口最多次数说明"],
+								"ToWinMaxNum" : ["承诺到窗口最多次数(含领取结\n\t\t\t\t\t\t果)"]
+							}]
+				}],
+				"ServiceName" : ["中学生招生计划"],
+				"ServiceSpecials" : [{
+							"ServiceSpecial" : [{
+										"Sconent" : ["特殊环节设定依据"],
+										"Sday" : ["特殊环节时限（工作日）"],
+										"Sname" : ["特殊环节名称"]
+									}]
+						}],
+				"ServiceType" : ["承诺件"],
+				"SrcCode" : ["350128102FK00101"],
+				"StarProperty" : ["1"],
+				"Unid" : ["AE5FE8A3CE62D124FF68411D5B74016D"],
+				"Version" : ["2014122712000010001"]
+			}]
+		}],
+		"Router" : [{
+					"FromAreaCode" : ["350000"],
+					"FromAreaName" : ["福建省"],
+					"Time" : ["2015-10-09 16:23:43"],
+					"ToAreaCode" : ["350128"],
+					"ToAreaName" : ["社会事业局教育处"]
+				}]
+	}
+}

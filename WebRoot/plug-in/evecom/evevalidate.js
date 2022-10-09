@@ -1,0 +1,83 @@
+var EveValidate = {
+    //必填规则
+    "required":{
+       "vText":"不能为空!"
+    },
+    //身份证验证规则
+    "chinaId":{
+        "vText":"输入的身份证号码格式不正确",
+        "regex":/^[1-9]\d{5}[1-9]\d{3}(((0[13578]|1[02])(0[1-9]|[12]\d|3[0-1]))|((0[469]|11)(0[1-9]|[12]\d|30))|(02(0[1-9]|[12]\d)))(\d{4}|\d{3}[xX])$/
+    },
+    //电话号码验证规则
+    "phone":{
+        "regex":/^([\+][0-9]{1,3}[ \.\-])?([\(]{1}[0-9]{2,6}[\)])?([0-9 \.\-\/]{3,20})((x|ext|extension)[ ]?[0-9]{1,4})?$/,
+        "vText":"输入的电话号码格式不正确"
+    },
+    //邮件验证规则
+    "email":{
+        "regex":/^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i,
+        "vText":"输入的邮件地址格式不正确"
+    },
+    "chinaZip":{
+		"regex":/^\d{6}$/,
+		"vText":"输入的邮政编码格式不正确"
+	},
+    //整数验证规则
+    "integer":{
+		"regex":/^[\-\+]?\d+$/,
+		"vText":"输入的数值不是有效的整数"
+	},
+	//数字验证规则
+	"number":{
+        "regex": /^[\-\+]?((([0-9]{1,3})([,][0-9]{3})*)|([0-9]+))?([\.]([0-9]+))?$/,
+		"vText":"输入的数值不是有效的数值"
+	},
+	//IP地址验证规则
+	"ipv4":{
+		"regex":/^((([01]?[0-9]{1,2})|(2[0-4][0-9])|(25[0-5]))[.]){3}(([0-1]?[0-9]{1,2})|(2[0-4][0-9])|(25[0-5]))$/,
+		"vText":"输入的IP地址无效"
+	},
+	//网址验证规则
+	"website":{
+		"regex":/^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$/i,
+		"vText":"输入的网址无效"
+	},
+	//只能是数字
+	"onlyNumberSp":{
+		"regex":/^[0-9]+$/,
+		"vText":"输入的值必须为数字"
+	},
+	"onlyLetterSp":{
+		"regex":/^[a-zA-Z\ \']+$/,
+		"vText":"只能填写英文字母"
+	},
+	"onlyLetterNumber":{
+		"regex":/^[0-9a-zA-Z]+$/,
+		"vText":"只能填写数字与英文字母"
+	},
+	"onlyLetterNumberUnderLine":{
+		"regex":/^[0-9a-zA-Z-_]+$/,
+		"vText":"只能填写英文字母、数字、下划线"
+	},
+	"onlyLetterNumberSpec":{
+		"regex":/^[\w#\$\+-\.\/:=@\[\]\^_\'\|\&\(\)\?]+$/,
+		"vText":"只能填写英文字母、数字、特殊字符"
+	},
+	"chinese":{
+		"regex":/^[\u4E00-\u9FA5]+$/,
+		"vText":"只能填写中文汉字"
+	},
+	"mobilePhoneLoose":{
+		"regex":/^1[3|4|5|8|7|9][0-9]\d{8}$/,
+		"vText":"无效的手机号码,例如13452031733"
+	},
+	"fixPhoneWithAreaCode":{
+		"regex":/^(\d{3,4}-)\d{7,8}$/,
+		"vText":"无效的 固定电话号码<br/>&nbsp;&nbsp;格式必须为 区号-号码 ,其中区号3位或4位、号码7位或8位"
+	},
+	"fixOrMobilePhone":{
+		"regex":/(^1[3|4|5|8][0-9]\d{8}$)|(^(\d{3,4}-)\d{7,8}$)/,
+		"vText":"无效的手机号码或固定电话<br/>&nbsp;&nbsp;手机号码必须为13、14、15、18开头的11位数字<br/>&nbsp;&nbsp;固定电话号码格式格式必须为 区号-号码 ,其中区号3位或4位、号码7位或8位"
+	}
+};
+	

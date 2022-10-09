@@ -1,0 +1,18 @@
+.upload-queue td {
+	border-bottom: 1px dotted #cdcdcd;
+}
+
+.upload-queue a {
+	color: "blue";
+	text-decoration: none;
+}
+
+.upload-queue a:visited {
+	color: #000;
+	text-decoration: none;
+}
+
+.upload-queue a:hover {
+	color: #cd1e01;
+	text-decoration: underline;
+}

@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta name="renderer" content="webkit">
+	<title></title>
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/Select.css">
+	<link rel="stylesheet" type="text/css" href="css/eui.css">
+</head>
+<body>
+	
+	<div class="eui-main mine">
+		<!-- 头部 -->
+		<div class="eui-con eui-flex vc eui-header">
+			<div class="eui-logo">
+				<a class="eui-flex vc" href="1首页.html"><img src="images/logo.png" ></a>
+			</div>
+			<div class="eui-nav flex1">
+				<ul class="eui-flex vc">
+					<li><a href="1首页.html">首　页</a></li>
+					<li><a href="2申报指引.html">申报指引</a></li>
+					<li><a href="3办事指南.html">办事指南</a></li>
+					<li><a href="4办件公示.html">办件公示</a></li>
+					<li><a href="5政策法规.html">政策法规</a></li>
+					<li><a href="6下载专区.html">下载专区</a></li>
+				</ul>
+			</div>
+			<div class="eui-header-login">
+				<!-- 未登录 -->
+				<a class="unlogin" style="display: none;" href="#">登录/注册</a>
+				<!-- 已登录 -->
+				<div class="eui-user">
+					<span>134****3386</span>
+					<div class="sub">
+						<a href="#">个人中心</a>
+						<a href="#">退出登录</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 头部 end -->
+		
+		<!-- 主体 -->
+		<div class="eui-con">
+			
+			<div class="eui-flex eui-mine">
+				<div class="flex1">
+					
+					<div class="eui-card eui-mb eui-table-project">
+						<table>
+							<tr>
+								<th>事项编码</th>
+								<td>7820006000</td>
+								<th>事项名称</th>
+								<td colspan="5">政府投资房建类-立项用地规划许可阶段</td>
+							</tr>
+							<tr>
+								<th>事项类型</th>
+								<td>工程建设联办</td>
+								<th>办件类型</th>
+								<td>承诺件</td>
+								<th>法定时限</th>
+								<td>30个工作日</td>
+								<th>承诺时限</th>
+								<td>16个工作日</td>
+							</tr>
+						</table>
+					</div>
+					
+					<div class="eui-card eui-mb eui-flex bt eui-step">
+						<span class="i1 on"><i>1</i>合同说明</span>
+						<span class="i2"><i>2</i>申报信息</span>
+						<span class="i3"><i>3</i>业务表单</span>
+						<span class="i4"><i>4</i>上传材料</span>
+						<span class="i5"><i>5</i>完成申报</span>
+					</div>
+					
+					<!-- 选择项目弹窗 -->
+					<div class="eui-popup eui-porject-select" style="display: none;">
+						<div class="close">×</div>
+						<div class="tit eui-flex bt vt">
+							<b>选择项目</b>
+						</div>
+						<div class="con">
+							<div class="eui-card eui-table-info bjgs">
+								<table>
+									<tr>
+										<th>项目编码</th>
+										<td><input class="ipt" type="text" placeholder="请输入项目编码"></td>
+										<th>项目名称</th>
+										<td><input class="ipt" type="text" placeholder="请输入项目名称"></td>
+										<th>
+											<a class="eui-btn round" href="javascript:void(0)">查询</a>
+											<a class="eui-btn round lightblue" href="javascript:void(0)">重置</a>
+										</th>
+									</tr>
+								</table>
+							</div>
+							<div class="eui-sx-list">
+								<table>
+									<thead>
+										<tr>
+											<th><input class="eui-checkbox" type="checkbox" /></th>
+											<td>项目编码</td>
+											<td>项目名称</td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th><input class="eui-checkbox" type="checkbox" /></th>
+											<td>2020-350128-48-01-075961</td>
+											<td>建设用地规划许可证及划拨决定书核发</td>
+										</tr>
+										<tr>
+											<th><input class="eui-checkbox" type="checkbox" /></th>
+											<td>2020-350128-48-01-075961</td>
+											<td>可行性研究报告审批</td>
+										</tr>
+										<tr>
+											<th><input class="eui-checkbox" type="checkbox" /></th>
+											<td>2020-350128-48-01-075961</td>
+											<td>建设项目用地预审和选址意见书核发</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="eui-flex end eui-btn-wrap">
+								<a class="eui-btn o" href="javascript:void(0)">项目登记</a>
+								<a class="eui-btn" href="javascript:void(0)">确 定</a>
+							</div>
+						</div>
+					</div>
+					
+					<!-- 1合同说明 -->
+					<div class="eui-card eui-declaration wysb1 on">
+						<!-- 类型 -->
+						<div class="eui-tit round">
+							<b>类型</b>
+						</div>
+						<div class="eui-filter i1 eui-flex wrap">
+							<span class="on">政府投资市政类（线性工程）项目</span>
+							<span>政府投资房建类项目</span>
+							<span>社会投资房建类项目</span>
+							<span>社会投资小型工程建设项目</span>
+							<span>社会投资工业类项目</span>
+							<span>带方案出让用地的社会投资项目</span>
+						</div>
+						<!-- 阶段 -->
+						<div class="eui-tit round">
+							<b>阶段</b>
+						</div>
+						<div class="eui-filter i2 eui-flex wrap">
+							<span class="on">立项用地规划许可阶段</span>
+							<span>工程建设许可阶段</span>
+							<span>施工许可阶段</span>
+							<span>竣工验收阶段</span>
+						</div>
+						<!-- 事项列表 -->
+						<div class="eui-tit round">
+							<b>事项列表</b>
+						</div>
+						<div class="eui-flex tc eui-search" style="margin-top: 0;">
+							<input class="ipt" type="text" placeholder="请输入事项名称">
+							<a class="eui-btn" href="javascript:void(0)">搜 索</a>
+						</div>
+						<div class="eui-sx-list">
+							<table>
+								<thead>
+									<tr>
+										<th><input class="eui-checkbox" type="checkbox" /></th>
+										<td>事项名称</td>
+										<th>服务</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th><input class="eui-checkbox" type="checkbox" /></th>
+										<td>建设用地规划许可证及划拨决定书核发<span>必经事项</span></td>
+										<th><a href="#">办事指南</a></th>
+									</tr>
+									<tr>
+										<th><input class="eui-checkbox" type="checkbox" /></th>
+										<td>建设用地规划许可证及划拨决定书核发<span>必经事项</span></td>
+										<th><a href="#">办事指南</a></th>
+									</tr>
+									<tr>
+										<th><input class="eui-checkbox" type="checkbox" /></th>
+										<td>建设用地规划许可证及划拨决定书核发</td>
+										<th><a href="#">办事指南</a></th>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="eui-flex bt vc">
+							<div class="eui-flex vc"><strong>已选事项：</strong>
+								<div class="eui-sx-selected">
+									<b>3</b>
+									<div class="eui-sx-popup">
+										<div class="tit eui-flex bt">
+											<span>已选事项</span>
+											<span class="close">×</span>
+										</div>
+										<div class="con eui-table">
+											<div class="tr">
+												<div class="td"><i>1</i>建设用地规划许可证及划拨决定书核发</div>
+												<div class="th min"><a class="del"></a></div>
+											</div>
+											<div class="tr">
+												<div class="td"><i>2</i>建设用地规划许可证及划拨决定书核发</div>
+												<div class="th min"><a class="del"></a></div>
+											</div>
+											<div class="tr">
+												<div class="td"><i>3</i>建设用地规划许可证及划拨决定书核发</div>
+												<div class="th min"><a class="del"></a></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="eui-flex tc eui-sx-btn">
+								<a class="eui-btn o" href="javascript:void(0)">保存草稿</a>
+								<a id="goto2" class="eui-btn" href="javascript:void(0)">下一步</a>
+							</div>
+						</div>
+						
+					</div>
+					<!-- 2申报信息 -->
+					<div class="eui-card eui-declaration wysb2">
+						<div class="eui-tit round">
+							<b>基本信息</b>
+						</div>
+						<div class="eui-table-import">
+							<table>
+								<colgroup>
+									<col>
+									<col width="200">
+									<col>
+									<col width="200">
+								</colgroup>
+								<tr>
+									<th>投资项目编号：</th>
+									<td>
+										<div class="eui-flex bt">
+											<div class="flex1"><input class="ipt error" type="text" /></div>
+											<a id="showXmxz" class="eui-btn" href="javascript:void(0)">选择项目</a>
+										</div>
+										<span class="tooltips" style="display: ;">请输入正确的项目编号</span>
+									</td>
+									<th>项目分类：</th>
+									<td><input class="ipt" type="text" /></td>
+								</tr>
+								<tr>
+									<th>项目类型：</th>
+									<td><input class="ipt" type="text" /></td>
+									<th>项目类型：</th>
+									<td><input class="ipt" type="text" /></td>
+								</tr>
+								<tr>
+									<th>项目所属区划：</th>
+									<td><input class="ipt" type="text" /></td>
+									<th>投资项目目录编码：</th>
+									<td><input class="ipt" type="text" /></td>
+								</tr>
+								<tr>
+									<th>建设性质：</th>
+									<td><input class="ipt" type="text" /></td>
+									<th>建设地点详情：</th>
+									<td><input class="ipt" type="text" /></td>
+								</tr>
+								<tr>
+									<th>拟开工时间：</th>
+									<td><input class="ipt" type="text" /></td>
+									<th>拟建成时间：</th>
+									<td><input class="ipt" type="text" /></td>
+								</tr>
+								<tr>
+									<th>总投资(万元)：</th>
+									<td><input class="ipt" type="text" /></td>
+									<th>申报时间：</th>
+									<td><input class="ipt" type="text" /></td>
+								</tr>
+								<tr>
+									<th>总投资额为0时说明：</th>
+									<td colspan="3"><textarea rows="6" cols=""></textarea></td>
+								</tr>
+								<tr>
+									<th>建设地点：</th>
+									<td><input class="ipt" type="text" /></td>
+									<th>国际行业：</th>
+									<td><input class="ipt" type="text" /></td>
+								</tr>
+								<tr>
+									<th>建设规模及内容：</th>
+									<td colspan="3"><textarea rows="6" cols=""></textarea></td>
+								</tr>
+								<tr>
+									<th>项目属性：</th>
+									<td><input class="ipt" type="text" /></td>
+									<th>产业结构指导目录：</th>
+									<td><input class="ipt" type="text" /></td>
+								</tr>
+								<tr>
+									<th>土地获取方式：</th>
+									<td><input class="ipt" type="text" /></td>
+									<th>项目投资来源：</th>
+									<td><input class="ipt" type="text" /></td>
+								</tr>
+								<tr>
+									<th>工程分类：</th>
+									<td><input class="ipt" type="text" /></td>
+									<th>是否完成区域评估：</th>
+									<td><input class="ipt" type="text" /></td>
+								</tr>
+								<tr>
+									<th>土地是否带设计方案：</th>
+									<td><input class="ipt" type="text" /></td>
+									<th></th>
+									<td></td>
+								</tr>
+							</table>
+						</div>
+						
+						<div class="eui-tit round">
+							<b>项目法人单位</b>
+							<span class="toolbar">
+								<a class="del" href="javascript:void(0)">删除</a>
+								<a class="add" href="javascript:void(0)">新增法人</a>
+							</span>
+						</div>
+						<div class="eui-table-import">
+							<table>
+								<colgroup>
+									<col>
+									<col width="200">
+									<col>
+									<col width="200">
+								</colgroup>
+								<tr>
+									<th>单位名称：</th>
+									<td><input class="ipt" type="text" /></td>
+									<th>单位类型：</th>
+									<td><input class="ipt" type="text" /></td>
+								</tr>
+								<tr>
+									<th>证照类型：</th>
+									<td><input class="ipt" type="text" /></td>
+									<th>证照号码：</th>
+									<td><input class="ipt" type="text" /></td>
+								</tr>
+								<tr>
+									<th>联系人名称：</th>
+									<td><input class="ipt" type="text" /></td>
+									<th>联系电话：</th>
+									<td><input class="ipt" type="text" /></td>
+								</tr>
+								<tr>
+									<th>联系人邮箱：</th>
+									<td><input class="ipt" type="text" /></td>
+									<th>注册地址：</th>
+									<td><input class="ipt" type="text" /></td>
+								</tr>
+								<tr>
+									<th>持股比例是否相同：</th>
+									<td><input class="ipt" type="text" /></td>
+									<th>单位性质：</th>
+									<td><input class="ipt" type="text" /></td>
+								</tr>
+								<tr>
+									<th>主要经营范围：</th>
+									<td><input class="ipt" type="text" /></td>
+									<th>联系手机：</th>
+									<td><input class="ipt" type="text" /></td>
+								</tr>
+								<tr>
+									<th>传真：</th>
+									<td><input class="ipt" type="text" /></td>
+									<th>通讯地址：</th>
+									<td><input class="ipt" type="text" /></td>
+								</tr>
+							</table>
+						</div>
+						
+						<div class="eui-flex tc eui-sx-btn">
+							<a id="back1" class="eui-btn light" href="javascript:void(0)">上一步</a>
+							<a class="eui-btn o" href="javascript:void(0)">保存草稿</a>
+							<a id="goto3" class="eui-btn" href="javascript:void(0)">下一步</a>
+						</div>
+					</div>
+					<!-- 3业务表单 -->
+					<div class="eui-card eui-declaration wysb3 ovh">
+						
+						<div class="tit" style="background-image: url(images/wysb-i3.png);">经办人信息</div>
+						<div class="eui-table-import">
+							<table>
+								<colgroup>
+									<col>
+									<col width="200">
+									<col>
+									<col width="200">
+								</colgroup>
+								<tr>
+									<th><i>*</i>姓名：</th>
+									<td><input class="ipt" type="text" /></td>
+									<th><i>*</i>性别：</th>
+									<td><input class="ipt" type="text" /></td>
+								</tr>
+								<tr>
+									<th><i>*</i>证件类型：</th>
+									<td>
+										<select name="">
+											<option value="">身份证</option>
+											<option value="">居住证</option>
+											<option value="">户口本</option>
+										</select>
+									</td>
+									<th><i>*</i>证件号码：</th>
+									<td><input class="ipt" type="text" /></td>
+								</tr>
+								<tr>
+									<th><i>*</i>手机号码：</th>
+									<td><input class="ipt" type="text" /></td>
+									<th>联系电话：</th>
+									<td><input class="ipt" type="text" /></td>
+								</tr>
+								<tr>
+									<th>邮政编码：</th>
+									<td><input class="ipt" type="text" /></td>
+									<th>电子邮箱：</th>
+									<td><input class="ipt" type="text" /></td>
+								</tr>
+								<tr>
+									<th>联系地址：</th>
+									<td colspan="3"><input class="ipt" type="text" /></td>
+								</tr>
+								<tr>
+									<th>备注：</th>
+									<td colspan="3"><input class="ipt" type="text" /></td>
+								</tr>
+							</table>
+						</div>
+						
+						<div class="tit" style="background-image: url(images/wysb-i4.png);">纸质材料提交方式</div>
+						<div class="eui-flex vc eui-wysb-zztj">
+							提交方式：
+							<label class="eui-label"><input class="eui-radio" type="radio" name="1">窗口收取</label>
+							<label class="eui-label"><input class="eui-radio" type="radio" name="1" checked="">邮递收取</label>
+						</div>
+						<div class="eui-flex bt vc eui-ems">
+							<b>EMS上门收取纸质申报材料的联系方式</b>
+							<span>
+								<a class="addr" href="javascript:void(0)">地址选择</a>
+								<small>（在用户中心—收件地址维护）</small>
+							</span>
+						</div>
+						<div class="eui-table-import">
+							<table>
+								<colgroup>
+									<col>
+									<col width="200">
+									<col>
+									<col width="200">
+								</colgroup>
+								<tr>
+									<th>寄件人：</th>
+									<td><input class="ipt" type="text" /></td>
+									<th>手机：</th>
+									<td><input class="ipt" type="text" /></td>
+								</tr>
+								<tr>
+									<th>固定电话：</th>
+									<td><input class="ipt" type="text" /></td>
+									<th>邮政编码：</th>
+									<td><input class="ipt" type="text" /></td>
+								</tr>
+								<tr>
+									<th>寄件地址：</th>
+									<td colspan="3">
+										<div class="eui-flex bt eui-city">
+											<select name="">
+												<option value="">福建省</option>
+											</select>
+											<select name="">
+												<option value="">福州省</option>
+											</select>
+											<select name="">
+												<option value="">鼓楼区</option>
+											</select>
+											<span class="flex1"><input class="ipt" type="text" /></span>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+						
+						<div class="tit" style="background-image: url(images/wysb-i5.png);">办理结果领取方式</div>
+						<div class="eui-flex vc eui-wysb-zztj">
+							领取方式：
+							<label class="eui-label"><input class="eui-radio" type="radio" name="1" checked="">窗口收取</label>
+							<label class="eui-label"><input class="eui-radio" type="radio" name="1">邮递收取</label>
+						</div>
+						
+						<div class="eui-flex tc eui-sx-btn">
+							<a id="back2" class="eui-btn light" href="javascript:void(0)">上一步</a>
+							<a class="eui-btn o" href="javascript:void(0)">保存草稿</a>
+							<a id="goto4" class="eui-btn" href="javascript:void(0)">下一步</a>
+						</div>
+					</div>
+					<!-- 4上传材料 -->
+					<div class="eui-card eui-declaration wysb4 ovh">
+						
+						<div class="eui-tips" style="margin-top: 20px;">温馨提示：加*号的材料，为必须上传的材料</div>
+						<div class="tit" style="background-image: url(images/wysb-i6.png);">通用/共性材料</div>
+						<div class="eui-upload">
+							<table>
+								<colgroup>
+									<col width="70">
+									<col>
+									<col>
+									<col width="360">
+								</colgroup>
+								<thead>
+									<tr>
+										<td>序号</td>
+										<td>材料名称</td>
+										<td>提供方式</td>
+										<td>提供方式</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td><i>*</i>立项用地规划许可阶段项目审批申请表</td>
+										<td>
+											<select name="">
+												<option value="">未提交</option>
+											</select>
+										</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>项目建设依据（项目建议书批复文件、项目列入相关规划文件或相关产业政策文件）</td>
+										<td>
+											<select name="">
+												<option value="">纸质收取</option>
+											</select>
+										</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>社会稳定风险评估意见表<a class="download" href="#">下载表格模板</a></td>
+										<td>
+											<select name="">
+												<option value="">上传</option>
+											</select>
+										</td>
+										<td>
+											<a class="btn" style="color: #ff902e;" href="javascript:void(0)">上传材料</a>
+											<a class="btn" style="color: #00e577;" href="javascript:void(0)">从我的材料库上传</a>
+											<a class="btn" style="color: #edbe00;" href="javascript:void(0)">APP扫码上传</a>
+										</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td><i>*</i>统一社会信用代码的证照</td>
+										<td>
+											<select name="">
+												<option value="">电子证照</option>
+											</select>
+										</td>
+										<td>
+											<a class="btn" style="color: #ff902e;" href="javascript:void(0)">证照库获取</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						
+						<div class="tit" style="background-image: url(images/wysb-i7.png);">建设用地规划许可证及划拨决定核发</div>
+						
+						<div class="tit" style="background-image: url(images/wysb-i7.png);">建设项目用地预审和选址意见书核发</div>
+						
+						<div class="eui-flex tc eui-sx-btn">
+							<a id="back3" class="eui-btn light" href="javascript:void(0)">上一步</a>
+							<a class="eui-btn o" href="javascript:void(0)">保存草稿</a>
+							<a id="goto5" class="eui-btn" href="javascript:void(0)">下一步</a>
+						</div>
+					</div>
+					<!-- 5完成申报 -->
+					<div class="eui-card eui-declaration wysb5 ovh">
+						
+						<div class="eui-finish">
+							<img src="images/finish.png" >
+							<b>恭喜！提交成功</b>
+							<table>
+								<tr>
+									<th>项目编码：</th>
+									<td>2020-350128-83-01-040015</td>
+								</tr>
+								<tr>
+									<th>项目名称：</th>
+									<td>平潭新兴产业园标准化厂房及其配套工程</td>
+								</tr>
+								<tr>
+									<th>申报事项：</th>
+									<td>建设用地规划许可证及划拨决定书核发，可行性研究报告审批，建设项目用地预审和选址意见书核发</td>
+								</tr>
+							</table>
+						</div>
+						
+						<div class="eui-flex tc eui-sx-btn">
+							<a class="eui-btn light" href="javascript:void(0)">返回我的办件</a>
+							<a class="eui-btn light" href="javascript:void(0)">申报新项目</a>
+							<a class="eui-btn" href="javascript:void(0)">继续申报当前项目</a>
+						</div>
+						
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<!-- 主体 end -->
+		
+		<!-- 底部 -->
+		<div class="eui-footer">
+			<iframe frameborder="0" width="100%" height="100%" marginheight="0" marginwidth="0" scrolling="no" allowtransparency="true" src="foot.html"></iframe>
+		</div>
+		<!-- 底部 end -->
+	</div>
+	
+	<script type="text/javascript" charset="utf-8" src="js/jquery.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/Select.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/totop.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$("#goto2").click(function(){
+				$(".wysb1").removeClass("on");
+				$(".wysb2").addClass("on");
+				$(".eui-step .i2").addClass("on");
+				$('html, body').animate({scrollTop: 0},300);return false;
+			})
+			$("#goto3").click(function(){
+				$(".wysb2").removeClass("on");
+				$(".wysb3").addClass("on");
+				$(".eui-step .i3").addClass("on");
+				$('html, body').animate({scrollTop: 0},300);return false;
+			})
+			$("#goto4").click(function(){
+				$(".wysb3").removeClass("on");
+				$(".wysb4").addClass("on");
+				$(".eui-step .i4").addClass("on");
+				$('html, body').animate({scrollTop: 0},300);return false;
+			})
+			$("#goto5").click(function(){
+				$(".wysb4").removeClass("on");
+				$(".wysb5").addClass("on");
+				$(".eui-step .i5").addClass("on");
+				$('html, body').animate({scrollTop: 0},300);return false;
+			})
+			$("#back1").click(function(){
+				$(".wysb2").removeClass("on");
+				$(".wysb1").addClass("on");
+				$(".eui-step .i2").removeClass("on");
+				$('html, body').animate({scrollTop: 0},300);return false;
+			})
+			$("#back2").click(function(){
+				$(".wysb3").removeClass("on");
+				$(".wysb2").addClass("on");
+				$(".eui-step .i3").removeClass("on");
+				$('html, body').animate({scrollTop: 0},300);return false;
+			})
+			$("#back3").click(function(){
+				$(".wysb4").removeClass("on");
+				$(".wysb3").addClass("on");
+				$(".eui-step .i4").removeClass("on");
+				$('html, body').animate({scrollTop: 0},300);return false;
+			})
+			$("#showXmxz").click(function(){
+				$(".eui-porject-select").fadeIn(300);
+			})
+			$(".eui-porject-select .close").click(function(){
+				$(this).parent().fadeOut(300);
+			})
+			//下拉框
+			$('select').selectMatch();
+			// 筛选
+			$(".eui-filter span").click(function(){
+				$(this).addClass("on").siblings().removeClass("on");
+			})
+			// 已选事项
+			$(".eui-sx-selected b").click(function(){
+				$(this).toggleClass("on");
+			})
+			$(".eui-sx-popup .close").click(function(){
+				$(".eui-sx-selected b").removeClass("on");
+			})
+		});
+	</script>
+	
+</body>
+</html>

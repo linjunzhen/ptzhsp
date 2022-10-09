@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+
+	<service xmlns="http://xfire.codehaus.org/config/1.0">
+		<name>CallWebService</name>
+		<serviceClass>net.evecom.platform.call.service.CallWebService</serviceClass>
+		<implementationClass>
+			net.evecom.platform.call.service.impl.CallWebServiceImpl
+		</implementationClass>
+	</service>
+ 
+	<service xmlns="http://xfire.codehaus.org/config/1.0">
+		<name>EstateWebService</name>
+		<serviceClass>net.evecom.platform.call.service.EstateWebService</serviceClass>
+		<implementationClass>
+			net.evecom.platform.call.service.impl.EstateWebServiceImpl
+		</implementationClass>
+	</service>
+ 
+	<service xmlns="http://xfire.codehaus.org/config/1.0">
+		<name>InduParkWebService</name>
+		<serviceClass>net.evecom.platform.indupark.service.InduParkWebService</serviceClass>
+		<implementationClass>
+			net.evecom.platform.indupark.service.impl.InduParkWebServiceImpl
+		</implementationClass>
+	</service>
+	
+	<!-- -->
+</beans>

@@ -1,0 +1,215 @@
+.count{
+float: left;border-radius: 50%;
+width: 20px;
+height: 20px;
+background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%);
+background-image: -webkit-radial-gradient(45px 45px, circle cover, yellow, orange);
+background-image: radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%);animation-name: spin; 
+animation-duration: 3s; /* 3 seconds */
+animation-iteration-count: infinite; 
+animation-timing-function: linear; text-align: center;color: white;
+}
+
+/*清除浮动*/
+.clearfix:after{content:'\0020';display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{*zoom:1; _zoom:1;}
+
+/* 首页 */
+.govContainer{height:100%;}
+.govBanner{width:100%; height:100%;}
+.govBanner img{display:block; width:100%;}
+.govGiad li{text-align:center; height:130px; border-right:1px solid #eeeeec; border-bottom:1px solid #eeeeec;}
+.grid-img img{width:60px; height:60px; margin-top:20px;}
+.grid-label{font-size:13px; line-height:20px; margin:4px 6px; font-weight:400;}
+.govGiad li a{color:#000;}
+
+/*动画*/
+.grid1{-webkit-animation-delay:100ms;-ms-animation-delay:100ms;animation-delay:100ms;}
+.grid2{-webkit-animation-delay:200ms;-ms-animation-delay:200ms;animation-delay:200ms;}
+.grid3{-webkit-animation-delay:300ms;-ms-animation-delay:300ms;animation-delay:300ms;}
+.grid4{-webkit-animation-delay:400ms;-ms-animation-delay:400ms;animation-delay:400ms;}
+.grid5{-webkit-animation-delay:500ms;-ms-animation-delay:500ms;animation-delay:500ms;}
+.grid6{-webkit-animation-delay:600ms;-ms-animation-delay:600ms;animation-delay:600ms;}
+.grid7{-webkit-animation-delay:700ms;-ms-animation-delay:700ms;animation-delay:700ms;}
+.grid8{-webkit-animation-delay:800ms;-ms-animation-delay:800ms;animation-delay:800ms;}
+.grid9{-webkit-animation-delay:900ms;-ms-animation-delay:900ms;animation-delay:900ms;}
+.grid10{-webkit-animation-delay:1000ms;-ms-animation-delay:1000ms;animation-delay:1000ms;}
+.grid11{-webkit-animation-delay:1100ms;-ms-animation-delay:1100ms;animation-delay:1100ms;}
+.grid12{-webkit-animation-delay:1200ms;-ms-animation-delay:1200ms;animation-delay:1200ms;}
+.grid13{-webkit-animation-delay:1300ms;-ms-animation-delay:1300ms;animation-delay:1300ms;}
+.grid14{-webkit-animation-delay:1400ms;-ms-animation-delay:1400ms;animation-delay:1400ms;}
+.grid15{-webkit-animation-delay:1500ms;-ms-animation-delay:1500ms;animation-delay:1500ms;}
+
+/* 表单*/
+.noborder{border:none !important;}
+.nopadding{padding:0px !important;}
+.govHeader{background:#3199e8;}
+.govHeader .am-header-title{margin:0 25%; color:#fff; font-size:1.7rem;}
+.govmain{background:#fff;}
+.govm10{margin:10px;}
+.govtm10{margin-top:10px;}
+.govtm20{margin-top:20px;}
+.gov-btn{display:inline-block; margin-bottom:0; padding:6px 8px; font-size:12px; font-weight:400; line-height:1.2; text-align:center; white-space:nowrap; background-image:none; border:1px solid transparent; border-radius:3px; cursor:pointer; outline:0; -webkit-appearance:none; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none; -webkit-transition:background-color .3s ease-out,border-color .3s ease-out; transition:background-color .3s ease-out,border-color .3s ease-out;}
+.govForm{}
+.govTitle{height:30px; line-height:30px; font-size:15px; padding:0 14px; color:#949494; border-bottom:1px solid #cacaca; background:#ebebeb;}
+.govForm .am-form-group{margin:0 10px; line-height:40px; border-bottom:1px solid #c9c9c9; background:#fff;}
+.label-all{float:left; font-size:18px; font-weight:400; padding:10px 0; line-height:40px; margin:0; vertical-align:middle; display:block;}
+.label-left{float:left; width:100px; font-size:18px; font-weight:400; padding:10px 0; line-height:40px; margin:0; vertical-align:middle; display:block;}
+.label-right{float:left;width:calc(100% - 120px); font-size:18px; font-weight:400; padding:10px 0; line-height:40px; margin:0; vertical-align:middle; display:block;}
+.lable-title{color:#426fa4;width:100%;}
+.govForm .am-form-group input[type=text],.govForm .am-form-group input[type=password],.govForm .am-form-group select,.govForm .am-form-group textarea{border:0px solid #fff; font-size:16px;}
+.govpre{margin:0px; border:none; background:#fff;font-size:15px;}
+.govcolor{color:#666;}
+.am-form-group input[type=text]{width: calc(100% - 10px);}
+.lable-must{color:red;padding-top: 15px;}
+/* 列表 */
+#wrapper{position:absolute; top:0px; bottom:0; overflow:hidden; margin:0; width:100%; padding:0 8px; background-color:#fff;}
+.am-list{margin: 0;}
+.am-list > li{ background:none; box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);}
+.pull-action{text-align:center; height:45px; line-height:45px; color:#999;}
+.pull-action .am-icon-spin{display:none;}
+.pull-action.loading .am-icon-spin{display:block;}
+.pull-action.loading .pull-label{display: none;}
+.govlist .am-list-item-dated a{color:#333; font-size:14px;}
+.govinfoimg{display:inline-block; width:42px; height:60px;}
+.govL50{float:left; width:50%; text-align:center;}
+.govL100{float:left; width:100%; text-align:center;}
+.gov-btn-1{color:#fff; width:96%; height:40px; background:#70b9e4;}
+.gov-btn-2{color:#fff; width:96%; height:40px; background:#8cc264;}
+.gov-btn-1:hover,.gov-btn-2:hover{color:#fff;}
+
+/* 两微矩阵与便民地图 */
+.eui-tabs li{text-align:center; background:#3199e8;}
+.am-tabs-d2 .am-tabs-nav a{color:#fff; display:block;}
+.borderimg{border-radius:50%; border:4px solid #eee;}
+.GovSearch{padding:10px; margin-top:42px; background:#ebebeb;}
+.GovSearch span input{width:80%; height:31px; margin:0px; padding:0px 5px; border:1px solid #bfbfbf; color:#969696; vertical-align:top !important; background:#fafafa;}
+.GovSearch a{display:inline-block; width:20%; height:31px; line-height:31px; font-size:14px; text-align:center; margin-left:-2px; color:#fff; background:#3199e8; border:1px solid #3199e8;}
+.lrmargin10{margin:0 10px !important;}
+.govMapn{width:30px; border-radius:50%; border:4px solid #eee; margin-right:6px;}
+.govMap img{width:30px;}
+.govMap a{padding:0px !important; margin-top:-6px;}
+
+/*新加样式*/
+.govlist1{background:#ebebeb;}
+.govlist1 li{height:60px; line-height:60px; text-align:center;}
+.govlist1 li img{width:35px; height:35px;}
+.bgcolor1{display:block; color:#fff; background:#6fb9e3; border:8px solid #ebebeb;}
+.bgcolor1:hover{color:#fff; background:#50a1cf;}
+.bgcolor2{display:block; color:#fff; background:#8dc263; border:8px solid #ebebeb;}
+.bgcolor2:hover{color:#fff; background:#75b047;}
+
+.matertitle{
+font-size:18px;
+font-weight:400;
+padding:10px 0;
+line-height:40px;
+margin:0;
+vertical-align:middle;
+-webkit-box-orient;
+text-overflow: ellipsis;
+overflow : hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 1;
+-webkit-box-orient: vertical;
+float: left;
+width: calc(100% - 40px);
+}
+.materright{
+padding:10px 0;
+line-height:40px;
+float:right;
+width:40px;
+text-align: center;
+}
+.mbutton{
+	
+	width:100%;
+	height:50px;
+    background:#0c83d3; 
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius:15px;
+    margin:15px 0 15px 0; 
+    vertical-align:middle; 
+    display:block;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    line-height: 50px;
+    font-weight: bold;
+}
+.ptwglist li{
+border: 0px;
+}
+.ptwglist li a{
+font-size:18px;
+font-weight:400;
+line-height:40px;
+margin: 0 10px;
+width: calc(100% - 20px);
+border-bottom: 2px solid #c9c9c9;
+}
+.ptwglist li div{
+	width:100%;
+	color: #6C6C6C;
+	font-size:16px;
+}
+.ptwgsplistsecond{
+float:left;
+color: #6C6C6C;
+text-align:left;
+font-size:16px;
+font-weight:400;
+line-height:30px;
+width:100%;
+}
+.ptwgsplistsecond span{
+text-align: right;
+float: right;
+}
+.ptwgsplistright{
+	font-size:18px;
+font-weight:400;
+padding:10px 0;
+line-height:40px;
+float: right;
+width:100px;
+text-align: center;
+color: red;
+}
+.ptwgsplistleft{
+font-size:18px;
+font-weight:400;
+padding:10px 0;
+line-height:40px;
+margin:0;
+vertical-align:middle;
+-webkit-box-orient;
+text-overflow: ellipsis;
+overflow : hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 1;
+-webkit-box-orient: vertical;
+float: left;
+width: calc(100% - 120px);
+}
+.ptwgsplistmore{
+font-size:18px;
+font-weight:400;
+line-height:40px;
+margin:0;
+vertical-align:middle;
+-webkit-box-orient;
+text-overflow: ellipsis;
+overflow : hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 1;
+-webkit-box-orient: vertical;
+width: 100%;
+text-align: center;
+color: #6C6C6C;
+}

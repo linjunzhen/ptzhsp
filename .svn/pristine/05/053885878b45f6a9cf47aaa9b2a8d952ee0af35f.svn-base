@@ -1,0 +1,37 @@
+.header{
+    background:#149aef;
+    overflow:hidden;
+    text-align:center;
+    position:relative;
+    width:100%;
+    position:fixed;
+    left:0;
+    top:0;
+    z-index:100;
+}
+.header span{
+    display:block;
+    width:45px;
+    height:45px;
+    float:left;
+    background:url(../images/back_off.png) no-repeat;
+}
+.header h2{
+    color:#fff;
+    display: inline-block;
+    line-height:45px;
+    /*width:50%;*/
+    font-weight: normal;
+}
+.header i{
+    display:block;
+    float:right;
+    width:45px;
+    height:45px;
+    background:url(../images/course_list/search.png) no-repeat;
+}
+
+.clearfix{position: fixed;width: 100%;left: 0;bottom: 0;z-index: 2;background-color: #fff;}
+.clearfix a{width: 25%;float: left;padding:1% 0 1% 0;color: #222222;text-align: center;}
+.clearfix a.current{color:#ff2557;}
+.clearfix a img{margin: 0 auto;padding-bottom: 2%;}

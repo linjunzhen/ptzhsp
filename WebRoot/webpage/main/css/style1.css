@@ -1,0 +1,1721 @@
+@charset "utf-8";
+
+/* CSS Document */
+/***
+ * uimaker
+ * http://www.uimaker.com
+ * e-mail: admin@uimaker.com
+ */
+* {
+	font-family: "Microsoft YaHei"
+}
+
+/*top.html*/
+.header {
+	height: 100px;
+}
+
+.topleft {
+	height: 100px;
+	float: left;
+	width: 560px;
+	display: inline;
+}
+
+.topleft img {
+	margin-top: 18px;
+	margin-left: 10px;
+}
+
+.topright {
+	height: 100px;
+	float: right;
+	display: inline;
+}
+
+.nav {
+	float: left;
+	display: inline;
+	height: 89px;
+	margin-top: 6px;
+}
+
+.nav li {
+	float: left;
+	display: inline;
+	width: 89px;
+	height: 89px;
+	margin: 0 5px;
+	text-align: center;
+
+}
+
+.nav li a.navactive,
+.nav li a:hover {
+	background: url(../images/btnhover.png) no-repeat !important;
+	color: #fff;
+}
+
+.nav li a {
+	display: block;
+	width: 89px;
+	height: 89px;
+	font-size: 14px;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+	background: url(../images/btna.png) no-repeat;
+}
+
+.nav li a img {
+	margin-top: 12px;
+}
+
+.nav li a p {
+	line-height: 22px;
+}
+
+.topright ul {
+	padding-top: 15px;
+	float: right;
+	padding-right: 12px;
+}
+
+.topright ul li {
+	float: left;
+	padding-left: 9px;
+	padding-right: 9px;
+	background: url(../images/line.png) no-repeat right;
+}
+
+.topright ul li:last-child {
+	background: none;
+}
+
+.topright ul li a {
+	font-size: 13px;
+	color: #fff;
+}
+
+.topright ul li a:hover {
+	color: #e94709;
+}
+
+.topright ul li span {
+	margin-top: 2px;
+	float: left;
+	padding-right: 3px;
+}
+
+.user {
+	height: 31px;
+	background: url(../images/ub1.png) repeat-x;
+	clear: both;
+	margin-top: 10px;
+	float: right;
+	margin-right: 12px;
+	border-radius: 30px;
+	behavior: url(js/pie.htc);
+	white-space: nowrap;
+	position: relative;
+}
+
+.user span {
+	display: inline-block;
+	padding-right: 10px;
+	background: url(../images/user.png) no-repeat 15px;
+	line-height: 30px;
+	font-size: 14px;
+	color: #fff;
+	padding-left: 20px;
+	padding-left: 35px;
+}
+
+.user b {
+	display: inline-block;
+	width: 20px;
+	height: 18px;
+	background: url(../images/msg.png);
+	text-align: center;
+	font-weight: normal;
+	color: #fff;
+	font-size: 14px;
+	margin-right: 13px;
+	margin-top: 7px;
+	line-height: 18px;
+}
+
+.user i {
+	display: inline-block;
+	margin-right: 5px;
+	padding-left: 15px;
+	font-style: normal;
+	line-height: 30px;
+	font-size: 14px;
+	color: #fff;
+	background: url(../images/line1.png) no-repeat left;
+}
+
+/*left.html*/
+.lefttop {
+	background: #f2f2f2;
+	height: 40px;
+	color: #0068b7;
+	font-size: 16px;
+	line-height: 40px;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+
+.lefttop span {
+	margin-left: 8px;
+	margin-top: 8px;
+	margin-right: 8px;
+	background: url(../images/left_top.png) no-repeat;
+	width: 25px;
+	height: 25px;
+	float: left;
+}
+
+.leftmenu {
+	width: 187px;
+	padding-bottom: 9999px;
+	margin-bottom: -9999px;
+	overflow: hidden;
+	background: url(../images/leftline.gif) repeat-y right;
+}
+
+.leftmenu dd {
+	line-height: 35px;
+	font-weight: bold;
+	font-size: 14px;
+	border-right: solid 1px #ccc;
+	border-bottom: solid 1px #ccc;
+}
+
+.leftmenu dd span {
+	float: left;
+	margin: 10px 8px 0 12px;
+}
+
+.leftmenu dd .menuson {
+	display: none;
+}
+
+.leftmenu dd:first-child .menuson {
+	display: block;
+}
+
+.menuson {
+	line-height: 30px;
+	font-weight: normal;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.menuson li {
+	cursor: pointer;
+	line-height: 39px;
+	border-bottom: 1px solid #ccc;
+}
+
+.menuson li.active {
+	position: relative;
+	line-height: 39px;
+	color: #0068b7;
+}
+
+.menuson li cite {
+	display: block;
+	float: left;
+	margin: 12px 6px 0 22px;
+	background: url(../images/list.gif) no-repeat;
+	width: 16px;
+	height: 16px;
+}
+
+.menuson li.active cite {
+	background: url(../images/list1.gif) no-repeat;
+}
+
+.menuson li a {
+	display: block;
+	*display: inline;
+	*padding-top: 5px;
+}
+
+.menuson li.active a {
+	color: #0068b7;
+}
+
+.title {
+	cursor: pointer;
+	background: url(../images/indnav.png) no-repeat 168px center #f2f2f2;
+	border-bottom: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	margin-bottom: -1px;
+	padding-left: 26px;
+	color: #555;
+}
+
+.indnavOn {
+	background: url(../images/indnavOn.png) no-repeat 168px center #f2f2f2 !important;
+	color: #0068b7 !important;
+}
+
+/*门户样式*/
+.main_con {
+	float: left;
+	width: 100%;
+	height: 180px;
+	background: url(../images/main_conbg.png);
+}
+
+.main_title {
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	font-size: 24px;
+	font-family: '微软雅黑';
+}
+
+.border_L {
+	display: block;
+	border-left: 6px solid #f0562d;
+	color: #f0562d;
+	height: 40px;
+	padding: 0 0 0 23px;
+}
+
+.border_L1 {
+	display: block;
+	/* border-left: 2px solid #3e8bff; */
+	color: #333;
+	height: 40px;
+	padding: 0 0 0 23px;
+	margin: 5px 0;
+}
+
+.border_L2 {
+	display: block;
+	border-left: 6px solid #2c5ca9;
+	color: #2c5ca9;
+	height: 40px;
+	padding: 0 0 0 23px;
+}
+
+.border_L3 {
+	display: block;
+	border-left: 6px solid #28b779;
+	color: #28b779;
+	height: 40px;
+	padding: 0 0 0 23px;
+}
+
+.main_title a {
+	float: right;
+	margin: 7px 22px 0 0;
+}
+
+.main_title a:hover {
+	position: relative;
+	left: 1px;
+}
+
+.main_list {
+	margin: 0 25px;
+}
+
+.main_list ul li {
+	height: 30px;
+	line-height: 30px;
+	border-bottom: 1px solid #a3b0bd;
+	color: #4c637b;
+	font-size: 16px;
+	font-family: '微软雅黑';
+}
+
+.main_list ul li span {
+	float: right;
+}
+
+.main_list ul li a {
+	color: #4c637b;
+	display: block;
+	word-wrap: normal;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.main_list ul li a:hover {
+	color: #f0562d
+}
+
+.f_orange a,
+.f_orange {
+	color: #f04e23 !important;
+}
+
+.main_list1 {
+	margin: 0 25px;
+}
+
+.main_list1 ul li {
+	height: 30px;
+	line-height: 30px;
+	/* border-bottom: 1px solid #a3b0bd; */
+	color: #4c637b;
+	font-size: 16px;
+	font-family: '微软雅黑';
+}
+
+.main_list1 ul li span {
+	float: right;
+}
+
+.main_list1 ul li a {
+	color: #333;
+	display: block;
+	word-wrap: normal;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.main_list1 ul li a:hover {
+	color: #3e8bff;
+}
+
+/* 修改框架样式代码 */
+.layout-panel-west .panel-header {
+	padding: 0px;
+	height: 36px;
+	line-height: 36px;
+	border: 1px solid #b9cbe1;
+	color: #484b50;
+	background-color: #d5dde8;
+	background: -webkit-linear-gradient(top, #d5dde8 0, #d5dde8 100%);
+	background: -moz-linear-gradient(top, #d5dde8 0, #d5dde8 100%);
+	background: -o-linear-gradient(top, #d5dde8 0, #d5dde8 100%);
+	background: linear-gradient(to bottom, #d5dde8 0, #d5dde8 100%);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#d5dde8, endColorstr=#d5dde8, GradientType=0);
+}
+
+.layout-panel-west .panel-header .panel-title {
+	font-size: 16px;
+	font-weight: 400;
+	padding-left: 16px;
+	color: #484b50;
+	height: 36px;
+	line-height: 36px;
+}
+
+.layout-panel-west .panel-header .panel-tool a,
+.layout-expand-west .panel-header .panel-tool a {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	opacity: 0.6;
+	filter: alpha(opacity=100);
+	margin: 0 0 0 2px;
+	vertical-align: top;
+}
+
+.layout-panel-west .panel-header .panel-tool a:hover,
+.layout-expand-west .panel-header .panel-tool a:hover {
+	opacity: 1;
+	filter: alpha(opacity=100);
+	background-color: transparent;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+	border-radius: 3px 3px 3px 3px;
+}
+
+.layout-expand,
+.layout-expand-over {
+	background-color: #d5dde8 !important;
+}
+
+.layout-expand-west .panel-header,
+.layout-expand-west .panel-body {
+	border: none;
+}
+
+/*2019-8-29*/
+
+.eui-jh-box {
+	/*padding: 20px 20px 0 20px;*/
+	background: #fbf7f8;
+	position: relative;
+}
+
+.eui-jh-box .layout-panel {
+    /* padding: 10px; */
+}
+
+.eui-jh-box .panel-body {
+	border: 0;
+	/*box-shaow:0 0 15px rgba(62,139,255,.1);*/
+}
+
+.eui-jh-box .layout-panel-west {
+	padding: 10px 0 10px 10px;
+}
+.eui-jh-box .layout-panel-east{
+	padding: 10px 10px 10px 0;
+}
+.eui-jh-box .layout-panel-center {
+	padding: 10px;
+
+}
+
+.eui-jh-box .layout-panel-west>.panel-body,
+.eui-jh-box .layout-panel-center>.panel-body,
+.eui-jh-box .layout-panel-east>.panel-body {
+	padding: 10px;
+	box-shadow: 0 0 15px rgba(62, 139, 255, .2);
+}
+
+/*头部工具栏*/
+.eui-jh-box .datagrid-toolbar {
+	border: none;
+
+}
+
+.eui-jh-box .right-con .e-toolbar,
+.eui-in-box .right-con .e-toolbar {
+	position: relative;
+	font-size: 16px;
+	height: 42px;
+	line-height: 42px;
+	border: none;
+	background: 0 0;
+	padding: 0;
+	background: #fff
+}
+
+.eui-jh-box .right-con .e-toolbar-overflow,
+.eui-in-box .right-con .e-toolbar-overflow {
+	background: #fff;
+	padding-left: 5px;
+	border-bottom: 1px solid #eee;
+}
+.eui-diabody .right-con .e-toolbar{
+	position: relative;
+	font-size: 16px;
+	height: 51px;
+	line-height: 35px;
+	border: none;
+	background: 0 0;
+	padding: 0;
+	background: #fff;
+}
+
+.eui-diabody .e-toolbar-overflow{
+	padding:10px;
+	background:#fff;
+	box-sizing: border-box;
+	height: 52px;
+}
+.eui-diabody .e-toolbar .e-toolbar-overflow>div::before{
+	content: '';
+	width: 2px;
+	background: #3e8bff;
+	display: block;
+	height: 17px;
+	position: absolute;
+	left: 1px;
+	top: 18px;
+}
+.eui-diabody .right-con .e-toolbar-overflow{
+	height: 51px;
+	line-height: 26px;
+	background:none;
+	padding: 13px 10px;
+	box-sizing: border-box;
+}
+
+.eui-jh-box .right-con .e-toolbar-ct,
+.eui-in-box .right-con .e-toolbar-ct,
+.eui-diabody .e-toolbar-ct {
+	background: #fff
+}
+
+.eui-jh-box .e-toolbar-ct img,
+.eui-in-box .e-toolbar-ct img,
+.eui-evetabplus .e-toolbar-ct img,
+.eui-diabody .e-toolbar-ct img {
+	display: none
+}
+
+.eui-jh-box .e-toolbar .e-toolbar-overflow>div::before,
+.eui-in-box .e-toolbar .e-toolbar-overflow>div::before {
+	content: '';
+	width: 2px;
+	background: #3e8bff;
+	display: block;
+	height: 17px;
+	position: absolute;
+	left: 1px;
+	top: 9px;
+}
+.eui-evetabplus .e-toolbar .e-toolbar-overflow{
+	font-size:16px
+}
+.eui-evetabplus .e-toolbar .e-toolbar-overflow>div::before{
+	content: '';
+	width: 2px;
+	background: #3e8bff;
+	display: block;
+	height: 17px;
+	position: absolute;
+	left: 1px;
+	top: 17px;
+}
+
+
+/* .eui-jh-box .datagrid-header td:last-child{
+	border-width:1px 0 1px 1px
+} */
+/* 按钮*/
+
+.eui-jh-box .l-btn,
+.eui-evetabplus .l-btn,
+.eui-diabody .l-btn,
+.eui-col3-box .l-btn {
+	text-decoration: none;
+	display: inline-block;
+	overflow: hidden;
+	height: 24px;
+	line-height: 24px;
+	padding: 0;
+	cursor: pointer;
+	outline: none;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.eui-jh-box .l-btn-text,
+.eui-evetabplus .l-btn-text,
+.eui-diabody .l-btn-text,
+.eui-col3-box .l-btn-text{
+	display: inline-block;
+	vertical-align: top;
+	width: auto;
+	line-height: 24px;
+	font-size: 12px;
+	padding: 0;
+	margin: 0 4px;
+}
+
+.eui-jh-box .l-btn-icon-left .l-btn-text,
+.eui-evetabplus .l-btn-icon-left .l-btn-text,
+.eui-diabody .l-btn-icon-left .l-btn-text,
+.eui-col3-box .l-btn-icon-left .l-btn-text{
+	margin: 0px 5px 0 24px;
+	font-size: 14px;
+}
+
+.eui-jh-box .e-toolbar-overflow .l-btn-plain,
+.eui-evetabplus .e-toolbar-overflow .l-btn-plain,
+.eui-diabody .e-toolbar-overflow .l-btn-plain,
+.eui-col3-box .e-toolbar-overflow .l-btn-plain {
+	color: #3e8bff;
+	background: transparent;
+	border: 1px solid #3e8bff;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+	border-radius: 3px 3px 3px 3px;
+	margin-right: 5px;
+}
+
+.eui-jh-box .e-toolbar-overflow .l-btn-plain:hover,
+.eui-evetabplus .e-toolbar-overflow .l-btn-plain:hover,
+.eui-diabody .e-toolbar-overflow .l-btn-plain:hover,
+.eui-col3-box .e-toolbar-overflow .l-btn-plain:hover {
+
+	background: #3e8bff!important;
+	color:#fff
+}
+.eui-jh-box .datagrid-view1 .datagrid-header td,
+.eui-evetabplus .datagrid-view1 .datagrid-header td,
+.eui-dialog .datagrid-view1 .datagrid-header td,
+.eui-in-box .datagrid-view1 .datagrid-header td,
+.eui-col3-box .datagrid-view1 .datagrid-header td {
+	border-width: 1px 0 1px 0;
+}
+
+.eui-jh-box .datagrid-header>dategrid-header-inner>table>tr>td:first-child,
+.eui-evetabplus .datagrid-header td:first-child, 
+.eui-dialog .datagrid-header td:first-child,
+.eui-in-box .datagrid-header td:first-child,
+.eui-col3-box .datagrid-header td:first-child {
+	border-width: 0;
+}
+.eui-jh-box .datagrid-header,
+.eui-jh-box .datagrid-td-rownumber,
+.eui-evetabplus .datagrid-header,
+.eui-evetabplus .datagrid-td-rownumber,
+.eui-dialog .datagrid-header,
+.eui-dialog .datagrid-td-rownumber,
+.eui-in-box .datagrid-header,
+.eui-in-box .datagrid-td-rownumber,
+.eui-diabody .datagrid-header,
+.eui-diabody .datagrid-td-rownumber,
+.eui-col3-box .datagrid-header,
+.eui-col3-box .datagrid-td-rownumber{
+	background: 0 0;
+}
+
+.eui-jh-box .datagrid-header-inner,
+.eui-evetabplus .datagrid-header-inner,
+.eui-dialog .datagrid-header-inner,
+.eui-in-box .datagrid-header-inner,
+.eui-diabody .datagrid-header-inner,
+.eui-col3-box .datagrid-header-inner {
+	background: #eff5fa;
+}
+
+.eui-jh-box .datagrid-header td,
+.eui-evetabplus .datagrid-header td,
+.eui-dialog .datagrid-header td,
+.eui-in-box .datagrid-header td,
+.eui-diabody .datagrid-header td,
+.eui-col3-box .datagrid-header td {
+	border-color: #dad9d9;
+	border-style: solid;
+	border-width: 0;
+}
+
+.eui-jh-box .datagrid-body td,
+.eui-jh-box .datagrid-footer td,
+.eui-evetabplus .datagrid-body td,
+.eui-evetabplus .datagrid-footer td,
+.eui-dialog .datagrid-body td,
+.eui-dialog .datagrid-footer td,
+.eui-in-box .datagrid-body td,
+.eui-in-box .datagrid-footer td,
+.eui-diabody .datagrid-body td,
+.eui-diabody .datagrid-footer td,
+.eui-col3-box .datagrid-body td,
+.eui-col3-box .datagrid-footer td {
+	border-width: 0 0 1px 0;
+	border-color: #eee;
+	border-style: solid;
+}
+
+.eui-jh-box .datagrid-row-alt,
+.eui-evetabplus .datagrid-row-alt,
+.eui-dialog .datagrid-row-alt,
+.eui-in-box .datagrid-row-alt,
+.eui-diabody .datagrid-row-alt,
+.eui-col3-box .datagrid-row-alt {
+	background: #fefdfd;
+}
+
+
+.eui-jh-box .datagrid-header .datagrid-cell span,
+.eui-jh-box .datagrid-header .datagrid-cell-group,
+.eui-evetabplus .datagrid-header .datagrid-cell span,
+.eui-evetabplus .datagrid-header .datagrid-cell-group,
+.eui-dialog .datagrid-header .datagrid-cell span,
+.eui-dialog .datagrid-header .datagrid-cell-group 
+.eui-in-box .datagrid-header .datagrid-cell span,
+.eui-in-box .datagrid-header .datagrid-cell-group,
+.eui-diabody .datagrid-header .datagrid-cell span,
+.eui-diabody .datagrid-header .datagrid-cell-group,
+.eui-col3-box .datagrid-header .datagrid-cell span,
+.eui-col3-box .datagrid-header .datagrid-cell-group
+ {
+	color: #014781;
+	font-weight: 600;
+	font-size: 14px;
+}
+
+
+.eui-jh-box .datagrid-htable,
+.eui-evetabplus .datagrid-htable,
+.eui-dialog .datagrid-htable,
+.eui-in-box .datagrid-htable,
+.eui-diabody .datagrid-htable,
+.eui-col3-box .datagrid-htable{
+	border-collapse: collapse;
+}
+
+.eui-jh-box .datagrid-row-over,
+.eui-evetabplus .datagrid-row-over,
+.eui-dialog .datagrid-row-over,
+.eui-in-box .datagrid-row-over,
+.eui-diabody .datagrid-row-over,
+.eui-col3-box .datagrid-row-over
+{
+
+	background: #eef1f8;
+	color: #333;
+	cursor: default;
+}
+
+.eui-jh-box .datagrid-row-selected,
+.eui-evetabplus .datagrid-row-selected,
+.eui-dialog .datagrid-row-selected,
+.eui-in-box .datagrid-row-selected,
+.eui-diabody .datagrid-row-selected,
+.eui-col3-box .datagrid-row-selected {
+	background: #3e8bff;
+	color: #fff;
+}
+.eui-jh-box .datagrid-row-selected>td,
+.eui-evetabplus .datagrid-row-selected>td,
+.eui-dialog .datagrid-row-selected>td,
+.eui-in-box .datagrid-row-selected>td,
+.eui-diabody .datagrid-row-selected>td,
+.eui-col3-box .datagrid-row-selected>td{
+	border:0;
+}
+.eui-jh-box .datagrid-row-selected>td>div>a>span,
+.eui-evetabplus .datagrid-row-selected>td>div>a>span,
+.eui-dialog .datagrid-row-selected>td>div>a>span,
+.eui-in-box .datagrid-row-selected>td>div>a>span,
+.eui-diabody .datagrid-row-selected>td>div>a>span,
+.eui-col3-box .datagrid-row-selected>td>div>a>span,
+.eui-jh-box .datagrid-row-selected>td>div>font,
+.eui-evetabplus .datagrid-row-selected>td>div>font,
+.eui-dialog .datagrid-row-selected>td>div>font,
+.eui-in-box .datagrid-row-selected>td>div>font,
+.eui-diabody .datagrid-row-selected>td>div>font,
+.eui-col3-box .datagrid-row-selected>td>div>font{
+	color:#fff!important
+}
+
+/* .eui-jh-box .datagrid-view{
+
+} */
+/*翻页*/
+.eui-jh-box .datagrid-header,
+.eui-jh-box .datagrid-toolbar,
+.eui-jh-box .datagrid-pager,
+.eui-jh-box .datagrid-footer-inner,
+.eui-evetabplus .datagrid-header,
+.eui-evetabplus .datagrid-toolbar,
+.eui-evetabplus .datagrid-pager,
+.eui-evetabplus .datagrid-footer-inner,
+.eui-dialog .datagrid-header,
+.eui-dialog .datagrid-toolbar,
+.eui-dialog .datagrid-pager,
+.eui-dialog .datagrid-footer-inner,
+.eui-in-box .datagrid-header,
+.eui-in-box .datagrid-toolbar,
+.eui-in-box .datagrid-pager,
+.eui-in-box .datagrid-footer-inner,
+.eui-diabody .datagrid-header,
+.eui-diabody .datagrid-toolbar,
+.eui-diabody .datagrid-pager,
+.eui-diabody .datagrid-footer-inner,
+.eui-col3-box .datagrid-header,
+.eui-col3-box .datagrid-toolbar,
+.eui-col3-box .datagrid-pager,
+.eui-col3-box .datagrid-footer-inner{
+	border-width: 0;
+}
+
+.eui-jh-box .datagrid-pager,
+.eui-evetabplus .datagrid-pager,
+.eui-dialog .datagrid-pager,
+.eui-in-box .datagrid-pager,
+.eui-diabody .datagrid-pager,
+.eui-col3-box .datagrid-pager {
+	background: #fff;
+}
+
+
+.eui-jh-box .datagrid-header-row,
+.eui-jh-box .datagrid-row,
+.eui-evetabplus .datagrid-header-row,
+.eui-evetabplus .datagrid-row,
+.eui-dialog .datagrid-header-row,
+.eui-dialog .datagrid-row,
+.eui-in-box .datagrid-header-row,
+.eui-in-box .datagrid-row,
+.eui-diabody .datagrid-header-row,
+.eui-diabody .datagrid-row,
+.eui-col3-box .datagrid-header-row,
+.eui-col3-box .datagrid-row  {
+	height: 40px;
+}
+
+.eui-jh-box .datagrid-header-rownumber,
+.eui-jh-box .datagrid-cell-rownumber,
+.eui-evetabplus .datagrid-header-rownumber,
+.eui-evetabplus .datagrid-cell-rownumber,
+.eui-dialog .datagrid-header-rownumber,
+.eui-dialog .datagrid-cell-rownumber,
+.eui-in-box .datagrid-header-rownumber,
+.eui-in-box .datagrid-cell-rownumber,
+.eui-diabody .datagrid-header-rownumber,
+.eui-diabody .datagrid-cell-rownumber,
+.eui-col3-box .datagrid-header-rownumber,
+.eui-col3-box .datagrid-cell-rownumber {
+	width: 40px;
+}
+
+.eui-jh-box .textbox.combo,
+.eui-evetabplus .textbox.combo,
+.eui-dialog .textbox.combo,
+.eui-in-box .textbox.combo,
+.eui-diabody .textbox.combo,
+.eui-col3-box .textbox.combo {
+	height: 30px;
+	border-radius: 3px;
+}
+
+.eui-jh-box .laydate-icon,
+.eui-evetabplus .laydate-icon,
+.eui-dialog .laydate-icon,
+.eui-in-box .laydate-icon,
+.eui-col3-box .laydate-icon {
+	height: 24px;
+	line-height: 24px;
+	border-radius: 3px;
+}
+
+.eui-evetabplus.eve-tabs {}
+
+.eui-evetabplus.eve-tabs .tabs {
+	border-color: #3e8bff !important;
+}
+
+.eui-evetabplus.eve-tabs .tabs li.tabs-selected a.tabs-inner {
+	border-bottom: 1px solid #3e8bff !important;
+}
+
+.eui-evetabplus.eve-tabs .tabs li.tabs-selected a.tabs-inner {
+	background: #3e8bff
+}
+
+.eui-evetabplus.eve-tabs .tabs li a.tabs-inner {
+	background: #fff
+}
+
+.eui-evetabplus.eve-tabs .tabs-header,
+.eve-tabs .tabs-tool {
+	background: #fff;
+	border:0;
+}
+
+.eui-evetabplus.eve-tabs .tabs li a.tabs-inner:hover {
+	color: #3e8bff;
+	background: #fff;
+	border-width: 1px 1px 0 1p;
+	border-style: solid;
+	border-color: #3e8bff;
+}
+.eui-evetabplus.eve-tabs .tabs li.tabs-selected a.tabs-inner:hover{
+	color: #3e8bff;
+}
+
+.eui-evetabplus .tabs-panels {
+	padding: 10px;
+	border-width: 0;
+	background: #fbf7f8;
+}
+
+.eui-evetabplus>.tabs-panels>.panel {
+	box-shadow: 0 0 15px rgba(62, 139, 255, .2);
+	padding: 0 5px 5px 5px;
+	background: #fff;
+}
+
+.eui-evetabplus .tabs-panels .layout-body {
+	border-width: 0;
+}
+
+td .eve-input {
+	height: 24px;
+	line-height: 24px;
+}
+
+td .eve-input:hover,
+td .eve-input:focus {
+	height: 24px;
+	line-height: 24px;
+}
+
+.eui-evetabplus td .laydate-icon {
+	height: 24px;
+	line-height: 24px;
+	margin-left: 4px;
+}
+
+table.dddl_table tr {
+	height: 30px;
+	line-height: 30px;
+
+}
+
+table.dddl_table td {
+	padding: 5px 0;
+}
+
+td .eve-button {
+	height: 24px;
+	line-height: 24px;
+	border: 1px solid #3e8bff;
+	color: #3e8bff;
+	background: #fff;
+	margin-left: 5px;
+    margin-top: 3px;
+}
+
+td .eve-button:hover {
+	background: #3e8bff;
+	color: #fff
+}
+
+/*ztree*/
+.eui-jh-box .ztree li span.button.center_docu,
+.eui-evetabplus .ztree li span.button.center_docu {
+	background: 0 0
+}
+
+.eui-jh-box .ztree li span.button.bottom_docu,
+.eui-evetabplus .ztree li span.button.bottom_docu {
+	background: 0 0
+}
+
+.eui-jh-box .ztree li ul.line,
+.eui-evetabplus .ztree li ul.line{
+	background: 0 0
+}
+
+.eui-jh-box .ztree li span.button.root_open,
+.eui-evetabplus .ztree li span.button.root_open {
+	background: url(../images/fiopen.png) no-repeat center;
+	background-size: auto 12px;
+}
+
+.eui-jh-box .ztree li span.button.center_close,
+.eui-jh-box .ztree li span.button.bottom_close,
+.eui-evetabplus .ztree li span.button.center_close,
+.eui-evetabplus .ztree li span.button.bottom_close {
+	background: url(../images/ficlose.png) no-repeat center;
+	background-size: auto 12px;
+}
+
+.eui-jh-box .ztree li span.button.root_close,
+.eui-evetabplus .ztree li span.button.root_close {
+	background: url(../images/ficlose.png) no-repeat center;
+	background-size: auto 12px;
+}
+
+.eui-jh-box .ztree li span.button.center_open,
+.eui-evetabplus .ztree li span.button.center_open {
+	background: url(../images/fiopen.png) no-repeat center;
+	background-size: auto 12px;
+}
+
+.eui-jh-box .ztree li span.button.bottom_open,
+.eui-evetabplus .ztree li span.button.bottom_open {
+	background: url(../images/fiopen.png) no-repeat center;
+	background-size: auto 12px;
+}
+
+.eui-jh-box .ztree li span.button.ico_close,
+.eui-jh-box .ztree li span.button.ico_open,
+.eui-evetabplus .ztree li span.button.ico_close,
+.eui-evetabplus .ztree li span.button.ico_open {
+	background: url(../images/fi.png) no-repeat center;
+	background-size: auto 12px;
+}
+
+.eui-jh-box .ztree li span.button.ico_docu,
+.eui-evetabplus .ztree li span.button.ico_docu {
+	background: url(../images/docu.png) no-repeat center;
+	background-size: auto 12px;
+}
+
+.eui-in-box{
+	background: #fbf7f8;
+}
+.eui-in-box .layout-panel-west>.panel-body{
+	background: #fbf7f8;
+	border-width: 0;
+}
+.eui-in-box .layout-panel-west .panel.datagrid{
+	padding: 10px;
+	
+}
+.eui-in-box .layout-panel-west .panel.datagrid:nth-child(2){
+	padding:0 10px 10px 10px
+}
+.eui-in-box .layout-panel-west .panel.datagrid>.panel-body{
+	box-shadow:0 0 5px rgba(62, 139, 255, .2);
+	background:#fff;
+	padding:10px
+}
+.eui-in-box .layout-panel-east>.panel-body{
+	background: #fbf7f8;
+	border-width: 0;
+	padding: 10px 10px 10px 0;
+}
+.eui-in-box .layout-panel-east .panel-body>div{
+	/* padding:10px; */
+	background:#fff;
+	box-shadow:0 0 5px rgba(62, 139, 255, .2);
+	position: relative;
+	height: 100%;
+}
+
+.eui-jh-box.eui-headborder .datagrid-header td:first-child{
+	border-width: 0
+}
+.eui-jh-box.eui-headborder .datagrid-header td:last-child{
+	border-width: 1px 1px 1px 0;
+}
+.eui-jh-box.eui-headborder .datagrid-header td{
+	border-width: 1px
+}
+.eui-jh-box.eui-headborder .datagrid-header{
+	border-width: 0 1px 1px 0
+}
+.eui-jh-box.eui-headborder .datagrid-view1 .datagrid-header td{
+ border-width: 1px 0
+}
+
+/*.eui-jh-box .gridtable .datagrid-header-row td:first-child,*/
+ .eui-jh-box .datagrid-view1 .datagrid-header td:first-child{
+	border-top:0;
+	border-bottom:0;
+}
+
+/*icons*/
+.l-btn-icon-left .l-btn-icon{
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	line-height: 14px;
+	position: absolute;
+	top: 50%;
+	margin-top: -7px;
+	font-size: 14px;
+}
+.l-btn-icon-left .l-btn-icon {
+    left: 6px;
+}
+
+
+/* 叫号按钮 */
+.eui-rightbtn{
+	padding: 0 10px;
+
+}
+
+.eui-rightbtn button{
+	position:relative;
+	box-sizing: border-box;
+	list-style: none;
+	width:100%;
+	height: 36px;
+	margin-bottom:10px;
+	cursor: pointer;
+	padding: 0 10px 0 40px;
+	width: 100%;
+	border: 1px solid #bed8ff;
+	
+	font-family: 宋体;
+	font-size: 14px;
+	color: #3e8bff;
+	background: #f5f9ff;
+	border-radius: 3px;
+	line-height: 36px;
+	height: 36px;
+}
+.eui-rightbtn button:hover{
+	border: 0;
+	color: #fff;
+	background: -moz-linear-gradient(left, #3b8bf2 0%, #6bd6fb 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, #3b8bf2 0%,#6bd6fb 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, #3b8bf2 0%,#6bd6fb 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b8bf2', endColorstr='#6bd6fb',GradientType=1 ); /* IE6-9 */
+}
+
+.eui-rightbtn button:disabled {
+      pointer-events: none;
+      cursor: not-allowed;
+      filter: alpha(opacity=65);
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      opacity: .65;    
+}
+
+.eui-rightbtn button[disabled] {
+      pointer-events: none;
+      cursor: not-allowed;
+      filter: alpha(opacity=65);
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      opacity: .65;    
+}
+
+.eui-rightbtn button i{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 16px;
+	height: 16px;
+
+	display: inline-block;
+}
+.eui-jhicon-1{
+	background: url(../images/icon-jh.png) no-repeat center;
+	background-size: auto 16px;
+}
+
+.eui-jhicon-2{
+	background: url(../images/icon-gh.png) no-repeat center;
+	background-size: auto 16px;
+}
+
+.eui-jhicon-3{
+	background: url(../images/icon-zt.png) no-repeat center;
+	background-size: auto 16px;
+}
+
+.eui-jhicon-4{
+	background: url(../images/icon-jx.png) no-repeat center;
+	background-size: auto 16px;
+}
+
+.eui-jhicon-5{
+	background: url(../images/icon-yc.png) no-repeat center;
+	background-size: auto 16px;
+}
+
+.eui-jhicon-6{
+	background: url(../images/icon-pj.png) no-repeat center;
+	background-size: auto 16px;
+}
+
+.eui-rightbtn button:hover .eui-jhicon-1{
+	background: url(../images/icon-jhon.png) no-repeat center;
+	background-size: auto 16px;
+}
+
+.eui-rightbtn button:hover .eui-jhicon-2{
+	background: url(../images/icon-ghon.png) no-repeat center;
+	background-size: auto 16px;
+}
+
+.eui-rightbtn button:hover .eui-jhicon-3{
+	background: url(../images/icon-zton.png) no-repeat center;
+	background-size: auto 16px;
+}
+
+.eui-rightbtn button:hover .eui-jhicon-4{
+	background: url(../images/icon-jxon.png) no-repeat center;
+	background-size: auto 16px;
+}
+
+.eui-rightbtn button:hover .eui-jhicon-5{
+	background: url(../images/icon-ycon.png) no-repeat center;
+	background-size: auto 16px;
+}
+
+.eui-rightbtn button:hover .eui-jhicon-6{
+	background: url(../images/icon-pjon.png) no-repeat center;
+	background-size: auto 16px;
+}
+
+.eui-switchck {
+	color: #333;
+	display: inline-block;
+	line-height: 40px;
+	font-size: 16px;
+	position: relative;
+	margin: 0 auto;
+	padding-left: 10px;
+}
+
+.eui-switchckbox {
+	display: none
+}
+
+.eui-switchckbox+label {
+	vertical-align: top;
+	margin-top: 11px;
+	margin-right: 10px;
+	background-color: #fff;
+	border: 1px solid #b8cbec;
+	padding: 7.5px;
+	border-radius: 3px;
+	display: inline-block;
+	position: relative
+}
+
+.eui-switchckbox:checked+label {
+	background-color: #fff;
+	border: 1px solid #3e8bff;
+	color: #3e8bff
+}
+
+.eui-switchckbox:checked+label:after {
+	content: '\2714';
+	font-size: 14px;
+	position: absolute;
+	top: 1px;
+	left: 2px;
+	line-height: 14px;
+	color: #3e8bff
+}
+
+.eui-rbottombtn{
+	position: absolute;
+	width: 100%;
+	bottom: 10px;
+	padding: 0 10px;
+	box-sizing: border-box
+}
+.eui-rbottombtn li{
+	cursor: pointer;
+	list-style: none;
+	width: 100%;
+	border: 1px solid #bed8ff;
+	margin-bottom:10px;
+	font-family: 宋体;
+	font-size: 16px;
+	color: #3e8bff;
+	background: #f5f9ff;
+	border-radius: 18px;
+	line-height: 36px;
+	height: 36px;
+	text-align: center
+}
+.eui-rbottombtn li:hover{
+	background: #3e8bff;
+	color: #fff;
+}
+
+.eui-jh-box .eve_buttons input.aui_state_highlight{
+	border:1px solid #3e8bff;
+	background:#3e8bff
+}
+.eui-jh-box .eve_buttons input{
+	background:#fff;
+	border:1px solid #ccc
+}
+.eui-jh-box .eve_buttons input:hover{
+	box-shadow:none
+}
+
+/* 2019-9-20 */
+.eui-diabody{
+	margin:0px;
+	background-color: #fff;
+	padding: 8px 10px;
+	box-sizing: border-box;
+}
+
+.eui-diabody .dddl-legend .eui-dddltit{
+	position:relative;
+	background: #f3f9fd;
+	font-size: 14px;
+	padding: 6px 0  !important;
+	font-weight: normal;
+	border:0;
+}
+
+.eui-diabody .dddl-legend .eui-dddltit a{
+	color:#1983da;
+	font-size:16px;
+}
+.eui-diabody .dddl_table td{
+	border-width: 0 1px 1px 0;
+	border-style:dashed;
+	border-color:#eee;
+	font-size:14px;
+}
+.eui-diabody .dddl_table td:last-child{
+	border-width: 0 0 1px 0;
+}
+.eui-diabody .dddl_table .dddl-legend{
+	padding-left: 0 !important;
+    border: none;
+    padding-top: 0;
+    background:none;
+}
+.eui-diabody .dddl_table{
+	border:0
+}
+.eui-diabody .dddl_table td>span{/* font-size:14px; */}
+.eui-diabody .dddl_table .eve-input,
+.eui-diabody .dddl_table .eve-input:hover,
+.eui-diabody .dddl_table .eve-input:focus{
+	margin:0;
+	height:30px;
+	line-height:30px;
+	box-sizing:border-box;
+}
+
+.eui-diabody .dddl_table td>select{
+	height:30px;
+	line-height:30px;
+}
+.eui-diabody .dddl-legend .eui-dddltit>a{
+	position:relative;
+}
+.eui-diabody .dddl-legend .eui-dddltit>a:before{
+	content:'';
+	width:30px;
+	height:1px;
+	background:#1983da;
+	position: absolute;
+	left: -40px;
+	top: 10px;
+}
+.eui-diabody .dddl-legend .eui-dddltit>a:after{
+	content:'';
+	width:30px;
+	height:1px;
+	background:#1983da;
+	position: absolute;
+	right: -40px;
+	top: 10px;
+}
+.eui-diabody .eve_buttons{
+	box-sizing:border-box;
+	position: fixed;
+	right: 0;
+	bottom:0;
+	/* height:60px; */
+	overflow: hidden;
+}
+.eui-diabody .eve_buttons input{
+	height:30px;
+	line-height:30px;
+	text-shadow:none;
+	padding:0 35px;
+	background:#fff;
+	border-color:#3e8bff;
+	box-shadow:none;
+	margin-right:10px;
+	color:#3e8bff;
+
+}
+.eui-diabody .eve_buttons input:hover{
+	border-color:#3e8bff
+}
+.eui-diabody .eve_buttons input.aui_state_highlight:hover{
+	background:#3e8bff;
+	border:#3e8bff;
+}
+.eui-diabody .eve_buttons input.aui_state_highlight{
+	background:#3e8bff;
+	border:#3e8bff;
+	color:#fff;
+
+}
+.eui-diabody .eve_inpbtn,
+.eui-diabody .btnOneP{
+	
+background: #3e8bff;
+	
+padding: 0 10px;
+	
+border-color: #3e8bff;
+text-shadow:none;
+}
+.eui-diabody .eve_inpbtn:hover,
+.eui-diabody .btnOneP:hover{
+	background: #3e8bff;
+	box-shadow: none;
+}
+.eui-diabody .eve-textarea{
+	margin-left:0;
+	border: 1px solid #ccc;
+	padding: 5px;
+	line-height: 150%;
+	box-sizing: border-box;
+}
+.eui-diabody .info{
+	color:#999;
+	line-height:200%;
+	padding: 10px;
+}
+
+.eui-evetabplus .right-con .e-toolbar-ct{
+	background:#fff;
+	
+}
+.eui-evetabplus .right-con .e-toolbar{
+	background:#fff;
+	
+}
+.eui-evetabplus .right-con .e-toolbar-overflow{
+	background:#fff;
+	padding:5px 0;
+	border-bottom:1px solid #eee
+}
+
+/* 左边 */
+.layout-panel-west{
+ overflow: visible;
+ box-shadow:0px 0px 15px rgba(62,139,255,0.2);
+ height: calc(100% - 71px);
+}
+.layout-panel-west .panel-header{
+ position: absolute;
+}
+.layout-panel-west .panel-header .panel-tool{
+ position:absolute;
+ left: 224px;
+ top: 50%;
+ z-index: 10;
+ width:15px !important;
+ height: 90px;
+ margin-top: -45px;
+ background:#81b0fb;
+}
+.layout-panel-west .panel-title{
+ display:none
+}
+.layout-panel-west:hover .panel-header .panel-tool{
+	display:block
+}
+.layout-panel-west .panel-header .panel-tool{
+ overflow: visible;
+ display:none;
+ }
+.layout-panel-west .panel-header .panel-tool:before{
+  position:absolute;
+  top:-15px;
+  left:0;
+  content:'';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 15px 0 0 15px;
+  border-color: transparent transparent transparent #81b0fb;
+}
+.layout-panel-west .panel-header .panel-tool:after{
+  position:absolute;
+  bottom:-15px;
+  left:0;
+  content:'';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 15px 15px 0 0;
+  border-color: #81b0fb transparent transparent transparent;
+}
+.layout-panel-west .layout-button-left{
+  background:url(../images/left-b.png) no-repeat left center;
+  background-size:auto 15px;
+  height: 90px !important;
+  /* overflow: hidden; */
+}
+
+.layout-expand.layout-expand-west{
+ height: 100%;
+ background:none;
+ background-color: transparent !important;
+ position: absolute;
+ width: 0 !important;
+ overflow: visible;
+}
+.layout-expand.layout-expand-west .panel-body{
+ display:none;
+}
+.layout-expand.layout-expand-west .panel-header .panel-tool{
+ height:90px;
+ overflow: visible;
+}
+.layout-expand.layout-expand-west .panel-header{
+ height:100%;
+ position: relative;
+ padding: 0;
+ width: 0 !important;
+ overflow: visible;
+}
+.layout-expand.layout-expand-west .panel-header .panel-title{
+	display:none
+}
+.layout-expand.layout-expand-west .panel-header .panel-tool{
+ position:absolute;
+ right: 0;
+ top: 50%;
+ z-index: 10;
+ width:15px !important;
+ height: 90px;
+ margin-top: -81px;
+ background:#81b0fb;
+ left: 0;
+}
+.layout-expand.layout-expand-west .panel-header .panel-tool:before{
+  position:absolute;
+  top:-15px;
+  left:0;
+  content:'';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 15px 0 0 15px;
+  border-color: transparent transparent transparent #81b0fb;
+
+}
+.layout-expand.layout-expand-west .panel-header .panel-tool:after{
+  position:absolute;
+  bottom:-15px;
+  left:0;
+  content:'';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 15px 15px 0 0;
+  border-color: #81b0fb transparent transparent transparent;
+}
+
+.layout-expand.layout-expand-west .layout-button-right{
+  background:url(../images/left-b.png) no-repeat right center;
+  background-size:auto 15px;
+  height: 90px !important;
+  transform: rotate(180deg);
+}
+.border_L1{
+	position:relative;
+	font-size:18px !important;
+	padding-left:10px !important;
+}
+.border_L1:before{
+	content:'';
+	position:absolute;
+	width:3px;
+	height:16px;
+	top:5px;
+	left:0;
+	background:#3e8bff
+}
+.portal-p{
+	border:0;
+	position: relative;
+	overflow: hidden;
+}
+.eui-portal-info{
+	cursor:pointer;
+	border:1px solid #ff0000;
+	border-radius:2px;
+	color:#ff0000;
+	padding: 0 10px;
+	line-height: 24px;
+	float: right;
+    margin: 0 20px;
+}
+.eui-portal-more{
+	text-align:right;
+	color: #3e8bff !important;
+	position: absolute;
+	bottom: 10px;
+	display: block;
+	width: 100%;
+	right:20px;
+	font-size:14px;
+}
+.portal-panel{
+	box-shadow: 0 0 10px rgba(66,139,255,.15);
+}
+.portal{
+/* 	padding-left:15px !important; */
+}
+
+.slimScrollDiv{
+	z-index: 3;
+}
+.eui-col3-box{
+	float:left;
+	width:33%;
+	height:100%;
+	
+	
+}
+.eui-col3-box>.panel{
+	box-shadow:0 0 15px rgba(62, 139, 255, .2);
+}
+.eui-col3-box .panel-header{
+	position:relative;
+	background:none;
+	height:37px;
+	border-color: #eee;
+	border-width:0 0 1px 0;
+	padding:0;
+	background: #fff;
+}
+.eui-col3-box .panel-header .panel-title{
+	font-size:16px;
+	line-height:32px;
+	padding-left: 8px;
+	color: #333;
+	font-weight:normal;
+	height: 32px;
+}
+.eui-col3-box .panel-header:after{
+	content: '';
+	width: 2px;
+	background: #3e8bff;
+	display: block;
+	height: 16px;
+	position: absolute;
+	left: 1px;
+	top: 8px;
+}
+.eui-col3-box .panel-body{
+	border:0;
+	padding: 0 5px;
+}
+.eui-col-box{
+	padding:10px;
+	height: 100%;
+	box-sizing:border-box;
+	background:#fbf7f8;
+	overflow:hidden;
+}
+/* artlog弹窗 */
+.aui_content{
+	font-size:16px
+}
+.aui_buttons{
+	border:0;
+	background:none
+}
+
+.aui_buttons button{
+	font-size:14px;
+	padding: 5px 15px;
+	background:#fff;
+	border: 1px solid #ccc;
+	box-shadow:none;
+	text-shadow:none
+}
+.aui_buttons button:active{
+	box-shadow:none;
+	text-shadow:none;
+	background:none;
+	border-color:#ccc
+}
+.aui_buttons button:hover{
+	border:1px solid #ccc;
+	opacity:.8;
+}
+.aui_buttons button:focus{
+	box-shadow:none;
+	text-shadow:none;
+
+}
+
+button.aui_state_highlight{
+	border:1px solid #1983da;
+	background:#1983da
+}
+button.aui_state_highlight:hover{
+	border:1px solid #1983da;
+	
+}

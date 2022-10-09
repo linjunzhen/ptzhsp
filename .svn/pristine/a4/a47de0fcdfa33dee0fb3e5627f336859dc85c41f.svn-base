@@ -1,0 +1,27 @@
+[{
+	"UPLOADER_ID" : "4028819a51c78eb30151c7bcd6a30002",
+	"UPLOADER_NAME" : "施巧玲",
+	"UPLOADER_DEPID" : "2c93f48251a4554f0151a46923c8000f",
+	"UPLOADER_DEPNAME" : "区行政审批局",
+	"FLOW_EXEID" : "FJPT16032300776",
+	"FLOW_TASKID" : "40288b9f53a1100b0153a17822c80136",
+	"FLOW_TASKNAME" : "汇总意见",
+	"SFHZD" : "-1",
+	"AUTH_USERCODES" : "shiqiaoling,liaoxinyan-spj,shaojinrong,chenxiaoyan",
+	"AUTH_USERNAMES" : "施巧玲,廖心妍,邵锦蓉,陈小燕",
+	"FILE_PATH" : "attachFiles/documenttemplate/DATE_20160329/4028810053c0af7e0153c0b7c2fb0002.doc",
+	"FILE_NAME" : "规划选址及用地审核情况汇总表.doc"
+}, {
+	"UPLOADER_ID" : "4028819a51c78eb30151c7bcd6a30002",
+	"UPLOADER_NAME" : "施巧玲",
+	"UPLOADER_DEPID" : "2c93f48251a4554f0151a46923c8000f",
+	"UPLOADER_DEPNAME" : "区行政审批局",
+	"FLOW_EXEID" : "FJPT16032300776",
+	"FLOW_TASKID" : "40288b9f53a1100b0153a17822c80136",
+	"FLOW_TASKNAME" : "汇总意见",
+	"SFHZD" : "-1",
+	"AUTH_USERCODES" : "shiqiaoling,liaoxinyan-spj,shaojinrong,chenxiaoyan",
+	"AUTH_USERNAMES" : "施巧玲,廖心妍,邵锦蓉,陈小燕",
+	"FILE_PATH" : "attachFiles/documenttemplate/DATE_20160329/4028810053c0af7e0153c0b7e0290003.doc",
+	"FILE_NAME" : "规划选址及用地意见回执函.doc"
+}]

@@ -1,0 +1,15 @@
+#抵押登记业务短信提醒2-模板编码
+messageTemplate1=262174
+
+#全局短信发送—模板编码
+messageTemplate2=282223
+
+#大数据中心根据企业名称查询企业基本信息
+sqjgNameQueryUrl=http://192.168.151.4:8443/hjgxpt/province/enterpInfo/queryByEnterp
+
+#二手房缴费信息短信相关配置
+secondHandHouse1=304761
+secondHandHouse2=304766
+
+#二手房转移平潭通办件短信提醒模板ID
+sendMsgForPtt=313730

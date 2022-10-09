@@ -1,0 +1,41 @@
+@charset "utf-8";
+/*2018-07-10 by Harry*/
+/* CSS Document */
+html,body,div,form,img,ul,ol,li,dl,dt,dd{margin:0px; padding:0px;}
+body{margin:0 auto;padding:0;border:0;}
+select,input,textarea{vertical-align:middle; padding:0; margin:0;}
+textarea{resize:none;}
+img{border:0;}
+ol,ul,li{list-style:none;}
+a{text-decoration:none; transition: ease-in-out .3s;}
+a,img,input,textarea,select,button,area{outline:none;}
+
+*{-webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;}
+
+
+.eui-print{position: relative; width:794px;height:1150px; padding-top: 60px;}
+/* .eui-idcard{position: relative; width: 400px; height: 253px; margin: 0 auto 60px; font-family: simhei; font-size: 16px; font-weight: 100;} */
+.eui-idcard{position: relative; width: 400px; height: 253px; margin: 100px auto 60px; font-family: simhei; font-size: 16px; font-weight: 100;}
+.eui-idcard>div{position: absolute;}
+.eui-idcard .bg img{width: 400px;}
+.eui-idcard .photo{top: 35px; left: 242px;}
+.eui-idcard .photo img{width: 120px; height: 148px;}
+.eui-idcard .name{top: 37px; left: 72px; font-size: 18px;}
+.eui-idcard .sex{top: 67px; left: 72px;}
+.eui-idcard .nation{top: 67px; left: 162px;}
+.eui-idcard .year{top: 97px; left: 72px;}
+.eui-idcard .month{top: 97px; left: 132px; width: 28px; text-align: center;}
+.eui-idcard .day{top: 97px; left: 165px; width: 28px; text-align: center;}
+.eui-idcard .address{top: 129px; left: 72px; width: 170px; line-height: 20px; font-size: 15px;}
+.eui-idcard .number{top: 210px; left: 135px; font-size: 18px; letter-spacing: 2px;}
+.eui-idcard .office{top: 178px; left: 162px; font-size: 15px;}
+.eui-idcard .indate{top: 210px; left: 162px;}
+
+/* .eui-footer{position: absolute; left: 80px; right: 80px; bottom: 50px; font-family: simsun; font-size: 24px; font-weight: bold; overflow: hidden;} */
+.eui-footer{position: absolute; left: 80px; right: 80px; bottom: 220px; font-family: simsun; font-size: 24px; font-weight: bold; overflow: hidden;}
+.eui-sign{float: left;}
+.eui-date{float: right;}
+.eui-date span{float: left; margin-left:40px;}
+

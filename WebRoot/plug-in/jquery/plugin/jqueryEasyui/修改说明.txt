@@ -1,0 +1,27 @@
+easyui.css
+
+.validatebox-invalid {
+  /*	
+  background-image: url('images/validatebox_warning.png');
+  */
+  background-repeat: no-repeat;
+  background-position: right center;
+  border-color: #ffa8a8;
+  /*
+  background-color: #fff3f3;
+  */
+  background-color: #FFFFEE;
+  color: #000;
+}
+
+jquery.easyui.min.js
+
+var win=_25e(_264,_265,_266); // 此行下面添加如下内容
+/*自定義 $.message.alert 關閉事件  start*/  
+win.window({onBeforeClose:function(){  
+if(fn){  
+fn();  
+return false;  
+}  
+}});  
+/*自定義 end*/  

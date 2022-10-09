@@ -1,0 +1,17 @@
+﻿create tablespace TSEVEFLOW_DATA
+logging  
+datafile 'D:\app\nice\oradata\orcl\TSEVEFLOW_DATA.dbf' 
+size 50m  
+autoextend on  
+next 50m maxsize 20480m  
+extent management local;  
+
+create temporary tablespace temp 
+tempfile 'D:\app\lenovo\oradata\orcl\temp.dbf' 
+size 100m  
+autoextend on  
+next 100m maxsize 20480m  
+extent management local;  
+
+create user ptzhsp identified by ptzhsp default tablespace 
+  TSEVEFLOW_DATA temporary tablespace temp;

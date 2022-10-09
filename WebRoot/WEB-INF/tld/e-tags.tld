@@ -1,0 +1,262 @@
+<?xml version="1.0"?>
+<taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+	<description>"evecom jsp标签"</description>
+	<display-name>"Evecom Taglib"</display-name>
+	<tlib-version>1.0</tlib-version>
+	<!--标签头 -->
+	<short-name>e</short-name>
+	<!--将来在页面用taglib引用时的uri属性,这部分的名字可以随便写，只要是符合HTTP网址形式的 -->
+	<uri>/WEB-INF/tld/e-tags.tld</uri>
+	<!-- 自定义分页标签的描述信息 -->
+	<tag>
+		<name>for</name>
+		<!-- 对应的标签处理类全限定名 -->
+		<tag-class>net.evecom.core.web.tag.ForTag</tag-class>
+		<!-- 标签主体的类型 -->
+		<body-content>JSP</body-content>
+		<description>获取list对像。并且可以直接遍历。类似c:for标签</description>
+		<!-- 当前页号属性的描述信息 -->
+		<attribute>
+			<description>"返回结果（list）的变量名：避免值栈重名。"</description>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description>"数据源ID："</description>
+			<name>dsid</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description>"数据源名称"</description>
+			<name>dsname</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description>"要查询的对像id：如：要显示某个栏目下的文章列表，filterId就是栏目ID"</description>
+			<name>filterid</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description>从第几条开始</description>
+			<name>begin</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description>到几条。</description>
+			<name>end</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description>"要查询的参数：多个时以":"分隔。"</description>
+			<name>paras</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	<tag>
+		<name>sub</name>
+		<tag-class>net.evecom.core.web.tag.SubStringTag</tag-class>
+		<body-content>empty</body-content>
+		<description>截取字符串，可显示"..."和new图标。此标签是e:out与e:isnew两标签的整合体，</description>
+		<attribute>
+			<description>要取的字符串</description>
+			<name>str</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description>值为null时，输出def值</description>
+			<name>def</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description>截取的结束位置。默认为0，表示不截取。</description>
+			<name>endindex</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description>是否显示省略号： 默认true false</description>
+			<name>ellipsis</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description>"对象的时间，（发布时间)"</description>
+			<name>objdate</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description>"new图标过期天数。"</description>
+			<name>timeout</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	<tag>
+		<description>
+			<![CDATA[获取单个对象]]>
+		</description>
+		<name>obj</name>
+		<!-- 对应的标签处理类全限定名 -->
+		<tag-class>net.evecom.core.web.tag.ObjTag</tag-class>
+		<!-- 标签主体的类型 -->
+		<body-content>JSP</body-content>
+		<!-- 当前页号属性的描述信息 -->
+		<attribute>
+			<description><![CDATA["返回结果（对象）的变量名：避免值栈重名。"]]></description>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description><![CDATA["数据源ID："]]></description>
+			<name>dsid</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description><![CDATA["数据源名称"]]></description>
+			<name>dsname</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description><![CDATA["要查询的对像id,如栏目ID"]]></description>
+			<name>filterid</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description><![CDATA[obj为空时是否跳过标签体：true：跳过，false：进入 执行标签体。默认false。]]></description>
+			<name>skipbody</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description><![CDATA["要查询的参数：多个时以":"分隔。"]]></description>
+			<name>paras</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	<tag>
+		<description>
+			<![CDATA[获取栏目当前导航]]>
+		</description>
+		<name>mcnav</name>
+		<!-- 对应的标签处理类全限定名 -->
+		<tag-class>net.evecom.core.web.tag.ModuleCurrentNavTag</tag-class>
+		<!-- 标签主体的类型 -->
+		<body-content>JSP</body-content>
+		<!-- 当前页号属性的描述信息 -->
+		<attribute>
+			<description><![CDATA["要查询的对像id,如栏目ID"]]></description>
+			<name>filterid</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	<tag>
+		<description>
+			<![CDATA[IMGPlayer]]>
+		</description>
+		<name>imgplayer</name>
+		<!-- 对应的标签处理类全限定名 -->
+		<tag-class>net.evecom.core.web.tag.IMGPlayerTag</tag-class>
+		<!-- 标签主体的类型 -->
+		<body-content>JSP</body-content>
+		<!-- 当前页号属性的描述信息 -->
+		<attribute>
+			<description><![CDATA["数据源ID："]]></description>
+			<name>dsid</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description><![CDATA["要查询的对像id,如栏目ID"]]></description>
+			<name>filterid</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description><![CDATA["播放器宽度640 无值时自适应"]]></description>
+			<name>width</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description><![CDATA["播放器高度272 无值时自适应"]]></description>
+			<name>height</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description><![CDATA["播放器皮肤：默认：default 蓝色：blue,灰色：light,自动隐藏工具条： bar"]]></description>
+			<name>skin</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description><![CDATA["标题长度：-1:不显示标题。0:显示标题但不限制长度，其它正整数：限制标题的显示长度。"]]></description>
+			<name>titlelenght</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description>
+				从第几条开始
+			</description>
+			<name>begin</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description>
+				每次显示几条默认显示1条。
+			</description>
+			<name>vis</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description>
+				到几条。
+			</description>
+			<name>end</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	<!-- 自定义el表达式开始 -->
+  <function>
+    <description>
+        站点访问统计，
+        第一个参数：站点id
+        第三个参数:数据库中的访问数。
+        返回现在的访问数：数据库中的访问数+缓存中的访问数。
+    </description>
+    <name>visitstat</name>
+    <function-class>net.evecom.core.web.tag.Functions</function-class>
+    <function-signature>java.lang.String visitstat(java.lang.String, java.lang.String, java.lang.String)</function-signature>
+    <example>
+      ${e:visitstat("1", "1")}
+    </example>
+  </function>
+  
+  <function>
+    <description>
+        今日访问量，
+        第一个参数：站点id
+        返回现在的访问数：数据库中的访问数+1。
+    </description>
+    <name>todatecount</name>
+    <function-class>net.evecom.core.web.tag.Functions</function-class>
+    <function-signature>java.lang.String todatecount(java.lang.String, java.lang.String)</function-signature>
+    <example>
+      ${e:todatecount("1")}
+    </example>
+  </function>
+</taglib>

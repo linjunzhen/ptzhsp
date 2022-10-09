@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>校验身份</title>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<!--标准mui.css-->
+<link href="https://cdn.bootcss.com/mui/3.7.1/css/mui.min.css"
+	rel="stylesheet" />
+<link href="css/mui.loading.css" rel="stylesheet" />
+
+<script
+	src="https://mztapp.fujian.gov.cn:8190/mztAppWeb/app/js/zepto.js"></script>
+<script
+	src="https://mztapp.fujian.gov.cn:8190/mztAppWeb/app/js/cordova.js"></script>
+<script
+	src="https://mztapp.fujian.gov.cn:8190/mztAppWeb/app/js/bingotouch.js"></script>
+<script
+	src="https://mztapp.fujian.gov.cn:8190/mztAppWeb/app/js/jmtplugins.js"></script>
+<script
+	src="https://mztapp.fujian.gov.cn:8190/mztAppWeb/app/js/jsencrypt.js"></script>
+<script src="https://cdn.bootcss.com/mui/3.7.1/js/mui.min.js"></script>
+<script type="text/javascript" src="js/mui.loading.js"></script>
+
+<style>
+body {
+	background-color: #ffffff;
+}
+
+.mui-btn {
+	display: block;
+	width: 120px;
+	margin: 10px auto;
+}
+
+#info {
+	padding: 20px 10px;
+}
+
+.botCenter {
+	width: 100%;
+	height: 35px;
+	line-height: 35px;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	font-size: 14px;
+	color: #000;
+	text-align: center;
+}
+</style>
+
+</head>
+
+<body>
+	<div class="mui-content" style="background-color:#ffffff">
+		<div class="mui-content-padded"
+			style="margin: 5px;text-align: center;">
+			<div class="mui-input-row">
+				<label>申报号</label> <input id="num" type="text"
+					placeholder="请输入申报号后8位数字">
+			</div>
+			<button id='checkId' type="button"
+				class="mui-btn mui-btn-blue mui-btn-outlined">核对身份</button>
+			<p class="botCenter">平潭综合实验区市场监督管理局 0591-86169725</p>
+		</div>
+	</div>
+	<script type="text/javascript" charset="utf-8">
+		//mui初始化
+		mui.init();
+		var num,
+			userId,
+			userIdCard,
+			name;
+	
+		app.page.onLoad = function() {
+	
+	
+			app.link.getLoginInfo(function(result) {
+				var encrypt = new JSEncrypt();
+				encrypt.setPrivateKey(keyUtil.getPrivateKey());
+				var userinfo = result;
+				userId = encrypt.decrypt(userinfo.userId);
+				userIdCard = encrypt.decrypt(userinfo.cardNum);
+				name = encrypt.decrypt(userinfo.name);
+				if (userId) {
+				} else {
+					confirmError();
+				}
+			}, function(result) {
+				if (result.error) {
+					confirmError();
+				}
+			})
+	
+	
+			$("#checkId").click(function() {
+				num = document.getElementById('num').value;
+				if (num.length < 8) {
+					mui.toast("请输入申报号后8位")
+					return;
+				}
+				mui.showLoading("校验中...");
+				var url = "http://xzfwzx.pingtan.gov.cn:8888/exeDataController.do?getResultOfSign";
+				$.post(url, {
+					EXEID : num,
+					NAME : name,
+					IDNO : userIdCard
+				},
+					function(responseText, status, xhr) {
+						mui.hideLoading();
+						var resultJson = $.parseJSON(responseText);
+						if (resultJson.code == '001') { //成功
+							mui.toast('校验成功');
+							window.location.href = "uploadIdCard.html?token=" + resultJson.msg;
+						} else { //失败
+							mui.alert(resultJson.msg);
+						}
+					}
+				);
+			})
+		}
+		function confirmError(msg) {
+			if (!msg) {
+				msg = "获取用户信息失败，请确认已登录，并已实名认证";
+			}
+			var btnArray = [ '重试' ];
+			mui.confirm(msg, '提示', btnArray, function(e) {
+				if (e.index == 0) {
+					app.refresh();
+				}
+			});
+			return;
+		}
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <classs>
+    <id>
+       <sonid>sonid</sonid>
+       <sonname>sonname</sonname>
+    </id>
+    <name>st001</name>
+    <student>
+      <id>0001</id>
+      <name>
+        <first>xue</first>
+        <last>bo</last>
+      </name>
+    </student>
+    <student>
+      <id>0001</id>
+      <name>
+        <first>xue</first>
+        <last>bo</last>
+      </name>
+    </student>
+  </classs>
+  <classs>
+    <id>001</id>
+    <name>st001</name>
+    <student>
+      <id>0001</id>
+      <name>
+        <first>xue</first>
+        <last>bo</last>
+      </name>
+    </student>
+  </classs>
+</root>

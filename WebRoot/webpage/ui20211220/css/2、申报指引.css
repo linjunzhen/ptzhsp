@@ -1,0 +1,29 @@
+
+/*内容开始*/
+.eui-declare{
+	width: 63vw;
+	height: 60vh;
+	background: rgba(255,255,255,0.7);
+	margin-top: 50px;
+}
+.eui-crumbs{
+	padding: 30px;
+}
+.eui-crumbs ul li{
+	float: left;
+	color: #5f6060;
+}
+.eui-crumbs ul li a{
+	display: inline-block;
+	color: #5f6060;
+	font-size: 18px;
+}
+.eui-crumbs ul li:first-child a{
+	color: #0068b7;
+}
+.eui-declare-main{
+	width: 100%;
+	height:90%;
+	overflow: auto;
+	text-align: center;
+}

@@ -1,0 +1,50 @@
+@charset "utf-8";
+/*2018-07-10 by Harry*/
+/* CSS Document */
+html,body,div,form,img,ul,ol,li,dl,dt,dd{margin:0px; padding:0px;}
+body{margin:0 auto;padding:0;border:0;}
+select,input,textarea{vertical-align:middle; padding:0; margin:0;}
+textarea{resize:none;}
+img{border:0;}
+ol,ul,li{list-style:none;}
+a{text-decoration:none; transition: ease-in-out .3s;}
+a,img,input,textarea,select,button,area{outline:none;}
+/*
+*{-webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;}*/
+
+/*清除浮动*/
+.clearfix:after{content:'';display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{*zoom:1; _zoom:1;}
+/*IE下a:hover 背景闪烁*/
+/**html{overflow:-moz-scrollbars-vertical; _zoom:expression(function(ele){ele.style.zoom = "1"; document.execCommand("BackgroundImageCache",false,true)}(this))}*/
+
+table{width: 100%; border-collapse: collapse; border-spacing: 0;}
+.lfloat{float: left;}
+.rfloat{float: right;}
+
+.eui-display-table{display: table; width: 100%;}
+.eui-display-table .tr{display: table-row;}
+.eui-display-table .th{display: table-cell; vertical-align: middle;}
+.eui-display-table .td{display: table-cell; vertical-align: middle;}
+
+.eui-print{position: relative; max-width: 800px; height:1016px; padding: 20px 0; font-family: simsun; font-size: 15px; background: #fff; overflow: hidden; page-break-after: always;}
+.eui-pic{position: absolute; z-index: 1; top: 0; left: -50px; right: -50px; bottom: 0;}
+.eui-pic img{display: block; width: 100%;}
+.eui-fixed{position: absolute; z-index: 2; left: 0; right: 0; bottom: 0; background: #fff;}
+.eui-print th,.eui-print td{padding: 12px; /* line-height: 1; */ border: 1px solid #000;}
+.eui-print th{width: 4em; font-weight: normal; text-align: center;}
+.eui-print label{display: block; height: 108px;}
+.eui-print .eui-display-table label{height: auto;}
+.eui-print .eui-display-table .th{padding-left: 15px;}
+.eui-print .eui-display-table .td{padding-right: 15px;}
+.eui-print .date label{display: inline-block; margin-left: 20px; width: 3em; font-size: 15px; text-align: center;}
+.eui-print .date label~label{width: 1em; margin: 0;}
+.eui-tips{line-height: 20px; font-size: 15px;}
+
+
+
+
+
+

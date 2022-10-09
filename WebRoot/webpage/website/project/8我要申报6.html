@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta name="renderer" content="webkit">
+	<title></title>
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/Select.css">
+	<link rel="stylesheet" type="text/css" href="css/eui.css">
+</head>
+<body>
+	
+	<div class="eui-main mine">
+		<!-- 头部 -->
+		<div class="eui-con eui-flex vc eui-header">
+			<div class="eui-logo">
+				<a class="eui-flex vc" href="1首页.html"><img src="images/logo.png" ></a>
+			</div>
+			<div class="eui-nav flex1">
+				<ul class="eui-flex vc">
+					<li><a href="1首页.html">首　页</a></li>
+					<li><a href="2申报指引.html">申报指引</a></li>
+					<li><a href="3办事指南.html">办事指南</a></li>
+					<li><a href="4办件公示.html">办件公示</a></li>
+					<li><a href="5政策法规.html">政策法规</a></li>
+					<li><a href="6下载专区.html">下载专区</a></li>
+				</ul>
+			</div>
+			<div class="eui-header-login">
+				<!-- 未登录 -->
+				<a class="unlogin" style="display: none;" href="#">登录/注册</a>
+				<!-- 已登录 -->
+				<div class="eui-user">
+					<span>134****3386</span>
+					<div class="sub">
+						<a href="#">个人中心</a>
+						<a href="#">退出登录</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 头部 end -->
+		
+		<!-- 主体 -->
+		<div class="eui-con">
+			
+			<div class="eui-flex eui-mine">
+				<div class="menu">
+					<div class="tit">
+						<i class="eui-flex vc tc"><img src="images/mine-logo.png" ></i>
+						博盛达企业管理
+					</div>
+					<div class="con">
+						<a href="#"><span>我的工作台</span></a>
+						<a class="on" href="#"><span>我要申报</span></a>
+						<a href="#"><span>我的办件</span></a>
+						<a href="#"><span>我的材料</span></a>
+						<a href="#"><span>账号管理</span></a>
+					</div>
+				</div>
+				<div class="flex1">
+					
+					<div class="eui-card eui-mb eui-flex bt eui-step">
+						<span class="on"><i>1</i>合同说明</span>
+						<span class="on"><i>2</i>申报信息</span>
+						<span class="on"><i>3</i>业务表单</span>
+						<span class="on"><i>4</i>上传材料</span>
+						<span class="on"><i>5</i>确认信息</span>
+						<span class="on"><i>6</i>完成申报</span>
+					</div>
+					
+					<div class="eui-card eui-declaration ovh">
+						
+						<div class="eui-finish">
+							<img src="images/finish.png" >
+							<b>恭喜！提交成功</b>
+							<table>
+								<tr>
+									<th>项目编码：</th>
+									<td>2020-350128-83-01-040015</td>
+								</tr>
+								<tr>
+									<th>项目名称：</th>
+									<td>平潭新兴产业园标准化厂房及其配套工程</td>
+								</tr>
+								<tr>
+									<th>申报事项：</th>
+									<td>建设用地规划许可证及划拨决定书核发，可行性研究报告审批，建设项目用地预审和选址意见书核发</td>
+								</tr>
+							</table>
+						</div>
+						
+						<div class="eui-flex tc eui-sx-btn">
+							<a class="eui-btn light" href="javascript:void(0)">返回我的办件</a>
+							<a class="eui-btn light" href="javascript:void(0)">申报新项目</a>
+							<a class="eui-btn" href="javascript:void(0)">继续申报当前项目</a>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 主体 end -->
+		
+		<!-- 底部 -->
+		<div class="eui-footer">
+			<iframe frameborder="0" width="100%" height="100%" marginheight="0" marginwidth="0" scrolling="no" allowtransparency="true" src="foot.html"></iframe>
+		</div>
+		<!-- 底部 end -->
+	</div>
+	
+	<script type="text/javascript" charset="utf-8" src="js/jquery.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/Select.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/totop.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			//下拉框
+			$('select').selectMatch();
+		});
+	</script>
+	
+</body>
+</html>

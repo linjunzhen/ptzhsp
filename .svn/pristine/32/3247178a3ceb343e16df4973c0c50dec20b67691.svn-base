@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta name="renderer" content="webkit">
+	<title></title>
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/eui.css">
+</head>
+<body>
+	<div class="eui-main">
+		<!-- 头部 -->
+		<div class="eui-con eui-flex vc eui-header">
+			<div class="eui-logo">
+				<a class="eui-flex vc" href="1首页.html"><img src="images/logo.png" ></a>
+			</div>
+			<div class="eui-nav flex1">
+				<ul class="eui-flex vc">
+					<li class="on"><a href="1首页.html">首　页</a></li>
+					<li><a href="2申报指引.html">申报指引</a></li>
+					<li><a href="3办事指南.html">办事指南</a></li>
+					<li><a href="4办件公示.html">办件公示</a></li>
+					<li><a href="5政策法规.html">政策法规</a></li>
+					<li><a href="6下载专区.html">下载专区</a></li>
+				</ul>
+			</div>
+			<div class="eui-header-login">
+				<!-- 未登录 -->
+				<a class="unlogin" href="#">登录/注册</a>
+				<!-- 已登录 -->
+				<div class="eui-user" style="display: none;">
+					<span>134****3386</span>
+					<div class="sub">
+						<a href="#">个人中心</a>
+						<a href="#">退出登录</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 头部 end -->
+		
+		<!-- banner -->
+		<div class="eui-banner slideBox">
+			<div class="hd"><ul class="eui-flex tc"></ul></div>
+			<div class="bd">
+				<ul>
+					<li><img src="images/banner.png" ></li>
+					<li><img src="images/banner.png" ></li>
+					<li><img src="images/banner.png" ></li>
+				</ul>
+			</div>
+		</div>
+		<!-- banner end -->
+		
+		<!-- 主体 -->
+		<div class="eui-con">
+			<!-- 投资建设项目 -->
+			<div class="slideTxtBox eui-tab eui-index-tzjs">
+				<div class="hd eui-flex bt vt">
+					<ul class="eui-flex">
+						<li>政府投资建设项目</li>
+						<li>社会投资建设项目</li>
+					</ul>
+					<a class="eui-btn round" href="#">项目登记</a>
+				</div>
+				<div class="bd">
+					<!-- 1政府投资建设项目 -->
+					<div class="eui-tab2">
+						<div class="inhd">
+							<ul class="eui-flex">
+								<li>房建类</li>
+								<li>小型工程建设</li>
+								<li>工业类</li>
+								<li>带方案出让用地</li>
+							</ul>
+						</div>
+						<div class="inbd">
+							<div class="eui-flex eui-tzjs">
+								<a href="#">
+									<i><img src="images/tzjs-i1.png" ></i>
+									<b>立项用地规划许可阶段</b>
+									<span>16个工作日</span>
+								</a>
+								<a href="#">
+									<i><img src="images/tzjs-i2.png" ></i>
+									<b>工程建设许可阶段</b>
+									<span>13个工作日</span>
+								</a>
+								<a href="#">
+									<i><img src="images/tzjs-i3.png" ></i>
+									<b>施工许可阶段</b>
+									<span>3个工作日</span>
+								</a>
+								<a href="#">
+									<i><img src="images/tzjs-i4.png" ></i>
+									<b>竣工验收阶段</b>
+									<span>8个工作日</span>
+								</a>
+								<a href="#">
+									<i><img src="images/tzjs-i5.png" ></i>
+									<b>市政公共服务</b>
+									<span>8个工作日</span>
+								</a>
+							</div>
+							<div class="eui-flex eui-tzjs">
+								<a href="#">
+									<i><img src="images/tzjs-i2.png" ></i>
+									<b>工程建设许可阶段</b>
+									<span>13个工作日</span>
+								</a>
+							</div>
+							<div class="eui-flex eui-tzjs">
+								<a href="#">
+									<i><img src="images/tzjs-i3.png" ></i>
+									<b>施工许可阶段</b>
+									<span>3个工作日</span>
+								</a>
+							</div>
+							<div class="eui-flex eui-tzjs">
+								<a href="#">
+									<i><img src="images/tzjs-i4.png" ></i>
+									<b>竣工验收阶段</b>
+									<span>8个工作日</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- 2社会投资建设项目 -->
+					<div>
+						
+					</div>
+				</div>
+			</div>
+			
+			<!-- 主题式服务 -->
+			<div class="eui-tit">
+				<b>主题式服务</b>
+			</div>
+			<div class="eui-index-grid eui-index-ztfw eui-flex wrap">
+				<a class="item bg1">
+					<b>项目可行性研究报</b>
+					<p>通过对项目的主要内容和配套条件等方面进行调查研究和分析比较</p>
+				</a>
+				<a class="item bg2">
+					<b>用地预审</b>
+					<p>通过对项目的主要内容和配套对建设项目涉及的土地利用事项进行的审查</p>
+				</a>
+				<a class="item bg3">
+					<b>选址</b>
+					<p>通过对项目的主要内容和配套条件等方面进行调查研究和分析比较</p>
+				</a>
+				<a class="item bg4">
+					<b>环境影响评价</b>
+					<p>对人为活动可能造成的环境影响采取的防治措施和对策</p>
+				</a>
+				<a class="item bg5">
+					<b>安全评价</b>
+					<p>对企业的生产场地、过程等进行现场检查</p>
+				</a>
+				<a class="item bg6">
+					<b>水土保持评价</b>
+					<p>对生态影响及其他环境影响评估</p>
+				</a>
+			</div>
+			
+			<!-- 专项改革 -->
+			<div class="eui-tit">
+				<b>主题式服务</b>
+			</div>
+			<div class="eui-index-grid eui-index-zxgg eui-flex bt wrap">
+				<a class="item" href="#">
+					<i><img src="images/zxgg-i1.png" ></i>
+					<b>多规合一</b>
+					<p>理论探索与实践创新</p>
+				</a>
+				<a class="item" href="#">
+					<i><img src="images/zxgg-i2.png" ></i>
+					<b>多图联审</b>
+					<p>让企业申办“一键加速”</p>
+				</a>
+				<a class="item" href="#">
+					<i><img src="images/zxgg-i3.png" ></i>
+					<b>多评合一</b>
+					<p>联合审查推动审批大提速</p>
+				</a>
+				<a class="item" href="#">
+					<i><img src="images/zxgg-i4.png" ></i>
+					<b>多测合一</b>
+					<p>最多跑一次</p>
+				</a>
+			</div>
+			
+			<!-- 办件公示 -->
+			<div class="eui-tit">
+				<b>办件公示</b>
+				<a href="#">查看更多 &gt;</a>
+			</div>
+			<div class="slideTxtBox eui-tab3">
+				<div class="hd eui-flex bt">
+					<ul class="eui-flex">
+						<li>批前公示</li>
+						<li>批后公示</li>
+					</ul>
+					<div class="eui-flex eui-search">
+						<input class="ipt" type="text" placeholder="请输入项目代码" />
+						<a class="eui-btn" href="javascript:void(0)">项目代码查验</a>
+					</div>
+				</div>
+				<div class="bd">
+					<div class="eui-index-bjgs">
+						<table>
+							<tr>
+								<th width="25%">项目代码</th>
+								<th align="left">项目名称</th>
+								<th width="16%">项目类型</th>
+								<th width="12%">办理结果</th>
+							</tr>
+							<tr>
+								<td align="center">2019-350128-78-01-026333</td>
+								<td>平潭滨湖小学（一期）</td>
+								<td align="center">施工许可</td>
+								<td align="center">审批</td>
+							</tr>
+							<tr>
+								<td align="center">2019-350128-78-01-026333</td>
+								<td>旅游驿站（榕山驿站）</td>
+								<td align="center">工程建设许可</td>
+								<td align="center">审批</td>
+							</tr>
+							<tr>
+								<td align="center">2019-350128-78-01-026333</td>
+								<td>平潭明碧桂园片区路网工程（规划三路、四路、五路、凤凰湖路）</td>
+								<td align="center">施工许可</td>
+								<td align="center">审批</td>
+							</tr>
+							<tr>
+								<td align="center">2019-350128-78-01-026333</td>
+								<td>旅游驿站（榕山驿站）</td>
+								<td align="center">施工许可</td>
+								<td align="center">审批</td>
+							</tr>
+							<tr>
+								<td align="center">2019-350128-78-01-026333</td>
+								<td>平潭明碧桂园片区路网工程（规划三路、四路、五路、凤凰湖路）</td>
+								<td align="center">施工许可</td>
+								<td align="center">审批</td>
+							</tr>
+						</table>
+					</div>
+					<div class="eui-index-bjgs">
+						<table>
+							<tr>
+								<th width="25%">项目代码</th>
+								<th align="left">项目名称</th>
+								<th width="16%">项目类型</th>
+								<th width="12%">办理结果</th>
+							</tr>
+							<tr>
+								<td align="center">2019-350128-78-01-026333</td>
+								<td>平潭滨湖小学（一期）</td>
+								<td align="center">施工许可</td>
+								<td align="center">审批</td>
+							</tr>
+							<tr>
+								<td align="center">2019-350128-78-01-026333</td>
+								<td>旅游驿站（榕山驿站）</td>
+								<td align="center">工程建设许可</td>
+								<td align="center">审批</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 政策法规 -->
+			<div class="eui-tit">
+				<b>政策法规</b>
+				<a href="#">查看更多 &gt;</a>
+			</div>
+			<div class="eui-table eui-index-zcfg">
+				<div class="th vt min">
+					<img src="images/zcfg-pic.png" >
+				</div>
+				<div class="td vt">
+					<div class="eui-topline">
+						<a href="#">
+							<b>国务院办公厅关于开展工程建设项目审批制度改革试点的通知</b>
+							<p>各省、自治区、直辖市人民政府，国务院各部委、各直属机构：为贯彻落实党中央、国务院关于深化“放管服”改革和优化营商环境的部署要求，推动政府职能转</p>
+						</a>
+					</div>
+					<div class="eui-list">
+						<ul>
+							<li><a href="#"><span>2019-03-14</span>国务院办公厅关于全面开展工程建设项目审批制度改革的实施意见</a></li>
+							<li><a href="#"><span>2019-03-14</span>国务院办公厅关于全面开展工程建设项目审批制度改革的实施意见</a></li>
+							<li><a href="#"><span>2019-03-14</span>国务院办公厅关于全面开展工程建设项目审批制度改革的实施意见</a></li>
+							<li><a href="#"><span>2019-03-14</span>国务院办公厅关于全面开展工程建设项目审批制度改革的实施意见</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 中介服务 -->
+			<div class="eui-tit">
+				<b>中介服务</b>
+				<a href="#">查看更多 &gt;</a>
+			</div>
+			<div class="eui-list">
+				<ul>
+					<li><a href="#"><span>2019-03-14</span>关于举办“全过程工程咨询模式落地与运作管理”培训班的通知</a></li>
+					<li><a href="#"><span>2019-03-14</span>关于开展平潭综合实验区行政审批中介机构年度信用考评的通知</a></li>
+					<li><a href="#"><span>2019-03-14</span>关于平潭综合实验区公共资源交易统一平台升级维护的通知</a></li>
+					<li><a href="#"><span>2019-03-14</span>关于平潭综合实验区政府采购网上超市第三批供应商入驻的通知</a></li>
+					<li><a href="#"><span>2019-03-14</span>关于发布新版电子招投标文件制作工具的通知</a></li>
+				</ul>
+			</div>
+			
+		</div>
+		<!-- 主体 end -->
+		
+		<!-- 底部 -->
+		<div class="eui-footer">
+			<iframe frameborder="0" width="100%" height="100%" marginheight="0" marginwidth="0" scrolling="no" allowtransparency="true" src="foot.html"></iframe>
+		</div>
+		<!-- 底部 end -->
+	</div>
+	
+	<script type="text/javascript" charset="utf-8" src="js/jquery.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/jquery.SuperSlide.2.1.3.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/totop.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			// banner切换
+			jQuery(".slideBox").slide({titCell:".hd ul",mainCell:".bd ul",effect:"fold",autoPlay:true,autoPage:true,interTime:4000});
+			// 选项卡切换
+			jQuery(".slideTxtBox").slide({targetCell:".more a",delayTime:0,triggerTime: 0,trigger:"click"});
+			jQuery(".eui-tab2").slide({titCell:".inhd li",mainCell:".inbd",delayTime:0,triggerTime: 0,trigger:"click"});
+		});
+	</script>
+	
+</body>
+</html>

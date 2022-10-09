@@ -1,0 +1,102 @@
+@charset "utf-8";
+/****************** 全局 ******************/
+html,body,div,form,img,ul,ol,li,dl,dt,dd{margin:0px; padding:0px;}
+body{margin:0 auto;padding:0;border:0; font-family: "microsoft yahei";}
+select,input,textarea{padding:0; margin:0;}
+textarea{resize:none;}
+img{border:0;}
+ol,ul,li{list-style:none;}
+a{color: #475056; text-decoration:none;}
+a,img,input,textarea,select,button,area{outline:none;}
+*{-webkit-box-sizing: border-box; box-sizing: border-box;}
+#qb_collection_img_mask{display: none!important;}
+
+
+.eui-xmgl{position: absolute; top: 0; bottom: 0; left: 0; right: 0; font-size: 16px; color: #232323; background: #fbf7f8;}
+.eui-xmgl .tit{margin-top: 15px; padding-left: 8px; line-height: 60px; font-size: 18px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Cpath fill-rule='evenodd' opacity='.149' fill='%234470FB' d='M10 0c5.523 0 10 4.477 10 10s-4.477 10-10 10S0 15.523 0 10 4.477 0 10 0z'/%3E%3C/svg%3E") no-repeat 0 16px;}
+
+/* 表格 */
+.eui-xmgl-table{width: 100%; table-layout: fixed; border-collapse: collapse; border-spacing: 0;}
+.eui-xmgl-table th,.eui-xmgl-table td{padding: 5px 20px; line-height: 16px; height: 41px; font-size: 14px; border: 1px solid #e0e9ff;}
+.eui-xmgl-table th{text-align: right; font-weight: normal; background: #ecf2ff;}
+.eui-xmgl-table td{font-weight: bold;}
+.eui-xmgl-table i{position: relative; top: 2px; right: 2px; font-style: normal; color: #f00;}
+.eui-xmgl-table thead th{padding: 5px 12px; text-align: center; font-weight: bold;}
+.eui-xmgl-table thead~tbody td{padding: 5px 12px; font-weight: normal;}
+.eui-xmgl-table-zbr{width: 100%; border-collapse: collapse; border-spacing: 0;}
+.eui-xmgl-table-zbr tr:nth-child(odd){background: #f9f9fc;}
+.eui-xmgl-table-zbr th,
+.eui-xmgl-table-zbr td{padding: 10px 16px; line-height: 18px; height: 36px; font-size: 14px;}
+.eui-xmgl-table-zbr th{text-align: left; background: #ecf2ff;}
+.eui-xmgl-table-zbr th:first-child,
+.eui-xmgl-table-zbr td:first-child{text-align: center;}
+.eui-xmgl-table-zbr td:not(:nth-child(3)){white-space: nowrap;}
+.eui-xmgl-table-zbr td a{text-decoration: underline; color: #4470fb;}
+.eui-xmgl-table-zbr td span~span{margin-left: 12px;}
+
+
+/* 选项卡 */
+.eui-xmgl-tab{position: absolute; top: 0; left: 0; right: 0; bottom: 0; margin: 10px; filter: drop-shadow(0 0 5px rgba(0,0,0,.1));}
+.eui-xmgl-tab .back{position: absolute; z-index: 1; top: 5px; right: 0; padding: 0 12px 0 24px; line-height: 40px; font-size: 14px; color: #4470fb; background: url("data:image/svg+xml,%3Csvg class='icon' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Cpath d='M623.71 321.164H232.726l153.6-144.291c13.964-13.964 13.964-37.237 0-51.2-13.963-13.964-37.236-13.964-51.2 0L116.364 335.127c0 4.655-4.655 4.655-4.655 9.31v18.618c0 4.654 0 9.309 4.655 13.963v4.655c0 4.654 4.654 4.654 4.654 9.309l218.764 204.8c9.309 4.654 18.618 9.309 23.273 9.309 9.309 0 18.618-4.655 27.927-13.964 13.963-13.963 13.963-37.236 0-51.2L242.036 400.291h390.982c121.018 0 223.418 102.4 223.418 223.418s-102.4 223.418-223.418 223.418H293.236c-18.618 0-37.236 18.618-37.236 37.237s18.618 37.236 37.236 37.236h339.782c162.91 0 297.891-134.982 297.891-297.89-9.309-172.22-144.29-302.546-307.2-302.546z' fill='%234470fb'/%3E%3C/svg%3E") no-repeat 0 center;}
+.eui-xmgl-tab .back:hover{text-decoration: underline;}
+.eui-xmgl-tab .hd{position: relative;}
+.eui-xmgl-tab .hd ul{display: flex; height: 50px;}
+.eui-xmgl-tab .hd li{margin-right: 12px; padding: 0 25px; min-width: 150px; line-height: 50px; text-align: center; font-size: 16px; background: #ecf2ff; cursor: pointer;}
+.eui-xmgl-tab .hd li.on{font-weight: bold; border-radius: 15px 15px 0 0; background: #fff;}
+.eui-xmgl-tab .bd{position: absolute; top: 50px; left: 0; right: 0; bottom: 0; padding: 25px; background: #fff;}
+.eui-xmgl-tab .bd .item{height: 100%; display: none; overflow-y: auto;}
+.eui-xmgl-tab2{display: flex; flex-direction: column; height: 100%;}
+.eui-xmgl-tab2 .hd2{margin-bottom: 20px;}
+.eui-xmgl-tab2 .hd2 ul{display: flex;}
+.eui-xmgl-tab2 .hd2 li{margin-right: 12px; padding: 0 20px; line-height: 36px; font-size: 16px; border-radius: 30px; background: #f8f8f8; cursor: pointer;}
+.eui-xmgl-tab2 .hd2 li.on{color: #fff; background: #4470fb;}
+.eui-xmgl-tab2 .bd2{flex: 1; overflow-y: hidden;}
+.eui-xmgl-tab2 .bd2>div{height: 100%; overflow-y: auto;}
+.eui-xmgl-tab2 td:first-child{text-align: center;}
+.eui-xmgl-tab2 td.tips{padding-left: 8px; text-align: left; font-size: 16px; font-weight: bold; border: none;}
+.eui-xmgl-tab3{display: flex; height: 100%;}
+.eui-xmgl-tab3 .hd3{margin-right: 20px; width: 17%; min-width: 240px; border: 1px solid #e0e9ff;}
+.eui-xmgl-tab3 .hd3 li{position: relative; line-height: 60px; text-align: center; font-size: 18px; cursor: pointer;}
+.eui-xmgl-tab3 .hd3 li::after{content: ''; position: absolute; left: 0; right: 0; bottom: -1px; border-bottom: 1px dashed #e0e9ff;}
+.eui-xmgl-tab3 .hd3 li.on{color: #fff; background: #4470fb;}
+.eui-xmgl-tab3 .hd3 li.on::after{display: none;}
+.eui-xmgl-tab3 .bd3{flex: 1; border: 1px solid #e0e9ff;}
+.eui-xmgl-tab3 .bd3>div{height: 100%; overflow-y: auto;}
+.eui-xmgl-tab3 .bd3 .scroll th:nth-child(1),
+.eui-xmgl-tab3 .bd3 .scroll td:nth-child(1){width: 180px;}
+.eui-xmgl-tab3 .bd3 .scroll th:nth-child(3),
+.eui-xmgl-tab3 .bd3 .scroll td:nth-child(3){width: 360px;}
+.eui-xmgl-tab3 .bd3 .scroll th:nth-child(4),
+.eui-xmgl-tab3 .bd3 .scroll td:nth-child(4){width: 180px;}
+.eui-xmgl-tab3 .bd3 .scroll th:nth-child(5),
+.eui-xmgl-tab3 .bd3 .scroll td:nth-child(5){width: 120px;}
+.eui-xmgl-table-zbr.scroll td{white-space: normal;}
+@media (max-width: 1440px) {
+.eui-xmgl-tab3 .bd3 .scroll th:nth-child(1),
+.eui-xmgl-tab3 .bd3 .scroll td:nth-child(1){width: 150px;}
+.eui-xmgl-tab3 .bd3 .scroll th:nth-child(3),
+.eui-xmgl-tab3 .bd3 .scroll td:nth-child(3){width: 180px;}
+.eui-xmgl-tab3 .bd3 .scroll th:nth-child(4),
+.eui-xmgl-tab3 .bd3 .scroll td:nth-child(4){width: 150px;}
+.eui-xmgl-tab3 .bd3 .scroll th:nth-child(5),
+.eui-xmgl-tab3 .bd3 .scroll td:nth-child(5){width: 150px;}
+}
+table.scroll{height: 100%;}
+table.scroll thead,table.scroll tfoot,table.scroll tbody tr{display: table; width: 100%; table-layout: fixed;}
+table.scroll tbody{display: block; height: calc(100% - 38px); overflow-y: scroll;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

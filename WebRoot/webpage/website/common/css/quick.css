@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+/* ---------------- 浮动窗口代码开始  ------------------ */
+.quick_links_wrap{top:300px; width:64px; position:fixed !important; right:7.5%; _position:absolute; _top:323px !important;/*z-index:88;*/ -webkit-transition:width linear .4s; -moz-transition:width linear .4s; -ms-transition:width linear .4s; transition:width linear .4s; top: expression(eval((document.compatMode&&document.compatMode=="CSS1Compat")?documentElement.scrollTop+documentElement.clientHeight-this.clientHeight-1:document.body.scrollTop+document.body.clientHeight-this.clientHeight-1));}
+.quick_links_wrap.quick_links_dockright{ margin-left:0; left:auto; right:4px;}
+.quick_links_panel{height:170px; width:64px; overflow:hidden; -webkit-transition:all ease .4s; -moz-transition:all ease .4s; -ms-transition:all ease .4s; transition:all ease .4s;}
+.quick_links_allow_gotop{ height:170px;}
+.quick_links{width:100%; -webkit-transition:top ease .4s; -moz-transition:top ease .4s; -ms-transition:top ease .4s; transition:top ease .4s;}
+.quick_links a{display:block; border-bottom:1px solid #fff; color:#fff; font-size:12px; padding:8px 0; text-align:center; background:#7fcefb; }
+.quick_links a:hover{background-color:#0084ff; color:#fff;}
+.quick_links span{ display:block; cursor:pointer; padding-top:3px; height:30px; width:100%; overflow:hidden; word-break:break-all; word-wrap:break-word; text-overflow:ellipsis;}
+.quick_links i{display:inline-block; background:url(../images/bg_hot.png) no-repeat; cursor:pointer; height:30px; width:30px; vertical-align:top;}
+.quick_links .quick_icon{background-position:0 0;}
+.quick_links a:hover .quick_icon{background-position:0 -30px;}
+.quick_links .quick_icon1{background-position:-30px 0px;}
+.quick_links a:hover .quick_icon1{background-position:-30px -30px;}
+.quick_links .quick_icon2{background-position:-60px 0px;}
+.quick_links a:hover .quick_icon2{background-position:-60px -30px;}
+.quick_links .quick_icon3{background-position:-90px 0px;}
+.quick_links a:hover .quick_icon3{background-position:-90px -30px;}
+.quick_links .quick_icon4{background-position:-120px 0px;}
+.quick_links a:hover .quick_icon4{background-position:-120px -30px;}
+.quick_links .quick_icon5{background-position:-150px 0px;}
+.quick_links a:hover .quick_icon5{background-position:-150px -30px;}
+.quick_links .return_top{background:url(../images/bg_top.png) left center; height:26px; width:64px; padding:0px;}
+.quick_links .return_top:hover{background-position:right center;}
+/* ---------------- 浮动窗口代码结束  ------------------ */

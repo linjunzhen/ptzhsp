@@ -1,0 +1,210 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib prefix="eve" uri="/evetag"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt_rt"%>
+
+<%
+    String path = request.getContextPath();
+			String basePath = request.getScheme() + "://"
+					+ request.getServerName() + ":" + request.getServerPort()
+					+ path + "/";
+%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<base href="<%=basePath%>">
+	<script type="text/javascript"
+		src="<%=basePath%>/webpage/common/dynamic.jsp"></script>
+	<link rel="stylesheet" type="text/css"
+		href="<%=basePath%>/webpage/common/css/common.css" />
+	<eve:resources
+		loadres="jquery,easyui,apputil,artdialog,json2,layer,ztree"></eve:resources>
+	<style>
+	.layout-split-south{border-top-width:0px !important;}
+	.eve_buttons{position: relative !important;}
+	</style>
+	<script type="text/javascript">
+		$(function() {
+			var curUserResKeys = $("input[name='curUserResKeys']").val();
+			var needCheckIds = $("input[name='needCheckIds']").val();
+			var checkCascadeY = $("input[name='checkCascadeY']").val();
+			var checkCascadeN = $("input[name='checkCascadeN']").val();
+			var allowCount = $("input[name='allowCount']").val();
+			var checkTypeObj = {
+				"Y" : checkCascadeY,
+				"N" : checkCascadeN
+			};
+			var check = {
+				enable : true,
+				chkboxType : checkTypeObj
+			};
+			if (allowCount == 1) {
+				check.chkStyle = "radio";
+				check.radioType = "all";
+			}
+			var setting = {
+				check : check,
+				edit : {
+					enable : true,
+					showRemoveBtn : false,
+					showRenameBtn : false
+				},
+				view : {
+					selectedMulti : false
+				},
+				callback : {
+					onAsyncSuccess : function(event, treeId, treeNode, msg) {
+						var treeObj = $.fn.zTree.getZTreeObj(treeId);
+						treeObj.expandAll(true);
+						
+					}
+				},
+				async : {
+					enable : true,
+					url : "moduleController.do?tree",
+					otherParam : {
+						"tableName" : "T_CMS_ARTICLE_MODULE",
+						"idAndNameCol" : "MODULE_ID,MODULE_NAME",
+						"targetCols" : "PARENT_ID,PATH",
+						"rootParentId" : "0",
+						"Q_STATUS_!=" : 0,
+						"needCheckIds" : needCheckIds,
+						"isShowRoot" : "false",
+						"rootName" : "栏目树"
+					}
+				}
+			};
+			$.fn.zTree.init($("#ModuleSelectTree"), setting);
+		});
+
+		//标记点击树还是列表 [0:树   1：列表]
+		var isclickRow = 0;
+		function selectDepartmentTree() {
+			if (isclickRow == 1) {
+				AppUtil.closeLayer();
+			}
+			var allowCount = $("input[name='allowCount']").val();
+			var treeObj = $.fn.zTree.getZTreeObj("ModuleSelectTree");
+			var nodes = treeObj.getCheckedNodes(true);
+			var checkIds = "";
+			var checkNames = "";
+			var checkRecords = [];
+			if (nodes != null && nodes.length > 0) {
+				for (var i = 0; i < nodes.length; i++) {
+					if (nodes[i].id != "0") {						
+						if(nodes[i].isParent){
+							alert("不能选择父节点")
+							return;
+						}
+						checkIds += nodes[i].id + ",";
+						checkNames += nodes[i].name + ",";
+						checkRecords.push(nodes[i].id);
+					}
+				}
+				if (checkRecords.length >= 1) {
+					if (allowCount != 0) {
+						if (checkRecords.length > allowCount) {
+							alert("最多只能选择" + allowCount + "条记录!");
+							return;
+						}
+					}
+					checkIds = checkIds.substring(0, checkIds.length - 1);
+					checkNames = checkNames.substring(0, checkNames.length - 1);
+					art.dialog.data("selectModuleInfo", {
+						moduleIds : checkIds,
+						moduleNames : checkNames
+					});// 存储数据
+					AppUtil.closeLayer();
+				}
+			} else {
+				alert("请至少选择一条记录!")
+			}
+		}
+		function gridDoSearch() {
+			var moduleName = $("input[name='Q_T.MODULE_NAME_LIKE']").val();
+			if (moduleName != '') {
+				$("#datagridDiv").css("display", "");
+				$("#treeDiv").css("display", "none");
+				AppUtil.gridDoSearch('DepartToolbar', 'DepartGrid');
+			} else {
+				$("#datagridDiv").css("display", "none");
+				$("#treeDiv").css("display", "");
+			}
+		}
+
+		function searchReset() {
+			$("#datagridDiv").css("display", "none");
+			$("#treeDiv").css("display", "");
+			AppUtil.gridSearchReset('DepartForm');
+		}
+
+		function clickRow(rowIndex, rowData) {
+			isclickRow = 1;
+			art.dialog.data("selectModuleInfo", {
+				moduleIds : rowData.MODULE_ID,
+				moduleNames : rowData.MODULE_NAME
+			});
+		}
+
+		function doubleClick(rowIndex, rowData) {
+			art.dialog.data("selectModuleInfo", {
+				moduleIds : rowData.MODULE_ID,
+				moduleNames : rowData.MODULE_NAME
+			});
+			AppUtil.closeLayer();
+		}
+	</script>
+</head>
+
+<body style="margin:0px;background-color: #f7f7f7;">
+	<div class="easyui-layout" fit="true"
+		style="margin:0px;background-color: #f7f7f7;">
+		<div region="center">
+			<!-- =========================查询面板开始========================= -->
+			<div id="DepartToolbar">
+				<!--====================开始编写隐藏域============== -->
+				<input type="hidden" value="${checkCascadeY}" name="checkCascadeY">
+				<input type="hidden" value="${checkCascadeN}" name="checkCascadeN">
+				<input type="hidden"
+					value="${sessionScope.curLoginUser.loginUserInfoJson}"
+					name="loginUserInfoJson"> <input type="hidden"
+					value="${sessionScope.curLoginUser.resKeys}" name="curUserResKeys">
+				<input type="hidden" value="${needCheckIds}" name="needCheckIds">
+				<input type="hidden" value="${allowCount}" name="allowCount">
+				<input type="hidden" value="${callbackFn}" name="callbackFn">
+				<!--====================结束编写隐藏域============== -->
+				<form action="#" name="DepartForm">
+					<table class="dddl-contentBorder dddl_table"
+						style="background-repeat:repeat;width:100%;border-collapse:collapse;display: none;">
+						<tbody>
+							<tr style="height:28px;">
+								<td style="width:68px;text-align:center;">栏目名称</td>
+								<td style="width:135px;"><input class="eve-input"
+									type="text" maxlength="20" style="width:128px;"
+									name="Q_T.MODULE_NAME_LIKE" /></td>
+								<td colspan="6"><input type="button" value="查询"
+									class="eve-button" onclick="gridDoSearch()" /> <input
+									type="button" value="重置" class="eve-button"
+									onclick="searchReset()" /></td>
+							</tr>
+						</tbody>
+					</table>
+				</form>
+			</div>
+			<div id="treeDiv">
+				<ul id="ModuleSelectTree" class="ztree"></ul>
+			</div>
+
+		</div>
+	    <div data-options="region:'south',split:true,border:false"  >
+				<div class="eve_buttons">
+					<input value="确定" type="button" onclick="selectDepartmentTree();"
+						class="z-dlg-button z-dialog-okbutton aui_state_highlight" /> <input
+						value="取消" type="button" class="z-dlg-button z-dialog-cancelbutton"
+						onclick="AppUtil.closeLayer();" />
+				</div>
+		</div>
+	</div>
+</body>

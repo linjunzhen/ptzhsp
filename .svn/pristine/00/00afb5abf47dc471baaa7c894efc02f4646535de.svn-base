@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta name="renderer" content="webkit">
+	<title></title>
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/Select.css">
+	<link rel="stylesheet" type="text/css" href="css/eui.css">
+</head>
+<body>
+	
+	<div class="eui-main mine">
+		<!-- 头部 -->
+		<div class="eui-con eui-flex vc eui-header">
+			<div class="eui-logo">
+				<a class="eui-flex vc" href="1首页.html"><img src="images/logo.png" ></a>
+			</div>
+			<div class="eui-nav flex1">
+				<ul class="eui-flex vc">
+					<li><a href="1首页.html">首　页</a></li>
+					<li><a href="2申报指引.html">申报指引</a></li>
+					<li><a href="3办事指南.html">办事指南</a></li>
+					<li><a href="4办件公示.html">办件公示</a></li>
+					<li><a href="5政策法规.html">政策法规</a></li>
+					<li><a href="6下载专区.html">下载专区</a></li>
+				</ul>
+			</div>
+			<div class="eui-header-login">
+				<!-- 未登录 -->
+				<a class="unlogin" style="display: none;" href="#">登录/注册</a>
+				<!-- 已登录 -->
+				<div class="eui-user">
+					<span>134****3386</span>
+					<div class="sub">
+						<a href="#">个人中心</a>
+						<a href="#">退出登录</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 头部 end -->
+		
+		<!-- 主体 -->
+		<div class="eui-con">
+			
+			<div class="eui-flex eui-mine">
+				<div class="menu">
+					<div class="tit">
+						<i class="eui-flex vc tc"><img src="images/mine-logo.png" ></i>
+						博盛达企业管理
+					</div>
+					<div class="con">
+						<a class="on" href="#"><span>我的工作台</span></a>
+						<a href="#"><span>我要申报</span></a>
+						<a href="#"><span>我的办件</span></a>
+						<a href="#"><span>我的材料</span></a>
+						<a href="#"><span>账号管理</span></a>
+					</div>
+				</div>
+				<div class="flex1">
+					<div class="eui-flex bt eui-mine-info eui-mb">
+						<span><font color="#45b5f9">2</font>立项用地规划许可阶段</span>
+						<span><font color="#4470fb">1</font>工程建设许可阶段</span>
+						<span><font color="#09c8db">5</font>施工许可阶段</span>
+						<span><font color="#ff8207">9</font>竣工验收阶段</span>
+					</div>
+					
+					<div class="eui-card eui-mb">
+						<div class="eui-tit round">
+							<b>待办事项</b>
+							<a href="#">查看更多 &gt;</a>
+						</div>
+						<ul class="eui-mine-todo">
+							<li>
+								<div class="tit"><span class="eui-bg-red">尚未提交</span>可行性研究报告审批</div>
+								<p>项目编号：2020-350128-83-01-040015</p>
+								<p>项目名称：平潭新兴产业园标准化厂房及其配套工程</p>
+								<div class="eui-flex">
+									<p>受理时间：2020-05-20</p>
+									<p>承诺时间：2020-06-19</p>
+									<p>办结时间：2020-06-26</p>
+								</div>
+							</li>
+							<li>
+								<div class="tit"><span class="eui-bg-orange">需要补件</span>雷电防护装置竣工验收</div>
+								<p>项目编号：2020-350128-83-01-040015</p>
+								<p>项目名称：平潭新兴产业园标准化厂房及其配套工程</p>
+								<div class="eui-flex">
+									<p>受理时间：2020-05-20</p>
+									<p>承诺时间：2020-06-19</p>
+									<p>办结时间：2020-06-26</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+					
+					<div class="eui-card eui-mb">
+						<div class="eui-tit round">
+							<b>办件公示</b>
+						</div>
+						<div class="eui-mine-bjgs">
+							<table>
+								<thead>
+									<tr>
+										<th>项目代码</th>
+										<th>项目名称</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>2019-350128-78-01-026333</td>
+										<td>旅游驿站（榕山驿站）</td>
+									</tr>
+									<tr>
+										<td>2019-350128-78-01-026333</td>
+										<td>旅游驿站（榕山驿站）</td>
+									</tr>
+									<tr>
+										<td>2019-350128-78-01-026333</td>
+										<td>旅游驿站（榕山驿站）</td>
+									</tr>
+									<tr>
+										<td>2019-350128-78-01-026333</td>
+										<td><span>平潭综合实验区竹屿七孔水闸外海翼墙护岸工平潭综合实验区竹屿七孔水闸外海翼墙护岸工</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					
+					<div class="eui-card">
+						<div class="eui-tit round">
+							<b>我的办件进度</b>
+							<select name="">
+								<option value="">2020年</option>
+								<option value="">2019年</option>
+							</select>
+						</div>
+						<div class="eui-flex vc eui-mine-bjjd">
+							<div class="total">
+								<div class="item i1"><span>项目数</span><b>135</b>件</div>
+								<div class="item i2"><span>办件数</span><b>19</b>件</div>
+							</div>
+							<div class="flex1 eui-chart">
+								<!-- 
+									正在办理 #f6a55f
+									等待受理 #f77569
+									已办结 #a742a6
+									已退办 #e1374e
+									需要补件 #f26d44 
+								-->
+								<img src="images/chart1.png" style="display: block; margin: 0 auto;">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<!-- 主体 end -->
+		
+		<!-- 底部 -->
+		<div class="eui-footer">
+			<iframe frameborder="0" width="100%" height="100%" marginheight="0" marginwidth="0" scrolling="no" allowtransparency="true" src="foot.html"></iframe>
+		</div>
+		<!-- 底部 end -->
+	</div>
+	
+	<script type="text/javascript" charset="utf-8" src="js/jquery.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/Select.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/totop.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			//下拉框
+			$('select').selectMatch();
+		});
+	</script>
+	
+</body>
+</html>

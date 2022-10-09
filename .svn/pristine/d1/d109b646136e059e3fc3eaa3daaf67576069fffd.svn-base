@@ -1,0 +1,110 @@
+body{ font-family: "微软雅黑"; color: #FFFFFF;}
+.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6,
+ .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12{
+ 	padding: 0;
+ 	margin: 0;
+ } 
+ table, tbody, tfoot, thead, tr, th, td{
+ 	margin: 0;
+    padding: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 0px;
+ }
+p{ margin: 0; padding: 0;}
+ul, li, tr,td,table{ padding: 0; margin: 0; list-style: none;}
+.LandingScreen{ 
+	width: 100%;
+	height: 1920px;
+	background:#01295d;
+	margin: auto;
+}
+.LandingScreen img{
+	max-width: 100%;
+}
+.LandingScreen_title{
+	text-align: center;
+	padding: 20px;
+}
+.LandingScreen_body{
+	padding: 0 160px;
+	padding-right: 0;
+	font-size: 40px;
+	left: 46px;
+	width: 100%;
+	top: 40px;
+}
+.LandingScreen_body table{
+	top:-160px;
+	/*border: solid 2px #266090;*/
+	font-size:30px;
+}
+.LandingScreen_body table tbody tr{
+	background:#001024;
+}
+.LandingScreen_body table tbody tr:nth-child(2n){
+	background:#20324a;
+	
+}
+.LandingScreen_body table tr td{
+	line-height: 55px;
+	height: 55px;
+	padding:  0 10px;
+}
+.LandingScreen_body_tr{
+	background: rgba(47,104,248,.1);
+	
+}
+.tableid_{
+	background: #172655;
+	width: 100%;
+}
+.LandingScreen_body_tr1{
+	background:url(../images/tt-bg.png) repeat-x center;
+	width: 264px!important;
+}
+.LandingScreen_body_tr1 h1{
+	font-size: 40px;
+}
+tbody{
+	height: 100%;
+}
+.ToDeclare{
+	width: 340PX!important;
+	text-align: left;
+	padding-left: 70px;
+	line-height: 110px;
+	height: 110px;
+}
+.declarant{
+	width: 190px;
+	text-align: left;
+	line-height: 110px;
+	height: 110px;
+}
+.OutState{
+	width: 235px;
+	line-height: 110px;
+	height: 110px;
+}
+.processingTime{
+	width: 247px!important;
+	line-height: 60px;
+	height: 80px;
+}
+.character_green{
+	color: #00ffba;
+	text-align: center;
+}
+.character_white{
+	color: #FFFFFF;
+	text-align: center;
+}
+.character_red{
+	color: #ff3838;
+	text-align: center;
+}

@@ -1,0 +1,37 @@
+#MYSQL Version Config=======================
+#jdbc.driverClassName=com.mysql.jdbc.Driver
+#jdbc.url=jdbc:mysql://localhost:3306/e-plat?useUnicode=true&amp;characterEncoding=utf-8
+#hibernate.dialect=org.hibernate.dialect.MySQLInnoDBDialect
+#jdbc.username=root
+#jdbc.password=123
+
+#SqlServer Version Config==========================
+#jdbc.driverClassName=com.microsoft.sqlserver.jdbc.SQLServerDriver
+#jdbc.url=jdbc:sqlserver://192.168.2.170:1433;databaseName=fj
+#hibernate.dialect=org.hibernate.dialect.SQLServerDialect
+#jdbc.username=sa
+#jdbc.password=87541961xxzx!
+
+#ORACLE Version Config======================
+jdbc.driverClassName=oracle.jdbc.driver.OracleDriver
+#jdbc.url=jdbc:oracle:thin:@192.168.1.27:1521:ORCL
+#jdbc.url=jdbc:oracle:thin:@172.16.51.10:1521:ORCL
+jdbc.url=fhPsN36oRngtz1Vt3gv+I8NcFoq55r4Fmt4mf+MjI6EN0S4ceSTdSgvTx4cr1dKL
+hibernate.dialect=org.hibernate.dialect.Oracle10gDialect
+jdbc.username=cCw+aPKbJKG+UEibd1zckw==
+jdbc.password=WrDsiyOEhXMKZpoJS6+j2w==
+
+hibernate.show_sql=false
+hibernate.format_sql=false
+c3p0.acquireIncrement=5
+c3p0.initialPoolSize=3
+c3p0.idleConnectionTestPeriod=60
+c3p0.minPoolSize=2
+c3p0.maxPoolSize=50
+c3p0.maxStatements=0
+c3p0.numHelperThreads=10
+c3p0.maxIdleTime=60
+c3p0.acquireRetryDelay=1000
+c3p0.acquireRetryAttempts=30
+c3p0.breakAfterAcquireFailure=false
+c3p0.testConnectionOnCheckout=false

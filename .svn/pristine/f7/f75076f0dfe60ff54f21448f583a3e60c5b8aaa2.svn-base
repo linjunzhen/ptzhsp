@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://webservice.evecom.net/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="EcipEntInfoManagementService" targetNamespace="http://webservice.evecom.net/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://webservice.evecom.net/" elementFormDefault="unqualified" targetNamespace="http://webservice.evecom.net/" version="1.0">
+
+  <xs:element name="updateEntInfo" type="tns:updateEntInfo"/>
+
+  <xs:element name="updateEntInfoResponse" type="tns:updateEntInfoResponse"/>
+
+  <xs:complexType name="updateEntInfo">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="items" type="tns:entCompositeInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="entCompositeInfo">
+    <xs:complexContent>
+      <xs:extension base="tns:model">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="approvalDate" type="xs:string"/>
+          <xs:element minOccurs="0" name="dom" type="xs:string"/>
+          <xs:element minOccurs="0" name="entName" type="xs:string"/>
+          <xs:element minOccurs="0" name="entType" type="xs:string"/>
+          <xs:element minOccurs="0" name="lerep" type="xs:string"/>
+          <xs:element minOccurs="0" name="lerepMobile" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="managers" nillable="true" type="tns:entManager"/>
+          <xs:element minOccurs="0" name="matterId" type="xs:string"/>
+          <xs:element minOccurs="0" name="opExpires" type="xs:string"/>
+          <xs:element minOccurs="0" name="opScope" type="xs:string"/>
+          <xs:element minOccurs="0" name="operator" type="xs:string"/>
+          <xs:element minOccurs="0" name="operatorMobile" type="xs:string"/>
+          <xs:element minOccurs="0" name="regCap" type="xs:decimal"/>
+          <xs:element minOccurs="0" name="socialCreditUnicode" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="stockHolders" nillable="true" type="tns:entStockHolder"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="supervisors" nillable="true" type="tns:entSupervisor"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="trustees" nillable="true" type="tns:entTrustee"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType abstract="true" name="model">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="entManager">
+    <xs:complexContent>
+      <xs:extension base="tns:model">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cerNo" type="xs:string"/>
+          <xs:element minOccurs="0" name="cerType" type="xs:string"/>
+          <xs:element minOccurs="0" name="personName" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="entStockHolder">
+    <xs:complexContent>
+      <xs:extension base="tns:model">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cerNo" type="xs:string"/>
+          <xs:element minOccurs="0" name="cerType" type="xs:string"/>
+          <xs:element minOccurs="0" name="impAm" type="xs:decimal"/>
+          <xs:element minOccurs="0" name="linkTel" type="xs:string"/>
+          <xs:element minOccurs="0" name="personName" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="entSupervisor">
+    <xs:complexContent>
+      <xs:extension base="tns:model">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cerNo" type="xs:string"/>
+          <xs:element minOccurs="0" name="cerType" type="xs:string"/>
+          <xs:element minOccurs="0" name="personName" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="entTrustee">
+    <xs:complexContent>
+      <xs:extension base="tns:model">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cerNo" type="xs:string"/>
+          <xs:element minOccurs="0" name="cerType" type="xs:string"/>
+          <xs:element minOccurs="0" name="personName" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="updateEntInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="result" type="tns:ecipResponse"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ecipResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="errorMsg" type="xs:string"/>
+      <xs:element name="reCode">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="entry">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="key" type="xs:string"/>
+                  <xs:element minOccurs="0" name="value" type="xs:string"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="resultCode" type="tns:resultEnum"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="resultEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OK"/>
+      <xs:enumeration value="BAD_REQUEST"/>
+      <xs:enumeration value="NO_CONTENT"/>
+      <xs:enumeration value="SERVER_ERROR"/>
+      <xs:enumeration value="UNAUTHORIZED"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="updateEntInfo">
+    <wsdl:part element="tns:updateEntInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateEntInfoResponse">
+    <wsdl:part element="tns:updateEntInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="EcipEntInfoManagement">
+    <wsdl:operation name="updateEntInfo">
+      <wsdl:input message="tns:updateEntInfo" name="updateEntInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:updateEntInfoResponse" name="updateEntInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EcipEntInfoManagementServiceSoapBinding" type="tns:EcipEntInfoManagement">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="updateEntInfo">
+      <soap:operation soapAction="updateEntInfo" style="document"/>
+      <wsdl:input name="updateEntInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateEntInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EcipEntInfoManagementService">
+    <wsdl:port binding="tns:EcipEntInfoManagementServiceSoapBinding" name="EcipEntInfoManagementPort">
+      <soap:address location="http://172.16.50.24:7777/webservice/entInfoManagement"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

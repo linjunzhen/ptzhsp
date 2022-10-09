@@ -1,0 +1,21 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" XK="0 0 54 42" height="42px" width="54px">
+	<g clip-path="url(#mainClip)" transform="matrix(1, 0, 0, 1, 0, 0)">
+		<g transform="matrix(1, 0, 0, 1, 198.81659852302897, 378)">
+			<g transform="matrix(1, 0, 0, 1, -197.81659852302897, -377)">
+				<g transform="matrix(1, 0, 0, 1, 0, 0)">
+					<path transform="matrix(1, 0, 0, 1, 1.5, 1.5)" stroke="none" fill="#79C900" d="M 14.083261120685233,0 L 34,0 L 48.083261120685236,10.837049096097742 L 48.083261120685236,26.162950903902257 L 34,37 L 14.083261120685233,37 L 0,26.162950903902257 L 0,10.837049096097742 z"></path>
+					<text transform="matrix(1, 0, 0, 1, 8.541630560342618, 11.55)" stroke="none" fill="whitesmoke" text-anchor="middle" style="font: bold 11pt Helvetica, Arial, sans-serif" y="12.675" x="17">Start</text>
+				    <!--
+				    <path transform="matrix(1, 0, 0, 1, 1.5, 1.5)" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="3" stroke="blue" fill="none" d="M 14.083261120685233,0 L 34,0 L 48.083261120685236,10.837049096097742 L 48.083261120685236,26.162950903902257 L 34,37 L 14.083261120685233,37 L 0,26.162950903902257 L 0,10.837049096097742 z"></path>
+				    -->
+				</g>
+				<path transform="matrix(1, 0, 0, 1, 0.5, 16)" stroke="none" fill="transparent" d="M 4,0 C 6.209138999323175,0 8,1.7908610006768257 8,4 C 8,6.209138999323175 6.209138999323175,8 4,8 C 1.7908610006768257,8 0,6.209138999323175 0,4 C 0,1.7908610006768257 1.7908610006768257,0 4,0 z"></path>
+				<path transform="matrix(1, 0, 0, 1, 42.583261120685236, 16)" stroke="none" fill="transparent" d="M 4,0 C 6.209138999323175,0 8,1.7908610006768257 8,4 C 8,6.209138999323175 6.209138999323175,8 4,8 C 1.7908610006768257,8 0,6.209138999323175 0,4 C 0,1.7908610006768257 1.7908610006768257,0 4,0 z"></path>
+				<path transform="matrix(1, 0, 0, 1, 21.541630560342618, 31.5)" stroke="none" fill="transparent" d="M 4,0 C 6.209138999323175,0 8,1.7908610006768257 8,4 C 8,6.209138999323175 6.209138999323175,8 4,8 C 1.7908610006768257,8 0,6.209138999323175 0,4 C 0,1.7908610006768257 1.7908610006768257,0 4,0 z"></path>
+			</g>
+		</g>
+	</g>
+	<clipPath id="mainClip">
+		<rect height="42" width="54" y="0" x="0"></rect>
+	</clipPath>
+</svg>

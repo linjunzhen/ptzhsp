@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="GB2312"?>
+<!-- 项目申请信息，申报件的相关内容，包括：基本信息、申报人/单位信息、经办人信息、 快递信息、业务表单、申请材料 -->
+<!-- applyFrom：办件来源。枚举类型，取值为: 1、省网上办事大厅产生的办件:窗口申请：10, 网上申请：11, 移动端申请：12, 
+	省发起的并 联审批：13 2、各市县区行政服务中心或省直部门业务系统产生的办件:窗口申请：20, 网上申请:21, 移 动端申请：22, 市县发起的并联审批：23, 
+	省市县联动：24 type：xml信息类型。枚举类型，取值为数字“事项信息=100，办件信息=10，过程信息=20， 计时暂停=21，补件信息=22，计时恢复=23，通知缴费=24，缴费信息=25，结果信息=30,结 
+	果信息（电子证照、批文）=31，评议信息=40，反馈信息=99” -->
+<Case applyFrom="10或11或12" type="10" unid="xml唯一标识(数据库主键 或 序列号)"
+	xsd="1.0">
+	<!-- 路由信息 -->
+	<Router>
+		<!--必填 发送部门所属地区的区划代码 -->
+		<FromAreaCode>350000</FromAreaCode>
+		<!--必填 发送部门所属地区的名称 -->
+		<FromAreaName>福建省</FromAreaName>
+		<!--必填 -->
+		<ToAreaCode>接收系统代码</ToAreaCode>
+		<!--必填 -->
+		<ToAreaName>接收系统名称</ToAreaName>
+		<!--必填 -->
+		<Time>发送时间格式(yyyy-MM-dd HH:mm:ss，如：2014-01-01 10:01:01)</Time>
+	</Router>
+	<!--数据区 -->
+	<Body>
+		<!--办件收件基本信息 -->
+		<ApasInfo>
+			<!--必填 -->
+			<ServiceID>省网上办事大厅的审批事项主键ID</ServiceID>
+			<!--必填 -->
+			<ServiceCode>省网上办事大厅的审批事项编码</ServiceCode>
+			<!--必填 -->
+			<ServiceName>省网上办事大厅的审批事项名称</ServiceName>
+			<!--必填 -->
+			<AreaCode>省网上办事大厅的审批事项所属区划</AreaCode>
+			<!--必填 -->
+			<ProjectName>申报名称</ProjectName>
+			<!--必填 （必须为数字） -->
+			<PromiseDay>承诺时限(工作日)</PromiseDay>
+			<!--必填 -->
+			<SN>申报号</SN>
+			<!--必填 -->
+			<PWD>查询密码</PWD>
+			<!--必填 （时间格式：yyyy-MM-dd HH:mm:ss，如：2014-01-01 10:01:01） -->
+			<DeclareTime>申报时间</DeclareTime>
+			<!--必填 -->
+			<ReceiveDeptName>实施部门</ReceiveDeptName>
+			<!--必填 （必须为9位，组织机构代码证上的“-”不要，如组织机构代码证上 的号码为74381792-7，则输入为743817927） -->
+			<ReceiveDeptCode>实施部门组织机构代码</ReceiveDeptCode>
+		</ApasInfo>
+		<!--申报对象信息 -->
+		<Proposer>
+			<!-- 必填，申报种类。枚举类型，取值为数字“个人（办理个人业务）=0， 法人（办理单位业务）=1” -->
+			<ApplyType>申报种类</ApplyType>
+			<AreaCode>申报对象所属区划</AreaCode>
+			<!-- 个人信息 -->
+			<Person>
+				<!--(不多于100个汉字) -->
+				<ApplyName>姓名</ApplyName>
+				<!--枚举类型，男、女 -->
+				<Sex>性别</Sex>
+				<!--（时间格式：yyyy-MM-dd，如：2014-01-01） -->
+				<Birthday>出生日期</Birthday>
+				<!--枚举类型，取值范围为“身份证：SF，组织机构代码证：JGDM，工 商营业执照：YYZZ，军官证：JG，士兵证：SB，护照：HZ，台湾居民来往大陆通行证： 
+					TWTX，香港身份证：HKSF，澳门身份证：AMSF，台湾身份证：TWSF，港澳居民来往内 地通行证：GATX，其他：QT” -->
+				<CertificateType>证件类型</CertificateType>
+				<!-- 当证件类型不在IDType的取值范围内时，需要“证件名称” -->
+				<CertificateName>证件名称</CertificateName>
+				<CertificateNumber>证件号码</CertificateNumber>
+				<!--(不多于100个汉字) -->
+				<Address>家庭住址</Address>
+				<Postcode>邮政编码</Postcode>
+				<MobilePhone>手机号码</MobilePhone>
+				<Mail>电子邮箱</Mail>
+				<Tel>办公/家庭电话</Tel>
+				<IdentificationStatus>实名认证状态</IdentificationStatus>
+			</Person>
+			<!-- 法人信息 -->
+			<Unit>
+				<UnitName>机构名称</UnitName>
+				<!--（必须为9位，组织机构代码证上的“-”不要，如组织机构代码证上 的号码为74381792-7，则输入为743817927） -->
+				<UnitCode>组织机构代码</UnitCode>
+				<!--枚举类型，取值范围为“机关：JG，事业单位：SYDW，企业：QY， 社团：ST，其他：QT” -->
+				<UnitType>机构类型</UnitType>
+				<LealPerson>法人代表</LealPerson>
+				<Address>机构地址</Address>
+				<Tel>联系电话</Tel>
+				<Postcode>邮政编码</Postcode>
+				<IdentificationStatus>实名认证状态</IdentificationStatus>
+			</Unit>
+		</Proposer>
+		<!--经办人信息 -->
+		<Operator>
+			<!--必填 (不多于100个汉字) -->
+			<Name>姓名</Name>
+			<!--枚举类型，男、女 -->
+			<Sex>性别</Sex>
+			<!--（时间格式：yyyy-MM-dd，如：2014-01-01） -->
+			<Birthday>出生日期</Birthday>
+			<!--枚举类型，取值范围为“身份证SF，组织机构代码证JGDM，工商营业执 照YYZZ，军官证JG，士兵证SB，护照HZ，台湾居民来往大陆通行证TWTX，香港身份证 
+				HKSF，澳门身份证 AMSF，台湾身份证 TWSF，港澳居民来往内地通行证 GATX，其他 QT” -->
+			<CertificateType>证件类型</CertificateType>
+			<!-- 当证件类型不在IDType的取值范围内时，需要“证件名称” -->
+			<CertificateName>证件名称</CertificateName>
+			<CertificateNumber>证件号码</CertificateNumber>
+			<!--(不多于100个汉字) -->
+			<Address>家庭住址</Address>
+			<Postcode>邮政编码</Postcode>
+			<MobilePhone>手机号码</MobilePhone>
+			<Mail>电子邮箱</Mail>
+			<Tel>办公/家庭电话</Tel>
+			<IdentificationStatus>实名认证状态</IdentificationStatus>
+		</Operator>
+		<!--办理结果邮寄信息 -->
+		<Expresses>
+			<Express>
+				<Recipients>收件人</Recipients>
+				<RAddress>地址</RAddress>
+				<RAreaCode>区号</RAreaCode>
+				<RMobile>手机号码</RMobile>
+				<RContactNumber>固定电话</RContactNumber>
+				<PaymentType>付款方式</PaymentType>
+			</Express>
+		</Expresses>
+		<!--表单信息，即业务数据 -->
+		<FormInfos>
+			<!--可有0-n个 -->
+			<FormInfo>
+				<UNID>对应实际业务表配置的UNID（ucap_form）</UNID>
+				<FormName>业务表名称（英文）</FormName>
+				<FormAlias>业务表名称（中文）</FormAlias>
+				<Items>
+					<!-- 扩展信息，可有1—n个 -->
+					<Item field="扩展字段名1" alias="扩展字段名1(中文)">扩展字段值
+						1
+					</Item>
+					<Item field="扩展字段名2" alias="扩展字段名2(中文)">扩展字段值
+						2
+					</Item>
+					<Item field="扩展字段名n" alias="扩展字段名n(中文)">扩展字段值
+						n
+					</Item>
+				</Items>
+			</FormInfo>
+		</FormInfos>
+		<!--用户提交的申请材料列表 -->
+		<Attrs>
+			<!--可有1—n个 -->
+			<Attr>
+				<!--当为PDF电子表单时，此字段为空 -->
+				<UNID>附件唯一标识，对应附件表中的主键</UNID>
+				<!--必填 （mode取值为，noneed(无)，upload(省网上办事大厅上传)， paper(窗口纸质) ，form(PDF电子表单)，license(电子证照) 
+					“网上”表示用户通过系统以附件上传的形式已经上传了附件； “网下”表示用户有这个附件，但是因为不方便在网上提交，会在网下 进行提交，所以消息中不存在这个附件； 
+					“材料表单”表示为结构化信息，需要填写Items中的扩展信息； “电子证照”表示为颁发的电子证照，FileName填写为证照编号； “无”表示用户没有所要求的附件，因此如果确实需要这个附件，会通 
+					过“补齐补正通知”的形式要求用户提交附件。） -->
+				<Mode>noneed/upload/paper/form/license</Mode>
+				<!--必填 （这个编码是各审批事项所需提交材料即附件的编码，每一种 附件都有唯一的附件编码。事项编码+附件编码为全局唯一的，能够唯一定位到一个附件实 
+					例上。） -->
+				<Code>申报材料编码</Code>
+				<!--必填 （审批事项定义中申报材料名称） -->
+				<Name>申报材料名称</Name>
+				<!-- 附件序号（如该审批事项有20个附件，则序号依次为1～20，顺序以 发布的顺序为准。 当mode=”upload”时有效。 预留，可为空 
+					） -->
+				<SeqNo>附件序号 </SeqNo>
+				<!--在mode=”upload、license”时此字段有效 -->
+				<FileName>附件的文件名 </FileName>
+			</Attr>
+		</Attrs>
+	</Body>
+</Case>

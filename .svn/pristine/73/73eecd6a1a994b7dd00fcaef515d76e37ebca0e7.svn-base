@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>手写签名</title>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<!--标准mui.css-->
+<link href="https://cdn.bootcss.com/mui/3.7.1/css/mui.min.css"
+	rel="stylesheet" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jSignature.min.js"></script>
+<script src="https://cdn.bootcss.com/mui/3.7.1/js/mui.min.js"></script>
+<script type="text/javascript" src="js/mui.loading.js"></script>
+<script type="text/javascript" src="js/mobileUtil.js"></script>
+<style>
+#out {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
+}
+
+#in {
+	width: 260px;
+	height: 420px;
+	border: 1px solid black;
+}
+
+#margin {
+	margin-left: 20px;
+}
+
+.mui-show-loading {
+	position: fixed;
+	padding: 5px;
+	width: 120px;
+	min-height: 120px;
+	top: 45%;
+	left: 50%;
+	margin-left: -60px;
+	background: rgba(0, 0, 0, 0.6);
+	text-align: center;
+	border-radius: 5px;
+	color: #FFFFFF;
+	visibility: hidden;
+	margin: 0;
+	z-index: 2000;
+	-webkit-transition-duration: .2s;
+	transition-duration: .2s;
+	opacity: 0;
+	-webkit-transform: scale(0.9) translate(-50%, -50%);
+	transform: scale(0.9) translate(-50%, -50%);
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+}
+
+.mui-show-loading.loading-visible {
+	opacity: 1;
+	visibility: visible;
+	-webkit-transform: scale(1) translate(-50%, -50%);
+	transform: scale(1) translate(-50%, -50%);
+}
+
+.mui-show-loading .mui-spinner {
+	margin-top: 24px;
+	width: 36px;
+	height: 36px;
+}
+
+.mui-show-loading .text {
+	line-height: 1.6;
+	font-family: -apple-system-font, "Helvetica Neue", sans-serif;
+	font-size: 14px;
+	margin: 10px 0 0;
+	color: #fff;
+}
+
+.mui-show-loading-mask {
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+}
+
+.mui-show-loading-mask-hidden {
+	display: none !important;
+}
+</style>
+
+</head>
+
+<body>
+	<div class="mui-content">
+		<p style="text-align: center;margin-top:10px">请在黑色框处手写签名</p>
+		<div id="out">
+			<div id="in">
+				<div id="signature"></div>
+			</div>
+		</div>
+		<div id="out">
+			<button type="button"
+				class="mui-btn  mui-btn-primary mui-btn-outlined"
+				onclick="importImg()">确认保存</button>
+			<button type="button" class="mui-btn mui-btn-outlined" id="margin"
+				onclick="clearSig()">重签</button>
+		</div>
+
+		<img id="img">
+	</div>
+
+	<script type="text/javascript">
+		mui.init();
+		//初始化画布  
+		$(document).ready(function() {
+			$("#signature").jSignature({
+				width : 258,
+				height : 418,
+				color : "#000",
+				lineWidth : 3
+			});
+		})
+		//重置画布  
+		function clearSig() {
+			$("#signature").jSignature("clear");
+		}
+		//将画布内容显示到IMG  
+		function importImg() {
+			if ($("#signature").jSignature('getData', 'native').length == 0) {
+				mui.alert("请先进行签名");
+				return;
+			}
+			var sig = $("#signature");
+			uploadPhoto(sig.jSignature('getData').replace("data:image/png;base64,", ""),"SIGN_WRITE")
+		}
+	
+		function uploadPhoto(base64, type) {
+		var mask = mobileUtil.createMask(function() {
+					return false;
+				}); //callback为用户点击蒙版时自动执行的回调；
+				mask.show(); //显示遮罩
+			$.post('http://xzfwzx.pingtan.gov.cn:8888/exeDataController.do?uploadBaseCode', {
+				TOKEN : getUrlParam("token"),
+				UPLOADBASECODE : base64,
+				TYPE : type
+			},
+				function(responseText, status, xhr) {
+					mask._remove(); //取消遮罩
+					var resultJson = $.parseJSON(responseText);
+					mui.alert(resultJson.msg);
+				}
+			);
+		}
+		function getUrlParam(name) {
+		var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+		var r = window.location.search.substr(1).match(reg);
+		if (r != null) {
+			return decodeURI(r[2]);
+		}
+		return null;
+	}
+	</script>
+</body>
+
+</html>

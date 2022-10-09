@@ -1,0 +1,74 @@
+@charset "utf-8";
+/* CSS Document */
+body{font-family:"Microsoft YaHei",sans-serif;}
+/*清除浮动*/
+.clearfix:after{content:'\0020';display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{*zoom:1; _zoom:1;}
+.titlebar{background-color:#393a3f;}
+.margin10{margin:10px;}
+.form-common,.form-common .card,.form-group .card{margin:0px;}
+.tmargin20{margin-top:20px !important;}
+.btnbgcolor{background-color:#3188d2; font-weight: bold;}
+.eveTitle{font-size: 18px; height: 30px; line-height: 30px; color: #949494; font-weight: 400; margin-left:10px;}
+.fontcolor{color:#c9c9c9;}
+.fontcolor1{color:#ffa103;}
+.lheight25{height:25px; line-height:25px;}
+.evePj{float: right; width:78px; height:25px; line-height:25px; text-align:center;  color:#fff;}
+.bgcolor{background:#ffa103;}
+.bgcolor1{background:#bfbfbf;}
+.text .grid-cell{margin:0px; height:30px; line-height:30px; }
+.text  .evePjon{background:#ffa103; color:#fff;}
+.bgcolor2{background:#6fb9e3;}
+.bgcolor3{background:#8dc263;}
+.evebtn a{display:block; color:#fff; font-size: 20px; line-height:50px;}
+.evebtn a img{width:30px; height: 30px; position:relative; top:8px;}
+.btnsend .submit{width:90%; float:right; background-color:#8cc264;}
+.sex{display:inline-block;width:66px; height: 25px; line-height: 25px; margin:0 10px; text-align: center; cursor: pointer; color: #fff; background: #bfbfbf;}
+.sexOn{background:#ffa103 !important;}
+.succeed{height:80px; line-height:80px; font-size:20px; color:#ffa103; border-radius:4px; text-align:center; border:1px solid #ddd; background:#fff;}
+.eveTitle1{height:30px; line-height:30px; text-align: center; color: #000; font-size:16px; font-weight: 400; margin-top:20px;}
+.btnbgcolor1{background-color:#ffa103; font-weight: bold;}
+.btnbgcolor1:active{color:#fff; border-color:#ffa103; background-color:#ef9703;}
+.fonts{font-size: 12px; color:#c9c9c9;}
+.tbborder{border-top:1px solid #ddd; border-bottom:1px dashed #ddd;}
+.eveDwen{ padding:14px 0; }
+.eveDwen span{float:left; padding:3px 6px; color:#fff; border-radius:4px; margin-right:5px;}
+.eveDwen p{padding-left:26px; line-height: 25px;}
+.tbpadding10{padding:10px 0 !important;}
+.evebs .grid-cell img{width:60%; height:60%; background-size:cover;}
+.eveoverflow{overflow:hidden; text-overflow:ellipsis; display: -webkit-box;-webkit-box-orient:vertical; line-height:1.3em; -webkit-line-clamp:2; max-height:2.6em; font-style:normal;}
+.eveinput{width:100%; height:40px !important; line-height:40px; border-radius: 0 !important;}
+/* ===== retrie分类下来 ===== */
+.retrie {position:relative; z-index:102; height:50px; background-color:#fff; border-bottom:1px solid #e5e5e5;}
+.retrie dt {overflow:hidden}
+.retrie dt a { position:relative; float:left; width:33.33%; height:49px; line-height:50px; color:#000; font-size:16px; text-align:center; border-bottom:1px solid #e5e5e5;}
+.retrie dt a:after {position:absolute; top:50%; left:50%; margin-top:-4px; margin-left:30px; width:8px; height:8px; border:#000 solid; border-width:1px 1px 0 0; content:' '; -webkit-transform:rotate(135deg);}
+.retrie dt .up { color:#ff6a22;}
+.retrie dt .up:after {margin-top: 0; border:#ff6a22 solid; border-width:1px 1px 0 0; -webkit-transform:rotate(-45deg);}
+.retrie dt a:last-child:before { position:absolute; top:10px; left:0; display:block; width:1px; height:30px; background-color:#e5e5e5; content:' ';}
+.retrie dt a:first-child:before {position:absolute; top:10px; right:0; display:block; width:1px; height:30px; background-color:#e5e5e5; content: ' ';}
+.retrie dd {position: relative;}
+/* ===== slide-area ===== */
+.slide {position:absolute; top:0px; left:0; z-index:104; display:none;  width:100%; overflow-y:auto; background-color:#fff; border-bottom:1px solid #eee;}
+.slide li {display:block; float:left; width:33.33%; height:40px;  text-align: center;}
+.slide li a {display:block; height:40px; color:#949494; background-color:#fff; line-height:40px; border-bottom:1px solid #eee; border-right:1px solid #eee;}
+.slide li a:hover,.slide li a.select{background-color:#f8f9fa; border-left:2px solid #ff6a22; color:#000;}
+.form-common .label-left, .form-common .label-right{line-height: 25px; background-color: transparent;}
+.more1{display:inline-block; background:#fff; padding:0px 10px; height:30px; line-height:30px; border:1px solid #ddd; border-top:none; color:#3188d2; margin-top: -1px;}
+.conthide{display: none;}
+/*简单流程图*/
+.flow_container {font-family: "Microsoft Yahei",Arial,sans-serif; display: inline-block; position: relative; color: #000; float:left; font-size:14px; padding:10px 0; width:100%;}
+.flow_container ul {list-style: none;}
+.flow_container ul,.flow_container li,.flow_container p {margin: 0;padding: 0;}
+.flow_container ul li{float:left; text-align:center; height:50px; position:relative; z-index:1; margin-top:-10px; border-bottom:none; overflow:inherit;}
+.flow_container ul li .pro_base{color:#fff; height:49px;}
+.flow_container ul li a{display:inline-block;}
+.flow_done .pro_base{background:url(../images/pointes_2.png) no-repeat center top; }
+.flow_active .pro_base{background:url(../images/pointes_3.png) no-repeat center top; }
+.flow_nodone .pro_base{background:url(../images/pointes_1.png) no-repeat center top;}
+.flow_done a{color:#60baff;}
+.flow_active a{color:#F00;}
+.flow_nodone a{color:#000;}
+.flow_progress{position:relative; top:9px; margin:0 52px;}
+.flow_progress_bar{height:6px; background:#e4e4e4;}
+.flow_progress_highlight{display:block; height:6px; background:#60baff;}

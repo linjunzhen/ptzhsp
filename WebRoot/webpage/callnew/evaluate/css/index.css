@@ -1,0 +1,407 @@
+body,
+div,
+a,
+button,
+input,
+textarea,
+table,
+tr,
+th,
+td,
+h3 {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: '微软雅黑', Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+ul,
+li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.header {
+    position: relative;
+    height: 0.88rem;
+    background-color: #fff;
+}
+
+.header>h3 {
+    position: relative;
+    margin: 0 0.88rem;
+    text-align: center;
+    padding: 0 0.1rem;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.36rem;
+    color: #000;
+    font-weight: 500;
+    line-height: 0.88rem;
+}
+
+.header>a {
+    position: absolute;
+    width: 0.88rem;
+    height: 0.88rem;
+    left: 0;
+    top: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.header>a.back {
+    background-image: url(images/iback.png);
+}
+
+.header:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #c4c4c4;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+}
+
+.main {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.main .title {
+    color: #007ad6;
+    margin: 0 0 28px;
+    font-size: .38rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+    font-weight: 500;
+}
+
+.main>.box {
+    background-color: #fff;
+    padding: .25rem 30px;
+}
+
+.main>.box+.box {
+    margin-top: .15rem;
+}
+
+.main>.box .flex .label {
+    width: 92px;
+    float: left;
+}
+
+.main>.box .flex .content {
+    overflow: hidden;
+}
+
+.smTitle {
+    font-size: .32rem;
+    margin-right: .25rem;
+}
+
+
+/*星级*/
+
+.start .s-photo {
+    font-size: 0;
+}
+
+.start .s-photo span {
+    width: 36px;
+    height: 34px;
+    background: url(./../images/istart.png) no-repeat;
+    background-size: contain;
+    margin-right: 12px;
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: top;
+}
+
+.start .s-photo span.on {
+    background-image: url(./../images/istarto.png);
+}
+
+.start .s-resuft {
+    width: calc(100% - 3.2rem);
+    font-size: .26rem;
+    color: #f49918;
+    text-align: right;
+}
+
+.textCnt {
+    margin-bottom: 30px;
+}
+
+.textCnt p {
+    font-size: 0.24rem;
+    margin: 25px 0 25px;
+}
+
+.textCnt .label {
+    line-height: 44px;
+    font-size: 18px;
+}
+
+.textCnt .links {
+    font-size: 0;
+    margin-left: -.15rem;
+}
+
+.textCnt .links a {
+    display: inline-block;
+    line-height: 44px;
+    color: #333;
+    text-decoration: none;
+    font-size: 0.24rem;
+    background-color: #dcdcdc;
+    padding: 0 30px;
+    margin-left: .15rem;
+}
+
+.textCnt .links a.on {
+    background-color: #007ad6;
+    color: #fff;
+}
+
+.textCnt .checks {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.textCnt .checks input {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.textCnt .checks>div {
+    margin-bottom: 18px;
+}
+
+.textareaBox {
+    position: relative;
+    font-size: 0;
+}
+
+.textareaBox textarea {
+    position: relative;
+    width: 100%;
+    height: 2.75rem;
+    border-radius: .08rem;
+    padding: .2rem;
+    border: none;
+    resize: none;
+    overflow: hidden;
+    outline: 0;
+    font-size: .24rem;
+    z-index: 1;
+}
+
+.textareaBox .wordsNum {
+    bottom: .2rem;
+    right: .2rem;
+    z-index: 2;
+    position: absolute;
+    font-size: .24rem;
+    color: #999;
+}
+
+.textareaBox .wordsNum em {
+    font-style: normal;
+    color: #f49918;
+}
+
+
+/*验证模块*/
+
+.yzModule .lable {
+    font-size: 0.32rem;
+}
+
+.yzModule input {
+    flex: 1;
+    margin: 0 0.25rem;
+    height: 0.65rem;
+    line-height: 0.65rem;
+    border: solid 1px #d2d2d2;
+    padding: 0 .15rem;
+    background-color: #fff;
+    border-radius: 0.08rem;
+    outline: none;
+}
+
+.yzModule a {
+    display: block;
+    height: 0.55rem;
+    width: 1rem;
+    font-size: 0;
+}
+
+.yzModule a img {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: inline-block;
+}
+
+.fixedBox {
+    background-color: #fff;
+    padding: 0 0.25rem 30px;
+    z-index: 3;
+    text-align: center;
+    font-size: 0;
+}
+
+.fixedBox a {
+    font-size: 28px;
+    background-color: #007ad6;
+    color: #fff;
+    display: inline-block;
+    vertical-align: top;
+    width: 3.2rem;
+    cursor: pointer;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    text-decoration: none;
+}
+.fixedBox a:hover {
+	color: #fff;
+}
+
+.fixedBox+.main {
+    padding-bottom: 1.3rem;
+}
+
+.title2 {
+    font-size: .32rem;
+    color: #000;
+    font-weight: 500;
+    margin-bottom: .15rem;
+}
+
+.ztable {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #e5e5e5;
+}
+
+.ztable th,
+.ztable td {
+    font-size: .24rem;
+    border: 1px solid #e5e5e5;
+    background-color: #fff;
+    text-align: left;
+    color: #333;
+    padding: .15rem .1rem;
+}
+
+.ztable th {
+    text-align: center;
+    color: #666;
+    font-weight: 500;
+    background-color: #eee;
+}
+
+.switch_tab {
+    width: 90%;
+    border: solid 1px #d2d2d2;
+}
+
+.switch_tab .tabHead {
+    line-height: 48px;
+    border-bottom: solid 1px #d2d2d2;
+    font-size: 0.26rem;
+}
+
+.switch_tab .tabHead li {
+    display: inline-block;
+    margin: 0 0.5rem;
+    position: relative;
+}
+
+.switch_tab .tabHead li.sel {
+    color: #007ad6;
+}
+
+.switch_tab .tabHead li.sel:after {
+    width: 0.42rem;
+    height: 0.05rem;
+    margin-left: -0.21rem;
+    background-color: #007ad6;
+    border-radius: 0.03rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    content: "";
+}
+
+.dragDiv {
+    width: 440px;
+    padding: 5px;
+    border: solid 1px #007ad6;
+}
+
+.dragDiv .drag {
+    height: 45px;
+    line-height: 45px;
+    position: relative;
+    margin: 0 auto;
+    font-size: 0.24rem;
+}
+
+.dragDiv .drag .bg {
+    width: 0.6rem;
+    height: 100%;
+    position: absolute;
+    background-color: #75CDF9;
+}
+
+.dragDiv .drag .text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    user-select: none;
+    color: #999;
+}
+
+.dragDiv .drag .btn {
+    width: 70px;
+    height: 45px;
+    position: absolute;
+    cursor: move;
+    text-align: center;
+    background-color: #007ad6;
+    user-select: none;
+    color: #fff;
+}
+
+.dragDiv .drag.pass .text {
+    color: #fff;
+}
+
+.dragDiv .drag.pass .btn {
+    color: #fff;
+}
+.layui-input-block span {
+    margin-right: 50px;
+}
+
